@@ -40,6 +40,20 @@ nav {
     padding: 5px;
 }
 
+#intro {
+    background-image: linear-gradient(45deg, #7e4343, #464b66);
+    color: white;
+    font-size: 1.4em;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+#intro > p {
+    max-width: 1200px;
+}
+
 @media only screen and (max-width: 900px) {
     nav {
         flex-direction: column;
@@ -83,5 +97,9 @@ nav {
 
     #navLinksSection > * {
         margin: 0px;
+    }
+
+    #intro {
+        font-size: 1.3em;
     }
 }
