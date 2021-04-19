@@ -26,11 +26,13 @@ nav {
 #navLinksSection {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 #siteTitle,
 #navLinksSection > * {
     margin-right: 40px;
+    text-align: center;
 }
 
 #siteTitle {
