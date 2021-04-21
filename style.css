@@ -76,8 +76,10 @@ nav {
 
 .portrait {
     border-radius: 100%;
-    max-width: 350px;
+    max-width: 300px;
     box-shadow: 0px 0px 20px #bbb;
+
+    filter: grayscale();
 }
 
 .portraitLabel {
@@ -108,6 +110,10 @@ nav {
     #navLinksSection {
         margin-top: 20px;
     }
+
+    #otherTeam {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -137,5 +143,9 @@ nav {
 
     #intro {
         font-size: 1.3em;
+    }
+
+    #otherTeam {
+        flex-direction: column;
     }
 }
