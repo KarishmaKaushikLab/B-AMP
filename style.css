@@ -29,6 +29,15 @@ nav {
     align-items: center;
 }
 
+#navLinksSection > a {
+    text-decoration: none;
+    color: white;
+}
+
+#navLinksSection > a:hover {
+    color: orange;
+}
+
 #siteTitle,
 #navLinksSection > * {
     margin-right: 40px;
@@ -38,6 +47,12 @@ nav {
 #siteTitle {
     border: 2px solid;
     padding: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.currentPage {
+    text-decoration: underline;
 }
 
 #intro {
