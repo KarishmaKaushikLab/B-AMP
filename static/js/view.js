@@ -63,7 +63,7 @@ const generateDRAMPCard = (drampID, pepID) => {
     drampCard.className = "drampCard";
 
     const drampHeading = document.createElement("h3");
-    drampHeading.textContent = `DRAMP${drampID}`;
+    drampHeading.textContent = `Pep${pepID} | DRAMP${drampID}`;
     drampCard.appendChild(drampHeading);
 
     const drampLinks = document.createElement("span");
