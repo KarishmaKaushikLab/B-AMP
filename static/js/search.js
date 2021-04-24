@@ -49,6 +49,10 @@ QUERY ALGORITHM:
 
 */
 
+const verifyResult = (resultItem) => {
+	return !(resultItem["drampID"] === undefined || resultItem["pepID"] === undefined);
+};
+
 const search = (query) => {
 	const queryItems = query.split(",").map(e => e.trim());
 
@@ -64,7 +68,7 @@ const search = (query) => {
 					"drampID": drampID,
 					"pepID": DRAMP_TO_PEP[drampID],
 				}
-				resultSet.push(resultItem);
+				if (verifyResult(resultItem)) resultSet.push(resultItem);
 			}
 		} else if (queryItem.startsWith("PEP") && queryItem.length > 3) {
 			const subQueryItem = queryItem.substring(3);
@@ -77,7 +81,8 @@ const search = (query) => {
 						"drampID": PEP_TO_DRAMP[subQueryItem.toString()],
 						"pepID": parseInt(subQueryItem),
 					};
-					resultSet.push(resultItem);
+					
+					if (verifyResult(resultItem)) resultSet.push(resultItem);
 					break;
 				}
 				case 2: {
@@ -92,7 +97,8 @@ const search = (query) => {
 							"drampID": PEP_TO_DRAMP[i],
 							"pepID": i,
 						};
-						resultSet.push(resultItem);
+
+						if (verifyResult(resultItem)) resultSet.push(resultItem);
 					}
 
 					break;
