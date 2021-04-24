@@ -10,9 +10,8 @@ def build_dramp_to_pep_index():
         
         pep_id = 2
         for row in reader:
-            dramp_id = row["DRAMP_ID"]
-            dramp_id_numeric = int(dramp_id[5:])
-            INDEX[dramp_id_numeric] = pep_id
+            dramp_id = row["DRAMP_ID"][5:]
+            INDEX[dramp_id] = pep_id
 
             pep_id += 1
 
@@ -31,9 +30,8 @@ def build_pep_to_dramp_index():
         
         pep_id = 2
         for row in reader:
-            dramp_id = row["DRAMP_ID"]
-            dramp_id_numeric = int(dramp_id[5:])
-            INDEX[pep_id] = dramp_id_numeric
+            dramp_id = row["DRAMP_ID"][5:]
+            INDEX[pep_id] = dramp_id
 
             pep_id += 1
 
