@@ -1,4 +1,5 @@
 const CARDS_CONTAINER = document.querySelector("#drampCards");
+const ERRORS_CONSOLE = document.querySelector("#errorsConsole");
 
 /*
 <span class="drampCard">
@@ -87,10 +88,28 @@ const showResults = (resultSet) => {
     }
 };
 
+const generateErrorCard = (error) => {
+    const card = document.createElement("span");
+    card.className = "errorCard";
+    card.innerText = error;
+    return card;
+}
+
+const showErrors = (errors) => {
+    ERRORS_CONSOLE.textContent = '';
+
+    for (const error of errors) {
+        ERRORS_CONSOLE.appendChild(generateErrorCard(error));
+    }
+};
+
 const triggerSearch = () => {
 	const response = search(searchBox.value.toUpperCase());
 	showResults(response["resultSet"]);
+    showErrors(response["errors"]);
 };
 
 const searchBox = document.querySelector("#searchBox");
 searchBox.oninput = triggerSearch;
+
+triggerSearch();

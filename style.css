@@ -132,10 +132,29 @@ nav {
     color: #888;
 }
 
+#errorsConsole {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 10px 50px;
+}
+
+.errorCard {
+    background-color: red;
+    color: white;
+
+    font-size: 1.3em;
+
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
 #drampCards {
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 50px;
+    padding: 10px 50px;
 }
 
 .drampCard {

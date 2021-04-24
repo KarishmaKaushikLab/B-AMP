@@ -53,6 +53,14 @@ const verifyResult = (resultItem) => {
 	return !(resultItem["drampID"] === undefined || resultItem["pepID"] === undefined);
 };
 
+const verifyRangeIndices = (indices) => {
+	for (const index of indices) {
+		if (index == "") return false;
+	}
+
+	return true;
+}
+
 const search = (query) => {
 	const queryItems = query.split(",").map(e => e.trim());
 
@@ -61,18 +69,27 @@ const search = (query) => {
 	for (const queryItem of queryItems) {
 		if (queryItem === "") continue;
 
+		if (!queryItem.match(/^(DRAMP|PEP)[0-9]*[-]*[0-9]*$/)) {
+			errors.push(`Invalid query item: ${queryItem}`);
+			continue;
+		}
+
 		if (/^DRAMP\d+$/.test(queryItem)) {
 			const drampID = queryItem.substring(5);
-			if (DRAMP_TO_PEP[drampID] !== undefined) {
-				const resultItem = {
-					"drampID": drampID,
-					"pepID": DRAMP_TO_PEP[drampID],
-				}
-				if (verifyResult(resultItem)) resultSet.push(resultItem);
+
+			const resultItem = {
+				"drampID": drampID,
+				"pepID": DRAMP_TO_PEP[drampID],
 			}
+
+			if (verifyResult(resultItem)) resultSet.push(resultItem);
 		} else if (queryItem.startsWith("PEP") && queryItem.length > 3) {
 			const subQueryItem = queryItem.substring(3);
 			const indices = subQueryItem.split("-");
+
+			if (!verifyRangeIndices(indices)) {
+				errors.push(`Invalid range query: ${queryItem}`);
+			}			
 
 			switch (indices.length) {
 				case 1: {
@@ -89,8 +106,10 @@ const search = (query) => {
 					const startIndex = parseInt(indices[0]);
 					const endIndex = parseInt(indices[1]);
 					
-					if (startIndex > endIndex)
+					if (startIndex > endIndex) {
+						errors.push(`Invalid range query, end index should be greater than start index: ${queryItem}`);
 						continue;
+					}
 
 					for (let i = startIndex; i <= endIndex; i++) {
 						const resultItem = {
@@ -109,7 +128,7 @@ const search = (query) => {
 				}
 			}
 		} else {
-			errors.push(`Invalid query: ${query}`);
+			errors.push(`Invalid query item: ${queryItem}`);
 		}
 	}
 
