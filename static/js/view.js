@@ -103,10 +103,15 @@ const showErrors = (errors) => {
     }
 };
 
+let errorDisplayTimer;
+
 const triggerSearch = () => {
+    clearTimeout(errorDisplayTimer);
+
 	const response = search(searchBox.value.toUpperCase());
 	showResults(response["resultSet"]);
-    showErrors(response["errors"]);
+
+    errorDisplayTimer = setTimeout(() => showErrors(response["errors"]), 750);
 };
 
 const searchBox = document.querySelector("#searchBox");
