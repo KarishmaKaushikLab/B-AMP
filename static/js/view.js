@@ -32,7 +32,7 @@ const generateDRAMPLink = (pepID, linkType) => {
             link.download = `Pep${pepID}.png`;
             img.src = "static/icons/camera.png";
 			img.alt = "camera-icon";
-            linkText.textContent = "3D MODEL IMAGE";
+            linkText.textContent = "3D MODEL";
             break;
         }
     }
