@@ -46,33 +46,27 @@ def build_pep_to_activity_index():
     INDEX = {}
 
     ACTIVITY_TO_ID = {
-        "Antibacterial": 1,
-        "Anti-Gram+": 2,
-        "Anti-Gram-": 3,
-        "Antimicrobial": 4,
+        "Anti-Gram+": 1,
+        "Anti-Gram-": 2,
     }
 
     with open("index/full.csv") as csv_fd:
         reader = DictReader(csv_fd)
-
-        aset = set()
         
         pep_id = 2
         for row in reader:
-            activities = []
+            activities = 0
             str_activities = row["Activity"].split(",")
             for str_activity in str_activities:
                 str_activity = str_activity.strip()
                 if str_activity:
                     if not ACTIVITY_TO_ID.get(str_activity):
-                        aset.add(str_activity)
                         continue
 
-                    activities.append(ACTIVITY_TO_ID[str_activity])
+                    activities += ACTIVITY_TO_ID[str_activity]
             
 
             INDEX[pep_id] = activities
-
             pep_id += 1
 
 

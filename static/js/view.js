@@ -1,26 +1,6 @@
 const CARDS_CONTAINER = document.querySelector("#drampCards");
 const ERRORS_CONSOLE = document.querySelector("#errorsConsole");
 
-/*
-<span class="drampCard">
-    <h3>#987654</h3>
-    <span class="drampLinks">
-        <a href="#" class="drampLink">
-            <img class="drampLinkIcon" src="static/icons/fasta.png" alt="fasta-icon">
-            FASTA
-        </a>
-        <a href="#" class="drampLink">
-            <img class="drampLinkIcon" src="static/icons/download.png" alt="download-icon">
-            PDB
-        </a>
-        <a href="#" class="drampLink">
-            <img class="drampLinkIcon" src="static/icons/camera.png" alt="camera-icon">
-            3D MODEL IMAGE
-        </a>
-    </span>
-</span>
-*/
-
 const generateDRAMPLink = (pepID, linkType) => {
     const link = document.createElement("a");
     link.className = "drampLink";
@@ -59,9 +39,15 @@ const generateDRAMPLink = (pepID, linkType) => {
     return link;
 };
 
+const ACTIVITY_TO_CSS_CLASS = ["otherActivity", "antiGramPositive", "antiGramNegative", "bothActivities"];
+
 const generateDRAMPCard = (drampID, pepID) => {
     const drampCard = document.createElement("span");
-    drampCard.className = "drampCard";
+    drampCard.classList.add("drampCard");
+    
+    const activity = PEP_TO_ACTIVITY[pepID];
+    console.log(activity);
+    drampCard.classList.add(ACTIVITY_TO_CSS_CLASS[activity]);
 
     const drampHeading = document.createElement("h3");
     drampHeading.textContent = `Pep${pepID} | DRAMP${drampID}`;
