@@ -1,4 +1,4 @@
-from utils import index, image
+from utils import fasta, index, image
 
 if __name__ == "__main__":
     index.build_dramp_to_pep_index()
@@ -6,3 +6,5 @@ if __name__ == "__main__":
     index.build_pep_to_activity_index()
 
     image.generate_thumbnails()
+
+    fasta.generate_fasta_files()

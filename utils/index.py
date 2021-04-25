@@ -5,7 +5,7 @@ import json
 def build_dramp_to_pep_index():
     INDEX = {}
 
-    with open("index/full.csv") as csv_fd:
+    with open("utils/full.csv") as csv_fd:
         reader = DictReader(csv_fd)
         
         pep_id = 2
@@ -25,7 +25,7 @@ def build_dramp_to_pep_index():
 def build_pep_to_dramp_index():
     INDEX = {}
 
-    with open("index/full.csv") as csv_fd:
+    with open("utils/full.csv") as csv_fd:
         reader = DictReader(csv_fd)
         
         pep_id = 2
@@ -50,7 +50,7 @@ def build_pep_to_activity_index():
         "Anti-Gram-": 2,
     }
 
-    with open("index/full.csv") as csv_fd:
+    with open("utils/full.csv") as csv_fd:
         reader = DictReader(csv_fd)
         
         pep_id = 2

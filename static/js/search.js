@@ -111,7 +111,7 @@ const search = (query) => {
 					const startIndex = parseInt(indices[0]);
 					const endIndex = parseInt(indices[1]);
 
-					if (startIndex > endIndex) {
+					if (startIndex >= endIndex) {
 						errors.push(
 							`Invalid range query, end index should be greater than start index: ${queryItem}`
 						);

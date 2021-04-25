@@ -14,7 +14,8 @@ const generateDRAMPLink = (pepID, linkType) => {
 
     switch (linkType) {
         case "fasta": {
-            link.href= "#";
+            link.href= `static/peptides/fasta/Pep${pepID}.fasta`;
+            link.download = `Pep${pepID}.fasta`;
             img.src = "static/icons/fasta.png";
             img.alt = "fasta-icon";
             linkText.textContent = "FASTA";
