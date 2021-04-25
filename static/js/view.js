@@ -28,7 +28,8 @@ const generateDRAMPLink = (pepID, linkType) => {
             break;
         }
         case "model": {
-            link.href = "";
+            link.href = `static/peptides/images/Pep${pepID}.png`;
+            link.download = `Pep${pepID}.png`;
             img.src = "static/icons/camera.png";
 			img.alt = "camera-icon";
             linkText.textContent = "3D MODEL IMAGE";
@@ -48,6 +49,11 @@ const generateDRAMPCard = (drampID, pepID) => {
     const activity = PEP_TO_ACTIVITY[pepID];
     console.log(activity);
     drampCard.classList.add(ACTIVITY_TO_CSS_CLASS[activity]);
+
+    const img = document.createElement("img");
+    img.className = "peptideImage";
+    img.src = `static/peptides/images/Pep${pepID}.png`;
+    drampCard.appendChild(img);
 
     const drampHeading = document.createElement("h3");
     drampHeading.textContent = `Pep${pepID} | DRAMP${drampID}`;
