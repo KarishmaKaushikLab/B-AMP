@@ -77,7 +77,6 @@ const search = (query) => {
 		if (queryItem.startsWith("DRAMP") && queryItem.length > 5) {
 			const drampID = queryItem.substring(5);
 			const indices = drampID.split("-");
-			console.log(indices);
 
 			if (indices.length > 1) {
 				errors.push(`Range queries not allowed on DRAMP IDs: ${queryItem}`);
