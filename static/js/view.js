@@ -52,7 +52,7 @@ const generateDRAMPCard = (drampID, pepID) => {
 
     const img = document.createElement("img");
     img.className = "peptideImage";
-    img.src = `static/peptides/images/Pep${pepID}.png`;
+    img.src = `static/peptides/thumbs/Pep${pepID}.png`;
     drampCard.appendChild(img);
 
     const drampHeading = document.createElement("h3");
