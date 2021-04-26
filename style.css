@@ -177,23 +177,27 @@ nav {
 }
 
 .otherActivity {
-    background-image: linear-gradient(45deg, #282828, #989898);
+    background-image: linear-gradient(45deg, #282828 40%, #989898);
 }
 
 .antiGramPositive {
-    background-image: linear-gradient(45deg, #500750, #b446b4);
+    background-image: linear-gradient(45deg, #500750 40%, #b446b4);
 }
 
 .antiGramNegative {
-    background-image: linear-gradient(45deg, #950000, red);
+    background-image: linear-gradient(45deg, #770f0f 40%, red);
 }
 
 .bothActivities {
-    background-image: linear-gradient(45deg, #500750, red);
+    background-image: linear-gradient(45deg, #500750 40%, red);
 }
 
 .peptideImage {
     width: 300px;
+}
+
+.drampLinks {
+    margin-top: 5px;
 }
 
 .drampLink {
