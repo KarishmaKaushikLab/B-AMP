@@ -2,6 +2,7 @@ const CARDS_CONTAINER = document.querySelector("#drampCards");
 const ERRORS_CONSOLE = document.querySelector("#errorsConsole");
 const RESULTS_COUNT = document.querySelector("#resultsCount");
 
+const ERROR_DELAY_MS = 400;
 const generateDRAMPLink = (pepID, linkType) => {
     const link = document.createElement("a");
     link.className = "drampLink";
@@ -118,7 +119,7 @@ const triggerSearch = () => {
 	const response = search(searchBox.value.toUpperCase(), env);
 	showResults(response["resultSet"]);
 
-    errorDisplayTimer = setTimeout(() => showErrors(response["errors"]), 750);
+    errorDisplayTimer = setTimeout(() => showErrors(response["errors"]), ERROR_DELAY_MS);
 };
 
 const main = () => {
