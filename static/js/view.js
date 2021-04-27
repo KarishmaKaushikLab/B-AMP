@@ -3,6 +3,7 @@ const ERRORS_CONSOLE = document.querySelector("#errorsConsole");
 const RESULTS_COUNT = document.querySelector("#resultsCount");
 
 const ERROR_DELAY_MS = 400;
+
 const generateDRAMPLink = (pepID, linkType) => {
     const link = document.createElement("a");
     link.className = "drampLink";
@@ -117,7 +118,10 @@ const triggerSearch = () => {
     clearTimeout(errorDisplayTimer);
 
 	const response = search(searchBox.value.toUpperCase(), env);
-	showResults(response["resultSet"]);
+    showResults(response["resultSet"]);
+
+    if (response["resultSet"].length === 0 && searchBox.value !== "" && response["errors"].length === 0)
+        response["errors"].push("No results found");
 
     errorDisplayTimer = setTimeout(() => showErrors(response["errors"]), ERROR_DELAY_MS);
 };
