@@ -1,5 +1,6 @@
 const CARDS_CONTAINER = document.querySelector("#drampCards");
 const ERRORS_CONSOLE = document.querySelector("#errorsConsole");
+const RESULTS_COUNT = document.querySelector("#resultsCount");
 
 const generateDRAMPLink = (pepID, linkType) => {
     const link = document.createElement("a");
@@ -48,7 +49,6 @@ const generateDRAMPCard = (drampID, pepID) => {
     drampCard.classList.add("drampCard");
     
     const activity = PEP_TO_ACTIVITY[pepID];
-    console.log(activity);
     drampCard.classList.add(ACTIVITY_TO_CSS_CLASS[activity]);
 
     const img = document.createElement("img");
@@ -74,8 +74,12 @@ const generateDRAMPCard = (drampID, pepID) => {
 const showResults = (resultSet) => {
 	CARDS_CONTAINER.textContent = "";
 
+    if (resultSet.length > 0) {
+        RESULTS_COUNT.style.visibility = "";
+        RESULTS_COUNT.innerText = `${resultSet.length} peptide${resultSet.length === 1 ? "": "s"} found`;
+    } else RESULTS_COUNT.style.visibility = "hidden";
+
     for (const result of resultSet) {
-        console.log(result);
         const card = generateDRAMPCard(result["drampID"], result["pepID"]);
         CARDS_CONTAINER.appendChild(card);
     }
@@ -96,18 +100,31 @@ const showErrors = (errors) => {
     }
 };
 
+const getEnv = () => {
+    const currentPage = document.querySelector("#currentPage");
+    return {
+        "All Peptides": "all",
+        "Anti-Gram Positive Peptides": "ag+",
+        "Docked Peptides": "docked"
+    }[currentPage.textContent];
+};
+
 let errorDisplayTimer;
+const env = getEnv();
 
 const triggerSearch = () => {
     clearTimeout(errorDisplayTimer);
 
-	const response = search(searchBox.value.toUpperCase());
+	const response = search(searchBox.value.toUpperCase(), env);
 	showResults(response["resultSet"]);
 
     errorDisplayTimer = setTimeout(() => showErrors(response["errors"]), 750);
 };
 
-const searchBox = document.querySelector("#searchBox");
-searchBox.oninput = triggerSearch;
+const main = () => {
+    const searchBox = document.querySelector("#searchBox");
+	searchBox.oninput = triggerSearch;
+};
 
+main();
 triggerSearch();
