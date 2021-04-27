@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto+Condensed&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Roboto Condensed';
+}
+
+body {
+    background-color: #efefef;
 }
 
 h1 {
@@ -60,7 +66,7 @@ nav {
     text-decoration: none;
 }
 
-.currentPage {
+#currentPage {
     text-decoration: underline;
     text-decoration-thickness: 2px;
 }
@@ -128,7 +134,7 @@ nav {
     font-size: 2em;
     text-transform: uppercase;
     margin: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     padding: 10px 5px;
     color: #282828;
     font-family: "JetBrains Mono", monospace;
@@ -148,14 +154,29 @@ nav {
 }
 
 .errorCard {
-    background-color: red;
+    background-image: linear-gradient(45deg, #ce0000, #ff4500);
     color: white;
 
     font-size: 1.3em;
 
     margin: 5px;
     padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 5px;
+
+    box-shadow: 0px 0px 15px #ccc;
+}
+
+#resultsCount {
+    width: 250px;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 1.45em;
+    border-radius: 5px;
+
+    background-image: linear-gradient(45deg, green, yellowgreen);
+    color: white;
+
+    box-shadow: 0px 0px 15px #ccc;
 }
 
 #drampCards {
@@ -173,7 +194,7 @@ nav {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 0px 15px turquoise;
+    box-shadow: 0px 0px 15px #bbb;
 }
 
 .otherActivity {
