@@ -17,5 +17,27 @@
             <a href="code.html"><h3>Code</h3></a>
         </section>
     </nav>
+
+    <section id="search">
+        <input type="text" name="dramp_id" id="searchBox" placeholder="DRAMP/PEP ID" autofocus>
+        <p style="margin: 10px 50px; text-align: center;">
+            ⚡ Search for a peptide by its DRAMP or PEP ID: <span class="mono">DRAMP01472</span> or <span class="mono">PEP1217</span>.
+            <br />
+            ⚡ Search for a range of peptides by their PEP IDs: <span class="mono">PEP12-25</span>
+            <br />
+            ⚡ Add commas for running multiple searches: <span class="mono">DRAMP01472, PEP1217, PEP12-25</span>
+        </p>
+    </section>
+    <section id="errorsConsole"></section>
+
+    <div style="display: flex; justify-content: center;">
+        <h4 id="resultsCount"></h4>
+    </div>
+    <main id="drampCards"></main>
+    <script src="static/js/pep_to_dramp.js"></script>
+    <script src="static/js/dramp_to_pep_index.js"></script>
+    <script src="static/js/pep_to_activity_index.js"></script>
+    <script src="static/js/search.js"></script>
+    <script src="static/js/view.js"></script>
 </body>
 </html>
