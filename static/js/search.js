@@ -61,11 +61,23 @@ const verifyRangeIndices = (indices) => {
 	return true;
 }
 
-const search = (query) => {
+const search = (query, env) => {
 	const queryItems = query.split(",").map(e => e.trim());
 
 	const resultSet = [];
 	const errors = [];
+
+	const addToResultSet = (resultItem) => {
+		if (!verifyResult(resultItem)) return;
+
+		if (env === "ag+") {
+			const pepActivity = PEP_TO_ACTIVITY[resultItem["pepID"]];
+			if (!(pepActivity === 1 || pepActivity === 3)) return;
+		}
+		
+		resultSet.push(resultItem);
+	};
+
 	for (const queryItem of queryItems) {
 		if (queryItem === "") continue;
 
@@ -88,7 +100,7 @@ const search = (query) => {
 				pepID: DRAMP_TO_PEP[drampID],
 			};
 
-			if (verifyResult(resultItem)) resultSet.push(resultItem);
+			addToResultSet(resultItem);
 		} else if (queryItem.startsWith("PEP") && queryItem.length > 3) {
 			const subQueryItem = queryItem.substring(3);
 			const indices = subQueryItem.split("-");
@@ -104,7 +116,7 @@ const search = (query) => {
 						pepID: parseInt(subQueryItem),
 					};
 
-					if (verifyResult(resultItem)) resultSet.push(resultItem);
+					addToResultSet(resultItem);
 					break;
 				}
 				case 2: {
@@ -124,7 +136,7 @@ const search = (query) => {
 							pepID: i,
 						};
 
-						if (verifyResult(resultItem)) resultSet.push(resultItem);
+						addToResultSet(resultItem);
 					}
 
 					break;
