@@ -118,7 +118,8 @@ nav {
 #otherTeam {
     width: 70%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #search {
@@ -249,10 +250,6 @@ nav {
     #navLinksSection {
         margin-top: 20px;
     }
-
-    #otherTeam {
-        flex-direction: column;
-    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -282,9 +279,5 @@ nav {
 
     #intro {
         font-size: 1.3em;
-    }
-
-    #otherTeam {
-        flex-direction: column;
     }
 }
