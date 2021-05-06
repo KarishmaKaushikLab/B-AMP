@@ -18,7 +18,8 @@ def build_dramp_to_pep_index():
 
     with open("static/js/dramp_to_pep_index.js", "w+") as index_fd:
         index_str = json.dumps(INDEX)
-        contents = f"const DRAMP_TO_PEP = JSON.parse(\'{index_str}\');"
+        index_str = json.dumps(index_str)   # for escaping double quotes
+        contents = f"const DRAMP_TO_PEP = JSON.parse({index_str});"
         index_fd.write(contents)
 
 
@@ -38,11 +39,12 @@ def build_pep_to_dramp_index():
 
     with open("static/js/pep_to_dramp.js", "w+") as index_fd:
         index_str = json.dumps(INDEX)
-        contents = f"const PEP_TO_DRAMP = JSON.parse(\'{index_str}\');"
+        index_str = json.dumps(index_str)   # for escaping double quotes
+        contents = f"const PEP_TO_DRAMP = JSON.parse({index_str});"
         index_fd.write(contents)
 
 
-def build_pep_to_activity_index():
+def build_pep_to_activity_and_name_index():
     INDEX = {}
 
     ACTIVITY_TO_ID = {
@@ -66,11 +68,12 @@ def build_pep_to_activity_index():
                     activities += ACTIVITY_TO_ID[str_activity]
             
 
-            INDEX[pep_id] = activities
+            INDEX[pep_id] = [activities, row["Name"]]
             pep_id += 1
 
 
-    with open("static/js/pep_to_activity_index.js", "w+") as index_fd:
+    with open("static/js/pep_to_activity_and_name_index.js", "w+") as index_fd:
         index_str = json.dumps(INDEX)
-        contents = f"const PEP_TO_ACTIVITY = JSON.parse(\'{index_str}\');"
+        index_str = json.dumps(index_str)   # for escaping double quotes
+        contents = f"const PEP_TO_ACTIVITY_AND_NAME = JSON.parse({index_str});"
         index_fd.write(contents)

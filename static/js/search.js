@@ -71,7 +71,7 @@ const search = (query, env) => {
 		if (!verifyResult(resultItem)) return;
 
 		if (env === "ag+") {
-			const pepActivity = PEP_TO_ACTIVITY[resultItem["pepID"]];
+			const pepActivity = PEP_TO_ACTIVITY_AND_NAME[resultItem["pepID"]][0];
 			if (!(pepActivity === 1 || pepActivity === 3)) return;
 		}
 
