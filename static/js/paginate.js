@@ -11,12 +11,15 @@ const paginate = (results) => {
 };
 
 const next = () => {
-	if ((CURRENT_PAGE + 1) * PAGE_SIZE < RESULTS.length) CURRENT_PAGE++;
+	if ((CURRENT_PAGE + 1) * PAGE_SIZE >= RESULTS.length) return null;
+
+	CURRENT_PAGE++;
 	return RESULTS.slice(CURRENT_PAGE * PAGE_SIZE, (CURRENT_PAGE + 1) * PAGE_SIZE);
 };
 
 const prev = () => {
-	if (CURRENT_PAGE > 0) CURRENT_PAGE--;
+	if (CURRENT_PAGE <= 0) return null;
 
+	CURRENT_PAGE--;
 	return RESULTS.slice(CURRENT_PAGE * PAGE_SIZE, (CURRENT_PAGE + 1) * PAGE_SIZE);
 };

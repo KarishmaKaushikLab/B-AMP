@@ -83,20 +83,22 @@ const generateDRAMPCard = (drampID, pepID) => {
 	return drampCard;
 };
 
-const showResults = (resultSet) => {
+const renderCards = (results) => {
 	CARDS_CONTAINER.textContent = "";
 
+	for (const result of results) {
+		const card = generateDRAMPCard(result["drampID"], result["pepID"]);
+		CARDS_CONTAINER.appendChild(card);
+	}
+};
+
+const showResults = (resultSet) => {
 	if (resultSet.length > 0) {
 		RESULTS_COUNT.style.visibility = "";
 		RESULTS_COUNT.innerText = `${resultSet.length} peptide${
 			resultSet.length === 1 ? "" : "s"
 		} found`;
 	} else RESULTS_COUNT.style.visibility = "hidden";
-
-	for (const result of resultSet) {
-		const card = generateDRAMPCard(result["drampID"], result["pepID"]);
-		CARDS_CONTAINER.appendChild(card);
-	}
 };
 
 const generateErrorCard = (error) => {
@@ -130,7 +132,8 @@ const triggerSearch = () => {
 	clearTimeout(errorDisplayTimer);
 
 	const response = search(searchBox.value.toUpperCase(), env);
-	showResults(paginate(response["resultSet"]));
+	showResults(response["resultSet"]);
+	renderCards(paginate(response["resultSet"]));
 
 	if (
 		response["resultSet"].length === 0 &&
@@ -143,11 +146,19 @@ const triggerSearch = () => {
 };
 
 const renderNext = () => {
-	showResults(next());
+	const nextPage = next();
+	if (nextPage === null) return;
+
+	renderCards(nextPage);
+	window.scrollTo(0, 0);
 };
 
 const renderPrev = () => {
-	showResults(prev());
+	const prevPage = prev();
+	if (prevPage === null) return;
+
+	renderCards(prevPage);
+	window.scrollTo(0, 0);
 };
 
 const main = () => {
