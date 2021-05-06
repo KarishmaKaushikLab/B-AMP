@@ -191,12 +191,29 @@ nav {
 }
 
 .paginationButton {
-    background-color: #282828;
-    color: white;
     border: none;
+    box-shadow: 0px 0px 10px #ccc;
+
+    font-size: 1.1em;
+    font-weight: bold;
 
     padding: 5px 20px;
     margin: 10px;
+    border-radius: 10px;
+}
+
+.paginationButton:hover {
+    cursor: pointer;
+}
+
+#prevButton {
+    background-color: #ffac33;
+    color: #545454;
+}
+
+#nextButton {
+    background-color: #4c4ca3;
+    color: white;
 }
 
 .drampCard {

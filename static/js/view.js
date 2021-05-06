@@ -133,7 +133,8 @@ const triggerSearch = () => {
 
 	const response = search(searchBox.value.toUpperCase(), env);
 	showResults(response["resultSet"]);
-	renderCards(paginate(response["resultSet"]));
+	paginate(response["resultSet"]);
+	renderNext();
 
 	if (
 		response["resultSet"].length === 0 &&

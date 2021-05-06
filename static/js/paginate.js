@@ -6,8 +6,6 @@ let CURRENT_PAGE = -1;
 const paginate = (results) => {
 	RESULTS = results;
 	CURRENT_PAGE = -1;
-
-	return next();
 };
 
 const next = () => {
