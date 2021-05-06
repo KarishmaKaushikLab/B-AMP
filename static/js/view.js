@@ -25,7 +25,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "pdb": {
-			link.href = "";
+			link.href = "#";
 			img.src = "static/icons/download.png";
 			img.alt = "download-icon";
 			linkText.textContent = "PDB";
@@ -92,7 +92,7 @@ const renderCards = (results) => {
 	}
 };
 
-const showResults = (resultSet) => {
+const showResultsStats = (resultSet) => {
 	if (resultSet.length > 0) {
 		RESULTS_COUNT.style.visibility = "";
 		RESULTS_COUNT.innerText = `${resultSet.length} peptide${
@@ -132,9 +132,8 @@ const triggerSearch = () => {
 	clearTimeout(errorDisplayTimer);
 
 	const response = search(searchBox.value.toUpperCase(), env);
-	showResults(response["resultSet"]);
-	paginate(response["resultSet"]);
-	renderNext();
+	showResultsStats(response["resultSet"]);
+	renderCards(paginate(response["resultSet"]));
 
 	if (
 		response["resultSet"].length === 0 &&
@@ -144,6 +143,16 @@ const triggerSearch = () => {
 		response["errors"].push("No results found");
 
 	errorDisplayTimer = setTimeout(() => showErrors(response["errors"]), ERROR_DELAY_MS);
+
+	togglePageNavButtonsVisibility();
+};
+
+const prevButton = document.querySelector("#prevButton");
+const nextButton = document.querySelector("#nextButton");
+
+const togglePageNavButtonsVisibility = () => {
+	prevButton.style.visibility = isFirstPage() ? "hidden" : "";
+	nextButton.style.visibility = isLastPage() ? "hidden" : "";
 };
 
 const renderNext = () => {
@@ -152,6 +161,8 @@ const renderNext = () => {
 
 	renderCards(nextPage);
 	window.scrollTo(0, 0);
+
+	togglePageNavButtonsVisibility();
 };
 
 const renderPrev = () => {
@@ -160,6 +171,8 @@ const renderPrev = () => {
 
 	renderCards(prevPage);
 	window.scrollTo(0, 0);
+
+	togglePageNavButtonsVisibility();
 };
 
 const main = () => {
