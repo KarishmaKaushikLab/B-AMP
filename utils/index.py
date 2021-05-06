@@ -18,7 +18,7 @@ def build_dramp_to_pep_index():
 
     with open("static/js/dramp_to_pep_index.js", "w+") as index_fd:
         index_str = json.dumps(INDEX)
-        contents = f"const DRAMP_TO_PEP = JSON.parse(\"{index_str}\");"
+        contents = f"const DRAMP_TO_PEP = JSON.parse(\'{index_str}\');"
         index_fd.write(contents)
 
 
@@ -38,7 +38,7 @@ def build_pep_to_dramp_index():
 
     with open("static/js/pep_to_dramp.js", "w+") as index_fd:
         index_str = json.dumps(INDEX)
-        contents = f"const DRAMP_TO_PEP = JSON.parse(\"{index_str}\");"
+        contents = f"const PEP_TO_DRAMP = JSON.parse(\'{index_str}\');"
         index_fd.write(contents)
 
 
@@ -72,5 +72,5 @@ def build_pep_to_activity_index():
 
     with open("static/js/pep_to_activity_index.js", "w+") as index_fd:
         index_str = json.dumps(INDEX)
-        contents = f"const DRAMP_TO_PEP = JSON.parse(\"{index_str}\");"
+        contents = f"const PEP_TO_ACTIVITY = JSON.parse(\'{index_str}\');"
         index_fd.write(contents)

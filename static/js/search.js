@@ -59,10 +59,10 @@ const verifyRangeIndices = (indices) => {
 	}
 
 	return true;
-}
+};
 
 const search = (query, env) => {
-	const queryItems = query.split(",").map(e => e.trim());
+	const queryItems = query.split(",").map((e) => e.trim());
 
 	const resultSet = [];
 	const errors = [];
@@ -74,7 +74,7 @@ const search = (query, env) => {
 			const pepActivity = PEP_TO_ACTIVITY[resultItem["pepID"]];
 			if (!(pepActivity === 1 || pepActivity === 3)) return;
 		}
-		
+
 		resultSet.push(resultItem);
 	};
 
@@ -152,7 +152,7 @@ const search = (query, env) => {
 	}
 
 	return {
-		"resultSet": resultSet,
-		"errors": errors
+		resultSet: resultSet,
+		errors: errors,
 	};
 };
