@@ -62,15 +62,15 @@ const generateDRAMPCard = (drampID, pepID) => {
 	drampHeading.textContent = `Pep${pepID} · DRAMP${drampID}`;
 	drampCard.appendChild(drampHeading);
 
-	const img = document.createElement("img");
-	img.className = "peptideImage";
-	img.src = `static/peptides/thumbs/Pep${pepID}.png`;
-	drampCard.appendChild(img);
-
 	const pepName = document.createElement("h2");
 	pepName.textContent = PEP_TO_ACTIVITY_AND_NAME[pepID][1];
 	pepName.className = "pepName";
 	drampCard.appendChild(pepName);
+
+	const img = document.createElement("img");
+	img.className = "peptideImage";
+	img.src = `static/peptides/thumbs/Pep${pepID}.png`;
+	drampCard.appendChild(img);
 
 	const drampLinks = document.createElement("span");
 	drampLinks.className = "drampLinks";
