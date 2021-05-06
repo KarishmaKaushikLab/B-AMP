@@ -130,7 +130,7 @@ const triggerSearch = () => {
 	clearTimeout(errorDisplayTimer);
 
 	const response = search(searchBox.value.toUpperCase(), env);
-	showResults(response["resultSet"]);
+	showResults(paginate(response["resultSet"]));
 
 	if (
 		response["resultSet"].length === 0 &&
@@ -140,6 +140,14 @@ const triggerSearch = () => {
 		response["errors"].push("No results found");
 
 	errorDisplayTimer = setTimeout(() => showErrors(response["errors"]), ERROR_DELAY_MS);
+};
+
+const renderNext = () => {
+	showResults(next());
+};
+
+const renderPrev = () => {
+	showResults(prev());
 };
 
 const main = () => {
