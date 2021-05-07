@@ -25,7 +25,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "pdb": {
-			link.href = "#";
+			link.href = `static/peptides/pdb/Pep${pepID}.pdb`;
 			img.src = "static/icons/download.png";
 			img.alt = "download-icon";
 			linkText.textContent = "PDB";
