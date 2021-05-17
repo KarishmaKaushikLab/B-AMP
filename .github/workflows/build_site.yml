@@ -9,6 +9,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
+          pip3 install Pillow
           python3 build.py all
 
       - name: Deploy 🚀
