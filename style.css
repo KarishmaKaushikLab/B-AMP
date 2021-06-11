@@ -120,6 +120,8 @@ nav {
 }
 
 #paparazzi {
+    background-image: linear-gradient(to bottom, #eee,#ccc);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -129,6 +131,7 @@ nav {
 #paparazzi > h1 {
     font-size: 2.5em;
     margin: 20px;
+    margin-top: 50px;
 }
 
 .portraitContainer {
@@ -139,9 +142,10 @@ nav {
 }
 
 .portrait {
+    margin: 20px;
     border-radius: 100%;
     max-width: 300px;
-    box-shadow: 0px 0px 30px #ccc;
+    box-shadow: 0px 0px 50px #bbb;
 }
 
 .portraitLabel {
