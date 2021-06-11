@@ -7,6 +7,11 @@ if __name__ == "__main__":
         print("Missing arguments: index/thumbs/fasta/all")
         exit(1)
 
+    for arg in argv[1:]:
+        if arg not in ("all", "index", "thumbs", "fasta"):
+            print(f"Unknown target: {arg}")
+            exit(1)
+
     if "all" in argv or "index" in argv:
         index.build_dramp_to_pep_index()
         index.build_pep_to_dramp_index()
