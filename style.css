@@ -71,12 +71,45 @@ nav {
     text-decoration-thickness: 2px;
 }
 
+#landing {
+    background-image: linear-gradient(to bottom, wheat, #dd9393);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    padding: 20px;
+}
+
+#welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#welcome > * {
+    margin: 25px;
+}
+
+#svgLogo {
+    margin: 50px;
+    max-height: 40vh;
+}
+
+#welcome > h1 {
+    color: #282828;
+    font-size: 3em;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+}
+
 #intro {
-    background-image: linear-gradient(45deg, #7e4343, #464b66);
-    color: white;
+    color: #545454;
     font-size: 1.4em;
     padding: 20px;
-    letter-spacing: 1px;
 
     display: flex;
     justify-content: center;
