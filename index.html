@@ -43,7 +43,7 @@
 			<h1>MEET THE TEAM</h1>
 
 			<section id="theTeam">
-				<section class="portraitContainer">
+				<section class="portraitContainer" id="gandhar">
 					<img src="static/portraits/gandhar.jpg" class="portrait" />
 					<h2 class="portraitLabel">Gandhar Tendulkar</h2>
 					<h4 class="affiliation">
@@ -52,7 +52,7 @@
 					</h4>
 				</section>
 
-				<section class="portraitContainer">
+				<section class="portraitContainer" id="maam">
 					<img src="static/portraits/karishma_maam.jpg" class="portrait" />
 					<h2 class="portraitLabel">Dr. Karishma S. Kaushik</h2>
 					<h4 class="affiliation">
@@ -62,7 +62,7 @@
 					</h4>
 				</section>
 
-				<section class="portraitContainer">
+				<section class="portraitContainer" id="rohit">
 					<img src="static/portraits/rohit.jpg" class="portrait" />
 					<h2 class="portraitLabel">Rohit Awate</h2>
 					<h4 class="affiliation">
@@ -71,7 +71,7 @@
 					</h4>
 				</section>
 
-				<section class="portraitContainer">
+				<section class="portraitContainer" id="shreeya">
 					<img src="static/portraits/shreeya.jpg" class="portrait" />
 					<h2 class="portraitLabel">Shreeya Mhade</h2>
 					<h4 class="affiliation">
@@ -80,7 +80,7 @@
 					</h4>
 				</section>
 
-				<section class="portraitContainer">
+				<section class="portraitContainer" id="stutee">
 					<img src="static/portraits/stutee.jpg" class="portrait" />
 					<h2 class="portraitLabel">Stutee Panse</h2>
 					<h4 class="affiliation">
@@ -91,4 +91,10 @@
 			</section>
 		</section>
 	</body>
+	<script>
+		const theTeam = document.querySelector("#theTeam");
+		for (var i = theTeam.children.length; i >= 0; i--) {
+			theTeam.appendChild(theTeam.children[Math.random() * i | 0]);
+		}
+	</script>
 </html>
