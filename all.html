@@ -24,6 +24,15 @@
     </section>
     <section id="errorsConsole"></section>
 
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <h4 class="resultsToast" id="resultsCount" style="visibility: hidden;"></h4>
+    </div>
+    <main id="drampCards"></main>
+    <section id="paginationButtons">
+        <button class="paginationButton" id="prevButton" onclick="renderPrev()">< PREV</button>
+        <button class="paginationButton" id="nextButton" onclick="renderNext()">NEXT ></button>
+    </section>
+
     <section id="helpOverlay" class="overlay">
         <h1>SEARCH LIKE A PRO</h1>
         <p style="margin: 10px 50px; text-align: center;">
@@ -47,14 +56,6 @@
         </section>
     </section>
 
-    <div style="display: flex; justify-content: center; align-items: center;">
-        <h4 class="resultsToast" id="resultsCount" style="visibility: hidden;"></h4>
-    </div>
-    <main id="drampCards"></main>
-    <section id="paginationButtons">
-        <button class="paginationButton" id="prevButton" onclick="renderPrev()">< PREV</button>
-        <button class="paginationButton" id="nextButton" onclick="renderNext()">NEXT ></button>
-    </section>
     <script src="static/js/pep_to_dramp.js"></script>
     <script src="static/js/dramp_to_pep_index.js"></script>
     <script src="static/js/pep_to_activity_and_name_index.js"></script>
