@@ -20,14 +20,12 @@
 
     <section id="search">
         <input type="text" name="dramp_id" id="searchBox" placeholder="DRAMP/PEP ID" spellcheck="false" autofocus>
-        <button class="helpButton" onclick="showHelpOverlay()">💡 SHOW HELP</button>
+        <button id="toggleHelpButton" onclick="showHelpOverlay()">💡 SHOW HELP</button>
     </section>
     <section id="errorsConsole"></section>
 
     <section id="helpOverlay" class="overlay">
-        <button class="helpButton" onclick="hideHelpOverlay()" style="margin-bottom: 50px;">✕ CLOSE</button>
-
-        <h1>SEARCH TIPS</h1>
+        <h1>SEARCH LIKE A PRO</h1>
         <p style="margin: 10px 50px; text-align: center;">
             ⚡ Search for a peptide by its DRAMP or PEP ID: <span class="mono">DRAMP01472</span> or <span class="mono">PEP1217</span>.
             <br />
@@ -36,7 +34,7 @@
             ⚡ Add commas for running multiple searches: <span class="mono">DRAMP01472, PEP1217, PEP12-25</span>
         </p>
 
-        <hr style="width: 50%; border-color: #ddd; margin: 30px 0px;">
+        <hr style="width: 50%; border-color: #ddd; margin: 15px 0px;">
 
         <h1>LEGEND</h1>
         <p>Each card in the search results is color-coded as per the activity exhibited by that peptide.</p>

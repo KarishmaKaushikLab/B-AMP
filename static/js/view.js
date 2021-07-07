@@ -2,6 +2,7 @@ const CARDS_CONTAINER = document.querySelector("#drampCards");
 const ERRORS_CONSOLE = document.querySelector("#errorsConsole");
 const RESULTS_COUNT = document.querySelector("#resultsCount");
 const HELP_OVERLAY = document.querySelector("#helpOverlay");
+const TOGGLE_HELP_BUTTON = document.querySelector("#toggleHelpButton");
 
 const ERROR_DELAY_MS = 400;
 
@@ -178,10 +179,16 @@ const renderPrev = () => {
 
 const showHelpOverlay = () => {
 	HELP_OVERLAY.style.display = "flex";
+	TOGGLE_HELP_BUTTON.innerHTML = "✕ CLOSE HELP";
+	TOGGLE_HELP_BUTTON.removeEventListener("click", showHelpOverlay);
+	TOGGLE_HELP_BUTTON.addEventListener("click", hideHelpOverlay);
 };
 
 const hideHelpOverlay = () => {
 	HELP_OVERLAY.style.display = "none";
+	TOGGLE_HELP_BUTTON.innerHTML = "💡 SHOW HELP";
+	TOGGLE_HELP_BUTTON.removeEventListener("click", hideHelpOverlay);
+	TOGGLE_HELP_BUTTON.addEventListener("click", showHelpOverlay);
 };
 
 const getPermalink = () => {
