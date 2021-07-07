@@ -20,6 +20,14 @@
 
     <section id="search">
         <input type="text" name="dramp_id" id="searchBox" placeholder="DRAMP/PEP ID" spellcheck="false" autofocus>
+        <button class="helpButton" onclick="showHelpOverlay()">💡 SHOW HELP</button>
+    </section>
+    <section id="errorsConsole"></section>
+
+    <section id="helpOverlay" class="overlay">
+        <button class="helpButton" onclick="hideHelpOverlay()" style="margin-bottom: 50px;">✕ CLOSE</button>
+
+        <h1>SEARCH TIPS</h1>
         <p style="margin: 10px 50px; text-align: center;">
             ⚡ Search for a peptide by its DRAMP or PEP ID: <span class="mono">DRAMP01472</span> or <span class="mono">PEP1217</span>.
             <br />
@@ -27,11 +35,22 @@
             <br />
             ⚡ Add commas for running multiple searches: <span class="mono">DRAMP01472, PEP1217, PEP12-25</span>
         </p>
-    </section>
-    <section id="errorsConsole"></section>
 
-    <div style="display: flex; justify-content: center;">
-        <h4 id="resultsCount" style="visibility: hidden;"></h4>
+        <hr style="width: 50%; border-color: #ddd; margin: 30px 0px;">
+
+        <h1>LEGEND</h1>
+        <p>Each card in the search results is color-coded as per the activity exhibited by that peptide.</p>
+
+        <section id="legends">
+            <span class="legend antiGramPositive">Anti-Gram Positive</span>
+            <span class="legend antiGramNegative">Anti-Gram Negative</span>
+            <span class="legend bothActivities">Anti-Gram Positive & Negative</span>
+            <span class="legend otherActivity">Other Activity</span>
+        </section>
+    </section>
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <h4 class="resultsToast" id="resultsCount" style="visibility: hidden;"></h4>
     </div>
     <main id="drampCards"></main>
     <section id="paginationButtons">

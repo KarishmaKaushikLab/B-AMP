@@ -1,6 +1,7 @@
 const CARDS_CONTAINER = document.querySelector("#drampCards");
 const ERRORS_CONSOLE = document.querySelector("#errorsConsole");
 const RESULTS_COUNT = document.querySelector("#resultsCount");
+const HELP_OVERLAY = document.querySelector("#helpOverlay");
 
 const ERROR_DELAY_MS = 400;
 
@@ -173,6 +174,14 @@ const renderPrev = () => {
 	window.scrollTo(0, 0);
 
 	togglePageNavButtonsVisibility();
+};
+
+const showHelpOverlay = () => {
+	HELP_OVERLAY.style.display = "flex";
+};
+
+const hideHelpOverlay = () => {
+	HELP_OVERLAY.style.display = "none";
 };
 
 const getPermalink = () => {
