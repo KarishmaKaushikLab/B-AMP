@@ -126,14 +126,12 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    padding: 20px;
 }
 
 #paparazzi > h1 {
     font-size: 2.5em;
     margin: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .portraitContainer {
@@ -309,40 +307,6 @@ nav {
 .drampLinkIcon {
     width: 16px;
     margin: 0px 5px;
-}
-
-footer {
-    padding: 20px;
-    background-image: linear-gradient(45deg, crimson, #545454);
-    color: white;
-
-    display: flex;
-    justify-content: center;
-}
-
-footer > #labLogo {
-    width: 200px;
-    margin: 20px;
-}
-
-footer > #footerContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-footer > #footerContent > hr {
-    border: 1px #999 solid;
-    margin: 20px 0px;
-}
-
-.footerLink {
-    width: 30px;
-    margin: 0px 10px 0px 0px;
-}
-
-.footerLink:hover {
-    opacity: 60%;
 }
 
 @media only screen and (max-width: 900px) {
