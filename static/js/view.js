@@ -175,9 +175,25 @@ const renderPrev = () => {
 	togglePageNavButtonsVisibility();
 };
 
+const getPermalink = () => {
+	const url = new URL(window.location);
+	return url.searchParams.get("pepid");
+};
+
 const main = () => {
 	const searchBox = document.querySelector("#searchBox");
 	searchBox.oninput = triggerSearch;
+
+	const permalink = getPermalink();
+	if (permalink) {
+		searchBox.value = `PEP${permalink}`;
+
+		const searchSection = document.querySelector("#search");
+		searchSection.style.display = "none";
+
+		const resultsCount = document.querySelector("#resultsCount");
+		resultsCount.style.display = "none";
+	}
 };
 
 main();
