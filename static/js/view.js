@@ -55,6 +55,7 @@ const ACTIVITY_TO_CSS_CLASS = [
 
 const generateDRAMPCard = (drampID, pepID) => {
 	const drampCard = document.createElement("span");
+	drampCard.classList.add("pepCard");
 	drampCard.classList.add("drampCard");
 
 	const activity = PEP_TO_ACTIVITY_AND_NAME[pepID][0];
@@ -85,11 +86,54 @@ const generateDRAMPCard = (drampID, pepID) => {
 	return drampCard;
 };
 
+const generateDockedCard = (drampID, pepID) => {
+	const dockedCard = document.createElement("span");
+	dockedCard.classList.add("pepCard");
+	dockedCard.classList.add("dockedCard");
+
+	const activity = PEP_TO_ACTIVITY_AND_NAME[pepID][0];
+	dockedCard.classList.add(ACTIVITY_TO_CSS_CLASS[activity]);
+
+	const img = document.createElement("img");
+	img.className = "dockedImage";
+	img.src = `static/peptides/docked/images/Pep${pepID}.png`;
+	dockedCard.appendChild(img);
+
+	const infoContainer = document.createElement("section");
+	infoContainer.className = "infoContainer";
+	dockedCard.appendChild(infoContainer);
+
+	const drampHeading = document.createElement("h3");
+	drampHeading.textContent = `Pep${pepID} · DRAMP${drampID}`;
+	infoContainer.appendChild(drampHeading);
+
+	const pepName = document.createElement("h2");
+	pepName.textContent = PEP_TO_ACTIVITY_AND_NAME[pepID][1];
+	pepName.className = "pepName";
+	infoContainer.appendChild(pepName);
+
+	const drampLinks = document.createElement("span");
+	drampLinks.className = "drampLinks";
+	infoContainer.appendChild(drampLinks);
+
+	drampLinks.appendChild(generateDRAMPLink(pepID, "fasta"));
+	drampLinks.appendChild(generateDRAMPLink(pepID, "pdb"));
+	drampLinks.appendChild(generateDRAMPLink(pepID, "model"));
+
+	return dockedCard;
+};
+
 const renderCards = (results) => {
 	CARDS_CONTAINER.textContent = "";
 
 	for (const result of results) {
-		const card = generateDRAMPCard(result["drampID"], result["pepID"]);
+		let card;
+
+		if (env === "docked") {
+			card = generateDockedCard(result["drampID"], result["pepID"]);
+		} else {
+			card = generateDRAMPCard(result["drampID"], result["pepID"]);
+		}
 		CARDS_CONTAINER.appendChild(card);
 	}
 };
@@ -97,9 +141,8 @@ const renderCards = (results) => {
 const showResultsStats = (resultSet) => {
 	if (resultSet.length > 0) {
 		RESULTS_COUNT.style.visibility = "";
-		RESULTS_COUNT.innerText = `${resultSet.length} peptide${
-			resultSet.length === 1 ? "" : "s"
-		} found`;
+		RESULTS_COUNT.innerText = `${resultSet.length} peptide${resultSet.length === 1 ? "" : "s"
+			} found`;
 	} else RESULTS_COUNT.style.visibility = "hidden";
 };
 
