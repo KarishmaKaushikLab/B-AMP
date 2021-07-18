@@ -1,0 +1,105 @@
+REMARK  18 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK       I    between atoms: C_3  and  N_9 
+REMARK    3  A    between atoms: N_9  and  CA_10 
+REMARK    4  A    between atoms: CA_10  and  CB_13 
+REMARK    5  A    between atoms: CA_10  and  C_11 
+REMARK       I    between atoms: C_11  and  N_18 
+REMARK    6  A    between atoms: CB_13  and  CG_14 
+REMARK    7  A    between atoms: CG_14  and  SD_15 
+REMARK    8  A    between atoms: N_18  and  CA_19 
+REMARK    9  A    between atoms: CA_19  and  C_20 
+REMARK   10  A    between atoms: CA_19  and  CB_22 
+REMARK       I    between atoms: C_20  and  N_26 
+REMARK   11  A    between atoms: N_26  and  CA_27 
+REMARK   12  A    between atoms: CA_27  and  C_28 
+REMARK   13  A    between atoms: CA_27  and  CB_30 
+REMARK       I    between atoms: C_28  and  N_34 
+REMARK   14  A    between atoms: CB_30  and  OG_31 
+REMARK   15  A    between atoms: N_34  and  CA_35 
+REMARK   16  A    between atoms: CA_35  and  CB_38 
+REMARK   17  A    between atoms: CA_35  and  C_36 
+REMARK   18  A    between atoms: CB_38  and  OG_39 
+ROOT
+ATOM      1  N   ALA     1      24.578  28.663  24.494  1.00  0.00    -0.058 N 
+ATOM      2  H1  ALA     1      24.242  27.748  24.271  1.00 99.99     0.276 HD
+ATOM      3  H2  ALA     1      23.826  29.288  24.572  1.00 99.99     0.276 HD
+ATOM      4  H3  ALA     1      25.085  28.967  23.692  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  ALA     1      25.418  28.597  25.707  1.00  0.00     0.255 C 
+ATOM      6  CB  ALA     1      24.952  29.651  26.728  1.00  0.00     0.042 C 
+BRANCH   5   7
+ATOM      7  C   ALA     1      25.456  27.149  26.266  1.00  0.00     0.259 C 
+ATOM      8  N   MET     2      24.592  26.807  27.231  1.00  0.00    -0.338 N 
+ATOM      9  H   MET     2      24.056  27.495  27.717  1.00 99.99     0.164 HD
+ATOM     10  O   ALA     1      26.076  26.298  25.634  1.00  0.00    -0.271 OA
+BRANCH   8  11
+ATOM     11  CA  MET     2      24.491  25.443  27.813  1.00  0.00     0.160 C 
+BRANCH  11  12
+ATOM     12  CB  MET     2      23.610  25.452  29.071  1.00  0.00     0.043 C 
+BRANCH  12  13
+ATOM     13  CG  MET     2      24.036  26.464  30.145  1.00  0.00     0.060 C 
+BRANCH  13  14
+ATOM     14  SD  MET     2      25.823  26.503  30.552  1.00  0.00    -0.139 SA
+ATOM     15  CE  MET     2      26.067  24.915  31.321  1.00  0.00     0.069 C 
+ENDBRANCH  13  14
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+BRANCH  11  16
+ATOM     16  C   MET     2      24.018  24.313  26.866  1.00  0.00     0.251 C 
+ATOM     17  N   VAL     3      23.570  24.702  25.674  1.00  0.00    -0.338 N 
+ATOM     18  H   VAL     3      23.383  25.662  25.494  1.00 99.99     0.164 HD
+ATOM     19  O   MET     2      23.873  23.171  27.287  1.00  0.00    -0.271 OA
+BRANCH  17  20
+ATOM     20  CA  VAL     3      23.198  23.800  24.557  1.00  0.00     0.159 C 
+BRANCH  20  21
+ATOM     21  C   VAL     3      24.057  24.089  23.303  1.00  0.00     0.251 C 
+ATOM     22  O   VAL     3      23.560  24.383  22.218  1.00  0.00    -0.271 OA
+ATOM     23  N   SER     4      25.361  24.219  23.531  1.00  0.00    -0.336 N 
+ATOM     24  H   SER     4      25.757  23.873  24.381  1.00 99.99     0.164 HD
+BRANCH  23  25
+ATOM     25  CA  SER     4      26.354  24.721  22.538  1.00  0.00     0.189 C 
+BRANCH  25  26
+ATOM     26  C   SER     4      27.759  24.319  23.004  1.00  0.00     0.254 C 
+ATOM     27  O   SER     4      28.684  24.210  22.205  1.00  0.00    -0.270 OA
+ATOM     28  N   SER     5      27.930  24.483  24.316  1.00  0.00    -0.334 N 
+ATOM     29  H   SER     5      27.538  25.279  24.785  1.00 99.99     0.164 HD
+BRANCH  28  30
+ATOM     30  CA  SER     5      28.839  23.681  25.163  1.00  0.00     0.198 C 
+BRANCH  30  31
+ATOM     31  CB  SER     5      28.881  24.247  26.587  1.00  0.00     0.171 C 
+BRANCH  31  32
+ATOM     32  OG  SER     5      28.933  25.676  26.605  1.00  0.00    -0.380 OA
+ATOM     33  HG  SER     5      28.958  25.988  27.556  1.00 99.99     0.211 HD
+ENDBRANCH  31  32
+ENDBRANCH  30  31
+BRANCH  30  34
+ATOM     34  C   SER     5      28.228  22.279  25.320  1.00  0.00     0.209 C 
+ATOM     35  O   SER     5      28.953  21.291  25.080  1.00 99.99    -0.646 OA
+ATOM     36  OXT SER     5      27.006  22.247  25.610  1.00 99.99    -0.646 OA
+ENDBRANCH  30  34
+ENDBRANCH  28  30
+ENDBRANCH  25  26
+BRANCH  25  37
+ATOM     37  CB  SER     4      26.374  26.254  22.422  1.00  0.00     0.169 C 
+BRANCH  37  38
+ATOM     38  OG  SER     4      25.057  26.813  22.377  1.00  0.00    -0.380 OA
+ATOM     39  HG  SER     4      24.390  26.061  22.317  1.00 99.99     0.211 HD
+ENDBRANCH  37  38
+ENDBRANCH  25  37
+ENDBRANCH  23  25
+ENDBRANCH  20  21
+BRANCH  20  40
+ATOM     40  CB  VAL     3      21.681  23.894  24.261  1.00  0.00     0.029 C 
+ATOM     41  CG2 VAL     3      21.194  25.326  23.987  1.00  0.00     0.002 C 
+ATOM     42  CG1 VAL     3      20.854  23.285  25.397  1.00  0.00     0.002 C 
+ENDBRANCH  20  40
+ENDBRANCH  17  20
+ENDBRANCH  11  16
+ENDBRANCH   8  11
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+TORSDOF 18

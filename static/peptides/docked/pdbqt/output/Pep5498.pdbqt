@@ -1,0 +1,1701 @@
+MODEL 1
+REMARK VINA RESULT:      -5.1      0.000      0.000
+REMARK WARNING: 32 MAX_TORS EXCEEDED!!!
+REMARK  33 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK       I    between atoms: C_3  and  N_9 
+REMARK    3  A    between atoms: N_9  and  CA_10 
+REMARK    4  A    between atoms: CA_10  and  CB_13 
+REMARK    5  A    between atoms: CA_10  and  C_11 
+REMARK       I    between atoms: C_11  and  N_21 
+REMARK    6  A    between atoms: CB_13  and  CG_14 
+REMARK    7  A    between atoms: N_21  and  CA_22 
+REMARK    8  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_27 
+REMARK    9  A    between atoms: N_27  and  CA_28 
+REMARK   10  A    between atoms: CA_28  and  C_29 
+REMARK   11  A    between atoms: CA_28  and  CB_31 
+REMARK       I    between atoms: C_29  and  N_40 
+REMARK   12  A    between atoms: CB_31  and  CG_32 
+REMARK   13  A    between atoms: CG_32  and  CD_33 
+REMARK   14  A    between atoms: CD_33  and  CE_34 
+REMARK   15  A    between atoms: CE_34  and  NZ_35 
+REMARK   16  A    between atoms: N_40  and  CA_41 
+REMARK   17  A    between atoms: CA_41  and  CB_44 
+REMARK   18  A    between atoms: CA_41  and  C_42 
+REMARK       I    between atoms: C_42  and  N_49 
+REMARK   19  A    between atoms: CB_44  and  CG_45 
+REMARK   20  A    between atoms: N_49  and  CA_50 
+REMARK   21  A    between atoms: CA_50  and  CB_53 
+REMARK   22  A    between atoms: CA_50  and  C_51 
+REMARK       I    between atoms: C_51  and  N_62 
+REMARK   23  A    between atoms: CB_53  and  CG_54 
+REMARK   24  A    between atoms: CG_54  and  CD_55 
+REMARK   25  A    between atoms: CD_55  and  CE_56 
+REMARK   26  A    between atoms: CE_56  and  NZ_57 
+REMARK   27  A    between atoms: N_62  and  CA_63 
+REMARK   28  A    between atoms: CA_63  and  C_64 
+REMARK   29  A    between atoms: CA_63  and  CB_66 
+REMARK   30  A    between atoms: CB_66  and  CG_67 
+REMARK   31  A    between atoms: CG_67  and  CD_68 
+REMARK   32  A    between atoms: CD_68  and  CE_69 
+REMARK   33  A    between atoms: CE_69  and  NZ_70 
+ROOT
+ATOM      1  N   ALA     1      66.683  46.917  48.428  1.00  0.00    -0.058 N 
+ATOM      2  H1  ALA     1      67.479  46.599  47.908  1.00 99.99     0.276 HD
+ATOM      3  H2  ALA     1      65.956  47.158  47.785  1.00 99.99     0.276 HD
+ATOM      4  H3  ALA     1      66.887  47.780  48.885  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  ALA     1      66.230  45.888  49.394  1.00  0.00     0.255 C 
+ATOM      6  CB  ALA     1      65.200  46.544  50.330  1.00  0.00     0.042 C 
+BRANCH   5   7
+ATOM      7  C   ALA     1      65.679  44.543  48.837  1.00  0.00     0.259 C 
+ATOM      8  N   PHE     2      64.571  44.602  48.091  1.00  0.00    -0.337 N 
+ATOM      9  H   PHE     2      64.232  45.468  47.730  1.00 99.99     0.164 HD
+ATOM     10  O   ALA     1      66.380  43.526  48.835  1.00  0.00    -0.271 OA
+BRANCH   8  11
+ATOM     11  CA  PHE     2      63.769  43.417  47.687  1.00  0.00     0.164 C 
+BRANCH  11  12
+ATOM     12  CB  PHE     2      62.427  43.478  48.435  1.00  0.00     0.056 C 
+BRANCH  12  13
+ATOM     13  CG  PHE     2      62.492  42.965  49.875  1.00  0.00    -0.044 A 
+ATOM     14  CD1 PHE     2      62.249  43.825  50.943  1.00  0.00     0.008 A 
+ATOM     15  CE1 PHE     2      62.249  43.333  52.243  1.00  0.00     0.001 A 
+ATOM     16  CZ  PHE     2      62.476  41.984  52.478  1.00  0.00     0.000 A 
+ATOM     17  CE2 PHE     2      62.719  41.126  51.414  1.00  0.00     0.001 A 
+ATOM     18  CD2 PHE     2      62.724  41.613  50.114  1.00  0.00     0.008 A 
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+BRANCH  11  19
+ATOM     19  C   PHE     2      63.587  43.196  46.166  1.00  0.00     0.251 C 
+ATOM     20  O   PHE     2      64.512  43.447  45.396  1.00  0.00    -0.271 OA
+ATOM     21  N   ALA     3      62.342  42.961  45.746  1.00  0.00    -0.338 N 
+ATOM     22  H   ALA     3      61.602  42.809  46.395  1.00 99.99     0.164 HD
+BRANCH  21  23
+ATOM     23  CA  ALA     3      61.947  42.780  44.328  1.00  0.00     0.159 C 
+ATOM     24  CB  ALA     3      62.411  41.396  43.869  1.00  0.00     0.034 C 
+BRANCH  23  25
+ATOM     25  C   ALA     3      60.452  42.974  43.983  1.00  0.00     0.251 C 
+ATOM     26  O   ALA     3      59.922  44.065  44.153  1.00  0.00    -0.271 OA
+ATOM     27  N   LYS     4      59.803  41.924  43.471  1.00  0.00    -0.338 N 
+ATOM     28  H   LYS     4      60.275  41.066  43.266  1.00 99.99     0.164 HD
+BRANCH  27  29
+ATOM     29  CA  LYS     4      58.355  41.896  43.151  1.00  0.00     0.159 C 
+BRANCH  29  30
+ATOM     30  C   LYS     4      57.480  41.109  44.151  1.00  0.00     0.251 C 
+ATOM     31  N   LEU     5      56.712  40.163  43.612  1.00  0.00    -0.338 N 
+ATOM     32  H   LEU     5      56.576  40.120  42.625  1.00 99.99     0.164 HD
+ATOM     33  O   LYS     4      57.358  41.482  45.314  1.00  0.00    -0.271 OA
+BRANCH  31  34
+ATOM     34  CA  LEU     5      55.871  39.216  44.377  1.00  0.00     0.159 C 
+BRANCH  34  35
+ATOM     35  CB  LEU     5      56.739  38.057  44.884  1.00  0.00     0.032 C 
+BRANCH  35  36
+ATOM     36  CG  LEU     5      57.307  37.156  43.781  1.00  0.00     0.002 C 
+ATOM     37  CD2 LEU     5      56.197  36.610  42.877  1.00  0.00     0.000 C 
+ATOM     38  CD1 LEU     5      58.061  35.993  44.427  1.00  0.00     0.000 C 
+ENDBRANCH  35  36
+ENDBRANCH  34  35
+BRANCH  34  39
+ATOM     39  C   LEU     5      55.189  39.882  45.589  1.00  0.00     0.251 C 
+ATOM     40  N   LYS     6      55.511  39.363  46.776  1.00  0.00    -0.338 N 
+ATOM     41  H   LYS     6      55.965  38.474  46.837  1.00 99.99     0.164 HD
+ATOM     42  O   LEU     5      54.279  40.687  45.427  1.00  0.00    -0.271 OA
+BRANCH  40  43
+ATOM     43  CA  LYS     6      55.044  39.896  48.072  1.00  0.00     0.159 C 
+BRANCH  43  44
+ATOM     44  CB  LYS     6      55.104  38.766  49.105  1.00  0.00     0.032 C 
+BRANCH  44  45
+ATOM     45  CG  LYS     6      53.703  38.494  49.654  1.00  0.00     0.004 C 
+BRANCH  45  46
+ATOM     46  CD  LYS     6      52.620  39.282  48.923  1.00  0.00     0.032 C 
+BRANCH  46  47
+ATOM     47  CE  LYS     6      51.947  40.217  49.928  1.00  0.00     0.206 C 
+BRANCH  47  48
+ATOM     48  NZ  LYS     6      52.388  41.606  49.757  1.00  0.00    -0.064 N 
+ATOM     49  HZ1 LYS     6      51.713  42.215  50.175  1.00 99.99     0.275 HD
+ATOM     50  HZ2 LYS     6      53.273  41.728  50.204  1.00 99.99     0.275 HD
+ATOM     51  HZ3 LYS     6      52.465  41.814  48.782  1.00 99.99     0.275 HD
+ENDBRANCH  47  48
+ENDBRANCH  46  47
+ENDBRANCH  45  46
+ENDBRANCH  44  45
+ENDBRANCH  43  44
+BRANCH  43  52
+ATOM     52  C   LYS     6      55.846  41.131  48.558  1.00  0.00     0.251 C 
+ATOM     53  N   LYS     7      57.117  40.912  48.890  1.00  0.00    -0.336 N 
+ATOM     54  H   LYS     7      57.513  39.998  48.840  1.00 99.99     0.164 HD
+ATOM     55  O   LYS     6      55.300  42.217  48.732  1.00  0.00    -0.271 OA
+BRANCH  53  56
+ATOM     56  CA  LYS     7      58.088  41.979  49.215  1.00  0.00     0.168 C 
+BRANCH  56  57
+ATOM     57  C   LYS     7      59.102  42.072  48.063  1.00  0.00     0.206 C 
+ATOM     58  O   LYS     7      59.177  43.140  47.417  1.00 99.99    -0.646 OA
+ATOM     59  OXT LYS     7      59.770  41.032  47.874  1.00 99.99    -0.646 OA
+ENDBRANCH  56  57
+BRANCH  56  60
+ATOM     60  CB  LYS     7      58.938  41.628  50.437  1.00  0.00     0.033 C 
+BRANCH  60  61
+ATOM     61  CG  LYS     7      58.641  42.306  51.772  1.00  0.00     0.004 C 
+BRANCH  61  62
+ATOM     62  CD  LYS     7      57.424  41.549  52.304  1.00  0.00     0.032 C 
+BRANCH  62  63
+ATOM     63  CE  LYS     7      56.103  42.307  52.227  1.00  0.00     0.206 C 
+BRANCH  63  64
+ATOM     64  NZ  LYS     7      55.037  41.329  51.968  1.00  0.00    -0.064 N 
+ATOM     65  HZ3 LYS     7      55.238  40.486  52.468  1.00 99.99     0.275 HD
+ATOM     66  HZ2 LYS     7      55.009  41.126  50.989  1.00 99.99     0.275 HD
+ATOM     67  HZ1 LYS     7      54.157  41.695  52.266  1.00 99.99     0.275 HD
+ENDBRANCH  63  64
+ENDBRANCH  62  63
+ENDBRANCH  61  62
+ENDBRANCH  60  61
+ENDBRANCH  56  60
+ENDBRANCH  53  56
+ENDBRANCH  43  52
+ENDBRANCH  40  43
+ENDBRANCH  34  39
+ENDBRANCH  31  34
+ENDBRANCH  29  30
+BRANCH  29  68
+ATOM     68  CB  LYS     4      58.144  41.276  41.765  1.00  0.00     0.032 C 
+BRANCH  68  69
+ATOM     69  CG  LYS     4      59.418  40.823  41.058  1.00  0.00     0.004 C 
+BRANCH  69  70
+ATOM     70  CD  LYS     4      59.913  41.990  40.198  1.00  0.00     0.032 C 
+BRANCH  70  71
+ATOM     71  CE  LYS     4      58.789  42.958  39.830  1.00  0.00     0.206 C 
+BRANCH  71  72
+ATOM     72  NZ  LYS     4      59.188  44.342  40.127  1.00  0.00    -0.064 N 
+ATOM     73  HZ1 LYS     4      59.308  44.846  39.272  1.00 99.99     0.275 HD
+ATOM     74  HZ2 LYS     4      58.484  44.785  40.682  1.00 99.99     0.275 HD
+ATOM     75  HZ3 LYS     4      60.053  44.338  40.630  1.00 99.99     0.275 HD
+ENDBRANCH  71  72
+ENDBRANCH  70  71
+ENDBRANCH  69  70
+ENDBRANCH  68  69
+ENDBRANCH  29  68
+ENDBRANCH  27  29
+ENDBRANCH  23  25
+ENDBRANCH  21  23
+ENDBRANCH  11  19
+ENDBRANCH   8  11
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+TORSDOF 33
+ENDMDL
+MODEL 2
+REMARK VINA RESULT:      -5.1      3.104      5.945
+REMARK WARNING: 32 MAX_TORS EXCEEDED!!!
+REMARK  33 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK       I    between atoms: C_3  and  N_9 
+REMARK    3  A    between atoms: N_9  and  CA_10 
+REMARK    4  A    between atoms: CA_10  and  CB_13 
+REMARK    5  A    between atoms: CA_10  and  C_11 
+REMARK       I    between atoms: C_11  and  N_21 
+REMARK    6  A    between atoms: CB_13  and  CG_14 
+REMARK    7  A    between atoms: N_21  and  CA_22 
+REMARK    8  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_27 
+REMARK    9  A    between atoms: N_27  and  CA_28 
+REMARK   10  A    between atoms: CA_28  and  C_29 
+REMARK   11  A    between atoms: CA_28  and  CB_31 
+REMARK       I    between atoms: C_29  and  N_40 
+REMARK   12  A    between atoms: CB_31  and  CG_32 
+REMARK   13  A    between atoms: CG_32  and  CD_33 
+REMARK   14  A    between atoms: CD_33  and  CE_34 
+REMARK   15  A    between atoms: CE_34  and  NZ_35 
+REMARK   16  A    between atoms: N_40  and  CA_41 
+REMARK   17  A    between atoms: CA_41  and  CB_44 
+REMARK   18  A    between atoms: CA_41  and  C_42 
+REMARK       I    between atoms: C_42  and  N_49 
+REMARK   19  A    between atoms: CB_44  and  CG_45 
+REMARK   20  A    between atoms: N_49  and  CA_50 
+REMARK   21  A    between atoms: CA_50  and  CB_53 
+REMARK   22  A    between atoms: CA_50  and  C_51 
+REMARK       I    between atoms: C_51  and  N_62 
+REMARK   23  A    between atoms: CB_53  and  CG_54 
+REMARK   24  A    between atoms: CG_54  and  CD_55 
+REMARK   25  A    between atoms: CD_55  and  CE_56 
+REMARK   26  A    between atoms: CE_56  and  NZ_57 
+REMARK   27  A    between atoms: N_62  and  CA_63 
+REMARK   28  A    between atoms: CA_63  and  C_64 
+REMARK   29  A    between atoms: CA_63  and  CB_66 
+REMARK   30  A    between atoms: CB_66  and  CG_67 
+REMARK   31  A    between atoms: CG_67  and  CD_68 
+REMARK   32  A    between atoms: CD_68  and  CE_69 
+REMARK   33  A    between atoms: CE_69  and  NZ_70 
+ROOT
+ATOM      1  N   ALA     1      65.721  47.576  48.999  1.00  0.00    -0.058 N 
+ATOM      2  H1  ALA     1      66.586  47.708  49.489  1.00 99.99     0.276 HD
+ATOM      3  H2  ALA     1      65.904  47.587  48.016  1.00 99.99     0.276 HD
+ATOM      4  H3  ALA     1      65.119  48.359  49.136  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  ALA     1      65.063  46.312  49.411  1.00  0.00     0.255 C 
+ATOM      6  CB  ALA     1      63.542  46.540  49.367  1.00  0.00     0.042 C 
+BRANCH   5   7
+ATOM      7  C   ALA     1      65.439  45.003  48.655  1.00  0.00     0.259 C 
+ATOM      8  N   PHE     2      66.459  45.070  47.793  1.00  0.00    -0.337 N 
+ATOM      9  H   PHE     2      67.083  45.848  47.785  1.00 99.99     0.164 HD
+ATOM     10  O   ALA     1      65.019  43.908  49.042  1.00  0.00    -0.271 OA
+BRANCH   8  11
+ATOM     11  CA  PHE     2      66.798  44.006  46.812  1.00  0.00     0.164 C 
+BRANCH  11  12
+ATOM     12  CB  PHE     2      67.953  43.176  47.397  1.00  0.00     0.056 C 
+BRANCH  12  13
+ATOM     13  CG  PHE     2      69.238  43.228  46.568  1.00  0.00    -0.044 A 
+ATOM     14  CD1 PHE     2      70.452  42.831  47.123  1.00  0.00     0.008 A 
+ATOM     15  CE1 PHE     2      71.601  42.821  46.342  1.00  0.00     0.001 A 
+ATOM     16  CZ  PHE     2      71.539  43.193  45.005  1.00  0.00     0.000 A 
+ATOM     17  CE2 PHE     2      70.329  43.588  44.452  1.00  0.00     0.001 A 
+ATOM     18  CD2 PHE     2      69.179  43.603  45.229  1.00  0.00     0.008 A 
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+BRANCH  11  19
+ATOM     19  C   PHE     2      65.625  43.122  46.323  1.00  0.00     0.251 C 
+ATOM     20  O   PHE     2      64.749  43.607  45.611  1.00  0.00    -0.271 OA
+ATOM     21  N   ALA     3      65.504  41.925  46.901  1.00  0.00    -0.338 N 
+ATOM     22  H   ALA     3      66.210  41.578  47.513  1.00 99.99     0.164 HD
+BRANCH  21  23
+ATOM     23  CA  ALA     3      64.421  40.954  46.618  1.00  0.00     0.159 C 
+ATOM     24  CB  ALA     3      65.003  39.540  46.701  1.00  0.00     0.034 C 
+BRANCH  23  25
+ATOM     25  C   ALA     3      63.145  41.048  47.487  1.00  0.00     0.251 C 
+ATOM     26  O   ALA     3      62.724  40.052  48.064  1.00  0.00    -0.271 OA
+ATOM     27  N   LYS     4      62.568  42.248  47.597  1.00  0.00    -0.338 N 
+ATOM     28  H   LYS     4      62.974  43.064  47.183  1.00 99.99     0.164 HD
+BRANCH  27  29
+ATOM     29  CA  LYS     4      61.303  42.517  48.322  1.00  0.00     0.159 C 
+BRANCH  29  30
+ATOM     30  C   LYS     4      60.125  42.974  47.432  1.00  0.00     0.251 C 
+ATOM     31  N   LEU     5      58.940  42.452  47.746  1.00  0.00    -0.338 N 
+ATOM     32  H   LEU     5      58.875  41.678  48.372  1.00 99.99     0.164 HD
+ATOM     33  O   LYS     4      60.322  43.602  46.396  1.00  0.00    -0.271 OA
+BRANCH  31  34
+ATOM     34  CA  LEU     5      57.656  42.817  47.106  1.00  0.00     0.159 C 
+BRANCH  34  35
+ATOM     35  CB  LEU     5      57.033  41.570  46.466  1.00  0.00     0.032 C 
+BRANCH  35  36
+ATOM     36  CG  LEU     5      57.744  41.080  45.199  1.00  0.00     0.002 C 
+ATOM     37  CD2 LEU     5      58.040  42.239  44.240  1.00  0.00     0.000 C 
+ATOM     38  CD1 LEU     5      56.858  40.050  44.498  1.00  0.00     0.000 C 
+ENDBRANCH  35  36
+ENDBRANCH  34  35
+BRANCH  34  39
+ATOM     39  C   LEU     5      56.647  43.407  48.111  1.00  0.00     0.251 C 
+ATOM     40  N   LYS     6      55.808  42.524  48.656  1.00  0.00    -0.338 N 
+ATOM     41  H   LYS     6      55.700  41.613  48.260  1.00 99.99     0.164 HD
+ATOM     42  O   LEU     5      56.519  44.622  48.225  1.00  0.00    -0.271 OA
+BRANCH  40  43
+ATOM     43  CA  LYS     6      54.818  42.853  49.701  1.00  0.00     0.159 C 
+BRANCH  43  44
+ATOM     44  CB  LYS     6      53.778  41.728  49.747  1.00  0.00     0.032 C 
+BRANCH  44  45
+ATOM     45  CG  LYS     6      54.238  40.563  48.871  1.00  0.00     0.004 C 
+BRANCH  45  46
+ATOM     46  CD  LYS     6      54.011  39.205  49.528  1.00  0.00     0.032 C 
+BRANCH  46  47
+ATOM     47  CE  LYS     6      55.306  38.787  50.224  1.00  0.00     0.206 C 
+BRANCH  47  48
+ATOM     48  NZ  LYS     6      56.490  39.263  49.500  1.00  0.00    -0.064 N 
+ATOM     49  HZ1 LYS     6      56.253  40.098  49.002  1.00 99.99     0.275 HD
+ATOM     50  HZ2 LYS     6      57.220  39.456  50.153  1.00 99.99     0.275 HD
+ATOM     51  HZ3 LYS     6      56.788  38.562  48.851  1.00 99.99     0.275 HD
+ENDBRANCH  47  48
+ENDBRANCH  46  47
+ENDBRANCH  45  46
+ENDBRANCH  44  45
+ENDBRANCH  43  44
+BRANCH  43  52
+ATOM     52  C   LYS     6      55.447  43.081  51.100  1.00  0.00     0.251 C 
+ATOM     53  N   LYS     7      55.904  41.996  51.722  1.00  0.00    -0.336 N 
+ATOM     54  H   LYS     7      55.823  41.092  51.308  1.00 99.99     0.164 HD
+ATOM     55  O   LYS     6      55.416  44.183  51.641  1.00  0.00    -0.271 OA
+BRANCH  53  56
+ATOM     56  CA  LYS     7      56.683  42.023  52.979  1.00  0.00     0.168 C 
+BRANCH  56  57
+ATOM     57  C   LYS     7      58.169  42.178  52.620  1.00  0.00     0.206 C 
+ATOM     58  O   LYS     7      58.699  41.318  51.883  1.00 99.99    -0.646 OA
+ATOM     59  OXT LYS     7      58.724  43.180  53.123  1.00 99.99    -0.646 OA
+ENDBRANCH  56  57
+BRANCH  56  60
+ATOM     60  CB  LYS     7      56.613  40.689  53.725  1.00  0.00     0.033 C 
+BRANCH  60  61
+ATOM     61  CG  LYS     7      55.419  40.404  54.633  1.00  0.00     0.004 C 
+BRANCH  61  62
+ATOM     62  CD  LYS     7      56.026  39.634  55.805  1.00  0.00     0.032 C 
+BRANCH  62  63
+ATOM     63  CE  LYS     7      57.531  39.807  55.988  1.00  0.00     0.206 C 
+BRANCH  63  64
+ATOM     64  NZ  LYS     7      57.748  40.609  57.200  1.00  0.00    -0.064 N 
+ATOM     65  HZ3 LYS     7      57.563  40.044  58.004  1.00 99.99     0.275 HD
+ATOM     66  HZ2 LYS     7      57.117  41.385  57.196  1.00 99.99     0.275 HD
+ATOM     67  HZ1 LYS     7      58.691  40.937  57.228  1.00 99.99     0.275 HD
+ENDBRANCH  63  64
+ENDBRANCH  62  63
+ENDBRANCH  61  62
+ENDBRANCH  60  61
+ENDBRANCH  56  60
+ENDBRANCH  53  56
+ENDBRANCH  43  52
+ENDBRANCH  40  43
+ENDBRANCH  34  39
+ENDBRANCH  31  34
+ENDBRANCH  29  30
+BRANCH  29  68
+ATOM     68  CB  LYS     4      61.532  43.605  49.378  1.00  0.00     0.032 C 
+BRANCH  68  69
+ATOM     69  CG  LYS     4      61.487  43.121  50.825  1.00  0.00     0.004 C 
+BRANCH  69  70
+ATOM     70  CD  LYS     4      62.727  42.255  51.065  1.00  0.00     0.032 C 
+BRANCH  70  71
+ATOM     71  CE  LYS     4      62.547  41.295  52.240  1.00  0.00     0.206 C 
+BRANCH  71  72
+ATOM     72  NZ  LYS     4      61.510  41.794  53.156  1.00  0.00    -0.064 N 
+ATOM     73  HZ1 LYS     4      60.607  41.593  52.779  1.00 99.99     0.275 HD
+ATOM     74  HZ2 LYS     4      61.607  41.354  54.049  1.00 99.99     0.275 HD
+ATOM     75  HZ3 LYS     4      61.610  42.784  53.263  1.00 99.99     0.275 HD
+ENDBRANCH  71  72
+ENDBRANCH  70  71
+ENDBRANCH  69  70
+ENDBRANCH  68  69
+ENDBRANCH  29  68
+ENDBRANCH  27  29
+ENDBRANCH  23  25
+ENDBRANCH  21  23
+ENDBRANCH  11  19
+ENDBRANCH   8  11
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+TORSDOF 33
+ENDMDL
+MODEL 3
+REMARK VINA RESULT:      -5.1      2.770      9.516
+REMARK WARNING: 32 MAX_TORS EXCEEDED!!!
+REMARK  33 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK       I    between atoms: C_3  and  N_9 
+REMARK    3  A    between atoms: N_9  and  CA_10 
+REMARK    4  A    between atoms: CA_10  and  CB_13 
+REMARK    5  A    between atoms: CA_10  and  C_11 
+REMARK       I    between atoms: C_11  and  N_21 
+REMARK    6  A    between atoms: CB_13  and  CG_14 
+REMARK    7  A    between atoms: N_21  and  CA_22 
+REMARK    8  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_27 
+REMARK    9  A    between atoms: N_27  and  CA_28 
+REMARK   10  A    between atoms: CA_28  and  C_29 
+REMARK   11  A    between atoms: CA_28  and  CB_31 
+REMARK       I    between atoms: C_29  and  N_40 
+REMARK   12  A    between atoms: CB_31  and  CG_32 
+REMARK   13  A    between atoms: CG_32  and  CD_33 
+REMARK   14  A    between atoms: CD_33  and  CE_34 
+REMARK   15  A    between atoms: CE_34  and  NZ_35 
+REMARK   16  A    between atoms: N_40  and  CA_41 
+REMARK   17  A    between atoms: CA_41  and  CB_44 
+REMARK   18  A    between atoms: CA_41  and  C_42 
+REMARK       I    between atoms: C_42  and  N_49 
+REMARK   19  A    between atoms: CB_44  and  CG_45 
+REMARK   20  A    between atoms: N_49  and  CA_50 
+REMARK   21  A    between atoms: CA_50  and  CB_53 
+REMARK   22  A    between atoms: CA_50  and  C_51 
+REMARK       I    between atoms: C_51  and  N_62 
+REMARK   23  A    between atoms: CB_53  and  CG_54 
+REMARK   24  A    between atoms: CG_54  and  CD_55 
+REMARK   25  A    between atoms: CD_55  and  CE_56 
+REMARK   26  A    between atoms: CE_56  and  NZ_57 
+REMARK   27  A    between atoms: N_62  and  CA_63 
+REMARK   28  A    between atoms: CA_63  and  C_64 
+REMARK   29  A    between atoms: CA_63  and  CB_66 
+REMARK   30  A    between atoms: CB_66  and  CG_67 
+REMARK   31  A    between atoms: CG_67  and  CD_68 
+REMARK   32  A    between atoms: CD_68  and  CE_69 
+REMARK   33  A    between atoms: CE_69  and  NZ_70 
+ROOT
+ATOM      1  N   ALA     1      58.844  44.163  46.867  1.00  0.00    -0.058 N 
+ATOM      2  H1  ALA     1      58.828  45.143  47.077  1.00 99.99     0.276 HD
+ATOM      3  H2  ALA     1      59.400  43.697  47.556  1.00 99.99     0.276 HD
+ATOM      4  H3  ALA     1      59.335  43.996  46.015  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  ALA     1      57.471  43.605  46.816  1.00  0.00     0.255 C 
+ATOM      6  CB  ALA     1      57.587  42.097  46.538  1.00  0.00     0.042 C 
+BRANCH   5   7
+ATOM      7  C   ALA     1      56.522  43.864  48.023  1.00  0.00     0.259 C 
+ATOM      8  N   PHE     2      56.261  42.826  48.825  1.00  0.00    -0.337 N 
+ATOM      9  H   PHE     2      56.804  41.990  48.786  1.00 99.99     0.164 HD
+ATOM     10  O   ALA     1      56.264  45.016  48.388  1.00  0.00    -0.271 OA
+BRANCH   8  11
+ATOM     11  CA  PHE     2      55.200  42.818  49.866  1.00  0.00     0.164 C 
+BRANCH  11  12
+ATOM     12  CB  PHE     2      54.324  41.575  49.636  1.00  0.00     0.056 C 
+BRANCH  12  13
+ATOM     13  CG  PHE     2      54.958  40.528  48.718  1.00  0.00    -0.044 A 
+ATOM     14  CD1 PHE     2      56.001  39.727  49.174  1.00  0.00     0.008 A 
+ATOM     15  CE1 PHE     2      56.526  38.737  48.353  1.00  0.00     0.001 A 
+ATOM     16  CZ  PHE     2      56.003  38.535  47.083  1.00  0.00     0.000 A 
+ATOM     17  CE2 PHE     2      54.963  39.333  46.626  1.00  0.00     0.001 A 
+ATOM     18  CD2 PHE     2      54.437  40.326  47.442  1.00  0.00     0.008 A 
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+BRANCH  11  19
+ATOM     19  C   PHE     2      55.675  42.942  51.333  1.00  0.00     0.251 C 
+ATOM     20  O   PHE     2      55.496  43.991  51.948  1.00  0.00    -0.271 OA
+ATOM     21  N   ALA     3      56.470  41.969  51.784  1.00  0.00    -0.338 N 
+ATOM     22  H   ALA     3      56.635  41.149  51.241  1.00 99.99     0.164 HD
+BRANCH  21  23
+ATOM     23  CA  ALA     3      57.077  41.929  53.135  1.00  0.00     0.159 C 
+ATOM     24  CB  ALA     3      56.681  40.612  53.806  1.00  0.00     0.034 C 
+BRANCH  23  25
+ATOM     25  C   ALA     3      58.609  42.124  53.226  1.00  0.00     0.251 C 
+ATOM     26  O   ALA     3      59.079  43.254  53.275  1.00  0.00    -0.271 OA
+ATOM     27  N   LYS     4      59.362  41.021  53.282  1.00  0.00    -0.338 N 
+ATOM     28  H   LYS     4      58.953  40.109  53.322  1.00 99.99     0.164 HD
+BRANCH  27  29
+ATOM     29  CA  LYS     4      60.845  41.008  53.296  1.00  0.00     0.159 C 
+BRANCH  29  30
+ATOM     30  C   LYS     4      61.509  40.787  51.918  1.00  0.00     0.251 C 
+ATOM     31  N   LEU     5      60.665  40.573  50.909  1.00  0.00    -0.338 N 
+ATOM     32  H   LEU     5      59.704  40.371  51.084  1.00 99.99     0.164 HD
+ATOM     33  O   LYS     4      62.720  40.617  51.820  1.00  0.00    -0.271 OA
+BRANCH  31  34
+ATOM     34  CA  LEU     5      61.059  40.439  49.489  1.00  0.00     0.159 C 
+BRANCH  34  35
+ATOM     35  CB  LEU     5      60.065  39.518  48.768  1.00  0.00     0.032 C 
+BRANCH  35  36
+ATOM     36  CG  LEU     5      60.592  38.106  48.490  1.00  0.00     0.002 C 
+ATOM     37  CD2 LEU     5      62.123  38.059  48.541  1.00  0.00     0.000 C 
+ATOM     38  CD1 LEU     5      60.111  37.659  47.108  1.00  0.00     0.000 C 
+ENDBRANCH  35  36
+ENDBRANCH  34  35
+BRANCH  34  39
+ATOM     39  C   LEU     5      61.086  41.796  48.757  1.00  0.00     0.251 C 
+ATOM     40  N   LYS     6      62.161  42.006  47.993  1.00  0.00    -0.338 N 
+ATOM     41  H   LYS     6      62.972  41.430  48.088  1.00 99.99     0.164 HD
+ATOM     42  O   LEU     5      60.271  42.670  49.033  1.00  0.00    -0.271 OA
+BRANCH  40  43
+ATOM     43  CA  LYS     6      62.356  43.195  47.140  1.00  0.00     0.159 C 
+BRANCH  43  44
+ATOM     44  CB  LYS     6      63.648  43.893  47.578  1.00  0.00     0.032 C 
+BRANCH  44  45
+ATOM     45  CG  LYS     6      63.357  44.828  48.752  1.00  0.00     0.004 C 
+BRANCH  45  46
+ATOM     46  CD  LYS     6      64.547  44.979  49.695  1.00  0.00     0.032 C 
+BRANCH  46  47
+ATOM     47  CE  LYS     6      65.155  46.365  49.481  1.00  0.00     0.206 C 
+BRANCH  47  48
+ATOM     48  NZ  LYS     6      66.357  46.564  50.298  1.00  0.00    -0.064 N 
+ATOM     49  HZ1 LYS     6      67.007  47.130  49.789  1.00 99.99     0.275 HD
+ATOM     50  HZ2 LYS     6      66.106  47.023  51.149  1.00 99.99     0.275 HD
+ATOM     51  HZ3 LYS     6      66.775  45.677  50.498  1.00 99.99     0.275 HD
+ENDBRANCH  47  48
+ENDBRANCH  46  47
+ENDBRANCH  45  46
+ENDBRANCH  44  45
+ENDBRANCH  43  44
+BRANCH  43  52
+ATOM     52  C   LYS     6      62.390  42.870  45.624  1.00  0.00     0.251 C 
+ATOM     53  N   LYS     7      61.216  42.609  45.053  1.00  0.00    -0.336 N 
+ATOM     54  H   LYS     7      60.373  42.609  45.586  1.00 99.99     0.164 HD
+ATOM     55  O   LYS     6      63.454  42.751  45.022  1.00  0.00    -0.271 OA
+BRANCH  53  56
+ATOM     56  CA  LYS     7      61.018  42.441  43.597  1.00  0.00     0.168 C 
+BRANCH  56  57
+ATOM     57  C   LYS     7      60.005  43.497  43.127  1.00  0.00     0.206 C 
+ATOM     58  O   LYS     7      59.364  44.138  43.988  1.00 99.99    -0.646 OA
+ATOM     59  OXT LYS     7      59.911  43.610  41.884  1.00 99.99    -0.646 OA
+ENDBRANCH  56  57
+BRANCH  56  60
+ATOM     60  CB  LYS     7      60.354  41.105  43.259  1.00  0.00     0.033 C 
+BRANCH  60  61
+ATOM     61  CG  LYS     7      59.956  40.163  44.392  1.00  0.00     0.004 C 
+BRANCH  61  62
+ATOM     62  CD  LYS     7      58.838  39.314  43.787  1.00  0.00     0.032 C 
+BRANCH  62  63
+ATOM     63  CE  LYS     7      57.886  40.060  42.856  1.00  0.00     0.206 C 
+BRANCH  63  64
+ATOM     64  NZ  LYS     7      56.640  40.311  43.594  1.00  0.00    -0.064 N 
+ATOM     65  HZ3 LYS     7      56.855  40.453  44.560  1.00 99.99     0.275 HD
+ATOM     66  HZ2 LYS     7      56.042  39.513  43.508  1.00 99.99     0.275 HD
+ATOM     67  HZ1 LYS     7      56.183  41.120  43.228  1.00 99.99     0.275 HD
+ENDBRANCH  63  64
+ENDBRANCH  62  63
+ENDBRANCH  61  62
+ENDBRANCH  60  61
+ENDBRANCH  56  60
+ENDBRANCH  53  56
+ENDBRANCH  43  52
+ENDBRANCH  40  43
+ENDBRANCH  34  39
+ENDBRANCH  31  34
+ENDBRANCH  29  30
+BRANCH  29  68
+ATOM     68  CB  LYS     4      61.344  39.899  54.230  1.00  0.00     0.032 C 
+BRANCH  68  69
+ATOM     69  CG  LYS     4      60.750  38.518  53.969  1.00  0.00     0.004 C 
+BRANCH  69  70
+ATOM     70  CD  LYS     4      61.913  37.543  53.764  1.00  0.00     0.032 C 
+BRANCH  70  71
+ATOM     71  CE  LYS     4      63.266  38.177  54.085  1.00  0.00     0.206 C 
+BRANCH  71  72
+ATOM     72  NZ  LYS     4      64.131  38.169  52.895  1.00  0.00    -0.064 N 
+ATOM     73  HZ1 LYS     4      63.865  38.915  52.285  1.00 99.99     0.275 HD
+ATOM     74  HZ2 LYS     4      65.086  38.284  53.170  1.00 99.99     0.275 HD
+ATOM     75  HZ3 LYS     4      64.028  37.298  52.415  1.00 99.99     0.275 HD
+ENDBRANCH  71  72
+ENDBRANCH  70  71
+ENDBRANCH  69  70
+ENDBRANCH  68  69
+ENDBRANCH  29  68
+ENDBRANCH  27  29
+ENDBRANCH  23  25
+ENDBRANCH  21  23
+ENDBRANCH  11  19
+ENDBRANCH   8  11
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+TORSDOF 33
+ENDMDL
+MODEL 4
+REMARK VINA RESULT:      -5.0      2.383     10.026
+REMARK WARNING: 32 MAX_TORS EXCEEDED!!!
+REMARK  33 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK       I    between atoms: C_3  and  N_9 
+REMARK    3  A    between atoms: N_9  and  CA_10 
+REMARK    4  A    between atoms: CA_10  and  CB_13 
+REMARK    5  A    between atoms: CA_10  and  C_11 
+REMARK       I    between atoms: C_11  and  N_21 
+REMARK    6  A    between atoms: CB_13  and  CG_14 
+REMARK    7  A    between atoms: N_21  and  CA_22 
+REMARK    8  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_27 
+REMARK    9  A    between atoms: N_27  and  CA_28 
+REMARK   10  A    between atoms: CA_28  and  C_29 
+REMARK   11  A    between atoms: CA_28  and  CB_31 
+REMARK       I    between atoms: C_29  and  N_40 
+REMARK   12  A    between atoms: CB_31  and  CG_32 
+REMARK   13  A    between atoms: CG_32  and  CD_33 
+REMARK   14  A    between atoms: CD_33  and  CE_34 
+REMARK   15  A    between atoms: CE_34  and  NZ_35 
+REMARK   16  A    between atoms: N_40  and  CA_41 
+REMARK   17  A    between atoms: CA_41  and  CB_44 
+REMARK   18  A    between atoms: CA_41  and  C_42 
+REMARK       I    between atoms: C_42  and  N_49 
+REMARK   19  A    between atoms: CB_44  and  CG_45 
+REMARK   20  A    between atoms: N_49  and  CA_50 
+REMARK   21  A    between atoms: CA_50  and  CB_53 
+REMARK   22  A    between atoms: CA_50  and  C_51 
+REMARK       I    between atoms: C_51  and  N_62 
+REMARK   23  A    between atoms: CB_53  and  CG_54 
+REMARK   24  A    between atoms: CG_54  and  CD_55 
+REMARK   25  A    between atoms: CD_55  and  CE_56 
+REMARK   26  A    between atoms: CE_56  and  NZ_57 
+REMARK   27  A    between atoms: N_62  and  CA_63 
+REMARK   28  A    between atoms: CA_63  and  C_64 
+REMARK   29  A    between atoms: CA_63  and  CB_66 
+REMARK   30  A    between atoms: CB_66  and  CG_67 
+REMARK   31  A    between atoms: CG_67  and  CD_68 
+REMARK   32  A    between atoms: CD_68  and  CE_69 
+REMARK   33  A    between atoms: CE_69  and  NZ_70 
+ROOT
+ATOM      1  N   ALA     1      52.179  39.475  53.077  1.00  0.00    -0.058 N 
+ATOM      2  H1  ALA     1      52.115  40.473  53.129  1.00 99.99     0.276 HD
+ATOM      3  H2  ALA     1      51.451  39.077  53.635  1.00 99.99     0.276 HD
+ATOM      4  H3  ALA     1      53.015  39.155  53.518  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  ALA     1      52.099  39.006  51.672  1.00  0.00     0.255 C 
+ATOM      6  CB  ALA     1      50.612  38.821  51.324  1.00  0.00     0.042 C 
+BRANCH   5   7
+ATOM      7  C   ALA     1      52.815  39.844  50.572  1.00  0.00     0.259 C 
+ATOM      8  N   PHE     2      53.862  39.278  49.962  1.00  0.00    -0.337 N 
+ATOM      9  H   PHE     2      54.048  38.302  50.047  1.00 99.99     0.164 HD
+ATOM     10  O   ALA     1      52.274  40.843  50.086  1.00  0.00    -0.271 OA
+BRANCH   8  11
+ATOM     11  CA  PHE     2      54.810  40.005  49.077  1.00  0.00     0.164 C 
+BRANCH  11  12
+ATOM     12  CB  PHE     2      54.199  40.048  47.667  1.00  0.00     0.056 C 
+BRANCH  12  13
+ATOM     13  CG  PHE     2      55.124  39.516  46.571  1.00  0.00    -0.044 A 
+ATOM     14  CD1 PHE     2      55.068  40.040  45.283  1.00  0.00     0.008 A 
+ATOM     15  CE1 PHE     2      55.957  39.593  44.312  1.00  0.00     0.001 A 
+ATOM     16  CZ  PHE     2      56.910  38.635  44.629  1.00  0.00     0.000 A 
+ATOM     17  CE2 PHE     2      56.967  38.111  45.913  1.00  0.00     0.001 A 
+ATOM     18  CD2 PHE     2      56.079  38.552  46.885  1.00  0.00     0.008 A 
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+BRANCH  11  19
+ATOM     19  C   PHE     2      55.271  41.400  49.563  1.00  0.00     0.251 C 
+ATOM     20  O   PHE     2      54.891  42.410  48.975  1.00  0.00    -0.271 OA
+ATOM     21  N   ALA     3      56.256  41.418  50.464  1.00  0.00    -0.338 N 
+ATOM     22  H   ALA     3      56.578  40.576  50.889  1.00 99.99     0.164 HD
+BRANCH  21  23
+ATOM     23  CA  ALA     3      56.879  42.646  51.013  1.00  0.00     0.159 C 
+ATOM     24  CB  ALA     3      55.947  43.228  52.079  1.00  0.00     0.034 C 
+BRANCH  23  25
+ATOM     25  C   ALA     3      58.311  42.516  51.583  1.00  0.00     0.251 C 
+ATOM     26  O   ALA     3      58.525  42.774  52.761  1.00  0.00    -0.271 OA
+ATOM     27  N   LYS     4      59.263  42.087  50.749  1.00  0.00    -0.338 N 
+ATOM     28  H   LYS     4      59.051  41.805  49.813  1.00 99.99     0.164 HD
+BRANCH  27  29
+ATOM     29  CA  LYS     4      60.701  41.972  51.092  1.00  0.00     0.159 C 
+BRANCH  29  30
+ATOM     30  C   LYS     4      61.569  43.183  50.683  1.00  0.00     0.251 C 
+ATOM     31  N   LEU     5      62.261  43.032  49.555  1.00  0.00    -0.338 N 
+ATOM     32  H   LEU     5      62.357  42.132  49.135  1.00 99.99     0.164 HD
+ATOM     33  O   LYS     4      61.755  44.117  51.458  1.00  0.00    -0.271 OA
+BRANCH  31  34
+ATOM     34  CA  LEU     5      63.076  44.086  48.912  1.00  0.00     0.159 C 
+BRANCH  34  35
+ATOM     35  CB  LEU     5      64.292  44.399  49.793  1.00  0.00     0.032 C 
+BRANCH  35  36
+ATOM     36  CG  LEU     5      64.464  45.882  50.140  1.00  0.00     0.002 C 
+ATOM     37  CD2 LEU     5      63.460  46.755  49.379  1.00  0.00     0.000 C 
+ATOM     38  CD1 LEU     5      65.888  46.314  49.787  1.00  0.00     0.000 C 
+ENDBRANCH  35  36
+ENDBRANCH  34  35
+BRANCH  34  39
+ATOM     39  C   LEU     5      63.578  43.670  47.515  1.00  0.00     0.251 C 
+ATOM     40  N   LYS     6      63.068  42.529  47.046  1.00  0.00    -0.338 N 
+ATOM     41  H   LYS     6      62.593  41.896  47.656  1.00 99.99     0.164 HD
+ATOM     42  O   LEU     5      64.519  44.257  46.991  1.00  0.00    -0.271 OA
+BRANCH  40  43
+ATOM     43  CA  LYS     6      63.343  41.986  45.701  1.00  0.00     0.159 C 
+BRANCH  43  44
+ATOM     44  CB  LYS     6      64.312  40.808  45.848  1.00  0.00     0.032 C 
+BRANCH  44  45
+ATOM     45  CG  LYS     6      64.409  40.400  47.318  1.00  0.00     0.004 C 
+BRANCH  45  46
+ATOM     46  CD  LYS     6      65.850  40.214  47.784  1.00  0.00     0.032 C 
+BRANCH  46  47
+ATOM     47  CE  LYS     6      66.210  41.378  48.707  1.00  0.00     0.206 C 
+BRANCH  47  48
+ATOM     48  NZ  LYS     6      66.884  42.460  47.980  1.00  0.00    -0.064 N 
+ATOM     49  HZ1 LYS     6      66.526  42.497  47.046  1.00 99.99     0.275 HD
+ATOM     50  HZ2 LYS     6      66.707  43.328  48.443  1.00 99.99     0.275 HD
+ATOM     51  HZ3 LYS     6      67.868  42.281  47.953  1.00 99.99     0.275 HD
+ENDBRANCH  47  48
+ENDBRANCH  46  47
+ENDBRANCH  45  46
+ENDBRANCH  44  45
+ENDBRANCH  43  44
+BRANCH  43  52
+ATOM     52  C   LYS     6      62.066  41.559  44.933  1.00  0.00     0.251 C 
+ATOM     53  N   LYS     7      61.041  42.408  44.980  1.00  0.00    -0.336 N 
+ATOM     54  H   LYS     7      61.100  43.259  45.498  1.00 99.99     0.164 HD
+ATOM     55  O   LYS     6      61.975  40.449  44.413  1.00  0.00    -0.271 OA
+BRANCH  53  56
+ATOM     56  CA  LYS     7      59.803  42.264  44.184  1.00  0.00     0.168 C 
+BRANCH  56  57
+ATOM     57  C   LYS     7      59.615  43.543  43.353  1.00  0.00     0.206 C 
+ATOM     58  O   LYS     7      59.983  43.540  42.159  1.00 99.99    -0.646 OA
+ATOM     59  OXT LYS     7      59.102  44.498  43.978  1.00 99.99    -0.646 OA
+ENDBRANCH  56  57
+BRANCH  56  60
+ATOM     60  CB  LYS     7      58.556  42.203  45.068  1.00  0.00     0.033 C 
+BRANCH  60  61
+ATOM     61  CG  LYS     7      58.613  41.432  46.384  1.00  0.00     0.004 C 
+BRANCH  61  62
+ATOM     62  CD  LYS     7      58.046  42.415  47.409  1.00  0.00     0.032 C 
+BRANCH  62  63
+ATOM     63  CE  LYS     7      57.572  43.748  46.838  1.00  0.00     0.206 C 
+BRANCH  63  64
+ATOM     64  NZ  LYS     7      56.663  44.359  47.818  1.00  0.00    -0.064 N 
+ATOM     65  HZ3 LYS     7      56.127  43.639  48.261  1.00 99.99     0.275 HD
+ATOM     66  HZ2 LYS     7      56.041  44.982  47.344  1.00 99.99     0.275 HD
+ATOM     67  HZ1 LYS     7      57.188  44.859  48.506  1.00 99.99     0.275 HD
+ENDBRANCH  63  64
+ENDBRANCH  62  63
+ENDBRANCH  61  62
+ENDBRANCH  60  61
+ENDBRANCH  56  60
+ENDBRANCH  53  56
+ENDBRANCH  43  52
+ENDBRANCH  40  43
+ENDBRANCH  34  39
+ENDBRANCH  31  34
+ENDBRANCH  29  30
+BRANCH  29  68
+ATOM     68  CB  LYS     4      61.296  40.730  50.418  1.00  0.00     0.032 C 
+BRANCH  68  69
+ATOM     69  CG  LYS     4      60.344  39.978  49.491  1.00  0.00     0.004 C 
+BRANCH  69  70
+ATOM     70  CD  LYS     4      61.084  39.719  48.176  1.00  0.00     0.032 C 
+BRANCH  70  71
+ATOM     71  CE  LYS     4      61.190  38.230  47.852  1.00  0.00     0.206 C 
+BRANCH  71  72
+ATOM     72  NZ  LYS     4      60.533  37.937  46.569  1.00  0.00    -0.064 N 
+ATOM     73  HZ1 LYS     4      60.953  37.130  46.155  1.00 99.99     0.275 HD
+ATOM     74  HZ2 LYS     4      59.558  37.768  46.719  1.00 99.99     0.275 HD
+ATOM     75  HZ3 LYS     4      60.642  38.718  45.954  1.00 99.99     0.275 HD
+ENDBRANCH  71  72
+ENDBRANCH  70  71
+ENDBRANCH  69  70
+ENDBRANCH  68  69
+ENDBRANCH  29  68
+ENDBRANCH  27  29
+ENDBRANCH  23  25
+ENDBRANCH  21  23
+ENDBRANCH  11  19
+ENDBRANCH   8  11
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+TORSDOF 33
+ENDMDL
+MODEL 5
+REMARK VINA RESULT:      -4.9      1.413      2.334
+REMARK WARNING: 32 MAX_TORS EXCEEDED!!!
+REMARK  33 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK       I    between atoms: C_3  and  N_9 
+REMARK    3  A    between atoms: N_9  and  CA_10 
+REMARK    4  A    between atoms: CA_10  and  CB_13 
+REMARK    5  A    between atoms: CA_10  and  C_11 
+REMARK       I    between atoms: C_11  and  N_21 
+REMARK    6  A    between atoms: CB_13  and  CG_14 
+REMARK    7  A    between atoms: N_21  and  CA_22 
+REMARK    8  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_27 
+REMARK    9  A    between atoms: N_27  and  CA_28 
+REMARK   10  A    between atoms: CA_28  and  C_29 
+REMARK   11  A    between atoms: CA_28  and  CB_31 
+REMARK       I    between atoms: C_29  and  N_40 
+REMARK   12  A    between atoms: CB_31  and  CG_32 
+REMARK   13  A    between atoms: CG_32  and  CD_33 
+REMARK   14  A    between atoms: CD_33  and  CE_34 
+REMARK   15  A    between atoms: CE_34  and  NZ_35 
+REMARK   16  A    between atoms: N_40  and  CA_41 
+REMARK   17  A    between atoms: CA_41  and  CB_44 
+REMARK   18  A    between atoms: CA_41  and  C_42 
+REMARK       I    between atoms: C_42  and  N_49 
+REMARK   19  A    between atoms: CB_44  and  CG_45 
+REMARK   20  A    between atoms: N_49  and  CA_50 
+REMARK   21  A    between atoms: CA_50  and  CB_53 
+REMARK   22  A    between atoms: CA_50  and  C_51 
+REMARK       I    between atoms: C_51  and  N_62 
+REMARK   23  A    between atoms: CB_53  and  CG_54 
+REMARK   24  A    between atoms: CG_54  and  CD_55 
+REMARK   25  A    between atoms: CD_55  and  CE_56 
+REMARK   26  A    between atoms: CE_56  and  NZ_57 
+REMARK   27  A    between atoms: N_62  and  CA_63 
+REMARK   28  A    between atoms: CA_63  and  C_64 
+REMARK   29  A    between atoms: CA_63  and  CB_66 
+REMARK   30  A    between atoms: CB_66  and  CG_67 
+REMARK   31  A    between atoms: CG_67  and  CD_68 
+REMARK   32  A    between atoms: CD_68  and  CE_69 
+REMARK   33  A    between atoms: CE_69  and  NZ_70 
+ROOT
+ATOM      1  N   ALA     1      66.639  46.936  48.617  1.00  0.00    -0.058 N 
+ATOM      2  H1  ALA     1      67.422  46.552  48.123  1.00 99.99     0.276 HD
+ATOM      3  H2  ALA     1      65.996  47.317  47.952  1.00 99.99     0.276 HD
+ATOM      4  H3  ALA     1      66.919  47.729  49.154  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  ALA     1      65.989  45.911  49.469  1.00  0.00     0.255 C 
+ATOM      6  CB  ALA     1      64.802  46.578  50.184  1.00  0.00     0.042 C 
+BRANCH   5   7
+ATOM      7  C   ALA     1      65.543  44.574  48.806  1.00  0.00     0.259 C 
+ATOM      8  N   PHE     2      64.404  44.594  48.105  1.00  0.00    -0.337 N 
+ATOM      9  H   PHE     2      63.972  45.452  47.839  1.00 99.99     0.164 HD
+ATOM     10  O   ALA     1      66.335  43.634  48.684  1.00  0.00    -0.271 OA
+BRANCH   8  11
+ATOM     11  CA  PHE     2      63.699  43.378  47.618  1.00  0.00     0.164 C 
+BRANCH  11  12
+ATOM     12  CB  PHE     2      62.310  43.343  48.276  1.00  0.00     0.056 C 
+BRANCH  12  13
+ATOM     13  CG  PHE     2      62.331  42.942  49.752  1.00  0.00    -0.044 A 
+ATOM     14  CD1 PHE     2      62.644  41.638  50.125  1.00  0.00     0.008 A 
+ATOM     15  CE1 PHE     2      62.722  41.301  51.471  1.00  0.00     0.001 A 
+ATOM     16  CZ  PHE     2      62.502  42.266  52.445  1.00  0.00     0.000 A 
+ATOM     17  CE2 PHE     2      62.190  43.566  52.074  1.00  0.00     0.001 A 
+ATOM     18  CD2 PHE     2      62.108  43.907  50.730  1.00  0.00     0.008 A 
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+BRANCH  11  19
+ATOM     19  C   PHE     2      63.630  43.193  46.083  1.00  0.00     0.251 C 
+ATOM     20  O   PHE     2      64.570  43.556  45.379  1.00  0.00    -0.271 OA
+ATOM     21  N   ALA     3      62.440  42.858  45.579  1.00  0.00    -0.338 N 
+ATOM     22  H   ALA     3      61.681  42.615  46.177  1.00 99.99     0.164 HD
+BRANCH  21  23
+ATOM     23  CA  ALA     3      62.149  42.689  44.136  1.00  0.00     0.159 C 
+ATOM     24  CB  ALA     3      62.658  41.314  43.696  1.00  0.00     0.034 C 
+BRANCH  23  25
+ATOM     25  C   ALA     3      60.680  42.872  43.686  1.00  0.00     0.251 C 
+ATOM     26  O   ALA     3      60.274  43.982  43.363  1.00  0.00    -0.271 OA
+ATOM     27  N   LYS     4      59.915  41.778  43.641  1.00  0.00    -0.338 N 
+ATOM     28  H   LYS     4      60.288  40.869  43.832  1.00 99.99     0.164 HD
+BRANCH  27  29
+ATOM     29  CA  LYS     4      58.470  41.767  43.309  1.00  0.00     0.159 C 
+BRANCH  29  30
+ATOM     30  C   LYS     4      57.568  41.055  44.342  1.00  0.00     0.251 C 
+ATOM     31  N   LEU     5      56.915  39.987  43.884  1.00  0.00    -0.338 N 
+ATOM     32  H   LEU     5      56.866  39.802  42.906  1.00 99.99     0.164 HD
+ATOM     33  O   LYS     4      57.323  41.569  45.429  1.00  0.00    -0.271 OA
+BRANCH  31  34
+ATOM     34  CA  LEU     5      56.078  39.088  44.709  1.00  0.00     0.159 C 
+BRANCH  34  35
+ATOM     35  CB  LEU     5      56.982  38.174  45.546  1.00  0.00     0.032 C 
+BRANCH  35  36
+ATOM     36  CG  LEU     5      57.076  36.730  45.038  1.00  0.00     0.002 C 
+ATOM     37  CD2 LEU     5      55.931  35.871  45.584  1.00  0.00     0.000 C 
+ATOM     38  CD1 LEU     5      58.416  36.136  45.474  1.00  0.00     0.000 C 
+ENDBRANCH  35  36
+ENDBRANCH  34  35
+BRANCH  34  39
+ATOM     39  C   LEU     5      55.147  39.862  45.664  1.00  0.00     0.251 C 
+ATOM     40  N   LYS     6      55.237  39.513  46.949  1.00  0.00    -0.338 N 
+ATOM     41  H   LYS     6      55.693  38.665  47.215  1.00 99.99     0.164 HD
+ATOM     42  O   LEU     5      54.266  40.591  45.221  1.00  0.00    -0.271 OA
+BRANCH  40  43
+ATOM     43  CA  LYS     6      54.504  40.178  48.045  1.00  0.00     0.159 C 
+BRANCH  43  44
+ATOM     44  CB  LYS     6      53.843  39.096  48.906  1.00  0.00     0.032 C 
+BRANCH  44  45
+ATOM     45  CG  LYS     6      54.387  37.722  48.515  1.00  0.00     0.004 C 
+BRANCH  45  46
+ATOM     46  CD  LYS     6      53.306  36.645  48.487  1.00  0.00     0.032 C 
+BRANCH  46  47
+ATOM     47  CE  LYS     6      52.196  37.105  47.541  1.00  0.00     0.206 C 
+BRANCH  47  48
+ATOM     48  NZ  LYS     6      52.665  37.191  46.154  1.00  0.00    -0.064 N 
+ATOM     49  HZ1 LYS     6      53.333  36.463  45.990  1.00 99.99     0.275 HD
+ATOM     50  HZ2 LYS     6      51.889  37.080  45.535  1.00 99.99     0.275 HD
+ATOM     51  HZ3 LYS     6      53.099  38.080  46.003  1.00 99.99     0.275 HD
+ENDBRANCH  47  48
+ENDBRANCH  46  47
+ENDBRANCH  45  46
+ENDBRANCH  44  45
+ENDBRANCH  43  44
+BRANCH  43  52
+ATOM     52  C   LYS     6      55.393  41.106  48.912  1.00  0.00     0.251 C 
+ATOM     53  N   LYS     7      56.433  41.665  48.295  1.00  0.00    -0.336 N 
+ATOM     54  H   LYS     7      56.626  41.476  47.335  1.00 99.99     0.164 HD
+ATOM     55  O   LYS     6      55.209  41.220  50.121  1.00  0.00    -0.271 OA
+BRANCH  53  56
+ATOM     56  CA  LYS     7      57.298  42.704  48.897  1.00  0.00     0.168 C 
+BRANCH  56  57
+ATOM     57  C   LYS     7      57.247  43.950  47.999  1.00  0.00     0.206 C 
+ATOM     58  O   LYS     7      56.185  44.608  47.949  1.00 99.99    -0.646 OA
+ATOM     59  OXT LYS     7      58.307  44.188  47.379  1.00 99.99    -0.646 OA
+ENDBRANCH  56  57
+BRANCH  56  60
+ATOM     60  CB  LYS     7      58.772  42.295  48.891  1.00  0.00     0.033 C 
+BRANCH  60  61
+ATOM     61  CG  LYS     7      59.144  40.851  48.568  1.00  0.00     0.004 C 
+BRANCH  61  62
+ATOM     62  CD  LYS     7      59.798  40.940  47.190  1.00  0.00     0.032 C 
+BRANCH  62  63
+ATOM     63  CE  LYS     7      60.475  39.660  46.708  1.00  0.00     0.206 C 
+BRANCH  63  64
+ATOM     64  NZ  LYS     7      61.854  39.662  47.216  1.00  0.00    -0.064 N 
+ATOM     65  HZ3 LYS     7      62.375  40.376  46.747  1.00 99.99     0.275 HD
+ATOM     66  HZ2 LYS     7      62.274  38.774  47.026  1.00 99.99     0.275 HD
+ATOM     67  HZ1 LYS     7      61.855  39.836  48.201  1.00 99.99     0.275 HD
+ENDBRANCH  63  64
+ENDBRANCH  62  63
+ENDBRANCH  61  62
+ENDBRANCH  60  61
+ENDBRANCH  56  60
+ENDBRANCH  53  56
+ENDBRANCH  43  52
+ENDBRANCH  40  43
+ENDBRANCH  34  39
+ENDBRANCH  31  34
+ENDBRANCH  29  30
+BRANCH  29  68
+ATOM     68  CB  LYS     4      58.254  41.080  41.956  1.00  0.00     0.032 C 
+BRANCH  68  69
+ATOM     69  CG  LYS     4      59.530  40.631  41.248  1.00  0.00     0.004 C 
+BRANCH  69  70
+ATOM     70  CD  LYS     4      59.915  41.724  40.247  1.00  0.00     0.032 C 
+BRANCH  70  71
+ATOM     71  CE  LYS     4      58.777  42.715  40.001  1.00  0.00     0.206 C 
+BRANCH  71  72
+ATOM     72  NZ  LYS     4      59.172  44.065  40.431  1.00  0.00    -0.064 N 
+ATOM     73  HZ1 LYS     4      58.705  44.293  41.284  1.00 99.99     0.275 HD
+ATOM     74  HZ2 LYS     4      60.162  44.100  40.569  1.00 99.99     0.275 HD
+ATOM     75  HZ3 LYS     4      58.913  44.726  39.726  1.00 99.99     0.275 HD
+ENDBRANCH  71  72
+ENDBRANCH  70  71
+ENDBRANCH  69  70
+ENDBRANCH  68  69
+ENDBRANCH  29  68
+ENDBRANCH  27  29
+ENDBRANCH  23  25
+ENDBRANCH  21  23
+ENDBRANCH  11  19
+ENDBRANCH   8  11
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+TORSDOF 33
+ENDMDL
+MODEL 6
+REMARK VINA RESULT:      -4.9      3.096      7.716
+REMARK WARNING: 32 MAX_TORS EXCEEDED!!!
+REMARK  33 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK       I    between atoms: C_3  and  N_9 
+REMARK    3  A    between atoms: N_9  and  CA_10 
+REMARK    4  A    between atoms: CA_10  and  CB_13 
+REMARK    5  A    between atoms: CA_10  and  C_11 
+REMARK       I    between atoms: C_11  and  N_21 
+REMARK    6  A    between atoms: CB_13  and  CG_14 
+REMARK    7  A    between atoms: N_21  and  CA_22 
+REMARK    8  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_27 
+REMARK    9  A    between atoms: N_27  and  CA_28 
+REMARK   10  A    between atoms: CA_28  and  C_29 
+REMARK   11  A    between atoms: CA_28  and  CB_31 
+REMARK       I    between atoms: C_29  and  N_40 
+REMARK   12  A    between atoms: CB_31  and  CG_32 
+REMARK   13  A    between atoms: CG_32  and  CD_33 
+REMARK   14  A    between atoms: CD_33  and  CE_34 
+REMARK   15  A    between atoms: CE_34  and  NZ_35 
+REMARK   16  A    between atoms: N_40  and  CA_41 
+REMARK   17  A    between atoms: CA_41  and  CB_44 
+REMARK   18  A    between atoms: CA_41  and  C_42 
+REMARK       I    between atoms: C_42  and  N_49 
+REMARK   19  A    between atoms: CB_44  and  CG_45 
+REMARK   20  A    between atoms: N_49  and  CA_50 
+REMARK   21  A    between atoms: CA_50  and  CB_53 
+REMARK   22  A    between atoms: CA_50  and  C_51 
+REMARK       I    between atoms: C_51  and  N_62 
+REMARK   23  A    between atoms: CB_53  and  CG_54 
+REMARK   24  A    between atoms: CG_54  and  CD_55 
+REMARK   25  A    between atoms: CD_55  and  CE_56 
+REMARK   26  A    between atoms: CE_56  and  NZ_57 
+REMARK   27  A    between atoms: N_62  and  CA_63 
+REMARK   28  A    between atoms: CA_63  and  C_64 
+REMARK   29  A    between atoms: CA_63  and  CB_66 
+REMARK   30  A    between atoms: CB_66  and  CG_67 
+REMARK   31  A    between atoms: CG_67  and  CD_68 
+REMARK   32  A    between atoms: CD_68  and  CE_69 
+REMARK   33  A    between atoms: CE_69  and  NZ_70 
+ROOT
+ATOM      1  N   ALA     1      64.953  44.955  50.111  1.00  0.00    -0.058 N 
+ATOM      2  H1  ALA     1      65.540  45.106  49.313  1.00 99.99     0.276 HD
+ATOM      3  H2  ALA     1      64.758  45.838  50.538  1.00 99.99     0.276 HD
+ATOM      4  H3  ALA     1      65.448  44.456  50.819  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  ALA     1      63.704  44.253  49.731  1.00  0.00     0.255 C 
+ATOM      6  CB  ALA     1      62.532  44.971  50.421  1.00  0.00     0.042 C 
+BRANCH   5   7
+ATOM      7  C   ALA     1      63.401  44.051  48.216  1.00  0.00     0.259 C 
+ATOM      8  N   PHE     2      62.175  43.626  47.893  1.00  0.00    -0.337 N 
+ATOM      9  H   PHE     2      61.429  43.639  48.554  1.00 99.99     0.164 HD
+ATOM     10  O   ALA     1      64.143  44.534  47.354  1.00  0.00    -0.271 OA
+BRANCH   8  11
+ATOM     11  CA  PHE     2      61.785  43.145  46.541  1.00  0.00     0.164 C 
+BRANCH  11  12
+ATOM     12  CB  PHE     2      62.635  41.904  46.219  1.00  0.00     0.056 C 
+BRANCH  12  13
+ATOM     13  CG  PHE     2      63.411  42.005  44.904  1.00  0.00    -0.044 A 
+ATOM     14  CD1 PHE     2      64.803  41.985  44.903  1.00  0.00     0.008 A 
+ATOM     15  CE1 PHE     2      65.496  42.013  43.698  1.00  0.00     0.001 A 
+ATOM     16  CZ  PHE     2      64.802  42.046  42.496  1.00  0.00     0.000 A 
+ATOM     17  CE2 PHE     2      63.415  42.067  42.496  1.00  0.00     0.001 A 
+ATOM     18  CD2 PHE     2      62.718  42.042  43.697  1.00  0.00     0.008 A 
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+BRANCH  11  19
+ATOM     19  C   PHE     2      60.275  42.903  46.306  1.00  0.00     0.251 C 
+ATOM     20  O   PHE     2      59.690  43.510  45.412  1.00  0.00    -0.271 OA
+ATOM     21  N   ALA     3      59.631  42.213  47.250  1.00  0.00    -0.338 N 
+ATOM     22  H   ALA     3      60.129  41.771  47.992  1.00 99.99     0.164 HD
+BRANCH  21  23
+ATOM     23  CA  ALA     3      58.178  41.923  47.245  1.00  0.00     0.159 C 
+ATOM     24  CB  ALA     3      57.974  40.457  47.637  1.00  0.00     0.034 C 
+BRANCH  23  25
+ATOM     25  C   ALA     3      57.275  42.829  48.114  1.00  0.00     0.251 C 
+ATOM     26  O   ALA     3      57.498  44.031  48.180  1.00  0.00    -0.271 OA
+ATOM     27  N   LYS     4      56.248  42.246  48.741  1.00  0.00    -0.338 N 
+ATOM     28  H   LYS     4      56.036  41.277  48.609  1.00 99.99     0.164 HD
+BRANCH  27  29
+ATOM     29  CA  LYS     4      55.324  42.934  49.674  1.00  0.00     0.159 C 
+BRANCH  29  30
+ATOM     30  C   LYS     4      55.840  43.069  51.124  1.00  0.00     0.251 C 
+ATOM     31  N   LEU     5      56.464  41.995  51.607  1.00  0.00    -0.338 N 
+ATOM     32  H   LEU     5      56.411  41.120  51.131  1.00 99.99     0.164 HD
+ATOM     33  O   LYS     4      55.507  44.017  51.828  1.00  0.00    -0.271 OA
+BRANCH  31  34
+ATOM     34  CA  LEU     5      57.130  41.923  52.926  1.00  0.00     0.159 C 
+BRANCH  34  35
+ATOM     35  CB  LEU     5      57.152  40.468  53.409  1.00  0.00     0.032 C 
+BRANCH  35  36
+ATOM     36  CG  LEU     5      56.054  39.580  52.809  1.00  0.00     0.002 C 
+ATOM     37  CD2 LEU     5      55.115  39.043  53.895  1.00  0.00     0.000 C 
+ATOM     38  CD1 LEU     5      56.707  38.411  52.071  1.00  0.00     0.000 C 
+ENDBRANCH  35  36
+ENDBRANCH  34  35
+BRANCH  34  39
+ATOM     39  C   LEU     5      58.581  42.444  52.880  1.00  0.00     0.251 C 
+ATOM     40  N   LYS     6      59.481  41.575  52.415  1.00  0.00    -0.338 N 
+ATOM     41  H   LYS     6      59.256  40.605  52.335  1.00 99.99     0.164 HD
+ATOM     42  O   LEU     5      58.880  43.503  53.422  1.00  0.00    -0.271 OA
+BRANCH  40  43
+ATOM     43  CA  LYS     6      60.909  41.888  52.206  1.00  0.00     0.159 C 
+BRANCH  43  44
+ATOM     44  CB  LYS     6      61.719  41.183  53.299  1.00  0.00     0.032 C 
+BRANCH  44  45
+ATOM     45  CG  LYS     6      61.053  39.855  53.660  1.00  0.00     0.004 C 
+BRANCH  45  46
+ATOM     46  CD  LYS     6      61.897  38.646  53.265  1.00  0.00     0.032 C 
+BRANCH  46  47
+ATOM     47  CE  LYS     6      60.980  37.618  52.602  1.00  0.00     0.206 C 
+BRANCH  47  48
+ATOM     48  NZ  LYS     6      60.240  38.198  51.475  1.00  0.00    -0.064 N 
+ATOM     49  HZ1 LYS     6      60.828  38.855  51.003  1.00 99.99     0.275 HD
+ATOM     50  HZ2 LYS     6      59.976  37.469  50.845  1.00 99.99     0.275 HD
+ATOM     51  HZ3 LYS     6      59.425  38.666  51.817  1.00 99.99     0.275 HD
+ENDBRANCH  47  48
+ENDBRANCH  46  47
+ENDBRANCH  45  46
+ENDBRANCH  44  45
+ENDBRANCH  43  44
+BRANCH  43  52
+ATOM     52  C   LYS     6      61.427  41.500  50.797  1.00  0.00     0.251 C 
+ATOM     53  N   LYS     7      62.676  41.041  50.737  1.00  0.00    -0.336 N 
+ATOM     54  H   LYS     7      63.239  40.972  51.557  1.00 99.99     0.164 HD
+ATOM     55  O   LYS     6      60.758  41.715  49.790  1.00  0.00    -0.271 OA
+BRANCH  53  56
+ATOM     56  CA  LYS     7      63.294  40.465  49.523  1.00  0.00     0.168 C 
+BRANCH  56  57
+ATOM     57  C   LYS     7      63.017  38.954  49.514  1.00  0.00     0.206 C 
+ATOM     58  O   LYS     7      62.015  38.532  48.897  1.00 99.99    -0.646 OA
+ATOM     59  OXT LYS     7      63.847  38.270  50.154  1.00 99.99    -0.646 OA
+ENDBRANCH  56  57
+BRANCH  56  60
+ATOM     60  CB  LYS     7      64.820  40.569  49.552  1.00  0.00     0.033 C 
+BRANCH  60  61
+ATOM     61  CG  LYS     7      65.577  40.805  48.249  1.00  0.00     0.004 C 
+BRANCH  61  62
+ATOM     62  CD  LYS     7      66.452  42.021  48.548  1.00  0.00     0.032 C 
+BRANCH  62  63
+ATOM     63  CE  LYS     7      67.361  42.465  47.406  1.00  0.00     0.206 C 
+BRANCH  63  64
+ATOM     64  NZ  LYS     7      67.145  43.903  47.191  1.00  0.00    -0.064 N 
+ATOM     65  HZ3 LYS     7      67.715  44.419  47.831  1.00 99.99     0.275 HD
+ATOM     66  HZ2 LYS     7      66.184  44.119  47.365  1.00 99.99     0.275 HD
+ATOM     67  HZ1 LYS     7      67.385  44.148  46.253  1.00 99.99     0.275 HD
+ENDBRANCH  63  64
+ENDBRANCH  62  63
+ENDBRANCH  61  62
+ENDBRANCH  60  61
+ENDBRANCH  56  60
+ENDBRANCH  53  56
+ENDBRANCH  43  52
+ENDBRANCH  40  43
+ENDBRANCH  34  39
+ENDBRANCH  31  34
+ENDBRANCH  29  30
+BRANCH  29  68
+ATOM     68  CB  LYS     4      53.988  42.183  49.728  1.00  0.00     0.032 C 
+BRANCH  68  69
+ATOM     69  CG  LYS     4      54.019  40.768  49.156  1.00  0.00     0.004 C 
+BRANCH  69  70
+ATOM     70  CD  LYS     4      53.448  39.825  50.218  1.00  0.00     0.032 C 
+BRANCH  70  71
+ATOM     71  CE  LYS     4      51.941  39.998  50.399  1.00  0.00     0.206 C 
+BRANCH  71  72
+ATOM     72  NZ  LYS     4      51.261  39.969  49.095  1.00  0.00    -0.064 N 
+ATOM     73  HZ1 LYS     4      51.076  40.904  48.795  1.00 99.99     0.275 HD
+ATOM     74  HZ2 LYS     4      51.841  39.509  48.422  1.00 99.99     0.275 HD
+ATOM     75  HZ3 LYS     4      50.397  39.473  49.181  1.00 99.99     0.275 HD
+ENDBRANCH  71  72
+ENDBRANCH  70  71
+ENDBRANCH  69  70
+ENDBRANCH  68  69
+ENDBRANCH  29  68
+ENDBRANCH  27  29
+ENDBRANCH  23  25
+ENDBRANCH  21  23
+ENDBRANCH  11  19
+ENDBRANCH   8  11
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+TORSDOF 33
+ENDMDL
+MODEL 7
+REMARK VINA RESULT:      -4.9      2.448      8.035
+REMARK WARNING: 32 MAX_TORS EXCEEDED!!!
+REMARK  33 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK       I    between atoms: C_3  and  N_9 
+REMARK    3  A    between atoms: N_9  and  CA_10 
+REMARK    4  A    between atoms: CA_10  and  CB_13 
+REMARK    5  A    between atoms: CA_10  and  C_11 
+REMARK       I    between atoms: C_11  and  N_21 
+REMARK    6  A    between atoms: CB_13  and  CG_14 
+REMARK    7  A    between atoms: N_21  and  CA_22 
+REMARK    8  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_27 
+REMARK    9  A    between atoms: N_27  and  CA_28 
+REMARK   10  A    between atoms: CA_28  and  C_29 
+REMARK   11  A    between atoms: CA_28  and  CB_31 
+REMARK       I    between atoms: C_29  and  N_40 
+REMARK   12  A    between atoms: CB_31  and  CG_32 
+REMARK   13  A    between atoms: CG_32  and  CD_33 
+REMARK   14  A    between atoms: CD_33  and  CE_34 
+REMARK   15  A    between atoms: CE_34  and  NZ_35 
+REMARK   16  A    between atoms: N_40  and  CA_41 
+REMARK   17  A    between atoms: CA_41  and  CB_44 
+REMARK   18  A    between atoms: CA_41  and  C_42 
+REMARK       I    between atoms: C_42  and  N_49 
+REMARK   19  A    between atoms: CB_44  and  CG_45 
+REMARK   20  A    between atoms: N_49  and  CA_50 
+REMARK   21  A    between atoms: CA_50  and  CB_53 
+REMARK   22  A    between atoms: CA_50  and  C_51 
+REMARK       I    between atoms: C_51  and  N_62 
+REMARK   23  A    between atoms: CB_53  and  CG_54 
+REMARK   24  A    between atoms: CG_54  and  CD_55 
+REMARK   25  A    between atoms: CD_55  and  CE_56 
+REMARK   26  A    between atoms: CE_56  and  NZ_57 
+REMARK   27  A    between atoms: N_62  and  CA_63 
+REMARK   28  A    between atoms: CA_63  and  C_64 
+REMARK   29  A    between atoms: CA_63  and  CB_66 
+REMARK   30  A    between atoms: CB_66  and  CG_67 
+REMARK   31  A    between atoms: CG_67  and  CD_68 
+REMARK   32  A    between atoms: CD_68  and  CE_69 
+REMARK   33  A    between atoms: CE_69  and  NZ_70 
+ROOT
+ATOM      1  N   ALA     1      62.866  39.954  46.728  1.00  0.00    -0.058 N 
+ATOM      2  H1  ALA     1      62.049  40.322  47.177  1.00 99.99     0.276 HD
+ATOM      3  H2  ALA     1      62.579  39.387  45.955  1.00 99.99     0.276 HD
+ATOM      4  H3  ALA     1      63.335  39.311  47.330  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  ALA     1      63.772  41.042  46.291  1.00  0.00     0.255 C 
+ATOM      6  CB  ALA     1      64.895  40.410  45.451  1.00  0.00     0.042 C 
+BRANCH   5   7
+ATOM      7  C   ALA     1      63.156  42.263  45.546  1.00  0.00     0.259 C 
+ATOM      8  N   PHE     2      61.850  42.206  45.263  1.00  0.00    -0.337 N 
+ATOM      9  H   PHE     2      61.255  41.527  45.687  1.00 99.99     0.164 HD
+ATOM     10  O   ALA     1      63.763  43.337  45.483  1.00  0.00    -0.271 OA
+BRANCH   8  11
+ATOM     11  CA  PHE     2      61.149  43.148  44.351  1.00  0.00     0.164 C 
+BRANCH  11  12
+ATOM     12  CB  PHE     2      61.545  42.792  42.909  1.00  0.00     0.056 C 
+BRANCH  12  13
+ATOM     13  CG  PHE     2      60.408  42.186  42.083  1.00  0.00    -0.044 A 
+ATOM     14  CD1 PHE     2      59.762  42.943  41.110  1.00  0.00     0.008 A 
+ATOM     15  CE1 PHE     2      58.774  42.363  40.322  1.00  0.00     0.001 A 
+ATOM     16  CZ  PHE     2      58.442  41.026  40.495  1.00  0.00     0.000 A 
+ATOM     17  CE2 PHE     2      59.085  40.271  41.464  1.00  0.00     0.001 A 
+ATOM     18  CD2 PHE     2      60.071  40.846  42.256  1.00  0.00     0.008 A 
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+BRANCH  11  19
+ATOM     19  C   PHE     2      59.616  43.266  44.530  1.00  0.00     0.251 C 
+ATOM     20  O   PHE     2      59.032  44.279  44.152  1.00  0.00    -0.271 OA
+ATOM     21  N   ALA     3      59.038  42.347  45.307  1.00  0.00    -0.338 N 
+ATOM     22  H   ALA     3      59.551  41.560  45.640  1.00 99.99     0.164 HD
+BRANCH  21  23
+ATOM     23  CA  ALA     3      57.596  42.315  45.651  1.00  0.00     0.159 C 
+ATOM     24  CB  ALA     3      57.137  40.855  45.680  1.00  0.00     0.034 C 
+BRANCH  23  25
+ATOM     25  C   ALA     3      57.167  43.026  46.956  1.00  0.00     0.251 C 
+ATOM     26  O   ALA     3      57.320  44.236  47.072  1.00  0.00    -0.271 OA
+ATOM     27  N   LYS     4      56.606  42.272  47.906  1.00  0.00    -0.338 N 
+ATOM     28  H   LYS     4      56.417  41.300  47.759  1.00 99.99     0.164 HD
+BRANCH  27  29
+ATOM     29  CA  LYS     4      56.202  42.759  49.247  1.00  0.00     0.159 C 
+BRANCH  29  30
+ATOM     30  C   LYS     4      57.086  42.266  50.414  1.00  0.00     0.251 C 
+ATOM     31  N   LEU     5      56.554  42.406  51.628  1.00  0.00    -0.338 N 
+ATOM     32  H   LEU     5      55.742  42.969  51.765  1.00 99.99     0.164 HD
+ATOM     33  O   LYS     4      58.263  41.970  50.235  1.00  0.00    -0.271 OA
+BRANCH  31  34
+ATOM     34  CA  LEU     5      57.164  41.915  52.883  1.00  0.00     0.159 C 
+BRANCH  34  35
+ATOM     35  CB  LEU     5      57.176  40.381  52.879  1.00  0.00     0.032 C 
+BRANCH  35  36
+ATOM     36  CG  LEU     5      56.395  39.734  54.029  1.00  0.00     0.002 C 
+ATOM     37  CD2 LEU     5      55.110  40.510  54.339  1.00  0.00     0.000 C 
+ATOM     38  CD1 LEU     5      57.283  39.694  55.273  1.00  0.00     0.000 C 
+ENDBRANCH  35  36
+ENDBRANCH  34  35
+BRANCH  34  39
+ATOM     39  C   LEU     5      58.612  42.414  53.067  1.00  0.00     0.251 C 
+ATOM     40  N   LYS     6      59.556  41.484  52.908  1.00  0.00    -0.338 N 
+ATOM     41  H   LYS     6      59.319  40.513  52.908  1.00 99.99     0.164 HD
+ATOM     42  O   LEU     5      58.832  43.532  53.519  1.00  0.00    -0.271 OA
+BRANCH  40  43
+ATOM     43  CA  LYS     6      61.007  41.755  52.955  1.00  0.00     0.159 C 
+BRANCH  43  44
+ATOM     44  CB  LYS     6      61.749  40.442  52.686  1.00  0.00     0.032 C 
+BRANCH  44  45
+ATOM     45  CG  LYS     6      60.744  39.340  52.351  1.00  0.00     0.004 C 
+BRANCH  45  46
+ATOM     46  CD  LYS     6      61.288  38.332  51.342  1.00  0.00     0.032 C 
+BRANCH  46  47
+ATOM     47  CE  LYS     6      62.296  39.049  50.444  1.00  0.00     0.206 C 
+BRANCH  47  48
+ATOM     48  NZ  LYS     6      63.195  38.103  49.774  1.00  0.00    -0.064 N 
+ATOM     49  HZ1 LYS     6      63.432  37.371  50.413  1.00 99.99     0.275 HD
+ATOM     50  HZ2 LYS     6      62.733  37.717  48.977  1.00 99.99     0.275 HD
+ATOM     51  HZ3 LYS     6      64.028  38.579  49.490  1.00 99.99     0.275 HD
+ENDBRANCH  47  48
+ENDBRANCH  46  47
+ENDBRANCH  45  46
+ENDBRANCH  44  45
+ENDBRANCH  43  44
+BRANCH  43  52
+ATOM     52  C   LYS     6      61.462  42.860  51.967  1.00  0.00     0.251 C 
+ATOM     53  N   LYS     7      61.509  42.515  50.682  1.00  0.00    -0.336 N 
+ATOM     54  H   LYS     7      61.278  41.590  50.388  1.00 99.99     0.164 HD
+ATOM     55  O   LYS     6      61.864  43.949  52.369  1.00  0.00    -0.271 OA
+BRANCH  53  56
+ATOM     56  CA  LYS     7      61.755  43.463  49.573  1.00  0.00     0.168 C 
+BRANCH  56  57
+ATOM     57  C   LYS     7      60.881  43.043  48.381  1.00  0.00     0.206 C 
+ATOM     58  O   LYS     7      60.313  43.934  47.713  1.00 99.99    -0.646 OA
+ATOM     59  OXT LYS     7      60.815  41.808  48.194  1.00 99.99    -0.646 OA
+ENDBRANCH  56  57
+BRANCH  56  60
+ATOM     60  CB  LYS     7      63.187  43.366  49.043  1.00  0.00     0.033 C 
+BRANCH  60  61
+ATOM     61  CG  LYS     7      64.277  44.225  49.679  1.00  0.00     0.004 C 
+BRANCH  61  62
+ATOM     62  CD  LYS     7      64.288  45.492  48.825  1.00  0.00     0.032 C 
+BRANCH  62  63
+ATOM     63  CE  LYS     7      63.418  46.633  49.343  1.00  0.00     0.206 C 
+BRANCH  63  64
+ATOM     64  NZ  LYS     7      63.599  46.712  50.799  1.00  0.00    -0.064 N 
+ATOM     65  HZ3 LYS     7      64.089  45.898  51.113  1.00 99.99     0.275 HD
+ATOM     66  HZ2 LYS     7      62.701  46.740  51.240  1.00 99.99     0.275 HD
+ATOM     67  HZ1 LYS     7      64.120  47.531  51.036  1.00 99.99     0.275 HD
+ENDBRANCH  63  64
+ENDBRANCH  62  63
+ENDBRANCH  61  62
+ENDBRANCH  60  61
+ENDBRANCH  56  60
+ENDBRANCH  53  56
+ENDBRANCH  43  52
+ENDBRANCH  40  43
+ENDBRANCH  34  39
+ENDBRANCH  31  34
+ENDBRANCH  29  30
+BRANCH  29  68
+ATOM     68  CB  LYS     4      54.761  42.325  49.543  1.00  0.00     0.032 C 
+BRANCH  68  69
+ATOM     69  CG  LYS     4      54.453  40.861  49.241  1.00  0.00     0.004 C 
+BRANCH  69  70
+ATOM     70  CD  LYS     4      53.913  40.225  50.525  1.00  0.00     0.032 C 
+BRANCH  70  71
+ATOM     71  CE  LYS     4      52.538  39.589  50.326  1.00  0.00     0.206 C 
+BRANCH  71  72
+ATOM     72  NZ  LYS     4      51.659  40.494  49.570  1.00  0.00    -0.064 N 
+ATOM     73  HZ1 LYS     4      50.714  40.179  49.642  1.00 99.99     0.275 HD
+ATOM     74  HZ2 LYS     4      51.733  41.422  49.937  1.00 99.99     0.275 HD
+ATOM     75  HZ3 LYS     4      51.934  40.497  48.608  1.00 99.99     0.275 HD
+ENDBRANCH  71  72
+ENDBRANCH  70  71
+ENDBRANCH  69  70
+ENDBRANCH  68  69
+ENDBRANCH  29  68
+ENDBRANCH  27  29
+ENDBRANCH  23  25
+ENDBRANCH  21  23
+ENDBRANCH  11  19
+ENDBRANCH   8  11
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+TORSDOF 33
+ENDMDL
+MODEL 8
+REMARK VINA RESULT:      -4.8      2.890      9.733
+REMARK WARNING: 32 MAX_TORS EXCEEDED!!!
+REMARK  33 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK       I    between atoms: C_3  and  N_9 
+REMARK    3  A    between atoms: N_9  and  CA_10 
+REMARK    4  A    between atoms: CA_10  and  CB_13 
+REMARK    5  A    between atoms: CA_10  and  C_11 
+REMARK       I    between atoms: C_11  and  N_21 
+REMARK    6  A    between atoms: CB_13  and  CG_14 
+REMARK    7  A    between atoms: N_21  and  CA_22 
+REMARK    8  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_27 
+REMARK    9  A    between atoms: N_27  and  CA_28 
+REMARK   10  A    between atoms: CA_28  and  C_29 
+REMARK   11  A    between atoms: CA_28  and  CB_31 
+REMARK       I    between atoms: C_29  and  N_40 
+REMARK   12  A    between atoms: CB_31  and  CG_32 
+REMARK   13  A    between atoms: CG_32  and  CD_33 
+REMARK   14  A    between atoms: CD_33  and  CE_34 
+REMARK   15  A    between atoms: CE_34  and  NZ_35 
+REMARK   16  A    between atoms: N_40  and  CA_41 
+REMARK   17  A    between atoms: CA_41  and  CB_44 
+REMARK   18  A    between atoms: CA_41  and  C_42 
+REMARK       I    between atoms: C_42  and  N_49 
+REMARK   19  A    between atoms: CB_44  and  CG_45 
+REMARK   20  A    between atoms: N_49  and  CA_50 
+REMARK   21  A    between atoms: CA_50  and  CB_53 
+REMARK   22  A    between atoms: CA_50  and  C_51 
+REMARK       I    between atoms: C_51  and  N_62 
+REMARK   23  A    between atoms: CB_53  and  CG_54 
+REMARK   24  A    between atoms: CG_54  and  CD_55 
+REMARK   25  A    between atoms: CD_55  and  CE_56 
+REMARK   26  A    between atoms: CE_56  and  NZ_57 
+REMARK   27  A    between atoms: N_62  and  CA_63 
+REMARK   28  A    between atoms: CA_63  and  C_64 
+REMARK   29  A    between atoms: CA_63  and  CB_66 
+REMARK   30  A    between atoms: CB_66  and  CG_67 
+REMARK   31  A    between atoms: CG_67  and  CD_68 
+REMARK   32  A    between atoms: CD_68  and  CE_69 
+REMARK   33  A    between atoms: CE_69  and  NZ_70 
+ROOT
+ATOM      1  N   ALA     1      58.912  43.838  46.753  1.00  0.00    -0.058 N 
+ATOM      2  H1  ALA     1      59.464  43.018  46.924  1.00 99.99     0.276 HD
+ATOM      3  H2  ALA     1      59.222  44.261  45.902  1.00 99.99     0.276 HD
+ATOM      4  H3  ALA     1      59.098  44.534  47.444  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  ALA     1      57.468  43.508  46.697  1.00  0.00     0.255 C 
+ATOM      6  CB  ALA     1      57.340  42.018  46.337  1.00  0.00     0.042 C 
+BRANCH   5   7
+ATOM      7  C   ALA     1      56.584  43.846  47.934  1.00  0.00     0.259 C 
+ATOM      8  N   PHE     2      56.310  42.845  48.778  1.00  0.00    -0.337 N 
+ATOM      9  H   PHE     2      56.812  41.983  48.742  1.00 99.99     0.164 HD
+ATOM     10  O   ALA     1      56.394  45.018  48.273  1.00  0.00    -0.271 OA
+BRANCH   8  11
+ATOM     11  CA  PHE     2      55.294  42.916  49.861  1.00  0.00     0.164 C 
+BRANCH  11  12
+ATOM     12  CB  PHE     2      54.285  41.778  49.636  1.00  0.00     0.056 C 
+BRANCH  12  13
+ATOM     13  CG  PHE     2      54.831  40.617  48.801  1.00  0.00    -0.044 A 
+ATOM     14  CD1 PHE     2      55.848  39.807  49.299  1.00  0.00     0.008 A 
+ATOM     15  CE1 PHE     2      56.292  38.718  48.559  1.00  0.00     0.001 A 
+ATOM     16  CZ  PHE     2      55.713  38.427  47.331  1.00  0.00     0.000 A 
+ATOM     17  CE2 PHE     2      54.699  39.234  46.834  1.00  0.00     0.001 A 
+ATOM     18  CD2 PHE     2      54.254  40.326  47.568  1.00  0.00     0.008 A 
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+BRANCH  11  19
+ATOM     19  C   PHE     2      55.836  42.946  51.310  1.00  0.00     0.251 C 
+ATOM     20  O   PHE     2      55.594  43.910  52.034  1.00  0.00    -0.271 OA
+ATOM     21  N   ALA     3      56.742  42.018  51.624  1.00  0.00    -0.338 N 
+ATOM     22  H   ALA     3      56.953  41.274  50.996  1.00 99.99     0.164 HD
+BRANCH  21  23
+ATOM     23  CA  ALA     3      57.424  41.910  52.936  1.00  0.00     0.159 C 
+ATOM     24  CB  ALA     3      56.673  40.886  53.790  1.00  0.00     0.034 C 
+BRANCH  23  25
+ATOM     25  C   ALA     3      58.933  41.574  52.921  1.00  0.00     0.251 C 
+ATOM     26  O   ALA     3      59.566  41.650  51.874  1.00  0.00    -0.271 OA
+ATOM     27  N   LYS     4      59.496  41.240  54.086  1.00  0.00    -0.338 N 
+ATOM     28  H   LYS     4      58.979  41.262  54.942  1.00 99.99     0.164 HD
+BRANCH  27  29
+ATOM     29  CA  LYS     4      60.907  40.814  54.254  1.00  0.00     0.159 C 
+BRANCH  29  30
+ATOM     30  C   LYS     4      61.890  41.381  53.206  1.00  0.00     0.251 C 
+ATOM     31  N   LEU     5      62.412  40.483  52.372  1.00  0.00    -0.338 N 
+ATOM     32  H   LEU     5      62.322  39.507  52.555  1.00 99.99     0.164 HD
+ATOM     33  O   LYS     4      62.305  42.534  53.287  1.00  0.00    -0.271 OA
+BRANCH  31  34
+ATOM     34  CA  LEU     5      63.293  40.802  51.226  1.00  0.00     0.159 C 
+BRANCH  34  35
+ATOM     35  CB  LEU     5      63.954  39.514  50.717  1.00  0.00     0.032 C 
+BRANCH  35  36
+ATOM     36  CG  LEU     5      63.379  38.224  51.312  1.00  0.00     0.002 C 
+ATOM     37  CD2 LEU     5      64.464  37.401  52.016  1.00  0.00     0.000 C 
+ATOM     38  CD1 LEU     5      62.753  37.394  50.191  1.00  0.00     0.000 C 
+ENDBRANCH  35  36
+ENDBRANCH  34  35
+BRANCH  34  39
+ATOM     39  C   LEU     5      62.525  41.452  50.058  1.00  0.00     0.251 C 
+ATOM     40  N   LYS     6      62.640  42.779  49.973  1.00  0.00    -0.338 N 
+ATOM     41  H   LYS     6      62.996  43.309  50.741  1.00 99.99     0.164 HD
+ATOM     42  O   LEU     5      61.722  40.799  49.400  1.00  0.00    -0.271 OA
+BRANCH  40  43
+ATOM     43  CA  LYS     6      62.060  43.597  48.888  1.00  0.00     0.159 C 
+BRANCH  43  44
+ATOM     44  CB  LYS     6      62.077  45.063  49.332  1.00  0.00     0.032 C 
+BRANCH  44  45
+ATOM     45  CG  LYS     6      62.657  45.169  50.743  1.00  0.00     0.004 C 
+BRANCH  45  46
+ATOM     46  CD  LYS     6      63.669  46.303  50.882  1.00  0.00     0.032 C 
+BRANCH  46  47
+ATOM     47  CE  LYS     6      64.869  45.986  49.990  1.00  0.00     0.206 C 
+BRANCH  47  48
+ATOM     48  NZ  LYS     6      65.250  47.136  49.162  1.00  0.00    -0.064 N 
+ATOM     49  HZ1 LYS     6      65.279  46.851  48.203  1.00 99.99     0.275 HD
+ATOM     50  HZ2 LYS     6      64.575  47.863  49.277  1.00 99.99     0.275 HD
+ATOM     51  HZ3 LYS     6      66.154  47.462  49.440  1.00 99.99     0.275 HD
+ENDBRANCH  47  48
+ENDBRANCH  46  47
+ENDBRANCH  45  46
+ENDBRANCH  44  45
+ENDBRANCH  43  44
+BRANCH  43  52
+ATOM     52  C   LYS     6      62.784  43.423  47.528  1.00  0.00     0.251 C 
+ATOM     53  N   LYS     7      62.231  42.563  46.675  1.00  0.00    -0.336 N 
+ATOM     54  H   LYS     7      61.408  42.054  46.917  1.00 99.99     0.164 HD
+ATOM     55  O   LYS     6      63.865  43.964  47.307  1.00  0.00    -0.271 OA
+BRANCH  53  56
+ATOM     56  CA  LYS     7      62.670  42.382  45.274  1.00  0.00     0.168 C 
+BRANCH  56  57
+ATOM     57  C   LYS     7      61.421  42.348  44.380  1.00  0.00     0.206 C 
+ATOM     58  O   LYS     7      60.381  41.815  44.825  1.00 99.99    -0.646 OA
+ATOM     59  OXT LYS     7      61.574  42.869  43.253  1.00 99.99    -0.646 OA
+ENDBRANCH  56  57
+BRANCH  56  60
+ATOM     60  CB  LYS     7      63.329  41.019  45.052  1.00  0.00     0.033 C 
+BRANCH  60  61
+ATOM     61  CG  LYS     7      63.437  40.044  46.221  1.00  0.00     0.004 C 
+BRANCH  61  62
+ATOM     62  CD  LYS     7      64.938  39.792  46.351  1.00  0.00     0.032 C 
+BRANCH  62  63
+ATOM     63  CE  LYS     7      65.781  41.028  46.652  1.00  0.00     0.206 C 
+BRANCH  63  64
+ATOM     64  NZ  LYS     7      65.586  41.372  48.068  1.00  0.00    -0.064 N 
+ATOM     65  HZ3 LYS     7      65.714  40.551  48.625  1.00 99.99     0.275 HD
+ATOM     66  HZ2 LYS     7      64.653  41.710  48.197  1.00 99.99     0.275 HD
+ATOM     67  HZ1 LYS     7      66.243  42.072  48.343  1.00 99.99     0.275 HD
+ENDBRANCH  63  64
+ENDBRANCH  62  63
+ENDBRANCH  61  62
+ENDBRANCH  60  61
+ENDBRANCH  56  60
+ENDBRANCH  53  56
+ENDBRANCH  43  52
+ENDBRANCH  40  43
+ENDBRANCH  34  39
+ENDBRANCH  31  34
+ENDBRANCH  29  30
+BRANCH  29  68
+ATOM     68  CB  LYS     4      60.996  39.284  54.190  1.00  0.00     0.032 C 
+BRANCH  68  69
+ATOM     69  CG  LYS     4      59.679  38.571  53.896  1.00  0.00     0.004 C 
+BRANCH  69  70
+ATOM     70  CD  LYS     4      59.863  37.768  52.606  1.00  0.00     0.032 C 
+BRANCH  70  71
+ATOM     71  CE  LYS     4      58.869  38.175  51.520  1.00  0.00     0.206 C 
+BRANCH  71  72
+ATOM     72  NZ  LYS     4      59.541  38.976  50.485  1.00  0.00    -0.064 N 
+ATOM     73  HZ1 LYS     4      59.277  38.643  49.581  1.00 99.99     0.275 HD
+ATOM     74  HZ2 LYS     4      59.280  39.937  50.578  1.00 99.99     0.275 HD
+ATOM     75  HZ3 LYS     4      60.532  38.891  50.590  1.00 99.99     0.275 HD
+ENDBRANCH  71  72
+ENDBRANCH  70  71
+ENDBRANCH  69  70
+ENDBRANCH  68  69
+ENDBRANCH  29  68
+ENDBRANCH  27  29
+ENDBRANCH  23  25
+ENDBRANCH  21  23
+ENDBRANCH  11  19
+ENDBRANCH   8  11
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+TORSDOF 33
+ENDMDL
+MODEL 9
+REMARK VINA RESULT:      -4.8      3.243      8.788
+REMARK WARNING: 32 MAX_TORS EXCEEDED!!!
+REMARK  33 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK       I    between atoms: C_3  and  N_9 
+REMARK    3  A    between atoms: N_9  and  CA_10 
+REMARK    4  A    between atoms: CA_10  and  CB_13 
+REMARK    5  A    between atoms: CA_10  and  C_11 
+REMARK       I    between atoms: C_11  and  N_21 
+REMARK    6  A    between atoms: CB_13  and  CG_14 
+REMARK    7  A    between atoms: N_21  and  CA_22 
+REMARK    8  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_27 
+REMARK    9  A    between atoms: N_27  and  CA_28 
+REMARK   10  A    between atoms: CA_28  and  C_29 
+REMARK   11  A    between atoms: CA_28  and  CB_31 
+REMARK       I    between atoms: C_29  and  N_40 
+REMARK   12  A    between atoms: CB_31  and  CG_32 
+REMARK   13  A    between atoms: CG_32  and  CD_33 
+REMARK   14  A    between atoms: CD_33  and  CE_34 
+REMARK   15  A    between atoms: CE_34  and  NZ_35 
+REMARK   16  A    between atoms: N_40  and  CA_41 
+REMARK   17  A    between atoms: CA_41  and  CB_44 
+REMARK   18  A    between atoms: CA_41  and  C_42 
+REMARK       I    between atoms: C_42  and  N_49 
+REMARK   19  A    between atoms: CB_44  and  CG_45 
+REMARK   20  A    between atoms: N_49  and  CA_50 
+REMARK   21  A    between atoms: CA_50  and  CB_53 
+REMARK   22  A    between atoms: CA_50  and  C_51 
+REMARK       I    between atoms: C_51  and  N_62 
+REMARK   23  A    between atoms: CB_53  and  CG_54 
+REMARK   24  A    between atoms: CG_54  and  CD_55 
+REMARK   25  A    between atoms: CD_55  and  CE_56 
+REMARK   26  A    between atoms: CE_56  and  NZ_57 
+REMARK   27  A    between atoms: N_62  and  CA_63 
+REMARK   28  A    between atoms: CA_63  and  C_64 
+REMARK   29  A    between atoms: CA_63  and  CB_66 
+REMARK   30  A    between atoms: CB_66  and  CG_67 
+REMARK   31  A    between atoms: CG_67  and  CD_68 
+REMARK   32  A    between atoms: CD_68  and  CE_69 
+REMARK   33  A    between atoms: CE_69  and  NZ_70 
+ROOT
+ATOM      1  N   ALA     1      57.671  41.756  41.397  1.00  0.00    -0.058 N 
+ATOM      2  H1  ALA     1      57.043  41.885  42.168  1.00 99.99     0.276 HD
+ATOM      3  H2  ALA     1      57.299  42.227  40.597  1.00 99.99     0.276 HD
+ATOM      4  H3  ALA     1      57.690  40.798  41.119  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  ALA     1      59.031  42.247  41.728  1.00  0.00     0.255 C 
+ATOM      6  CB  ALA     1      59.404  43.325  40.696  1.00  0.00     0.042 C 
+BRANCH   5   7
+ATOM      7  C   ALA     1      59.299  42.761  43.173  1.00  0.00     0.259 C 
+ATOM      8  N   PHE     2      59.551  41.840  44.109  1.00  0.00    -0.337 N 
+ATOM      9  H   PHE     2      59.768  40.897  43.866  1.00 99.99     0.164 HD
+ATOM     10  O   ALA     1      59.556  43.951  43.383  1.00  0.00    -0.271 OA
+BRANCH   8  11
+ATOM     11  CA  PHE     2      59.584  42.117  45.570  1.00  0.00     0.164 C 
+BRANCH  11  12
+ATOM     12  CB  PHE     2      58.454  41.309  46.228  1.00  0.00     0.056 C 
+BRANCH  12  13
+ATOM     13  CG  PHE     2      57.529  42.142  47.117  1.00  0.00    -0.044 A 
+ATOM     14  CD1 PHE     2      56.753  41.531  48.098  1.00  0.00     0.008 A 
+ATOM     15  CE1 PHE     2      55.964  42.305  48.942  1.00  0.00     0.001 A 
+ATOM     16  CZ  PHE     2      55.961  43.688  48.817  1.00  0.00     0.000 A 
+ATOM     17  CE2 PHE     2      56.734  44.298  47.840  1.00  0.00     0.001 A 
+ATOM     18  CD2 PHE     2      57.521  43.529  46.992  1.00  0.00     0.008 A 
+ENDBRANCH  12  13
+ENDBRANCH  11  12
+BRANCH  11  19
+ATOM     19  C   PHE     2      60.945  41.913  46.278  1.00  0.00     0.251 C 
+ATOM     20  O   PHE     2      60.986  41.370  47.380  1.00  0.00    -0.271 OA
+ATOM     21  N   ALA     3      61.990  42.555  45.750  1.00  0.00    -0.338 N 
+ATOM     22  H   ALA     3      61.913  43.028  44.877  1.00 99.99     0.164 HD
+BRANCH  21  23
+ATOM     23  CA  ALA     3      63.363  42.538  46.308  1.00  0.00     0.159 C 
+ATOM     24  CB  ALA     3      64.357  42.672  45.151  1.00  0.00     0.034 C 
+BRANCH  23  25
+ATOM     25  C   ALA     3      63.691  43.578  47.405  1.00  0.00     0.251 C 
+ATOM     26  O   ALA     3      64.638  44.341  47.259  1.00  0.00    -0.271 OA
+ATOM     27  N   LYS     4      62.886  43.615  48.471  1.00  0.00    -0.338 N 
+ATOM     28  H   LYS     4      62.072  43.037  48.532  1.00 99.99     0.164 HD
+BRANCH  27  29
+ATOM     29  CA  LYS     4      63.085  44.488  49.653  1.00  0.00     0.159 C 
+BRANCH  29  30
+ATOM     30  C   LYS     4      62.275  44.086  50.905  1.00  0.00     0.251 C 
+ATOM     31  N   LEU     5      61.500  43.012  50.760  1.00  0.00    -0.338 N 
+ATOM     32  H   LEU     5      61.317  42.636  49.854  1.00 99.99     0.164 HD
+ATOM     33  O   LYS     4      62.203  44.831  51.878  1.00  0.00    -0.271 OA
+BRANCH  31  34
+ATOM     34  CA  LEU     5      60.716  42.379  51.843  1.00  0.00     0.159 C 
+BRANCH  34  35
+ATOM     35  CB  LEU     5      59.643  41.468  51.232  1.00  0.00     0.032 C 
+BRANCH  35  36
+ATOM     36  CG  LEU     5      58.406  41.259  52.113  1.00  0.00     0.002 C 
+ATOM     37  CD2 LEU     5      57.486  40.177  51.537  1.00  0.00     0.000 C 
+ATOM     38  CD1 LEU     5      57.641  42.579  52.218  1.00  0.00     0.000 C 
+ENDBRANCH  35  36
+ENDBRANCH  34  35
+BRANCH  34  39
+ATOM     39  C   LEU     5      61.594  41.534  52.788  1.00  0.00     0.251 C 
+ATOM     40  N   LYS     6      61.893  40.312  52.342  1.00  0.00    -0.338 N 
+ATOM     41  H   LYS     6      61.389  39.913  51.577  1.00 99.99     0.164 HD
+ATOM     42  O   LEU     5      61.814  41.909  53.935  1.00  0.00    -0.271 OA
+BRANCH  40  43
+ATOM     43  CA  LYS     6      62.786  39.367  53.042  1.00  0.00     0.159 C 
+BRANCH  43  44
+ATOM     44  CB  LYS     6      61.919  38.299  53.717  1.00  0.00     0.032 C 
+BRANCH  44  45
+ATOM     45  CG  LYS     6      60.451  38.523  53.358  1.00  0.00     0.004 C 
+BRANCH  45  46
+ATOM     46  CD  LYS     6      59.817  37.312  52.678  1.00  0.00     0.032 C 
+BRANCH  46  47
+ATOM     47  CE  LYS     6      60.065  37.423  51.174  1.00  0.00     0.206 C 
+BRANCH  47  48
+ATOM     48  NZ  LYS     6      59.413  36.336  50.434  1.00  0.00    -0.064 N 
+ATOM     49  HZ1 LYS     6      59.127  35.628  51.081  1.00 99.99     0.275 HD
+ATOM     50  HZ2 LYS     6      58.614  36.696  49.954  1.00 99.99     0.275 HD
+ATOM     51  HZ3 LYS     6      60.059  35.945  49.778  1.00 99.99     0.275 HD
+ENDBRANCH  47  48
+ENDBRANCH  46  47
+ENDBRANCH  45  46
+ENDBRANCH  44  45
+ENDBRANCH  43  44
+BRANCH  43  52
+ATOM     52  C   LYS     6      63.844  38.715  52.115  1.00  0.00     0.251 C 
+ATOM     53  N   LYS     7      65.003  39.362  52.001  1.00  0.00    -0.336 N 
+ATOM     54  H   LYS     7      65.160  40.224  52.477  1.00 99.99     0.164 HD
+ATOM     55  O   LYS     6      63.578  37.723  51.441  1.00  0.00    -0.271 OA
+BRANCH  53  56
+ATOM     56  CA  LYS     7      66.191  38.824  51.304  1.00  0.00     0.168 C 
+BRANCH  56  57
+ATOM     57  C   LYS     7      67.442  39.262  52.082  1.00  0.00     0.206 C 
+ATOM     58  O   LYS     7      67.293  39.808  53.196  1.00 99.99    -0.646 OA
+ATOM     59  OXT LYS     7      68.525  39.026  51.501  1.00 99.99    -0.646 OA
+ENDBRANCH  56  57
+BRANCH  56  60
+ATOM     60  CB  LYS     7      66.373  39.447  49.918  1.00  0.00     0.033 C 
+BRANCH  60  61
+ATOM     61  CG  LYS     7      65.378  40.499  49.437  1.00  0.00     0.004 C 
+BRANCH  61  62
+ATOM     62  CD  LYS     7      66.245  41.505  48.681  1.00  0.00     0.032 C 
+BRANCH  62  63
+ATOM     63  CE  LYS     7      67.486  40.921  48.013  1.00  0.00     0.206 C 
+BRANCH  63  64
+ATOM     64  NZ  LYS     7      67.287  40.985  46.558  1.00  0.00    -0.064 N 
+ATOM     65  HZ3 LYS     7      67.861  41.712  46.181  1.00 99.99     0.275 HD
+ATOM     66  HZ2 LYS     7      66.328  41.196  46.368  1.00 99.99     0.275 HD
+ATOM     67  HZ1 LYS     7      67.532  40.111  46.141  1.00 99.99     0.275 HD
+ENDBRANCH  63  64
+ENDBRANCH  62  63
+ENDBRANCH  61  62
+ENDBRANCH  60  61
+ENDBRANCH  56  60
+ENDBRANCH  53  56
+ENDBRANCH  43  52
+ENDBRANCH  40  43
+ENDBRANCH  34  39
+ENDBRANCH  31  34
+ENDBRANCH  29  30
+BRANCH  29  68
+ATOM     68  CB  LYS     4      62.704  45.931  49.301  1.00  0.00     0.032 C 
+BRANCH  68  69
+ATOM     69  CG  LYS     4      63.854  46.934  49.351  1.00  0.00     0.004 C 
+BRANCH  69  70
+ATOM     70  CD  LYS     4      64.995  46.293  50.145  1.00  0.00     0.032 C 
+BRANCH  70  71
+ATOM     71  CE  LYS     4      66.346  46.445  49.447  1.00  0.00     0.206 C 
+BRANCH  71  72
+ATOM     72  NZ  LYS     4      66.565  47.845  49.055  1.00  0.00    -0.064 N 
+ATOM     73  HZ1 LYS     4      65.844  48.133  48.425  1.00 99.99     0.275 HD
+ATOM     74  HZ2 LYS     4      66.555  48.430  49.867  1.00 99.99     0.275 HD
+ATOM     75  HZ3 LYS     4      67.452  47.928  48.599  1.00 99.99     0.275 HD
+ENDBRANCH  71  72
+ENDBRANCH  70  71
+ENDBRANCH  69  70
+ENDBRANCH  68  69
+ENDBRANCH  29  68
+ENDBRANCH  27  29
+ENDBRANCH  23  25
+ENDBRANCH  21  23
+ENDBRANCH  11  19
+ENDBRANCH   8  11
+ENDBRANCH   5   7
+ENDBRANCH   1   5
+TORSDOF 33
+ENDMDL
