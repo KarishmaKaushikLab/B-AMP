@@ -193,7 +193,7 @@ const hideHelpOverlay = () => {
 
 const getPermalink = () => {
 	const url = new URL(window.location);
-	return url.searchParams.get("pepid");
+	return url.searchParams.get("pep");
 };
 
 const main = () => {
