@@ -41,6 +41,36 @@ const generateDRAMPLink = (pepID, linkType) => {
 			linkText.textContent = "3D MODEL";
 			break;
 		}
+		case "pdbqtin": {
+			link.href = `static/peptides/docked/pdbqt/input/Pep${pepID}.pdbqt`;
+			img.src = "static/icons/download.png";
+			img.alt = "download-icon";
+			linkText.textContent = "PDBQT IN";
+			break;
+		}
+		case "pdbqtout": {
+			link.href = `static/peptides/docked/pdbqt/output/Pep${pepID}.pdbqt`;
+			img.src = "static/icons/download.png";
+			img.alt = "download-icon";
+			linkText.textContent = "PDBQT OUT";
+			break;
+		}
+		case "dockedmodel": {
+			link.href = `static/peptides/docked/images/Pep${pepID}.png`;
+			link.download = `Pep${pepID}.png`;
+			img.src = "static/icons/camera.png";
+			img.alt = "camera-icon";
+			linkText.textContent = "3D MODEL";
+			break;
+		}
+		case "bondinfo": {
+			link.href = `static/peptides/docked/bond_info/Pep${pepID}.txt`;
+			link.download = `Pep${pepID}.txt`;
+			img.src = "static/icons/info.png";
+			img.alt = "info-icon";
+			linkText.textContent = "BOND INFO";
+			break;
+		}
 	}
 
 	return link;
@@ -96,7 +126,7 @@ const generateDockedCard = (drampID, pepID) => {
 
 	const img = document.createElement("img");
 	img.className = "dockedImage";
-	img.src = `static/peptides/docked/images/Pep${pepID}.png`;
+	img.src = `static/peptides/docked/images/Pep${pepID}.png`;	// TODO: Replace with thumbnail
 	dockedCard.appendChild(img);
 
 	const infoContainer = document.createElement("section");
@@ -116,9 +146,10 @@ const generateDockedCard = (drampID, pepID) => {
 	drampLinks.className = "drampLinks";
 	infoContainer.appendChild(drampLinks);
 
-	drampLinks.appendChild(generateDRAMPLink(pepID, "fasta"));
-	drampLinks.appendChild(generateDRAMPLink(pepID, "pdb"));
-	drampLinks.appendChild(generateDRAMPLink(pepID, "model"));
+	drampLinks.appendChild(generateDRAMPLink(pepID, "pdbqtin"));
+	drampLinks.appendChild(generateDRAMPLink(pepID, "pdbqtout"));
+	drampLinks.appendChild(generateDRAMPLink(pepID, "dockedmodel"));
+	drampLinks.appendChild(generateDRAMPLink(pepID, "bondinfo"));
 
 	return dockedCard;
 };
