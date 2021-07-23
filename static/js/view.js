@@ -26,8 +26,17 @@ const generateDRAMPLink = (pepID, linkType) => {
 			linkText.textContent = "FASTA";
 			break;
 		}
+		case "sortase_fasta": {
+			link.href = "static/sortase/M_Ala_Sortase.fasta";
+			link.download = "M_Ala_Sortase.fasta";
+			img.src = "static/icons/fasta.png";
+			img.alt = "fasta-icon";
+			linkText.textContent = "FASTA";
+			break;
+		}
 		case "pdb": {
 			link.href = `static/peptides/pdb/Pep${pepID}.pdb`;
+			link.download = `Pep${pepID}.pdb`;
 			img.src = "static/icons/download.png";
 			img.alt = "download-icon";
 			linkText.textContent = "PDB";
@@ -41,21 +50,15 @@ const generateDRAMPLink = (pepID, linkType) => {
 			linkText.textContent = "3D MODEL";
 			break;
 		}
-		case "pdbqtin": {
-			link.href = `static/peptides/docked/pdbqt/input/Pep${pepID}.pdbqt`;
-			img.src = "static/icons/download.png";
-			img.alt = "download-icon";
-			linkText.textContent = "PDBQT IN";
+		case "sortase_model": {
+			link.href = "static/sortase/M_Ala_Sortase.png";
+			link.download = "M_Ala_Sortase.png";
+			img.src = "static/icons/camera.png";
+			img.alt = "camera-icon";
+			linkText.textContent = "3D MODEL";
 			break;
 		}
-		case "pdbqtout": {
-			link.href = `static/peptides/docked/pdbqt/output/Pep${pepID}.pdbqt`;
-			img.src = "static/icons/download.png";
-			img.alt = "download-icon";
-			linkText.textContent = "PDBQT OUT";
-			break;
-		}
-		case "dockedmodel": {
+		case "docked_model": {
 			link.href = `static/peptides/docked/images/Pep${pepID}.png`;
 			link.download = `Pep${pepID}.png`;
 			img.src = "static/icons/camera.png";
@@ -63,9 +66,33 @@ const generateDRAMPLink = (pepID, linkType) => {
 			linkText.textContent = "3D MODEL";
 			break;
 		}
-		case "bondinfo": {
+		case "sortase_pdbqt": {
+			link.href = `static/sortase/M_Ala_Sortase.pdbqt`;
+			link.download = `M_Ala_Sortase.pdbqt`;
+			img.src = "static/icons/download.png";
+			img.alt = "download-icon";
+			linkText.textContent = "PDBQT";
+			break;
+		}
+		case "pdbqt_in": {
+			link.href = `static/peptides/docked/pdbqt/input/Pep${pepID}.pdbqt`;
+			link.download = `Pep${pepID}_In.pdbqt`;
+			img.src = "static/icons/download.png";
+			img.alt = "download-icon";
+			linkText.textContent = "PDBQT IN";
+			break;
+		}
+		case "pdbqt_out": {
+			link.href = `static/peptides/docked/pdbqt/output/Pep${pepID}.pdbqt`;
+			link.download = `Pep${pepID}_Out.pdbqt`;
+			img.src = "static/icons/download.png";
+			img.alt = "download-icon";
+			linkText.textContent = "PDBQT OUT";
+			break;
+		}
+		case "bond_info": {
 			link.href = `static/peptides/docked/bond_info/Pep${pepID}.txt`;
-			link.download = `Pep${pepID}.txt`;
+			link.download = `Pep${pepID}_BondInfo.txt`;
 			img.src = "static/icons/info.png";
 			img.alt = "info-icon";
 			linkText.textContent = "BOND INFO";
@@ -159,10 +186,40 @@ const generateDockedCard = (drampID, pepID) => {
 	drampLinks.className = "drampLinks";
 	infoContainer.appendChild(drampLinks);
 
-	drampLinks.appendChild(generateDRAMPLink(pepID, "pdbqtin"));
-	drampLinks.appendChild(generateDRAMPLink(pepID, "pdbqtout"));
-	drampLinks.appendChild(generateDRAMPLink(pepID, "dockedmodel"));
-	drampLinks.appendChild(generateDRAMPLink(pepID, "bondinfo"));
+	drampLinks.appendChild(generateDRAMPLink(pepID, "pdbqt_in"));
+	drampLinks.appendChild(generateDRAMPLink(pepID, "pdbqt_out"));
+	drampLinks.appendChild(generateDRAMPLink(pepID, "docked_model"));
+	drampLinks.appendChild(generateDRAMPLink(pepID, "bond_info"));
+
+	return dockedCard;
+};
+
+const generateSortaseCard = () => {
+	const dockedCard = document.createElement("span");
+	dockedCard.classList.add("pepCard");
+	dockedCard.classList.add("dockedCard");
+	dockedCard.id = "sortaseCard";
+
+	const img = document.createElement("img");
+	img.className = "dockedImage";
+	img.src = "static/sortase/M_Ala_Sortase.png";	// TODO: Replace with thumbnail
+	dockedCard.appendChild(img);
+
+	const infoContainer = document.createElement("section");
+	infoContainer.className = "infoContainer";
+	dockedCard.appendChild(infoContainer);
+
+	const drampHeading = document.createElement("h3");
+	drampHeading.innerHTML = "Mutated Sortase C. of <i>Corynebacterium striatum</i>";
+	infoContainer.appendChild(drampHeading);
+
+	const drampLinks = document.createElement("span");
+	drampLinks.className = "drampLinks";
+	infoContainer.appendChild(drampLinks);
+
+	drampLinks.appendChild(generateDRAMPLink(-1, "sortase_pdbqt"));
+	drampLinks.appendChild(generateDRAMPLink(-1, "sortase_fasta"));
+	drampLinks.appendChild(generateDRAMPLink(-1, "sortase_model"));
 
 	return dockedCard;
 };
@@ -218,6 +275,11 @@ let errorDisplayTimer;
 const env = getEnv();
 
 const triggerSearch = () => {
+	const permalink = getPermalink();
+	if (permalink === "sortase") {
+		return;
+	}
+
 	clearTimeout(errorDisplayTimer);
 
 	const response = search(searchBox.value.toUpperCase(), env);
@@ -289,7 +351,13 @@ const main = () => {
 
 	const permalink = getPermalink();
 	if (permalink) {
-		searchBox.value = `PEP${permalink}`;
+		if (permalink === "sortase") {
+			const card = generateSortaseCard();
+			CARDS_CONTAINER.appendChild(card);
+			togglePageNavButtonsVisibility();
+		} else {
+			searchBox.value = `PEP${permalink}`;
+		}
 
 		const searchSection = document.querySelector("#search");
 		searchSection.style.display = "none";
