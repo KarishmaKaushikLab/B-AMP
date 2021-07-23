@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Docked Peptides | AMP-R</title>
+    <title>Docked Peptides | AMP DB</title>
     <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
@@ -19,7 +19,7 @@
         </section>
     </nav>
 
-    <h2 id="dockingDisclaimer">All docking attempts were made on the Sortase C. protein</h2>
+    <h2 id="dockingDisclaimer">All docking attempts were made on a <a href="/docked.html?pep=sortase">mutated Class C Sortase protein of Corynebacterium striatum</a></h2>
 
     <section id="search">
         <input type="text" name="dramp_id" id="searchBox" placeholder="DRAMP/PEP ID" spellcheck="false" autofocus>
@@ -61,6 +61,7 @@
 
     <script src="static/js/pep_to_dramp.js"></script>
     <script src="static/js/dramp_to_pep_index.js"></script>
+    <script src="static/js/pep_to_docking_score_index.js"></script>
     <script src="static/js/pep_to_activity_and_name_index.js"></script>
     <script src="static/js/search.js"></script>
     <script src="static/js/paginate.js"></script>
