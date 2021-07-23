@@ -210,7 +210,7 @@ const generateSortaseCard = () => {
 	dockedCard.appendChild(infoContainer);
 
 	const drampHeading = document.createElement("h3");
-	drampHeading.innerHTML = "Mutated Sortase C. of <i>Corynebacterium striatum</i>";
+	drampHeading.innerHTML = "Mutated Class C Sortase of <i>Corynebacterium striatum</i>";
 	infoContainer.appendChild(drampHeading);
 
 	const drampLinks = document.createElement("span");
