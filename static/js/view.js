@@ -133,14 +133,27 @@ const generateDockedCard = (drampID, pepID) => {
 	infoContainer.className = "infoContainer";
 	dockedCard.appendChild(infoContainer);
 
+	const horizontalContainer = document.createElement("span");
+	horizontalContainer.className = "horizontalContainer"
+	infoContainer.appendChild(horizontalContainer);
+
+	const nameContainer = document.createElement("span");
+	nameContainer.className = "nameContainer";
+	horizontalContainer.appendChild(nameContainer);
+
 	const drampHeading = document.createElement("h3");
 	drampHeading.textContent = `Pep${pepID} · DRAMP${drampID}`;
-	infoContainer.appendChild(drampHeading);
+	nameContainer.appendChild(drampHeading);
 
 	const pepName = document.createElement("h2");
 	pepName.textContent = PEP_TO_ACTIVITY_AND_NAME[pepID][1];
 	pepName.className = "pepName";
-	infoContainer.appendChild(pepName);
+	nameContainer.appendChild(pepName);
+
+	const dockingEnergy = document.createElement("h2");
+	dockingEnergy.textContent = `${PEP_TO_DOCKING_SCORE[pepID]} kJ/mol`;
+	dockingEnergy.className = "dockingEnergy";
+	horizontalContainer.appendChild(dockingEnergy);
 
 	const drampLinks = document.createElement("span");
 	drampLinks.className = "drampLinks";
