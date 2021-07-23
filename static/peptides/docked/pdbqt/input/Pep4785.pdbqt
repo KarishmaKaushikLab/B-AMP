@@ -1,0 +1,161 @@
+REMARK  28 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK    3  A    between atoms: CA_2  and  CB_5 
+REMARK       I    between atoms: C_3  and  N_12 
+REMARK    4  A    between atoms: CB_5  and  CG_6 
+REMARK    5  A    between atoms: N_12  and  CA_13 
+REMARK    6  A    between atoms: CA_13  and  CB_16 
+REMARK    7  A    between atoms: CA_13  and  C_14 
+REMARK       I    between atoms: C_14  and  N_21 
+REMARK    8  A    between atoms: CB_16  and  CG_17 
+REMARK    9  A    between atoms: N_21  and  CA_22 
+REMARK   10  A    between atoms: CA_22  and  CB_25 
+REMARK   11  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_30 
+REMARK   12  A    between atoms: CB_25  and  CG_26 
+REMARK   13  A    between atoms: N_30  and  CA_31 
+REMARK   14  A    between atoms: CA_31  and  C_32 
+REMARK   15  A    between atoms: CA_31  and  CB_34 
+REMARK       I    between atoms: C_32  and  N_39 
+REMARK   16  A    between atoms: CB_34  and  CG_35 
+REMARK   17  A    between atoms: N_39  and  CA_40 
+REMARK   18  A    between atoms: CA_40  and  C_41 
+REMARK   19  A    between atoms: CA_40  and  CB_43 
+REMARK       I    between atoms: C_41  and  N_48 
+REMARK   20  A    between atoms: CB_43  and  CG_44 
+REMARK   21  A    between atoms: N_48  and  CA_49 
+REMARK   22  A    between atoms: CA_49  and  C_50 
+REMARK   23  A    between atoms: CA_49  and  CB_52 
+REMARK       I    between atoms: C_50  and  N_57 
+REMARK   24  A    between atoms: CB_52  and  CG_53 
+REMARK   25  A    between atoms: N_57  and  CA_58 
+REMARK   26  A    between atoms: CA_58  and  C_59 
+REMARK   27  A    between atoms: CA_58  and  CB_61 
+REMARK   28  A    between atoms: CB_61  and  CG_62 
+ROOT
+ATOM      1  N   ASP     1      28.864  23.094  30.477  1.00  0.00    -0.057 N 
+ATOM      2  H1  ASP     1      29.212  23.993  30.700  1.00 99.99     0.276 HD
+ATOM      3  H2  ASP     1      28.659  22.605  31.312  1.00 99.99     0.276 HD
+ATOM      4  H3  ASP     1      29.576  22.568  30.039  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  ASP     1      27.654  23.180  29.593  1.00  0.00     0.266 C 
+BRANCH   5   6
+ATOM      6  C   ASP     1      27.306  24.658  29.272  1.00  0.00     0.259 C 
+ATOM      7  O   ASP     1      26.715  24.987  28.252  1.00  0.00    -0.271 OA
+ATOM      8  N   ASP     2      27.728  25.516  30.204  1.00  0.00    -0.337 N 
+ATOM      9  H   ASP     2      27.823  25.173  31.143  1.00 99.99     0.164 HD
+BRANCH   8  10
+ATOM     10  CA  ASP     2      28.044  26.958  30.104  1.00  0.00     0.170 C 
+BRANCH  10  11
+ATOM     11  CB  ASP     2      29.311  27.227  30.952  1.00  0.00     0.129 C 
+BRANCH  11  12
+ATOM     12  CG  ASP     2      29.388  26.604  32.369  1.00  0.00     0.188 C 
+ATOM     13  OD1 ASP     2      29.160  25.372  32.475  1.00  0.00    -0.647 OA
+ATOM     14  OD2 ASP     2      29.726  27.343  33.307  1.00  0.00    -0.647 OA
+ENDBRANCH  11  12
+ENDBRANCH  10  11
+BRANCH  10  15
+ATOM     15  C   ASP     2      28.235  27.441  28.644  1.00  0.00     0.252 C 
+ATOM     16  O   ASP     2      27.395  28.164  28.108  1.00  0.00    -0.271 OA
+ATOM     17  N   ASP     3      29.231  26.855  27.971  1.00  0.00    -0.337 N 
+ATOM     18  H   ASP     3      29.962  26.405  28.486  1.00 99.99     0.164 HD
+BRANCH  17  19
+ATOM     19  CA  ASP     3      29.578  27.067  26.545  1.00  0.00     0.170 C 
+BRANCH  19  20
+ATOM     20  CB  ASP     3      30.676  26.075  26.111  1.00  0.00     0.129 C 
+BRANCH  20  21
+ATOM     21  CG  ASP     3      31.883  25.842  27.057  1.00  0.00     0.188 C 
+ATOM     22  OD1 ASP     3      32.058  26.641  28.003  1.00  0.00    -0.647 OA
+ATOM     23  OD2 ASP     3      32.500  24.776  26.903  1.00  0.00    -0.647 OA
+ENDBRANCH  20  21
+ENDBRANCH  19  20
+BRANCH  19  24
+ATOM     24  C   ASP     3      28.373  26.957  25.577  1.00  0.00     0.252 C 
+ATOM     25  N   ASP     4      27.615  25.857  25.684  1.00  0.00    -0.337 N 
+ATOM     26  H   ASP     4      27.824  25.165  26.374  1.00 99.99     0.164 HD
+ATOM     27  O   ASP     3      28.082  27.907  24.848  1.00  0.00    -0.271 OA
+BRANCH  25  28
+ATOM     28  CA  ASP     4      26.386  25.578  24.907  1.00  0.00     0.170 C 
+BRANCH  28  29
+ATOM     29  C   ASP     4      25.155  26.430  25.290  1.00  0.00     0.252 C 
+ATOM     30  O   ASP     4      24.220  26.529  24.497  1.00  0.00    -0.271 OA
+ATOM     31  N   ASP     5      25.061  26.843  26.561  1.00  0.00    -0.337 N 
+ATOM     32  H   ASP     5      25.690  26.495  27.256  1.00 99.99     0.164 HD
+BRANCH  31  33
+ATOM     33  CA  ASP     5      23.995  27.740  27.068  1.00  0.00     0.170 C 
+BRANCH  33  34
+ATOM     34  C   ASP     5      24.148  29.242  26.732  1.00  0.00     0.252 C 
+ATOM     35  N   ASP     6      25.378  29.769  26.669  1.00  0.00    -0.337 N 
+ATOM     36  H   ASP     6      26.186  29.214  26.885  1.00 99.99     0.164 HD
+ATOM     37  O   ASP     5      23.133  29.924  26.599  1.00  0.00    -0.271 OA
+BRANCH  35  38
+ATOM     38  CA  ASP     6      25.639  31.211  26.422  1.00  0.00     0.170 C 
+BRANCH  38  39
+ATOM     39  C   ASP     6      25.761  31.730  24.971  1.00  0.00     0.252 C 
+ATOM     40  O   ASP     6      25.242  32.814  24.694  1.00  0.00    -0.271 OA
+ATOM     41  N   ASP     7      26.428  31.017  24.053  1.00  0.00    -0.336 N 
+ATOM     42  H   ASP     7      26.716  30.076  24.231  1.00 99.99     0.164 HD
+BRANCH  41  43
+ATOM     43  CA  ASP     7      26.676  31.499  22.662  1.00  0.00     0.179 C 
+BRANCH  43  44
+ATOM     44  C   ASP     7      25.826  30.812  21.570  1.00  0.00     0.207 C 
+ATOM     45  OXT ASP     7      25.800  29.562  21.535  1.00 99.99    -0.646 OA
+ATOM     46  O   ASP     7      25.282  31.561  20.718  1.00 99.99    -0.646 OA
+ENDBRANCH  43  44
+BRANCH  43  47
+ATOM     47  CB  ASP     7      28.162  31.352  22.279  1.00  0.00     0.131 C 
+BRANCH  47  48
+ATOM     48  CG  ASP     7      29.095  32.575  22.427  1.00  0.00     0.188 C 
+ATOM     49  OD1 ASP     7      28.611  33.715  22.308  1.00  0.00    -0.647 OA
+ATOM     50  OD2 ASP     7      30.314  32.316  22.544  1.00  0.00    -0.647 OA
+ENDBRANCH  47  48
+ENDBRANCH  43  47
+ENDBRANCH  41  43
+ENDBRANCH  38  39
+BRANCH  38  51
+ATOM     51  CB  ASP     6      26.836  31.730  27.240  1.00  0.00     0.129 C 
+BRANCH  51  52
+ATOM     52  CG  ASP     6      26.545  32.271  28.656  1.00  0.00     0.188 C 
+ATOM     53  OD1 ASP     6      25.424  32.766  28.895  1.00  0.00    -0.647 OA
+ATOM     54  OD2 ASP     6      27.500  32.234  29.461  1.00  0.00    -0.647 OA
+ENDBRANCH  51  52
+ENDBRANCH  38  51
+ENDBRANCH  35  38
+ENDBRANCH  33  34
+BRANCH  33  55
+ATOM     55  CB  ASP     5      23.789  27.575  28.582  1.00  0.00     0.129 C 
+BRANCH  55  56
+ATOM     56  CG  ASP     5      22.882  26.413  29.054  1.00  0.00     0.188 C 
+ATOM     57  OD1 ASP     5      21.850  26.158  28.407  1.00  0.00    -0.647 OA
+ATOM     58  OD2 ASP     5      23.255  25.822  30.091  1.00  0.00    -0.647 OA
+ENDBRANCH  55  56
+ENDBRANCH  33  55
+ENDBRANCH  31  33
+ENDBRANCH  28  29
+BRANCH  28  59
+ATOM     59  CB  ASP     4      25.989  24.092  25.000  1.00  0.00     0.129 C 
+BRANCH  59  60
+ATOM     60  CG  ASP     4      26.907  23.057  24.324  1.00  0.00     0.188 C 
+ATOM     61  OD1 ASP     4      27.492  23.372  23.266  1.00  0.00    -0.647 OA
+ATOM     62  OD2 ASP     4      27.034  21.972  24.928  1.00  0.00    -0.647 OA
+ENDBRANCH  59  60
+ENDBRANCH  28  59
+ENDBRANCH  25  28
+ENDBRANCH  19  24
+ENDBRANCH  17  19
+ENDBRANCH  10  15
+ENDBRANCH   8  10
+ENDBRANCH   5   6
+BRANCH   5  63
+ATOM     63  CB  ASP     1      26.497  22.416  30.229  1.00  0.00     0.137 C 
+BRANCH  63  64
+ATOM     64  CG  ASP     1      26.924  21.003  30.670  1.00  0.00     0.188 C 
+ATOM     65  OD1 ASP     1      27.618  20.326  29.882  1.00  0.00    -0.647 OA
+ATOM     66  OD2 ASP     1      26.717  20.725  31.869  1.00  0.00    -0.647 OA
+ENDBRANCH  63  64
+ENDBRANCH   5  63
+ENDBRANCH   1   5
+TORSDOF 28

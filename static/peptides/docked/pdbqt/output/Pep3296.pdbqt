@@ -1,0 +1,918 @@
+MODEL 1
+REMARK VINA RESULT:      -5.0      0.000      0.000
+REMARK  17 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK    3  A    between atoms: CA_2  and  CB_5 
+REMARK       I    between atoms: C_3  and  N_12 
+REMARK    4  A    between atoms: CB_5  and  CG_6 
+REMARK    5  A    between atoms: N_12  and  CA_13 
+REMARK    6  A    between atoms: CA_13  and  CB_16 
+REMARK    7  A    between atoms: CA_13  and  C_14 
+REMARK       I    between atoms: C_14  and  N_21 
+REMARK    8  A    between atoms: CB_16  and  CG_17 
+REMARK    9  A    between atoms: N_21  and  CA_22 
+REMARK   10  A    between atoms: CA_22  and  CB_25 
+REMARK   11  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_30 
+REMARK   12  A    between atoms: CB_25  and  CG_26 
+REMARK   13  A    between atoms: N_30  and  CA_31 
+REMARK   14  A    between atoms: CA_31  and  C_32 
+REMARK   15  A    between atoms: CA_31  and  CB_34 
+REMARK   16  A    between atoms: CB_34  and  CG_35 
+REMARK   17  A    between atoms: CG_35  and  CD_36 
+ROOT
+ATOM      1  N   LEU A   1      58.461  39.704  52.477  1.00  0.00    -0.058 N 
+ATOM      2  H1  LEU A   1      58.656  39.335  51.570  1.00 99.99     0.276 HD
+ATOM      3  H2  LEU A   1      59.248  39.635  53.092  1.00 99.99     0.276 HD
+ATOM      4  H3  LEU A   1      57.748  39.194  52.948  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  LEU A   1      58.042  41.120  52.423  1.00  0.00     0.255 C 
+BRANCH   5   6
+ATOM      6  C   LEU A   1      59.252  42.000  52.839  1.00  0.00     0.259 C 
+ATOM      7  O   LEU A   1      59.059  43.091  53.356  1.00  0.00    -0.271 OA
+ATOM      8  N   LEU A   2      60.473  41.481  52.718  1.00  0.00    -0.338 N 
+ATOM      9  H   LEU A   2      60.669  40.640  52.203  1.00 99.99     0.164 HD
+BRANCH   8  10
+ATOM     10  CA  LEU A   2      61.699  42.208  53.059  1.00  0.00     0.159 C 
+BRANCH  10  11
+ATOM     11  CB  LEU A   2      62.918  41.275  53.092  1.00  0.00     0.032 C 
+BRANCH  11  12
+ATOM     12  CG  LEU A   2      62.873  40.617  54.472  1.00  0.00     0.002 C 
+ATOM     13  CD2 LEU A   2      63.167  41.597  55.604  1.00  0.00     0.000 C 
+ATOM     14  CD1 LEU A   2      63.483  39.215  54.525  1.00  0.00     0.000 C 
+ENDBRANCH  11  12
+ENDBRANCH  10  11
+BRANCH  10  15
+ATOM     15  C   LEU A   2      61.875  43.321  51.999  1.00  0.00     0.251 C 
+ATOM     16  O   LEU A   2      61.983  44.485  52.352  1.00  0.00    -0.271 OA
+ATOM     17  N   LEU A   3      62.004  42.924  50.737  1.00  0.00    -0.338 N 
+ATOM     18  H   LEU A   3      61.841  41.974  50.449  1.00 99.99     0.164 HD
+BRANCH  17  19
+ATOM     19  CA  LEU A   3      62.132  43.837  49.598  1.00  0.00     0.159 C 
+BRANCH  19  20
+ATOM     20  CB  LEU A   3      63.565  43.863  49.055  1.00  0.00     0.032 C 
+BRANCH  20  21
+ATOM     21  CG  LEU A   3      64.160  45.161  49.601  1.00  0.00     0.002 C 
+ATOM     22  CD1 LEU A   3      65.648  45.349  49.300  1.00  0.00     0.000 C 
+ATOM     23  CD2 LEU A   3      63.215  46.351  49.458  1.00  0.00     0.000 C 
+ENDBRANCH  20  21
+ENDBRANCH  19  20
+BRANCH  19  24
+ATOM     24  C   LEU A   3      61.132  43.365  48.504  1.00  0.00     0.251 C 
+ATOM     25  O   LEU A   3      61.529  43.225  47.358  1.00  0.00    -0.271 OA
+ATOM     26  N   GLU A   4      59.930  42.984  48.915  1.00  0.00    -0.336 N 
+ATOM     27  H   GLU A   4      59.662  43.018  49.884  1.00 99.99     0.164 HD
+BRANCH  26  28
+ATOM     28  CA  GLU A   4      58.844  42.603  47.988  1.00  0.00     0.169 C 
+BRANCH  28  29
+ATOM     29  C   GLU A   4      58.149  43.829  47.305  1.00  0.00     0.206 C 
+ATOM     30  O   GLU A   4      58.529  44.058  46.107  1.00  0.00    -0.646 OA
+ATOM     31  OXT GLU A   4      57.332  44.449  47.934  1.00  0.00    -0.646 OA
+ENDBRANCH  28  29
+BRANCH  28  32
+ATOM     32  CB  GLU A   4      57.797  41.791  48.749  1.00  0.00     0.044 C 
+BRANCH  32  33
+ATOM     33  CG  GLU A   4      57.291  40.631  47.901  1.00  0.00     0.100 C 
+BRANCH  33  34
+ATOM     34  CD  GLU A   4      55.952  40.988  47.207  1.00  0.00     0.185 C 
+ATOM     35  OE1 GLU A   4      54.966  41.078  47.888  1.00  0.00    -0.647 OA
+ATOM     36  OE2 GLU A   4      56.031  41.153  45.943  1.00  0.00    -0.647 OA
+ENDBRANCH  33  34
+ENDBRANCH  32  33
+ENDBRANCH  28  32
+ENDBRANCH  26  28
+ENDBRANCH  19  24
+ENDBRANCH  17  19
+ENDBRANCH  10  15
+ENDBRANCH   8  10
+ENDBRANCH   5   6
+BRANCH   5  37
+ATOM     37  CB  LEU A   1      56.816  41.405  53.309  1.00  0.00     0.040 C 
+BRANCH  37  38
+ATOM     38  CG  LEU A   1      55.706  41.891  52.359  1.00  0.00     0.002 C 
+ATOM     39  CD2 LEU A   1      55.214  40.844  51.358  1.00  0.00     0.000 C 
+ATOM     40  CD1 LEU A   1      55.884  43.324  51.862  1.00  0.00     0.000 C 
+ENDBRANCH  37  38
+ENDBRANCH   5  37
+ENDBRANCH   1   5
+TORSDOF 17
+ENDMDL
+MODEL 2
+REMARK VINA RESULT:      -4.9      1.794      5.113
+REMARK  17 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK    3  A    between atoms: CA_2  and  CB_5 
+REMARK       I    between atoms: C_3  and  N_12 
+REMARK    4  A    between atoms: CB_5  and  CG_6 
+REMARK    5  A    between atoms: N_12  and  CA_13 
+REMARK    6  A    between atoms: CA_13  and  CB_16 
+REMARK    7  A    between atoms: CA_13  and  C_14 
+REMARK       I    between atoms: C_14  and  N_21 
+REMARK    8  A    between atoms: CB_16  and  CG_17 
+REMARK    9  A    between atoms: N_21  and  CA_22 
+REMARK   10  A    between atoms: CA_22  and  CB_25 
+REMARK   11  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_30 
+REMARK   12  A    between atoms: CB_25  and  CG_26 
+REMARK   13  A    between atoms: N_30  and  CA_31 
+REMARK   14  A    between atoms: CA_31  and  C_32 
+REMARK   15  A    between atoms: CA_31  and  CB_34 
+REMARK   16  A    between atoms: CB_34  and  CG_35 
+REMARK   17  A    between atoms: CG_35  and  CD_36 
+ROOT
+ATOM      1  N   LEU A   1      62.135  41.604  53.901  1.00  0.00    -0.058 N 
+ATOM      2  H1  LEU A   1      61.926  42.302  54.584  1.00 99.99     0.276 HD
+ATOM      3  H2  LEU A   1      62.207  40.689  54.302  1.00 99.99     0.276 HD
+ATOM      4  H3  LEU A   1      63.023  41.745  53.475  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  LEU A   1      61.122  41.557  52.827  1.00  0.00     0.255 C 
+BRANCH   5   6
+ATOM      6  C   LEU A   1      61.345  42.780  51.896  1.00  0.00     0.259 C 
+ATOM      7  O   LEU A   1      61.458  43.897  52.379  1.00  0.00    -0.271 OA
+ATOM      8  N   LEU A   2      61.519  42.551  50.594  1.00  0.00    -0.338 N 
+ATOM      9  H   LEU A   2      61.327  41.666  50.157  1.00 99.99     0.164 HD
+BRANCH   8  10
+ATOM     10  CA  LEU A   2      61.724  43.613  49.606  1.00  0.00     0.159 C 
+BRANCH  10  11
+ATOM     11  CB  LEU A   2      63.184  43.673  49.135  1.00  0.00     0.032 C 
+BRANCH  11  12
+ATOM     12  CG  LEU A   2      63.506  45.166  49.038  1.00  0.00     0.002 C 
+ATOM     13  CD2 LEU A   2      64.951  45.432  48.625  1.00  0.00     0.000 C 
+ATOM     14  CD1 LEU A   2      62.876  46.022  50.138  1.00  0.00     0.000 C 
+ENDBRANCH  11  12
+ENDBRANCH  10  11
+BRANCH  10  15
+ATOM     15  C   LEU A   2      60.767  43.324  48.425  1.00  0.00     0.251 C 
+ATOM     16  O   LEU A   2      61.193  43.338  47.281  1.00  0.00    -0.271 OA
+ATOM     17  N   LEU A   3      59.525  42.969  48.740  1.00  0.00    -0.338 N 
+ATOM     18  H   LEU A   3      59.166  43.032  49.677  1.00 99.99     0.164 HD
+BRANCH  17  19
+ATOM     19  CA  LEU A   3      58.472  42.704  47.756  1.00  0.00     0.159 C 
+BRANCH  19  20
+ATOM     20  CB  LEU A   3      58.570  41.281  47.197  1.00  0.00     0.032 C 
+BRANCH  20  21
+ATOM     21  CG  LEU A   3      58.096  41.403  45.748  1.00  0.00     0.002 C 
+ATOM     22  CD1 LEU A   3      56.713  40.807  45.484  1.00  0.00     0.000 C 
+ATOM     23  CD2 LEU A   3      58.463  42.743  45.117  1.00  0.00     0.000 C 
+ENDBRANCH  20  21
+ENDBRANCH  19  20
+BRANCH  19  24
+ATOM     24  C   LEU A   3      57.104  42.932  48.460  1.00  0.00     0.251 C 
+ATOM     25  O   LEU A   3      56.253  43.604  47.900  1.00  0.00    -0.271 OA
+ATOM     26  N   GLU A   4      56.880  42.242  49.571  1.00  0.00    -0.336 N 
+ATOM     27  H   GLU A   4      57.565  41.617  49.959  1.00 99.99     0.164 HD
+BRANCH  26  28
+ATOM     28  CA  GLU A   4      55.671  42.422  50.401  1.00  0.00     0.169 C 
+BRANCH  28  29
+ATOM     29  C   GLU A   4      55.880  43.406  51.601  1.00  0.00     0.206 C 
+ATOM     30  O   GLU A   4      55.069  44.393  51.629  1.00  0.00    -0.646 OA
+ATOM     31  OXT GLU A   4      56.760  43.173  52.387  1.00  0.00    -0.646 OA
+ENDBRANCH  28  29
+BRANCH  28  32
+ATOM     32  CB  GLU A   4      55.223  41.063  50.938  1.00  0.00     0.044 C 
+BRANCH  32  33
+ATOM     33  CG  GLU A   4      54.849  40.127  49.796  1.00  0.00     0.100 C 
+BRANCH  33  34
+ATOM     34  CD  GLU A   4      53.622  40.661  49.015  1.00  0.00     0.185 C 
+ATOM     35  OE1 GLU A   4      53.685  40.700  47.816  1.00  0.00    -0.647 OA
+ATOM     36  OE2 GLU A   4      52.638  41.023  49.746  1.00  0.00    -0.647 OA
+ENDBRANCH  33  34
+ENDBRANCH  32  33
+ENDBRANCH  28  32
+ENDBRANCH  26  28
+ENDBRANCH  19  24
+ENDBRANCH  17  19
+ENDBRANCH  10  15
+ENDBRANCH   8  10
+ENDBRANCH   5   6
+BRANCH   5  37
+ATOM     37  CB  LEU A   1      59.684  41.530  53.374  1.00  0.00     0.040 C 
+BRANCH  37  38
+ATOM     38  CG  LEU A   1      58.961  40.398  52.622  1.00  0.00     0.002 C 
+ATOM     39  CD2 LEU A   1      57.773  39.788  53.369  1.00  0.00     0.000 C 
+ATOM     40  CD1 LEU A   1      59.889  39.450  51.865  1.00  0.00     0.000 C 
+ENDBRANCH  37  38
+ENDBRANCH   5  37
+ENDBRANCH   1   5
+TORSDOF 17
+ENDMDL
+MODEL 3
+REMARK VINA RESULT:      -4.8      1.944      6.515
+REMARK  17 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK    3  A    between atoms: CA_2  and  CB_5 
+REMARK       I    between atoms: C_3  and  N_12 
+REMARK    4  A    between atoms: CB_5  and  CG_6 
+REMARK    5  A    between atoms: N_12  and  CA_13 
+REMARK    6  A    between atoms: CA_13  and  CB_16 
+REMARK    7  A    between atoms: CA_13  and  C_14 
+REMARK       I    between atoms: C_14  and  N_21 
+REMARK    8  A    between atoms: CB_16  and  CG_17 
+REMARK    9  A    between atoms: N_21  and  CA_22 
+REMARK   10  A    between atoms: CA_22  and  CB_25 
+REMARK   11  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_30 
+REMARK   12  A    between atoms: CB_25  and  CG_26 
+REMARK   13  A    between atoms: N_30  and  CA_31 
+REMARK   14  A    between atoms: CA_31  and  C_32 
+REMARK   15  A    between atoms: CA_31  and  CB_34 
+REMARK   16  A    between atoms: CB_34  and  CG_35 
+REMARK   17  A    between atoms: CG_35  and  CD_36 
+ROOT
+ATOM      1  N   LEU A   1      60.096  41.699  47.336  1.00  0.00    -0.058 N 
+ATOM      2  H1  LEU A   1      60.943  42.229  47.344  1.00 99.99     0.276 HD
+ATOM      3  H2  LEU A   1      59.947  41.208  48.195  1.00 99.99     0.276 HD
+ATOM      4  H3  LEU A   1      60.107  40.978  46.651  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  LEU A   1      58.913  42.546  47.079  1.00  0.00     0.255 C 
+BRANCH   5   6
+ATOM      6  C   LEU A   1      58.242  42.869  48.442  1.00  0.00     0.259 C 
+ATOM      7  O   LEU A   1      57.347  43.700  48.497  1.00  0.00    -0.271 OA
+ATOM      8  N   LEU A   2      58.594  42.139  49.500  1.00  0.00    -0.338 N 
+ATOM      9  H   LEU A   2      59.394  41.529  49.511  1.00 99.99     0.164 HD
+BRANCH   8  10
+ATOM     10  CA  LEU A   2      58.051  42.348  50.845  1.00  0.00     0.159 C 
+BRANCH  10  11
+ATOM     11  CB  LEU A   2      57.134  41.192  51.270  1.00  0.00     0.032 C 
+BRANCH  11  12
+ATOM     12  CG  LEU A   2      55.734  41.804  51.335  1.00  0.00     0.002 C 
+ATOM     13  CD2 LEU A   2      54.851  41.385  50.162  1.00  0.00     0.000 C 
+ATOM     14  CD1 LEU A   2      55.699  43.257  51.811  1.00  0.00     0.000 C 
+ENDBRANCH  11  12
+ENDBRANCH  10  11
+BRANCH  10  15
+ATOM     15  C   LEU A   2      59.257  42.486  51.804  1.00  0.00     0.251 C 
+ATOM     16  O   LEU A   2      59.073  42.793  52.971  1.00  0.00    -0.271 OA
+ATOM     17  N   LEU A   3      60.448  42.156  51.313  1.00  0.00    -0.338 N 
+ATOM     18  H   LEU A   3      60.598  41.978  50.335  1.00 99.99     0.164 HD
+BRANCH  17  19
+ATOM     19  CA  LEU A   3      61.704  42.270  52.059  1.00  0.00     0.159 C 
+BRANCH  19  20
+ATOM     20  CB  LEU A   3      62.701  41.181  51.650  1.00  0.00     0.032 C 
+BRANCH  20  21
+ATOM     21  CG  LEU A   3      62.903  40.348  52.917  1.00  0.00     0.002 C 
+ATOM     22  CD1 LEU A   3      64.295  40.473  53.539  1.00  0.00     0.000 C 
+ATOM     23  CD2 LEU A   3      61.678  40.349  53.827  1.00  0.00     0.000 C 
+ENDBRANCH  20  21
+ENDBRANCH  19  20
+BRANCH  19  24
+ATOM     24  C   LEU A   3      62.285  43.686  51.786  1.00  0.00     0.251 C 
+ATOM     25  O   LEU A   3      62.059  44.584  52.581  1.00  0.00    -0.271 OA
+ATOM     26  N   GLU A   4      63.137  43.800  50.775  1.00  0.00    -0.336 N 
+ATOM     27  H   GLU A   4      63.382  43.017  50.193  1.00 99.99     0.164 HD
+BRANCH  26  28
+ATOM     28  CA  GLU A   4      63.697  45.094  50.334  1.00  0.00     0.169 C 
+BRANCH  28  29
+ATOM     29  C   GLU A   4      62.731  45.908  49.407  1.00  0.00     0.206 C 
+ATOM     30  O   GLU A   4      61.687  45.272  49.036  1.00  0.00    -0.646 OA
+ATOM     31  OXT GLU A   4      63.030  47.037  49.118  1.00  0.00    -0.646 OA
+ENDBRANCH  28  29
+BRANCH  28  32
+ATOM     32  CB  GLU A   4      65.012  44.848  49.597  1.00  0.00     0.044 C 
+BRANCH  32  33
+ATOM     33  CG  GLU A   4      64.914  43.611  48.713  1.00  0.00     0.100 C 
+BRANCH  33  34
+ATOM     34  CD  GLU A   4      64.704  44.002  47.228  1.00  0.00     0.185 C 
+ATOM     35  OE1 GLU A   4      65.478  44.774  46.729  1.00  0.00    -0.647 OA
+ATOM     36  OE2 GLU A   4      63.696  43.453  46.667  1.00  0.00    -0.647 OA
+ENDBRANCH  33  34
+ENDBRANCH  32  33
+ENDBRANCH  28  32
+ENDBRANCH  26  28
+ENDBRANCH  19  24
+ENDBRANCH  17  19
+ENDBRANCH  10  15
+ENDBRANCH   8  10
+ENDBRANCH   5   6
+BRANCH   5  37
+ATOM     37  CB  LEU A   1      57.915  41.886  46.112  1.00  0.00     0.040 C 
+BRANCH  37  38
+ATOM     38  CG  LEU A   1      58.076  42.617  44.766  1.00  0.00     0.002 C 
+ATOM     39  CD2 LEU A   1      58.448  41.717  43.586  1.00  0.00     0.000 C 
+ATOM     40  CD1 LEU A   1      58.760  43.979  44.866  1.00  0.00     0.000 C 
+ENDBRANCH  37  38
+ENDBRANCH   5  37
+ENDBRANCH   1   5
+TORSDOF 17
+ENDMDL
+MODEL 4
+REMARK VINA RESULT:      -4.8      2.508      7.621
+REMARK  17 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK    3  A    between atoms: CA_2  and  CB_5 
+REMARK       I    between atoms: C_3  and  N_12 
+REMARK    4  A    between atoms: CB_5  and  CG_6 
+REMARK    5  A    between atoms: N_12  and  CA_13 
+REMARK    6  A    between atoms: CA_13  and  CB_16 
+REMARK    7  A    between atoms: CA_13  and  C_14 
+REMARK       I    between atoms: C_14  and  N_21 
+REMARK    8  A    between atoms: CB_16  and  CG_17 
+REMARK    9  A    between atoms: N_21  and  CA_22 
+REMARK   10  A    between atoms: CA_22  and  CB_25 
+REMARK   11  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_30 
+REMARK   12  A    between atoms: CB_25  and  CG_26 
+REMARK   13  A    between atoms: N_30  and  CA_31 
+REMARK   14  A    between atoms: CA_31  and  C_32 
+REMARK   15  A    between atoms: CA_31  and  CB_34 
+REMARK   16  A    between atoms: CB_34  and  CG_35 
+REMARK   17  A    between atoms: CG_35  and  CD_36 
+ROOT
+ATOM      1  N   LEU A   1      61.046  40.543  48.999  1.00  0.00    -0.058 N 
+ATOM      2  H1  LEU A   1      61.891  40.052  49.207  1.00 99.99     0.276 HD
+ATOM      3  H2  LEU A   1      60.262  40.181  49.505  1.00 99.99     0.276 HD
+ATOM      4  H3  LEU A   1      60.777  40.446  48.046  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  LEU A   1      61.157  41.987  49.292  1.00  0.00     0.255 C 
+BRANCH   5   6
+ATOM      6  C   LEU A   1      60.251  42.756  48.291  1.00  0.00     0.259 C 
+ATOM      7  O   LEU A   1      60.733  43.631  47.587  1.00  0.00    -0.271 OA
+ATOM      8  N   LEU A   2      58.989  42.352  48.155  1.00  0.00    -0.338 N 
+ATOM      9  H   LEU A   2      58.539  41.715  48.789  1.00 99.99     0.164 HD
+BRANCH   8  10
+ATOM     10  CA  LEU A   2      58.026  42.998  47.258  1.00  0.00     0.159 C 
+BRANCH  10  11
+ATOM     11  CB  LEU A   2      57.546  42.039  46.159  1.00  0.00     0.032 C 
+BRANCH  11  12
+ATOM     12  CG  LEU A   2      58.367  42.413  44.924  1.00  0.00     0.002 C 
+ATOM     13  CD2 LEU A   2      59.499  41.428  44.646  1.00  0.00     0.000 C 
+ATOM     14  CD1 LEU A   2      58.631  43.912  44.769  1.00  0.00     0.000 C 
+ENDBRANCH  11  12
+ENDBRANCH  10  11
+BRANCH  10  15
+ATOM     15  C   LEU A   2      56.845  43.480  48.133  1.00  0.00     0.251 C 
+ATOM     16  O   LEU A   2      56.546  44.664  48.152  1.00  0.00    -0.271 OA
+ATOM     17  N   LEU A   3      56.141  42.537  48.753  1.00  0.00    -0.338 N 
+ATOM     18  H   LEU A   3      56.438  41.577  48.790  1.00 99.99     0.164 HD
+BRANCH  17  19
+ATOM     19  CA  LEU A   3      55.021  42.810  49.658  1.00  0.00     0.159 C 
+BRANCH  19  20
+ATOM     20  CB  LEU A   3      54.010  41.659  49.664  1.00  0.00     0.032 C 
+BRANCH  20  21
+ATOM     21  CG  LEU A   3      54.700  40.535  48.891  1.00  0.00     0.002 C 
+ATOM     22  CD1 LEU A   3      55.209  39.388  49.765  1.00  0.00     0.000 C 
+ATOM     23  CD2 LEU A   3      54.007  40.214  47.570  1.00  0.00     0.000 C 
+ENDBRANCH  20  21
+ENDBRANCH  19  20
+BRANCH  19  24
+ATOM     24  C   LEU A   3      55.612  43.038  51.079  1.00  0.00     0.251 C 
+ATOM     25  O   LEU A   3      55.321  44.056  51.686  1.00  0.00    -0.271 OA
+ATOM     26  N   GLU A   4      56.279  42.027  51.620  1.00  0.00    -0.336 N 
+ATOM     27  H   GLU A   4      56.421  41.159  51.132  1.00 99.99     0.164 HD
+BRANCH  26  28
+ATOM     28  CA  GLU A   4      56.977  42.125  52.919  1.00  0.00     0.169 C 
+BRANCH  28  29
+ATOM     29  C   GLU A   4      58.527  42.303  52.781  1.00  0.00     0.206 C 
+ATOM     30  O   GLU A   4      59.111  41.388  52.106  1.00  0.00    -0.646 OA
+ATOM     31  OXT GLU A   4      59.044  43.256  53.302  1.00  0.00    -0.646 OA
+ENDBRANCH  28  29
+BRANCH  28  32
+ATOM     32  CB  GLU A   4      56.687  40.871  53.741  1.00  0.00     0.044 C 
+BRANCH  32  33
+ATOM     33  CG  GLU A   4      55.193  40.734  54.011  1.00  0.00     0.100 C 
+BRANCH  33  34
+ATOM     34  CD  GLU A   4      54.666  39.355  53.543  1.00  0.00     0.185 C 
+ATOM     35  OE1 GLU A   4      55.465  38.532  53.187  1.00  0.00    -0.647 OA
+ATOM     36  OE2 GLU A   4      53.395  39.227  53.578  1.00  0.00    -0.647 OA
+ENDBRANCH  33  34
+ENDBRANCH  32  33
+ENDBRANCH  28  32
+ENDBRANCH  26  28
+ENDBRANCH  19  24
+ENDBRANCH  17  19
+ENDBRANCH  10  15
+ENDBRANCH   8  10
+ENDBRANCH   5   6
+BRANCH   5  37
+ATOM     37  CB  LEU A   1      62.609  42.491  49.228  1.00  0.00     0.040 C 
+BRANCH  37  38
+ATOM     38  CG  LEU A   1      62.847  43.275  50.532  1.00  0.00     0.002 C 
+ATOM     39  CD2 LEU A   1      62.355  42.575  51.801  1.00  0.00     0.000 C 
+ATOM     40  CD1 LEU A   1      62.618  44.780  50.415  1.00  0.00     0.000 C 
+ENDBRANCH  37  38
+ENDBRANCH   5  37
+ENDBRANCH   1   5
+TORSDOF 17
+ENDMDL
+MODEL 5
+REMARK VINA RESULT:      -4.7      1.812      2.387
+REMARK  17 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK    3  A    between atoms: CA_2  and  CB_5 
+REMARK       I    between atoms: C_3  and  N_12 
+REMARK    4  A    between atoms: CB_5  and  CG_6 
+REMARK    5  A    between atoms: N_12  and  CA_13 
+REMARK    6  A    between atoms: CA_13  and  CB_16 
+REMARK    7  A    between atoms: CA_13  and  C_14 
+REMARK       I    between atoms: C_14  and  N_21 
+REMARK    8  A    between atoms: CB_16  and  CG_17 
+REMARK    9  A    between atoms: N_21  and  CA_22 
+REMARK   10  A    between atoms: CA_22  and  CB_25 
+REMARK   11  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_30 
+REMARK   12  A    between atoms: CB_25  and  CG_26 
+REMARK   13  A    between atoms: N_30  and  CA_31 
+REMARK   14  A    between atoms: CA_31  and  C_32 
+REMARK   15  A    between atoms: CA_31  and  CB_34 
+REMARK   16  A    between atoms: CB_34  and  CG_35 
+REMARK   17  A    between atoms: CG_35  and  CD_36 
+ROOT
+ATOM      1  N   LEU A   1      57.853  40.882  50.941  1.00  0.00    -0.058 N 
+ATOM      2  H1  LEU A   1      58.784  40.922  50.580  1.00 99.99     0.276 HD
+ATOM      3  H2  LEU A   1      57.416  39.998  50.770  1.00 99.99     0.276 HD
+ATOM      4  H3  LEU A   1      57.247  41.535  50.497  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  LEU A   1      57.809  41.144  52.395  1.00  0.00     0.255 C 
+BRANCH   5   6
+ATOM      6  C   LEU A   1      58.996  42.077  52.755  1.00  0.00     0.259 C 
+ATOM      7  O   LEU A   1      58.779  43.162  53.275  1.00  0.00    -0.271 OA
+ATOM      8  N   LEU A   2      60.233  41.610  52.586  1.00  0.00    -0.338 N 
+ATOM      9  H   LEU A   2      60.442  40.775  52.067  1.00 99.99     0.164 HD
+BRANCH   8  10
+ATOM     10  CA  LEU A   2      61.439  42.390  52.872  1.00  0.00     0.159 C 
+BRANCH  10  11
+ATOM     11  CB  LEU A   2      62.592  41.494  53.345  1.00  0.00     0.032 C 
+BRANCH  11  12
+ATOM     12  CG  LEU A   2      62.284  41.197  54.814  1.00  0.00     0.002 C 
+ATOM     13  CD2 LEU A   2      63.426  41.588  55.748  1.00  0.00     0.000 C 
+ATOM     14  CD1 LEU A   2      61.546  39.879  55.052  1.00  0.00     0.000 C 
+ENDBRANCH  11  12
+ENDBRANCH  10  11
+BRANCH  10  15
+ATOM     15  C   LEU A   2      61.813  43.141  51.572  1.00  0.00     0.251 C 
+ATOM     16  O   LEU A   2      62.113  44.323  51.618  1.00  0.00    -0.271 OA
+ATOM     17  N   LEU A   3      61.884  42.410  50.463  1.00  0.00    -0.338 N 
+ATOM     18  H   LEU A   3      61.564  41.457  50.423  1.00 99.99     0.164 HD
+BRANCH  17  19
+ATOM     19  CA  LEU A   3      62.176  42.957  49.136  1.00  0.00     0.159 C 
+BRANCH  19  20
+ATOM     20  CB  LEU A   3      63.525  42.460  48.606  1.00  0.00     0.032 C 
+BRANCH  20  21
+ATOM     21  CG  LEU A   3      64.217  43.715  48.074  1.00  0.00     0.002 C 
+ATOM     22  CD1 LEU A   3      65.328  44.254  48.976  1.00  0.00     0.000 C 
+ATOM     23  CD2 LEU A   3      64.437  43.675  46.565  1.00  0.00     0.000 C 
+ENDBRANCH  20  21
+ENDBRANCH  19  20
+BRANCH  19  24
+ATOM     24  C   LEU A   3      61.017  42.535  48.189  1.00  0.00     0.251 C 
+ATOM     25  O   LEU A   3      60.406  41.504  48.422  1.00  0.00    -0.271 OA
+ATOM     26  N   GLU A   4      60.650  43.411  47.263  1.00  0.00    -0.336 N 
+ATOM     27  H   GLU A   4      61.109  44.299  47.156  1.00 99.99     0.164 HD
+BRANCH  26  28
+ATOM     28  CA  GLU A   4      59.633  43.116  46.232  1.00  0.00     0.169 C 
+BRANCH  28  29
+ATOM     29  C   GLU A   4      60.106  43.449  44.777  1.00  0.00     0.206 C 
+ATOM     30  O   GLU A   4      59.305  44.190  44.112  1.00  0.00    -0.646 OA
+ATOM     31  OXT GLU A   4      61.155  42.999  44.398  1.00  0.00    -0.646 OA
+ENDBRANCH  28  29
+BRANCH  28  32
+ATOM     32  CB  GLU A   4      58.362  43.905  46.541  1.00  0.00     0.044 C 
+BRANCH  32  33
+ATOM     33  CG  GLU A   4      57.307  43.007  47.174  1.00  0.00     0.100 C 
+BRANCH  33  34
+ATOM     34  CD  GLU A   4      56.636  43.703  48.385  1.00  0.00     0.185 C 
+ATOM     35  OE1 GLU A   4      56.758  43.199  49.469  1.00  0.00    -0.647 OA
+ATOM     36  OE2 GLU A   4      55.998  44.773  48.103  1.00  0.00    -0.647 OA
+ENDBRANCH  33  34
+ENDBRANCH  32  33
+ENDBRANCH  28  32
+ENDBRANCH  26  28
+ENDBRANCH  19  24
+ENDBRANCH  17  19
+ENDBRANCH  10  15
+ENDBRANCH   8  10
+ENDBRANCH   5   6
+BRANCH   5  37
+ATOM     37  CB  LEU A   1      57.847  39.850  53.227  1.00  0.00     0.040 C 
+BRANCH  37  38
+ATOM     38  CG  LEU A   1      56.815  40.037  54.355  1.00  0.00     0.002 C 
+ATOM     39  CD2 LEU A   1      55.572  40.838  53.961  1.00  0.00     0.000 C 
+ATOM     40  CD1 LEU A   1      57.424  40.297  55.731  1.00  0.00     0.000 C 
+ENDBRANCH  37  38
+ENDBRANCH   5  37
+ENDBRANCH   1   5
+TORSDOF 17
+ENDMDL
+MODEL 6
+REMARK VINA RESULT:      -4.7      3.962      8.191
+REMARK  17 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK    3  A    between atoms: CA_2  and  CB_5 
+REMARK       I    between atoms: C_3  and  N_12 
+REMARK    4  A    between atoms: CB_5  and  CG_6 
+REMARK    5  A    between atoms: N_12  and  CA_13 
+REMARK    6  A    between atoms: CA_13  and  CB_16 
+REMARK    7  A    between atoms: CA_13  and  C_14 
+REMARK       I    between atoms: C_14  and  N_21 
+REMARK    8  A    between atoms: CB_16  and  CG_17 
+REMARK    9  A    between atoms: N_21  and  CA_22 
+REMARK   10  A    between atoms: CA_22  and  CB_25 
+REMARK   11  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_30 
+REMARK   12  A    between atoms: CB_25  and  CG_26 
+REMARK   13  A    between atoms: N_30  and  CA_31 
+REMARK   14  A    between atoms: CA_31  and  C_32 
+REMARK   15  A    between atoms: CA_31  and  CB_34 
+REMARK   16  A    between atoms: CB_34  and  CG_35 
+REMARK   17  A    between atoms: CG_35  and  CD_36 
+ROOT
+ATOM      1  N   LEU A   1      63.149  42.693  50.384  1.00  0.00    -0.058 N 
+ATOM      2  H1  LEU A   1      63.937  43.166  50.775  1.00 99.99     0.276 HD
+ATOM      3  H2  LEU A   1      62.708  42.082  51.043  1.00 99.99     0.276 HD
+ATOM      4  H3  LEU A   1      63.404  42.089  49.636  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  LEU A   1      62.130  43.635  49.876  1.00  0.00     0.255 C 
+BRANCH   5   6
+ATOM      6  C   LEU A   1      61.146  42.844  48.972  1.00  0.00     0.259 C 
+ATOM      7  O   LEU A   1      60.327  42.090  49.480  1.00  0.00    -0.271 OA
+ATOM      8  N   LEU A   2      61.153  43.101  47.665  1.00  0.00    -0.338 N 
+ATOM      9  H   LEU A   2      61.878  43.628  47.209  1.00 99.99     0.164 HD
+BRANCH   8  10
+ATOM     10  CA  LEU A   2      60.288  42.417  46.700  1.00  0.00     0.159 C 
+BRANCH  10  11
+ATOM     11  CB  LEU A   2      59.368  43.404  45.968  1.00  0.00     0.032 C 
+BRANCH  11  12
+ATOM     12  CG  LEU A   2      57.967  43.110  46.505  1.00  0.00     0.002 C 
+ATOM     13  CD2 LEU A   2      57.520  44.111  47.568  1.00  0.00     0.000 C 
+ATOM     14  CD1 LEU A   2      57.666  41.624  46.709  1.00  0.00     0.000 C 
+ENDBRANCH  11  12
+ENDBRANCH  10  11
+BRANCH  10  15
+ATOM     15  C   LEU A   2      61.214  41.675  45.708  1.00  0.00     0.251 C 
+ATOM     16  O   LEU A   2      60.788  40.720  45.077  1.00  0.00    -0.271 OA
+ATOM     17  N   LEU A   3      62.423  42.195  45.521  1.00  0.00    -0.338 N 
+ATOM     18  H   LEU A   3      62.789  42.934  46.097  1.00 99.99     0.164 HD
+BRANCH  17  19
+ATOM     19  CA  LEU A   3      63.448  41.602  44.657  1.00  0.00     0.159 C 
+BRANCH  19  20
+ATOM     20  CB  LEU A   3      63.699  42.459  43.412  1.00  0.00     0.032 C 
+BRANCH  20  21
+ATOM     21  CG  LEU A   3      63.107  41.646  42.260  1.00  0.00     0.002 C 
+ATOM     22  CD1 LEU A   3      63.534  40.178  42.238  1.00  0.00     0.000 C 
+ATOM     23  CD2 LEU A   3      61.651  42.002  41.971  1.00  0.00     0.000 C 
+ENDBRANCH  20  21
+ENDBRANCH  19  20
+BRANCH  19  24
+ATOM     24  C   LEU A   3      64.746  41.457  45.501  1.00  0.00     0.251 C 
+ATOM     25  O   LEU A   3      65.792  41.177  44.938  1.00  0.00    -0.271 OA
+ATOM     26  N   GLU A   4      64.672  41.805  46.779  1.00  0.00    -0.336 N 
+ATOM     27  H   GLU A   4      63.815  42.127  47.196  1.00 99.99     0.164 HD
+BRANCH  26  28
+ATOM     28  CA  GLU A   4      65.791  41.632  47.728  1.00  0.00     0.169 C 
+BRANCH  28  29
+ATOM     29  C   GLU A   4      65.484  40.613  48.876  1.00  0.00     0.206 C 
+ATOM     30  O   GLU A   4      66.464  40.383  49.663  1.00  0.00    -0.646 OA
+ATOM     31  OXT GLU A   4      64.382  40.133  48.937  1.00  0.00    -0.646 OA
+ENDBRANCH  28  29
+BRANCH  28  32
+ATOM     32  CB  GLU A   4      66.144  42.987  48.340  1.00  0.00     0.044 C 
+BRANCH  32  33
+ATOM     33  CG  GLU A   4      67.479  43.491  47.806  1.00  0.00     0.100 C 
+BRANCH  33  34
+ATOM     34  CD  GLU A   4      67.309  44.157  46.418  1.00  0.00     0.185 C 
+ATOM     35  OE1 GLU A   4      66.252  44.667  46.158  1.00  0.00    -0.647 OA
+ATOM     36  OE2 GLU A   4      68.337  44.092  45.662  1.00  0.00    -0.647 OA
+ENDBRANCH  33  34
+ENDBRANCH  32  33
+ENDBRANCH  28  32
+ENDBRANCH  26  28
+ENDBRANCH  19  24
+ENDBRANCH  17  19
+ENDBRANCH  10  15
+ENDBRANCH   8  10
+ENDBRANCH   5   6
+BRANCH   5  37
+ATOM     37  CB  LEU A   1      62.751  44.820  49.117  1.00  0.00     0.040 C 
+BRANCH  37  38
+ATOM     38  CG  LEU A   1      63.673  45.536  50.121  1.00  0.00     0.002 C 
+ATOM     39  CD2 LEU A   1      62.947  46.251  51.263  1.00  0.00     0.000 C 
+ATOM     40  CD1 LEU A   1      64.871  46.240  49.488  1.00  0.00     0.000 C 
+ENDBRANCH  37  38
+ENDBRANCH   5  37
+ENDBRANCH   1   5
+TORSDOF 17
+ENDMDL
+MODEL 7
+REMARK VINA RESULT:      -4.6     15.564     17.891
+REMARK  17 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK    3  A    between atoms: CA_2  and  CB_5 
+REMARK       I    between atoms: C_3  and  N_12 
+REMARK    4  A    between atoms: CB_5  and  CG_6 
+REMARK    5  A    between atoms: N_12  and  CA_13 
+REMARK    6  A    between atoms: CA_13  and  CB_16 
+REMARK    7  A    between atoms: CA_13  and  C_14 
+REMARK       I    between atoms: C_14  and  N_21 
+REMARK    8  A    between atoms: CB_16  and  CG_17 
+REMARK    9  A    between atoms: N_21  and  CA_22 
+REMARK   10  A    between atoms: CA_22  and  CB_25 
+REMARK   11  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_30 
+REMARK   12  A    between atoms: CB_25  and  CG_26 
+REMARK   13  A    between atoms: N_30  and  CA_31 
+REMARK   14  A    between atoms: CA_31  and  C_32 
+REMARK   15  A    between atoms: CA_31  and  CB_34 
+REMARK   16  A    between atoms: CB_34  and  CG_35 
+REMARK   17  A    between atoms: CG_35  and  CD_36 
+ROOT
+ATOM      1  N   LEU A   1      48.207  47.905  45.297  1.00  0.00    -0.058 N 
+ATOM      2  H1  LEU A   1      48.463  48.481  46.072  1.00 99.99     0.276 HD
+ATOM      3  H2  LEU A   1      48.699  47.033  45.293  1.00 99.99     0.276 HD
+ATOM      4  H3  LEU A   1      48.449  48.316  44.424  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  LEU A   1      46.758  47.616  45.273  1.00  0.00     0.255 C 
+BRANCH   5   6
+ATOM      6  C   LEU A   1      46.080  48.616  44.297  1.00  0.00     0.259 C 
+ATOM      7  O   LEU A   1      44.975  49.067  44.561  1.00  0.00    -0.271 OA
+ATOM      8  N   LEU A   2      46.784  49.040  43.248  1.00  0.00    -0.338 N 
+ATOM      9  H   LEU A   2      47.643  48.611  42.948  1.00 99.99     0.164 HD
+BRANCH   8  10
+ATOM     10  CA  LEU A   2      46.260  49.970  42.244  1.00  0.00     0.159 C 
+BRANCH  10  11
+ATOM     11  CB  LEU A   2      47.282  51.063  41.899  1.00  0.00     0.032 C 
+BRANCH  11  12
+ATOM     12  CG  LEU A   2      46.579  52.379  42.236  1.00  0.00     0.002 C 
+ATOM     13  CD2 LEU A   2      45.058  52.248  42.258  1.00  0.00     0.000 C 
+ATOM     14  CD1 LEU A   2      47.209  53.616  41.594  1.00  0.00     0.000 C 
+ENDBRANCH  11  12
+ENDBRANCH  10  11
+BRANCH  10  15
+ATOM     15  C   LEU A   2      45.897  49.131  40.996  1.00  0.00     0.251 C 
+ATOM     16  O   LEU A   2      44.807  48.586  40.927  1.00  0.00    -0.271 OA
+ATOM     17  N   LEU A   3      46.777  49.136  39.999  1.00  0.00    -0.338 N 
+ATOM     18  H   LEU A   3      47.699  49.526  40.095  1.00 99.99     0.164 HD
+BRANCH  17  19
+ATOM     19  CA  LEU A   3      46.623  48.364  38.764  1.00  0.00     0.159 C 
+BRANCH  19  20
+ATOM     20  CB  LEU A   3      45.989  49.204  37.651  1.00  0.00     0.032 C 
+BRANCH  20  21
+ATOM     21  CG  LEU A   3      46.775  50.516  37.662  1.00  0.00     0.002 C 
+ATOM     22  CD1 LEU A   3      47.560  50.792  36.378  1.00  0.00     0.000 C 
+ATOM     23  CD2 LEU A   3      46.013  51.657  38.329  1.00  0.00     0.000 C 
+ENDBRANCH  20  21
+ENDBRANCH  19  20
+BRANCH  19  24
+ATOM     24  C   LEU A   3      48.035  47.862  38.345  1.00  0.00     0.251 C 
+ATOM     25  O   LEU A   3      48.995  48.138  39.047  1.00  0.00    -0.271 OA
+ATOM     26  N   GLU A   4      48.092  47.019  37.322  1.00  0.00    -0.336 N 
+ATOM     27  H   GLU A   4      47.269  46.732  36.821  1.00 99.99     0.164 HD
+BRANCH  26  28
+ATOM     28  CA  GLU A   4      49.364  46.533  36.749  1.00  0.00     0.169 C 
+BRANCH  28  29
+ATOM     29  C   GLU A   4      49.824  47.332  35.483  1.00  0.00     0.206 C 
+ATOM     30  O   GLU A   4      49.930  46.633  34.420  1.00  0.00    -0.646 OA
+ATOM     31  OXT GLU A   4      50.038  48.511  35.596  1.00  0.00    -0.646 OA
+ENDBRANCH  28  29
+BRANCH  28  32
+ATOM     32  CB  GLU A   4      49.219  45.056  36.385  1.00  0.00     0.044 C 
+BRANCH  32  33
+ATOM     33  CG  GLU A   4      50.394  44.248  36.920  1.00  0.00     0.100 C 
+BRANCH  33  34
+ATOM     34  CD  GLU A   4      50.966  43.307  35.830  1.00  0.00     0.185 C 
+ATOM     35  OE1 GLU A   4      51.925  42.638  36.103  1.00  0.00    -0.647 OA
+ATOM     36  OE2 GLU A   4      50.344  43.340  34.714  1.00  0.00    -0.647 OA
+ENDBRANCH  33  34
+ENDBRANCH  32  33
+ENDBRANCH  28  32
+ENDBRANCH  26  28
+ENDBRANCH  19  24
+ENDBRANCH  17  19
+ENDBRANCH  10  15
+ENDBRANCH   8  10
+ENDBRANCH   5   6
+BRANCH   5  37
+ATOM     37  CB  LEU A   1      46.121  47.686  46.672  1.00  0.00     0.040 C 
+BRANCH  37  38
+ATOM     38  CG  LEU A   1      45.150  46.495  46.760  1.00  0.00     0.002 C 
+ATOM     39  CD2 LEU A   1      44.907  45.967  48.175  1.00  0.00     0.000 C 
+ATOM     40  CD1 LEU A   1      45.301  45.473  45.635  1.00  0.00     0.000 C 
+ENDBRANCH  37  38
+ENDBRANCH   5  37
+ENDBRANCH   1   5
+TORSDOF 17
+ENDMDL
+MODEL 8
+REMARK VINA RESULT:      -4.5      2.622      6.660
+REMARK  17 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK    3  A    between atoms: CA_2  and  CB_5 
+REMARK       I    between atoms: C_3  and  N_12 
+REMARK    4  A    between atoms: CB_5  and  CG_6 
+REMARK    5  A    between atoms: N_12  and  CA_13 
+REMARK    6  A    between atoms: CA_13  and  CB_16 
+REMARK    7  A    between atoms: CA_13  and  C_14 
+REMARK       I    between atoms: C_14  and  N_21 
+REMARK    8  A    between atoms: CB_16  and  CG_17 
+REMARK    9  A    between atoms: N_21  and  CA_22 
+REMARK   10  A    between atoms: CA_22  and  CB_25 
+REMARK   11  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_30 
+REMARK   12  A    between atoms: CB_25  and  CG_26 
+REMARK   13  A    between atoms: N_30  and  CA_31 
+REMARK   14  A    between atoms: CA_31  and  C_32 
+REMARK   15  A    between atoms: CA_31  and  CB_34 
+REMARK   16  A    between atoms: CB_34  and  CG_35 
+REMARK   17  A    between atoms: CG_35  and  CD_36 
+ROOT
+ATOM      1  N   LEU A   1      61.825  42.987  45.425  1.00  0.00    -0.058 N 
+ATOM      2  H1  LEU A   1      62.524  43.526  44.956  1.00 99.99     0.276 HD
+ATOM      3  H2  LEU A   1      61.028  42.812  44.846  1.00 99.99     0.276 HD
+ATOM      4  H3  LEU A   1      61.446  43.463  46.212  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  LEU A   1      62.348  41.687  45.894  1.00  0.00     0.255 C 
+BRANCH   5   6
+ATOM      6  C   LEU A   1      62.804  41.851  47.369  1.00  0.00     0.259 C 
+ATOM      7  O   LEU A   1      63.779  41.235  47.775  1.00  0.00    -0.271 OA
+ATOM      8  N   LEU A   2      62.176  42.755  48.121  1.00  0.00    -0.338 N 
+ATOM      9  H   LEU A   2      61.312  43.194  47.852  1.00 99.99     0.164 HD
+BRANCH   8  10
+ATOM     10  CA  LEU A   2      62.496  42.999  49.529  1.00  0.00     0.159 C 
+BRANCH  10  11
+ATOM     11  CB  LEU A   2      62.315  44.477  49.901  1.00  0.00     0.032 C 
+BRANCH  11  12
+ATOM     12  CG  LEU A   2      63.465  45.204  49.202  1.00  0.00     0.002 C 
+ATOM     13  CD2 LEU A   2      64.801  44.482  49.357  1.00  0.00     0.000 C 
+ATOM     14  CD1 LEU A   2      63.424  46.727  49.332  1.00  0.00     0.000 C 
+ENDBRANCH  11  12
+ENDBRANCH  10  11
+BRANCH  10  15
+ATOM     15  C   LEU A   2      61.565  42.093  50.370  1.00  0.00     0.251 C 
+ATOM     16  O   LEU A   2      61.922  40.964  50.666  1.00  0.00    -0.271 OA
+ATOM     17  N   LEU A   3      60.443  42.648  50.818  1.00  0.00    -0.338 N 
+ATOM     18  H   LEU A   3      60.125  43.550  50.509  1.00 99.99     0.164 HD
+BRANCH  17  19
+ATOM     19  CA  LEU A   3      59.423  41.931  51.587  1.00  0.00     0.159 C 
+BRANCH  19  20
+ATOM     20  CB  LEU A   3      59.683  42.025  53.094  1.00  0.00     0.032 C 
+BRANCH  20  21
+ATOM     21  CG  LEU A   3      59.636  40.578  53.585  1.00  0.00     0.002 C 
+ATOM     22  CD1 LEU A   3      60.992  40.011  54.009  1.00  0.00     0.000 C 
+ATOM     23  CD2 LEU A   3      58.406  40.282  54.437  1.00  0.00     0.000 C 
+ENDBRANCH  20  21
+ENDBRANCH  19  20
+BRANCH  19  24
+ATOM     24  C   LEU A   3      58.042  42.546  51.222  1.00  0.00     0.251 C 
+ATOM     25  O   LEU A   3      57.436  43.186  52.066  1.00  0.00    -0.271 OA
+ATOM     26  N   GLU A   4      57.670  42.474  49.950  1.00  0.00    -0.336 N 
+ATOM     27  H   GLU A   4      58.238  42.023  49.254  1.00 99.99     0.164 HD
+BRANCH  26  28
+ATOM     28  CA  GLU A   4      56.348  42.926  49.470  1.00  0.00     0.169 C 
+BRANCH  28  29
+ATOM     29  C   GLU A   4      55.344  41.752  49.209  1.00  0.00     0.206 C 
+ATOM     30  O   GLU A   4      54.164  42.121  48.888  1.00  0.00    -0.646 OA
+ATOM     31  OXT GLU A   4      55.741  40.622  49.326  1.00  0.00    -0.646 OA
+ENDBRANCH  28  29
+BRANCH  28  32
+ATOM     32  CB  GLU A   4      56.530  43.727  48.182  1.00  0.00     0.044 C 
+BRANCH  32  33
+ATOM     33  CG  GLU A   4      57.316  42.926  47.152  1.00  0.00     0.100 C 
+BRANCH  33  34
+ATOM     34  CD  GLU A   4      58.698  43.573  46.880  1.00  0.00     0.185 C 
+ATOM     35  OE1 GLU A   4      59.507  43.580  47.768  1.00  0.00    -0.647 OA
+ATOM     36  OE2 GLU A   4      58.843  44.053  45.704  1.00  0.00    -0.647 OA
+ENDBRANCH  33  34
+ENDBRANCH  32  33
+ENDBRANCH  28  32
+ENDBRANCH  26  28
+ENDBRANCH  19  24
+ENDBRANCH  17  19
+ENDBRANCH  10  15
+ENDBRANCH   8  10
+ENDBRANCH   5   6
+BRANCH   5  37
+ATOM     37  CB  LEU A   1      63.495  41.161  45.012  1.00  0.00     0.040 C 
+BRANCH  37  38
+ATOM     38  CG  LEU A   1      64.130  42.399  44.354  1.00  0.00     0.002 C 
+ATOM     39  CD2 LEU A   1      64.123  42.388  42.824  1.00  0.00     0.000 C 
+ATOM     40  CD1 LEU A   1      65.385  42.913  45.056  1.00  0.00     0.000 C 
+ENDBRANCH  37  38
+ENDBRANCH   5  37
+ENDBRANCH   1   5
+TORSDOF 17
+ENDMDL
+MODEL 9
+REMARK VINA RESULT:      -4.4      2.212      6.277
+REMARK  17 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  CA_2 
+REMARK    2  A    between atoms: CA_2  and  C_3 
+REMARK    3  A    between atoms: CA_2  and  CB_5 
+REMARK       I    between atoms: C_3  and  N_12 
+REMARK    4  A    between atoms: CB_5  and  CG_6 
+REMARK    5  A    between atoms: N_12  and  CA_13 
+REMARK    6  A    between atoms: CA_13  and  CB_16 
+REMARK    7  A    between atoms: CA_13  and  C_14 
+REMARK       I    between atoms: C_14  and  N_21 
+REMARK    8  A    between atoms: CB_16  and  CG_17 
+REMARK    9  A    between atoms: N_21  and  CA_22 
+REMARK   10  A    between atoms: CA_22  and  CB_25 
+REMARK   11  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_30 
+REMARK   12  A    between atoms: CB_25  and  CG_26 
+REMARK   13  A    between atoms: N_30  and  CA_31 
+REMARK   14  A    between atoms: CA_31  and  C_32 
+REMARK   15  A    between atoms: CA_31  and  CB_34 
+REMARK   16  A    between atoms: CB_34  and  CG_35 
+REMARK   17  A    between atoms: CG_35  and  CD_36 
+ROOT
+ATOM      1  N   LEU A   1      58.191  43.768  46.759  1.00  0.00    -0.058 N 
+ATOM      2  H1  LEU A   1      58.271  43.410  47.689  1.00 99.99     0.276 HD
+ATOM      3  H2  LEU A   1      58.310  44.762  46.724  1.00 99.99     0.276 HD
+ATOM      4  H3  LEU A   1      57.284  43.626  46.376  1.00 99.99     0.276 HD
+ENDROOT
+BRANCH   1   5
+ATOM      5  CA  LEU A   1      59.170  43.154  45.840  1.00  0.00     0.255 C 
+BRANCH   5   6
+ATOM      6  C   LEU A   1      60.528  43.036  46.586  1.00  0.00     0.259 C 
+ATOM      7  O   LEU A   1      61.472  42.482  46.043  1.00  0.00    -0.271 OA
+ATOM      8  N   LEU A   2      60.649  43.649  47.763  1.00  0.00    -0.338 N 
+ATOM      9  H   LEU A   2      59.868  44.017  48.279  1.00 99.99     0.164 HD
+BRANCH   8  10
+ATOM     10  CA  LEU A   2      61.867  43.606  48.576  1.00  0.00     0.159 C 
+BRANCH  10  11
+ATOM     11  CB  LEU A   2      62.169  44.969  49.214  1.00  0.00     0.032 C 
+BRANCH  11  12
+ATOM     12  CG  LEU A   2      63.648  45.225  48.916  1.00  0.00     0.002 C 
+ATOM     13  CD2 LEU A   2      64.229  44.229  47.916  1.00  0.00     0.000 C 
+ATOM     14  CD1 LEU A   2      64.479  45.626  50.136  1.00  0.00     0.000 C 
+ENDBRANCH  11  12
+ENDBRANCH  10  11
+BRANCH  10  15
+ATOM     15  C   LEU A   2      61.652  42.519  49.656  1.00  0.00     0.251 C 
+ATOM     16  O   LEU A   2      61.829  41.343  49.379  1.00  0.00    -0.271 OA
+ATOM     17  N   LEU A   3      61.378  42.948  50.885  1.00  0.00    -0.338 N 
+ATOM     18  H   LEU A   3      61.163  43.910  51.086  1.00 99.99     0.164 HD
+BRANCH  17  19
+ATOM     19  CA  LEU A   3      61.098  42.065  52.020  1.00  0.00     0.159 C 
+BRANCH  19  20
+ATOM     20  CB  LEU A   3      62.069  42.314  53.179  1.00  0.00     0.032 C 
+BRANCH  20  21
+ATOM     21  CG  LEU A   3      62.860  41.012  53.306  1.00  0.00     0.002 C 
+ATOM     22  CD1 LEU A   3      63.425  40.750  54.703  1.00  0.00     0.000 C 
+ATOM     23  CD2 LEU A   3      62.230  39.859  52.530  1.00  0.00     0.000 C 
+ENDBRANCH  20  21
+ENDBRANCH  19  20
+BRANCH  19  24
+ATOM     24  C   LEU A   3      59.629  42.319  52.461  1.00  0.00     0.251 C 
+ATOM     25  O   LEU A   3      59.386  43.255  53.205  1.00  0.00    -0.271 OA
+ATOM     26  N   GLU A   4      58.691  41.591  51.868  1.00  0.00    -0.336 N 
+ATOM     27  H   GLU A   4      58.913  40.889  51.183  1.00 99.99     0.164 HD
+BRANCH  26  28
+ATOM     28  CA  GLU A   4      57.264  41.649  52.249  1.00  0.00     0.169 C 
+BRANCH  28  29
+ATOM     29  C   GLU A   4      56.867  40.601  53.342  1.00  0.00     0.206 C 
+ATOM     30  O   GLU A   4      57.638  40.573  54.360  1.00  0.00    -0.646 OA
+ATOM     31  OXT GLU A   4      55.895  39.917  53.154  1.00  0.00    -0.646 OA
+ENDBRANCH  28  29
+BRANCH  28  32
+ATOM     32  CB  GLU A   4      56.404  41.431  51.006  1.00  0.00     0.044 C 
+BRANCH  32  33
+ATOM     33  CG  GLU A   4      56.905  42.279  49.844  1.00  0.00     0.100 C 
+BRANCH  33  34
+ATOM     34  CD  GLU A   4      55.772  43.171  49.276  1.00  0.00     0.185 C 
+ATOM     35  OE1 GLU A   4      56.048  44.289  48.933  1.00  0.00    -0.647 OA
+ATOM     36  OE2 GLU A   4      54.623  42.615  49.231  1.00  0.00    -0.647 OA
+ENDBRANCH  33  34
+ENDBRANCH  32  33
+ENDBRANCH  28  32
+ENDBRANCH  26  28
+ENDBRANCH  19  24
+ENDBRANCH  17  19
+ENDBRANCH  10  15
+ENDBRANCH   8  10
+ENDBRANCH   5   6
+BRANCH   5  37
+ATOM     37  CB  LEU A   1      59.324  43.944  44.529  1.00  0.00     0.040 C 
+BRANCH  37  38
+ATOM     38  CG  LEU A   1      59.185  42.915  43.391  1.00  0.00     0.002 C 
+ATOM     39  CD2 LEU A   1      58.329  41.693  43.732  1.00  0.00     0.000 C 
+ATOM     40  CD1 LEU A   1      60.463  42.687  42.587  1.00  0.00     0.000 C 
+ENDBRANCH  37  38
+ENDBRANCH   5  37
+ENDBRANCH   1   5
+TORSDOF 17
+ENDMDL
