@@ -1,0 +1,15 @@
+Finding intermodel H-bonds
+Constraints relaxed by 0.4 angstroms and 20 degrees
+Models used:
+	#0 M_Ala_Sortase.pdb
+	#1 vPep113.pdb
+
+H-bonds (donor, acceptor, hydrogen, D..A dist, D-H..A dist):
+#0 ARG 98.A NH1   #1 ARG 18 O       #0 ARG 98.A 2HH1   3.006  2.267
+#0 GLN 143.A NE2  #1 LYS 12 O       #0 GLN 143.A 2HE2  2.803  1.969
+#0 ASN 236.A ND2  #1 ILE 9 O        #0 ASN 236.A 1HD2  2.856  1.863
+#1 PHE 1 N        #0 ASN 236.A O    #1 PHE 1 H2        3.071  2.321
+#1 PHE 1 N        #0 THR 237.A O    #1 PHE 1 H2        3.392  2.751
+#1 LYS 4 NZ       #0 LEU 96.A O     #1 LYS 4 HZ3       3.492  2.638
+#1 LYS 12 NZ      #0 THR 137.A O    #1 LYS 12 HZ2      2.896  1.908
+#1 ALA 15 N       #0 GLN 143.A OE1  #1 ALA 15 H        3.293  2.396
