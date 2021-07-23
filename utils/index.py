@@ -77,3 +77,20 @@ def build_pep_to_activity_and_name_index():
         index_str = json.dumps(index_str)   # for escaping double quotes
         contents = f"const PEP_TO_ACTIVITY_AND_NAME = JSON.parse({index_str});"
         index_fd.write(contents)
+
+
+def build_pep_to_docking_score_index():
+    INDEX = {}
+
+    with open("utils/docked.csv") as csv_fd:
+        reader = DictReader(csv_fd)
+        
+        for row in reader:
+            INDEX[row["Peptide#"]] = row["Docking Score"]
+
+
+    with open("static/js/pep_to_docking_score_index.js", "w+") as index_fd:
+        index_str = json.dumps(INDEX)
+        index_str = json.dumps(index_str)   # for escaping double quotes
+        contents = f"const PEP_TO_DOCKING_SCORE = JSON.parse({index_str});"
+        index_fd.write(contents)
