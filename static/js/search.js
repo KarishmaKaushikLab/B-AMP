@@ -170,9 +170,8 @@ const search = (query, env) => {
 
 		// Full-text search
 		const peps = TEXT_TO_PEP[queryItem.toLowerCase()];
-		console.log(queryItem, peps);
 
-		if (peps === undefined) return;
+		if (peps === undefined) continue;
 
 		for (const pep of peps) {
 			const resultItem = {
