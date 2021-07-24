@@ -112,7 +112,8 @@ def build_text_to_pep_index():
             tokens = name.split(sep=" ")
 
             for token in tokens:
-                INDEX[token].append(pep_id)
+                if len(token) >= 3:
+                    INDEX[token].append(pep_id)
 
             pep_id += 1
 
