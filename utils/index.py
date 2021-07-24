@@ -108,10 +108,10 @@ def build_text_to_pep_index():
         pep_id = 2
         for row in reader:
             name = row["Name"].lower()
+            name = re.sub(r"\W+", " ", name)
             tokens = name.split(sep=" ")
 
             for token in tokens:
-                token = re.sub(r"\W+", "", token)
                 INDEX[token].append(pep_id)
 
             pep_id += 1
