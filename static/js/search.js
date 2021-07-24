@@ -119,7 +119,9 @@ const search = (query, env) => {
 			};
 
 			addToResultSet(resultItem);
-		} else if (queryItem.startsWith("PEP") && queryItem.length > 3) {
+		}
+
+		if (queryItem.startsWith("PEP") && queryItem.length > 3) {
 			const subQueryItem = queryItem.substring(3);
 			const indices = subQueryItem.split("-");
 
@@ -164,19 +166,20 @@ const search = (query, env) => {
 					errors.push(`Invalid range query: ${queryItem}`);
 				}
 			}
-		} else {
-			const peps = TEXT_TO_PEP[queryItem.toLowerCase()];
+		}
 
-			if (peps === undefined) return;
+		// Full-text search
+		const peps = TEXT_TO_PEP[queryItem.toLowerCase()];
 
-			for (const pep of peps) {
-				const resultItem = {
-					pepID: pep,
-					drampID: PEP_TO_DRAMP[pep]
-				};
+		if (peps === undefined) continue;
 
-				addToResultSet(resultItem);
-			}
+		for (const pep of peps) {
+			const resultItem = {
+				pepID: pep,
+				drampID: PEP_TO_DRAMP[pep]
+			};
+
+			addToResultSet(resultItem);
 		}
 	}
 
