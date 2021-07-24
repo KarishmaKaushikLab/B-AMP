@@ -94,3 +94,31 @@ def build_pep_to_docking_score_index():
         index_str = json.dumps(index_str)   # for escaping double quotes
         contents = f"const PEP_TO_DOCKING_SCORE = JSON.parse({index_str});"
         index_fd.write(contents)
+
+
+def build_text_to_pep_index():
+    from collections import defaultdict
+    import re
+
+    INDEX = defaultdict(list)
+
+    with open("utils/full.csv") as csv_fd:
+        reader = DictReader(csv_fd)
+        
+        pep_id = 2
+        for row in reader:
+            name = row["Name"].lower()
+            tokens = name.split(sep=" ")
+
+            for token in tokens:
+                token = re.sub(r"\W+", "", token)
+                INDEX[token].append(pep_id)
+
+            pep_id += 1
+
+
+    with open("static/js/text_to_pep.js", "w+") as index_fd:
+        index_str = json.dumps(INDEX)
+        index_str = json.dumps(index_str)   # for escaping double quotes
+        contents = f"const TEXT_TO_PEP = JSON.parse({index_str});"
+        index_fd.write(contents)

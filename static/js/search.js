@@ -104,11 +104,6 @@ const search = (query, env) => {
 	for (const queryItem of queryItems) {
 		if (queryItem === "") continue;
 
-		if (!queryItem.match(/^(DRAMP|PEP)[0-9]*[-]*[0-9]*$/)) {
-			errors.push(`Invalid query item: ${queryItem}`);
-			continue;
-		}
-
 		if (queryItem.startsWith("DRAMP") && queryItem.length > 5) {
 			const drampID = queryItem.substring(5);
 			const indices = drampID.split("-");
@@ -170,7 +165,18 @@ const search = (query, env) => {
 				}
 			}
 		} else {
-			errors.push(`Invalid query item: ${queryItem}`);
+			const peps = TEXT_TO_PEP[queryItem.toLowerCase()];
+
+			if (peps === undefined) return;
+
+			for (const pep of peps) {
+				const resultItem = {
+					pepID: pep,
+					drampID: PEP_TO_DRAMP[pep]
+				};
+
+				addToResultSet(resultItem);
+			}
 		}
 	}
 
