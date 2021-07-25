@@ -21,6 +21,7 @@ if __name__ == "__main__":
 
     if "all" in argv or "thumbs" in argv:
         thumbs.generate_thumbnails()
+        thumbs.generate_docked_thumbnails()
 
     if "all" in argv or "fasta" in argv:
         fasta.generate_fasta_files()

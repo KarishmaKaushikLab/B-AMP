@@ -74,7 +74,7 @@ const generateDockedCard = (drampID, pepID) => {
 
     const img = document.createElement("img");
     img.className = "dockedImage";
-    img.src = `static/peptides/docked/images/Pep${pepID}.png`;	// TODO: Replace with thumbnail
+    img.src = `static/peptides/docked/thumbs/Pep${pepID}.png`;
     dockedCard.appendChild(img);
 
     const infoContainer = document.createElement("section");
@@ -147,18 +147,21 @@ const renderIsland = (score) => {
     islandHeading.textContent = `Score ${score}`;
     island.appendChild(islandHeading);
 
+    const islandCardContainer = document.createElement("span");
+    islandCardContainer.className = "islandCardContainer";
+    island.appendChild(islandCardContainer);
+
     for (const pep of peps) {
         const card = generateDockedCard(DRAMP_TO_PEP[pep], pep);
-        island.appendChild(card);
+        islandCardContainer.appendChild(card);
     }
 
     CARDS_CONTAINER.appendChild(island);
 };
 
 const main = () => {
-    for (let i = 10; i >= 0; i--) {
+    for (let i = 10; i >= 0; i--)
         renderIsland(i);
-    }
 };
 
 main();
