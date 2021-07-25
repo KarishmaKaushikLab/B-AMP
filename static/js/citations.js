@@ -99,6 +99,16 @@ const main = () => {
             "title": "DRAMP: a comprehensive data repository of antimicrobial peptides",
             "publication": "Sci Rep. 2016 Apr 14;6:24482. PMID: 27075512"
         },
+        {
+            "authors": "Pettersen EF, Goddard TD, Huang CC, Couch GS, Greenblatt DM, Meng EC, Ferrin TE.",
+            "title": "UCSF Chimera--a visualization system for exploratory research and analysis",
+            "publication": "J Comput Chem. 2004 Oct;25(13):1605-12.",
+        },
+        {
+            "authors": "The PyMOL Molecular Graphics System, Version 2.0",
+            "title": "",
+            "publication": "Schrödinger, LLC.",
+        }
     ];
 
     renderCitations(CITATIONS);
