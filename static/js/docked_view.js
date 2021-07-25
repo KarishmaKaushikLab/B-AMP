@@ -137,8 +137,23 @@ const DOCKED_PEPTIDES_BY_SCORE = {
     10: [1437, 4021, 4583, 4707, 4785, 5494, 5496],
 };
 
+const sortByDockingScore = () => {
+    for (let score = 0; score <= 10; score++) {
+        let peps = DOCKED_PEPTIDES_BY_SCORE[score];
+
+        peps.sort((pepA, pepB) => {
+            const scoreA = PEP_TO_DOCKING_SCORE[pepA];
+            const scoreB = PEP_TO_DOCKING_SCORE[pepB];
+
+            if (scoreB > scoreA) return 1;
+
+            return 0;
+        })
+    }
+};
+
 const renderIsland = (score) => {
-    const peps = DOCKED_PEPTIDES_BY_SCORE[score].sort();
+    const peps = DOCKED_PEPTIDES_BY_SCORE[score];
 
     const island = document.createElement("span");
     island.className = "island";
@@ -161,6 +176,8 @@ const renderIsland = (score) => {
 };
 
 const main = () => {
+    sortByDockingScore();
+
     for (let score = 10; score >= 0; score--)
         renderIsland(score);
 };
