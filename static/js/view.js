@@ -355,8 +355,10 @@ const main = () => {
 			const card = generateSortaseCard();
 			CARDS_CONTAINER.appendChild(card);
 			togglePageNavButtonsVisibility();
+			document.title = "Class C Sortase | Pep Preview | AMP-R";
 		} else {
 			searchBox.value = `PEP${permalink}`;
+			document.title = `Pep${permalink} | Pep Preview | AMP-R`;
 		}
 
 		const searchSection = document.querySelector("#search");
