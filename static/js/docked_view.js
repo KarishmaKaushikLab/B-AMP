@@ -116,7 +116,7 @@ const generateDockedCard = (drampID, pepID) => {
 };
 
 const DOCKING_SCORE_TO_COLOR_CODE = [
-    "red", "green", "yellow", "blue", "pink", "purple", "orange", "black", "olive", "grey", "mustard", "lemon",
+    "red", "green", "#cfde0d", "#1a91db", "#e75480", "purple", "orange", "black", "olive", "grey", "#c4a01d", "#FDFF00",
 ];
 
 const DOCKED_PEPTIDES_BY_SCORE = {
@@ -144,6 +144,7 @@ const renderIsland = (score) => {
     island.className = "island";
 
     const islandHeading = document.createElement("h1");
+    islandHeading.style = `background-color: ${DOCKING_SCORE_TO_COLOR_CODE[score]}`;
     islandHeading.textContent = `Score ${score}`;
     island.appendChild(islandHeading);
 
@@ -160,8 +161,8 @@ const renderIsland = (score) => {
 };
 
 const main = () => {
-    for (let i = 10; i >= 0; i--)
-        renderIsland(i);
+    for (let score = 10; score >= 0; score--)
+        renderIsland(score);
 };
 
 main();
