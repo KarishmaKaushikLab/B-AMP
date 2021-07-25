@@ -143,57 +143,6 @@ const generateDRAMPCard = (drampID, pepID) => {
 	return drampCard;
 };
 
-const generateDockedCard = (drampID, pepID) => {
-	const dockedCard = document.createElement("span");
-	dockedCard.classList.add("pepCard");
-	dockedCard.classList.add("dockedCard");
-
-	const activity = PEP_TO_ACTIVITY_AND_NAME[pepID][0];
-	dockedCard.classList.add(ACTIVITY_TO_CSS_CLASS[activity]);
-
-	const img = document.createElement("img");
-	img.className = "dockedImage";
-	img.src = `static/peptides/docked/images/Pep${pepID}.png`;	// TODO: Replace with thumbnail
-	dockedCard.appendChild(img);
-
-	const infoContainer = document.createElement("section");
-	infoContainer.className = "infoContainer";
-	dockedCard.appendChild(infoContainer);
-
-	const horizontalContainer = document.createElement("span");
-	horizontalContainer.className = "horizontalContainer"
-	infoContainer.appendChild(horizontalContainer);
-
-	const nameContainer = document.createElement("span");
-	nameContainer.className = "nameContainer";
-	horizontalContainer.appendChild(nameContainer);
-
-	const drampHeading = document.createElement("h3");
-	drampHeading.textContent = `Pep${pepID} · DRAMP${drampID}`;
-	nameContainer.appendChild(drampHeading);
-
-	const pepName = document.createElement("h2");
-	pepName.textContent = PEP_TO_ACTIVITY_AND_NAME[pepID][1];
-	pepName.className = "pepName";
-	nameContainer.appendChild(pepName);
-
-	const dockingEnergy = document.createElement("h2");
-	dockingEnergy.textContent = `${PEP_TO_DOCKING_SCORE[pepID]} kJ/mol`;
-	dockingEnergy.className = "dockingEnergy";
-	horizontalContainer.appendChild(dockingEnergy);
-
-	const drampLinks = document.createElement("span");
-	drampLinks.className = "drampLinks";
-	infoContainer.appendChild(drampLinks);
-
-	drampLinks.appendChild(generateDRAMPLink(pepID, "pdbqt_in"));
-	drampLinks.appendChild(generateDRAMPLink(pepID, "pdbqt_out"));
-	drampLinks.appendChild(generateDRAMPLink(pepID, "docked_model"));
-	drampLinks.appendChild(generateDRAMPLink(pepID, "bond_info"));
-
-	return dockedCard;
-};
-
 const generateSortaseCard = () => {
 	const dockedCard = document.createElement("span");
 	dockedCard.classList.add("pepCard");
