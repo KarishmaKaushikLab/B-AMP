@@ -132,8 +132,8 @@ const main = () => {
 			publication: "Sci Rep. 2018 Jul 25;8(1):11189. PMID:30046138",
 		},
 		{
-			authors: "Liu S.; Fan L.; Sun J.; Lao X.",
-			title: "Zheng H. Computational resources and tools for antimicrobial peptides",
+			authors: "Liu S.; Fan L.; Sun J.; Lao X.; Zheng H.",
+			title: "Computational resources and tools for antimicrobial peptides",
 			publication: "J Pept Sci. 2017 Jan;23(1):4-12. PMID:27966278",
 		},
 		{
