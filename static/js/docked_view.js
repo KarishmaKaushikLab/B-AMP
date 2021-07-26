@@ -171,7 +171,7 @@ const renderIsland = (score) => {
     island.appendChild(islandCardContainer);
 
     for (const pep of peps) {
-        const card = generateDockedCard(DRAMP_TO_PEP[pep], pep);
+        const card = generateDockedCard(PEP_TO_DRAMP[pep], pep);
         islandCardContainer.appendChild(card);
     }
 
