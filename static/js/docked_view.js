@@ -136,6 +136,7 @@ const DOCKED_PEPTIDES_BY_SCORE = {
     ],
     9: [1218, 4708, 4931, 4934, 5482, 5508],
     10: [1437, 4021, 4583, 4707, 4785, 5494, 5496],
+    11: [1],
 };
 
 const sortByDockingScore = () => {
@@ -193,7 +194,7 @@ const addJumpListItem = (score) => {
 const main = () => {
     sortByDockingScore();
 
-    for (let score = 10; score >= 0; score--) {
+    for (let score = 11; score >= 0; score--) {
         renderIsland(score);
         addJumpListItem(score);
     }

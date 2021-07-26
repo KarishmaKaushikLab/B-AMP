@@ -8,7 +8,7 @@ def build_dramp_to_pep_index():
     with open("utils/full.csv") as csv_fd:
         reader = DictReader(csv_fd)
         
-        pep_id = 2
+        pep_id = 0
         for row in reader:
             dramp_id = row["DRAMP_ID"][5:]
             INDEX[dramp_id] = pep_id
@@ -29,7 +29,7 @@ def build_pep_to_dramp_index():
     with open("utils/full.csv") as csv_fd:
         reader = DictReader(csv_fd)
         
-        pep_id = 2
+        pep_id = 0
         for row in reader:
             dramp_id = row["DRAMP_ID"][5:]
             INDEX[pep_id] = dramp_id
@@ -55,7 +55,7 @@ def build_pep_to_activity_and_name_index():
     with open("utils/full.csv") as csv_fd:
         reader = DictReader(csv_fd)
         
-        pep_id = 2
+        pep_id = 0
         for row in reader:
             activities = 0
             str_activities = row["Activity"].split(",")
@@ -105,7 +105,7 @@ def build_text_to_pep_index():
     with open("utils/full.csv") as csv_fd:
         reader = DictReader(csv_fd)
         
-        pep_id = 2
+        pep_id = 0
         for row in reader:
             name = row["Name"].lower()
             name = re.sub(r"\W+", " ", name)
