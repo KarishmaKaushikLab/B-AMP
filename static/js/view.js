@@ -151,7 +151,7 @@ const generateSortaseCard = () => {
 
 	const img = document.createElement("img");
 	img.className = "dockedImage";
-	img.src = "static/sortase/M_Ala_Sortase.png";	// TODO: Replace with thumbnail
+	img.src = "static/sortase/M_Ala_Sortase.png"; // TODO: Replace with thumbnail
 	dockedCard.appendChild(img);
 
 	const infoContainer = document.createElement("section");
@@ -191,8 +191,9 @@ const renderCards = (results) => {
 const showResultsStats = (resultSet) => {
 	if (resultSet.length > 0) {
 		RESULTS_COUNT.style.visibility = "";
-		RESULTS_COUNT.innerText = `${resultSet.length} peptide${resultSet.length === 1 ? "" : "s"
-			} found`;
+		RESULTS_COUNT.innerText = `${resultSet.length} peptide${
+			resultSet.length === 1 ? "" : "s"
+		} found`;
 	} else RESULTS_COUNT.style.visibility = "hidden";
 };
 
