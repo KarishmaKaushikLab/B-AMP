@@ -295,27 +295,39 @@ const getPermalink = () => {
 	return url.searchParams.get("pep");
 };
 
+const enablePreviewMode = (permalink) => {
+	const searchSection = document.querySelector("#search");
+	searchSection.style.display = "none";
+
+	const resultsCount = document.querySelector("#resultsCount");
+	resultsCount.style.display = "none";
+
+	const navLinksSection = document.querySelector("#navLinksSection");
+	navLinksSection.innerHTML = "";
+
+	const previewHeading = document.createElement("h3");
+	previewHeading.innerHTML = "Pep View";
+	navLinksSection.appendChild(previewHeading);
+
+	togglePageNavButtonsVisibility();
+
+	if (permalink === "sortase") {
+		const card = generateSortaseCard();
+		CARDS_CONTAINER.appendChild(card);
+		document.title = "Class C Sortase | Pep View | AMP-R";
+	} else {
+		searchBox.value = `PEP${permalink}`;
+		document.title = `Pep${permalink} | Pep View | AMP-R`;
+	}
+};
+
 const main = () => {
 	const searchBox = document.querySelector("#searchBox");
 	searchBox.oninput = triggerSearch;
 
 	const permalink = getPermalink();
 	if (permalink) {
-		if (permalink === "sortase") {
-			const card = generateSortaseCard();
-			CARDS_CONTAINER.appendChild(card);
-			togglePageNavButtonsVisibility();
-			document.title = "Class C Sortase | Pep Preview | AMP-R";
-		} else {
-			searchBox.value = `PEP${permalink}`;
-			document.title = `Pep${permalink} | Pep Preview | AMP-R`;
-		}
-
-		const searchSection = document.querySelector("#search");
-		searchSection.style.display = "none";
-
-		const resultsCount = document.querySelector("#resultsCount");
-		resultsCount.style.display = "none";
+		enablePreviewMode(permalink);
 	}
 };
 
