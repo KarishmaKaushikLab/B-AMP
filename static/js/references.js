@@ -105,16 +105,21 @@ const main = () => {
 			],
 		},
 		{
-			authors:
-				"Jianyi Yang, Ivan Anishchenko, Hahnbeom Park, Zhenling Peng, Sergey Ovchinnikov, and David Baker",
-			title: "Improved protein structure prediction using predicted interresidue orientations.",
-			publication: "(2020) PNAS 117 (3) 1496-1503",
-		},
-		{
-			authors:
-				"Naozumi Hiranuma, Hahnbeom Park, Ivan Anishchanka, Minkyung Baek, David Baker",
-			title: "Improved protein structure refinement guided by deep learning based accuracy estimation",
-			publication: "(2020) bioRxiv preprint.",
+			section: "Robetta",
+			citations: [
+				{
+					authors:
+						"Jianyi Yang, Ivan Anishchenko, Hahnbeom Park, Zhenling Peng, Sergey Ovchinnikov, and David Baker",
+					title: "Improved protein structure prediction using predicted interresidue orientations.",
+					publication: "(2020) PNAS 117 (3) 1496-1503",
+				},
+				{
+					authors:
+						"Naozumi Hiranuma, Hahnbeom Park, Ivan Anishchanka, Minkyung Baek, David Baker",
+					title: "Improved protein structure refinement guided by deep learning based accuracy estimation",
+					publication: "(2020) bioRxiv preprint.",
+				},
+			],
 		},
 		{
 			authors: "O. Trott, A. J. Olson",
