@@ -91,7 +91,7 @@ const generateDockedCard = (drampID, pepID) => {
     horizontalContainer.appendChild(nameContainer);
 
     const drampHeading = document.createElement("h3");
-    drampHeading.textContent = `Pep${pepID} · DRAMP${drampID}`;
+    drampHeading.textContent = drampID ? `Pep${pepID} · DRAMP${drampID}` : `Pep${pepID}`;
     nameContainer.appendChild(drampHeading);
 
     const pepName = document.createElement("h2");
