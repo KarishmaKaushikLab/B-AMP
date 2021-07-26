@@ -91,7 +91,7 @@ const generateDockedCard = (drampID, pepID) => {
     horizontalContainer.appendChild(nameContainer);
 
     const drampHeading = document.createElement("h3");
-    drampHeading.textContent = `Pep${pepID} · DRAMP${drampID}`;
+    drampHeading.textContent = drampID ? `Pep${pepID} · DRAMP${drampID}` : `Pep${pepID}`;
     nameContainer.appendChild(drampHeading);
 
     const pepName = document.createElement("h2");
@@ -117,7 +117,7 @@ const generateDockedCard = (drampID, pepID) => {
 };
 
 const DOCKING_SCORE_TO_COLOR_CODE = [
-    "red", "green", "#cfde0d", "#1a91db", "#e75480", "purple", "orange", "black", "olive", "grey", "#c4a01d", "#FDFF00",
+    "red", "green", "#cfde0d", "#1a91db", "#e75480", "purple", "orange", "black", "olive", "grey", "#c4a01d", "teal",
 ];
 
 const DOCKED_PEPTIDES_BY_SCORE = {
@@ -163,7 +163,7 @@ const renderIsland = (score) => {
 
     const islandHeading = document.createElement("h1");
     islandHeading.style = `background-color: ${DOCKING_SCORE_TO_COLOR_CODE[score]}`;
-    islandHeading.textContent = `Score ${score}`;
+    islandHeading.textContent = score === 11 ? "Standard" : `Score ${score}`;
     island.appendChild(islandHeading);
 
     const islandCardContainer = document.createElement("span");
@@ -171,7 +171,7 @@ const renderIsland = (score) => {
     island.appendChild(islandCardContainer);
 
     for (const pep of peps) {
-        const card = generateDockedCard(DRAMP_TO_PEP[pep], pep);
+        const card = generateDockedCard(PEP_TO_DRAMP[pep], pep);
         islandCardContainer.appendChild(card);
     }
 
@@ -184,7 +184,7 @@ const addJumpListItem = (score) => {
     li.style = `background-color: ${DOCKING_SCORE_TO_COLOR_CODE[score]}`;
 
     const jumpLink = document.createElement("a");
-    jumpLink.textContent = `Score ${score}`;
+    jumpLink.textContent = score === 11 ? "Standard" : `Score ${score}`;
     jumpLink.href = `#score-${score}`;
     li.appendChild(jumpLink);
 

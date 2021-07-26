@@ -119,7 +119,7 @@ const generateDRAMPCard = (drampID, pepID) => {
 	drampCard.classList.add(ACTIVITY_TO_CSS_CLASS[activity]);
 
 	const drampHeading = document.createElement("h3");
-	drampHeading.textContent = `Pep${pepID} · DRAMP${drampID}`;
+	drampHeading.textContent = drampID ? `Pep${pepID} · DRAMP${drampID}` : `Pep${pepID}`;
 	drampCard.appendChild(drampHeading);
 
 	const pepName = document.createElement("h2");
