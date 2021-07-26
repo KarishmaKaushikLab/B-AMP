@@ -1,4 +1,5 @@
 const CARDS_CONTAINER = document.querySelector("#drampCards");
+const JUMP_LIST = document.querySelector("#jumpList");
 
 const ACTIVITY_TO_CSS_CLASS = [
     "otherActivity",
@@ -157,6 +158,7 @@ const renderIsland = (score) => {
 
     const island = document.createElement("span");
     island.className = "island";
+    island.id = `score-${score}`;
 
     const islandHeading = document.createElement("h1");
     islandHeading.style = `background-color: ${DOCKING_SCORE_TO_COLOR_CODE[score]}`;
@@ -175,11 +177,26 @@ const renderIsland = (score) => {
     CARDS_CONTAINER.appendChild(island);
 };
 
+const addJumpListItem = (score) => {
+    const li = document.createElement("li");
+    li.className = "jumpListItem";
+    li.style = `background-color: ${DOCKING_SCORE_TO_COLOR_CODE[score]}`;
+
+    const jumpLink = document.createElement("a");
+    jumpLink.textContent = `Score ${score}`;
+    jumpLink.href = `#score-${score}`;
+    li.appendChild(jumpLink);
+
+    JUMP_LIST.appendChild(li);
+};
+
 const main = () => {
     sortByDockingScore();
 
-    for (let score = 10; score >= 0; score--)
+    for (let score = 10; score >= 0; score--) {
         renderIsland(score);
+        addJumpListItem(score);
+    }
 };
 
 main();
