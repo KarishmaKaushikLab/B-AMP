@@ -25,8 +25,33 @@ const generateCitation = (authors, title, publication) => {
     return citation;
 };
 
+const generateSection = (sectionTitle, citations) => {
+    const section = document.createElement("li");
+    section.className = "citation";
+
+    const title = document.createElement("h1");
+    title.textContent = sectionTitle;
+    section.appendChild(title);
+
+    const list = document.createElement("ul");
+    section.appendChild(list);
+
+    for (const citation of citations) {
+        const citationElement = generateCitation(citation["authors"], citation["title"], citation["publication"]);
+        list.appendChild(citationElement);
+    }
+
+    return section;
+};
+
 const renderCitations = (citations) => {
     for (const citation of citations) {
+        if (citation["section"]) {
+            const section = generateSection(citation["section"], citation["citations"]);
+            CITATIONS_LIST.appendChild(section);
+            continue;
+        }
+
         const citationElement = generateCitation(citation["authors"], citation["title"], citation["publication"]);
         CITATIONS_LIST.appendChild(citationElement);
     }
@@ -35,34 +60,44 @@ const renderCitations = (citations) => {
 const main = () => {
     const CITATIONS = [
         {
-            "authors": "Lamiable A, Thévenet P, Rey J, Vavrusa M, Derreumaux P, Tufféry P.",
-            "title": "PEP-FOLD3: faster de novo structure prediction for linear peptides in solution and in complex.",
-            "publication": "Nucleic Acids Res. 2016 Jul 8;44(W1):W449-54."
+            "section": "PEP-FOLD3",
+            "citations": [
+                {
+                    "authors": "Lamiable A, Thévenet P, Rey J, Vavrusa M, Derreumaux P, Tufféry P.",
+                    "title": "PEP-FOLD3: faster de novo structure prediction for linear peptides in solution and in complex.",
+                    "publication": "Nucleic Acids Res. 2016 Jul 8;44(W1):W449-54."
+                },
+                {
+                    "authors": "Shen Y, Maupetit J, Derreumaux P, Tufféry P.",
+                    "title": "Improved PEP-FOLD approach for peptide and miniprotein structure prediction",
+                    "publication": "J. Chem. Theor. Comput. 2014; 10:4745-4758"
+                },
+                {
+                    "authors": "Thévenet P, Shen Y, Maupetit J, Guyon F, Derreumaux P, Tufféry P.",
+                    "title": "PEP-FOLD: an updated de novo structure prediction server for both linear and disulfide bonded cyclic peptides.",
+                    "publication": "Nucleic Acids Res. 2012. 40, W288-293."
+                }
+            ]
         },
         {
-            "authors": "Shen Y, Maupetit J, Derreumaux P, Tufféry P.",
-            "title": "Improved PEP-FOLD approach for peptide and miniprotein structure prediction",
-            "publication": "J. Chem. Theor. Comput. 2014; 10:4745-4758"
-        },
-        {
-            "authors": "Thévenet P, Shen Y, Maupetit J, Guyon F, Derreumaux P, Tufféry P.",
-            "title": "PEP-FOLD: an updated de novo structure prediction server for both linear and disulfide bonded cyclic peptides.",
-            "publication": "Nucleic Acids Res. 2012. 40, W288-293."
-        },
-        {
-            "authors": "J Yang, R Yan, A Roy, D Xu, J Poisson, Y Zhang.",
-            "title": "The I-TASSER Suite: Protein structure and function prediction",
-            "publication": "Nature Methods, 12: 7-8 (2015)"
-        },
-        {
-            "authors": "A Roy, A Kucukural, Y Zhang",
-            "title": "I-TASSER: a unified platform for automated protein structure and function prediction.",
-            "publication": "Nature Protocols, 5: 725-738 (2010)"
-        },
-        {
-            "authors": "Y Zhang",
-            "title": "I-TASSER server for protein 3D structure prediction",
-            "publication": "BMC Bioinformatics, vol 9, 40 (2008)"
+            "section": "I-TASSER",
+            "citations": [
+                {
+                    "authors": "J Yang, R Yan, A Roy, D Xu, J Poisson, Y Zhang.",
+                    "title": "The I-TASSER Suite: Protein structure and function prediction",
+                    "publication": "Nature Methods, 12: 7-8 (2015)"
+                },
+                {
+                    "authors": "A Roy, A Kucukural, Y Zhang",
+                    "title": "I-TASSER: a unified platform for automated protein structure and function prediction.",
+                    "publication": "Nature Protocols, 5: 725-738 (2010)"
+                },
+                {
+                    "authors": "Y Zhang",
+                    "title": "I-TASSER server for protein 3D structure prediction",
+                    "publication": "BMC Bioinformatics, vol 9, 40 (2008)"
+                }
+            ]
         },
         {
             "authors": "Jianyi Yang, Ivan Anishchenko, Hahnbeom Park, Zhenling Peng, Sergey Ovchinnikov, and David Baker",
