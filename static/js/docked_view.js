@@ -1,4 +1,5 @@
 const CARDS_CONTAINER = document.querySelector("#drampCards");
+const JUMP_LIST = document.querySelector("#jumpList");
 
 const ACTIVITY_TO_CSS_CLASS = [
     "otherActivity",
@@ -116,7 +117,7 @@ const generateDockedCard = (drampID, pepID) => {
 };
 
 const DOCKING_SCORE_TO_COLOR_CODE = [
-    "red", "green", "yellow", "blue", "pink", "purple", "orange", "black", "olive", "grey", "mustard", "lemon",
+    "red", "green", "#cfde0d", "#1a91db", "#e75480", "purple", "orange", "black", "olive", "grey", "#c4a01d", "#FDFF00",
 ];
 
 const DOCKED_PEPTIDES_BY_SCORE = {
@@ -135,15 +136,33 @@ const DOCKED_PEPTIDES_BY_SCORE = {
     ],
     9: [1218, 4708, 4931, 4934, 5482, 5508],
     10: [1437, 4021, 4583, 4707, 4785, 5494, 5496],
+    11: [1],
+};
+
+const sortByDockingScore = () => {
+    for (let score = 0; score <= 10; score++) {
+        let peps = DOCKED_PEPTIDES_BY_SCORE[score];
+
+        peps.sort((pepA, pepB) => {
+            const scoreA = PEP_TO_DOCKING_SCORE[pepA];
+            const scoreB = PEP_TO_DOCKING_SCORE[pepB];
+
+            if (scoreB > scoreA) return 1;
+
+            return 0;
+        })
+    }
 };
 
 const renderIsland = (score) => {
-    const peps = DOCKED_PEPTIDES_BY_SCORE[score].sort();
+    const peps = DOCKED_PEPTIDES_BY_SCORE[score];
 
     const island = document.createElement("span");
     island.className = "island";
+    island.id = `score-${score}`;
 
     const islandHeading = document.createElement("h1");
+    islandHeading.style = `background-color: ${DOCKING_SCORE_TO_COLOR_CODE[score]}`;
     islandHeading.textContent = `Score ${score}`;
     island.appendChild(islandHeading);
 
@@ -159,9 +178,26 @@ const renderIsland = (score) => {
     CARDS_CONTAINER.appendChild(island);
 };
 
+const addJumpListItem = (score) => {
+    const li = document.createElement("li");
+    li.className = "jumpListItem";
+    li.style = `background-color: ${DOCKING_SCORE_TO_COLOR_CODE[score]}`;
+
+    const jumpLink = document.createElement("a");
+    jumpLink.textContent = `Score ${score}`;
+    jumpLink.href = `#score-${score}`;
+    li.appendChild(jumpLink);
+
+    JUMP_LIST.appendChild(li);
+};
+
 const main = () => {
-    for (let i = 10; i >= 0; i--)
-        renderIsland(i);
+    sortByDockingScore();
+
+    for (let score = 11; score >= 0; score--) {
+        renderIsland(score);
+        addJumpListItem(score);
+    }
 };
 
 main();

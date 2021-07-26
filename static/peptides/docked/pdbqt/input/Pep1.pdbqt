@@ -1,0 +1,86 @@
+REMARK  14 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: CA_2  and  C_7 
+REMARK    2  A    between atoms: CA_2  and  CB_3 
+REMARK    3  A    between atoms: CB_3  and  CG_4 
+REMARK       I    between atoms: C_7  and  N_9 
+REMARK    4  A    between atoms: CA_10  and  C_14 
+REMARK       I    between atoms: C_14  and  N_16 
+REMARK    5  A    between atoms: N_16  and  CA_17 
+REMARK    6  A    between atoms: CA_17  and  C_22 
+REMARK    7  A    between atoms: CA_17  and  CB_18 
+REMARK    8  A    between atoms: CB_18  and  CG_19 
+REMARK    9  A    between atoms: CG_19  and  SD_20 
+REMARK       I    between atoms: C_22  and  N_24 
+REMARK   10  A    between atoms: N_24  and  CA_25 
+REMARK   11  A    between atoms: CA_25  and  CB_26 
+REMARK   12  A    between atoms: CA_25  and  C_29 
+REMARK       I    between atoms: C_29  and  N_31 
+REMARK   13  A    between atoms: N_31  and  CA_32 
+REMARK   14  A    between atoms: CA_32  and  C_33 
+ROOT
+ATOM      1  N   LEU     1      24.980  24.050  23.370  1.00  0.00     0.626 N 
+ATOM      2  CA  LEU     1      26.250  23.710  24.040  1.00  0.00     0.379 C 
+ENDROOT
+BRANCH   2   3
+ATOM      3  C   LEU     1      26.110  24.060  25.540  1.00  0.00     0.271 C 
+ATOM      4  O   LEU     1      25.220  24.870  25.810  1.00  0.00    -0.270 OA
+ATOM      5  N   PRO     2      26.910  23.520  26.470  1.00  0.00    -0.312 N 
+ATOM      6  CD  PRO     2      28.100  22.680  26.220  1.00  0.00     0.105 C 
+ATOM      7  CA  PRO     2      26.740  23.730  27.930  1.00  0.00     0.165 C 
+ATOM      8  CG  PRO     2      28.920  22.810  27.500  1.00  0.00     0.027 C 
+ATOM      9  CB  PRO     2      27.850  22.900  28.590  1.00  0.00     0.034 C 
+BRANCH   7  10
+ATOM     10  C   PRO     2      26.720  25.180  28.470  1.00  0.00     0.272 C 
+ATOM     11  O   PRO     2      26.570  25.370  29.670  1.00  0.00    -0.269 OA
+ATOM     12  N   MET     3      27.170  26.130  27.650  1.00  0.00    -0.229 NA
+BRANCH  12  13
+ATOM     13  CA  MET     3      27.050  27.570  27.940  1.00  0.00     0.187 C 
+BRANCH  13  14
+ATOM     14  C   MET     3      26.050  28.350  27.050  1.00  0.00     0.274 C 
+ATOM     15  N   THR     4      25.190  27.640  26.320  1.00  0.00    -0.226 NA
+ATOM     16  O   MET     3      26.130  29.570  26.960  1.00  0.00    -0.268 OA
+BRANCH  15  17
+ATOM     17  CA  THR     4      24.250  28.260  25.340  1.00  0.00     0.216 C 
+BRANCH  17  18
+ATOM     18  CB  THR     4      24.700  28.090  23.870  1.00  0.00     0.184 C 
+ATOM     19  OG1 THR     4      24.340  26.780  23.380  1.00  0.00    -0.221 OA
+ATOM     20  CG2 THR     4      26.180  28.410  23.620  1.00  0.00     0.038 C 
+ENDBRANCH  17  18
+BRANCH  17  21
+ATOM     21  C   THR     4      22.790  27.760  25.410  1.00  0.00     0.277 C 
+ATOM     22  O   THR     4      22.050  27.900  24.430  1.00  0.00    -0.268 OA
+ATOM     23  N   GLY     5      22.500  26.920  26.390  1.00  0.00    -0.225 NA
+BRANCH  23  24
+ATOM     24  CA  GLY     5      21.230  26.200  26.570  1.00  0.00     0.226 C 
+BRANCH  24  25
+ATOM     25  C   GLY     5      21.410  25.390  27.860  1.00  0.00     0.211 C 
+ATOM     26  O1  GLY     5      22.600  25.200  28.230  1.00  0.00    -0.646 OA
+ATOM     27  O2  GLY     5      20.380  25.080  28.480  1.00  0.00    -0.646 OA
+ENDBRANCH  24  25
+ENDBRANCH  23  24
+ENDBRANCH  17  21
+ENDBRANCH  15  17
+ENDBRANCH  13  14
+BRANCH  13  28
+ATOM     28  CB  MET     3      28.460  28.180  27.830  1.00  0.00     0.046 C 
+BRANCH  28  29
+ATOM     29  CG  MET     3      29.070  28.140  26.420  1.00  0.00     0.060 C 
+BRANCH  29  30
+ATOM     30  SD  MET     3      29.340  26.450  25.740  1.00  0.00    -0.139 SA
+ATOM     31  CE  MET     3      30.980  26.160  26.380  1.00  0.00     0.069 C 
+ENDBRANCH  29  30
+ENDBRANCH  28  29
+ENDBRANCH  13  28
+ENDBRANCH  12  13
+ENDBRANCH   7  10
+ENDBRANCH   2   3
+BRANCH   2  32
+ATOM     32  CB  LEU     1      27.370  24.520  23.370  1.00  0.00     0.049 C 
+BRANCH  32  33
+ATOM     33  CG  LEU     1      27.760  24.000  21.980  1.00  0.00     0.003 C 
+ATOM     34  CD1 LEU     1      28.760  24.960  21.340  1.00  0.00     0.000 C 
+ATOM     35  CD2 LEU     1      28.380  22.600  22.070  1.00  0.00     0.000 C 
+ENDBRANCH  32  33
+ENDBRANCH   2  32
+TORSDOF 14
