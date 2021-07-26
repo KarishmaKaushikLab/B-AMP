@@ -35,3 +35,13 @@ def generate_docked_thumbnails():
         print(f"Thumb generated: {image_file}")
 
     print(f"Successfully generated {len(image_files)} thumbs.")
+
+
+def generate_sortase_thumbnail():
+    full_img = Image.open(f"static/sortase/M_Ala_Sortase.png")
+    scaled_img = full_img.resize((400, 355))
+    scaled_img.save(
+        f"static/sortase/M_Ala_Sortase_Thumb.png", optimize=True, quality=50
+    )
+
+    print(f"Successfully generated Sortase thumb.")

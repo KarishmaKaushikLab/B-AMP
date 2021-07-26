@@ -151,7 +151,7 @@ const generateSortaseCard = () => {
 
 	const img = document.createElement("img");
 	img.className = "dockedImage";
-	img.src = "static/sortase/M_Ala_Sortase.png"; // TODO: Replace with thumbnail
+	img.src = "static/sortase/M_Ala_Sortase_Thumb.png"; // TODO: Replace with thumbnail
 	dockedCard.appendChild(img);
 
 	const infoContainer = document.createElement("section");
