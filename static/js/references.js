@@ -4,23 +4,20 @@ const generateCitation = (authors, title, publication) => {
     const citation = document.createElement("li");
     citation.className = "citation";
 
-    const citationContainer = document.createElement("span");
-    citation.appendChild(citationContainer);
-
     const authorsHeading = document.createElement("h3");
     authorsHeading.className = "citationAuthors";
     authorsHeading.innerText = authors;
-    citationContainer.appendChild(authorsHeading);
+    citation.appendChild(authorsHeading);
 
     const titleHeading = document.createElement("h3");
     titleHeading.className = "citationTitle";
     titleHeading.innerText = title;
-    citationContainer.appendChild(titleHeading);
+    citation.appendChild(titleHeading);
 
     const publicationHeading = document.createElement("h4");
     publicationHeading.className = "citationPublication";
     publicationHeading.innerText = publication;
-    citationContainer.appendChild(publicationHeading);
+    citation.appendChild(publicationHeading);
 
     return citation;
 };
