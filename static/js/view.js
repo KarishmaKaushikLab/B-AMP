@@ -166,8 +166,8 @@ const generateSortaseCard = () => {
 	drampLinks.className = "drampLinks";
 	infoContainer.appendChild(drampLinks);
 
-	drampLinks.appendChild(generateDRAMPLink(-1, "sortase_pdbqt"));
 	drampLinks.appendChild(generateDRAMPLink(-1, "sortase_fasta"));
+	drampLinks.appendChild(generateDRAMPLink(-1, "sortase_pdbqt"));
 	drampLinks.appendChild(generateDRAMPLink(-1, "sortase_model"));
 
 	return dockedCard;
