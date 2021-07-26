@@ -137,6 +137,17 @@ const main = () => {
 			],
 		},
 		{
+			section: "Visualization",
+			citations: [
+				{
+					authors:
+						"Pettersen EF, Goddard TD, Huang CC, Couch GS, Greenblatt DM, Meng EC, Ferrin TE.",
+					title: "UCSF Chimera--a visualization system for exploratory research and analysis",
+					publication: "J Comput Chem. 2004 Oct;25(13):1605-12.",
+				},
+			],
+		},
+		{
 			authors: "O. Trott, A. J. Olson",
 			title: "AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization and multithreading",
 			publication: "Journal of Computational Chemistry 31 (2010) 455-461",
@@ -150,13 +161,6 @@ const main = () => {
 			authors: "Liu S.; Fan L.; Sun J.; Lao X.; Zheng H.",
 			title: "Computational resources and tools for antimicrobial peptides",
 			publication: "J Pept Sci. 2017 Jan;23(1):4-12. PMID:27966278",
-		},
-
-		{
-			authors:
-				"Pettersen EF, Goddard TD, Huang CC, Couch GS, Greenblatt DM, Meng EC, Ferrin TE.",
-			title: "UCSF Chimera--a visualization system for exploratory research and analysis",
-			publication: "J Comput Chem. 2004 Oct;25(13):1605-12.",
 		},
 		{
 			authors: "The PyMOL Molecular Graphics System, Version 2.0",
