@@ -76,6 +76,7 @@ const generateDockedCard = (drampID, pepID) => {
 	const img = document.createElement("img");
 	img.className = "dockedImage";
 	img.src = `static/peptides/docked/thumbs/Pep${pepID}.png`;
+	img.loading = "lazy";
 	dockedCard.appendChild(img);
 
 	const infoContainer = document.createElement("section");
