@@ -1,6 +1,7 @@
 from csv import DictReader
 from os import mkdir, path
 
+
 def generate_fasta_files():
     with open("utils/full.csv") as fd:
         reader = DictReader(fd)

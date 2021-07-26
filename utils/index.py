@@ -7,7 +7,7 @@ def build_dramp_to_pep_index():
 
     with open("utils/full.csv") as csv_fd:
         reader = DictReader(csv_fd)
-        
+
         pep_id = 0
         for row in reader:
             dramp_id = row["DRAMP_ID"][5:]
@@ -15,10 +15,9 @@ def build_dramp_to_pep_index():
 
             pep_id += 1
 
-
     with open("static/js/dramp_to_pep_index.js", "w+") as index_fd:
         index_str = json.dumps(INDEX)
-        index_str = json.dumps(index_str)   # for escaping double quotes
+        index_str = json.dumps(index_str)  # for escaping double quotes
         contents = f"const DRAMP_TO_PEP = JSON.parse({index_str});"
         index_fd.write(contents)
 
@@ -28,7 +27,7 @@ def build_pep_to_dramp_index():
 
     with open("utils/full.csv") as csv_fd:
         reader = DictReader(csv_fd)
-        
+
         pep_id = 0
         for row in reader:
             dramp_id = row["DRAMP_ID"][5:]
@@ -36,10 +35,9 @@ def build_pep_to_dramp_index():
 
             pep_id += 1
 
-
     with open("static/js/pep_to_dramp.js", "w+") as index_fd:
         index_str = json.dumps(INDEX)
-        index_str = json.dumps(index_str)   # for escaping double quotes
+        index_str = json.dumps(index_str)  # for escaping double quotes
         contents = f"const PEP_TO_DRAMP = JSON.parse({index_str});"
         index_fd.write(contents)
 
@@ -54,7 +52,7 @@ def build_pep_to_activity_and_name_index():
 
     with open("utils/full.csv") as csv_fd:
         reader = DictReader(csv_fd)
-        
+
         pep_id = 0
         for row in reader:
             activities = 0
@@ -66,15 +64,13 @@ def build_pep_to_activity_and_name_index():
                         continue
 
                     activities += ACTIVITY_TO_ID[str_activity]
-            
 
             INDEX[pep_id] = [activities, row["Name"]]
             pep_id += 1
 
-
     with open("static/js/pep_to_activity_and_name_index.js", "w+") as index_fd:
         index_str = json.dumps(INDEX)
-        index_str = json.dumps(index_str)   # for escaping double quotes
+        index_str = json.dumps(index_str)  # for escaping double quotes
         contents = f"const PEP_TO_ACTIVITY_AND_NAME = JSON.parse({index_str});"
         index_fd.write(contents)
 
@@ -84,14 +80,13 @@ def build_pep_to_docking_score_index():
 
     with open("utils/docked.csv") as csv_fd:
         reader = DictReader(csv_fd)
-        
+
         for row in reader:
             INDEX[row["Peptide#"]] = row["Docking Score"]
 
-
     with open("static/js/pep_to_docking_score_index.js", "w+") as index_fd:
         index_str = json.dumps(INDEX)
-        index_str = json.dumps(index_str)   # for escaping double quotes
+        index_str = json.dumps(index_str)  # for escaping double quotes
         contents = f"const PEP_TO_DOCKING_SCORE = JSON.parse({index_str});"
         index_fd.write(contents)
 
@@ -104,7 +99,7 @@ def build_text_to_pep_index():
 
     with open("utils/full.csv") as csv_fd:
         reader = DictReader(csv_fd)
-        
+
         pep_id = 0
         for row in reader:
             name = row["Name"].lower()
@@ -117,9 +112,8 @@ def build_text_to_pep_index():
 
             pep_id += 1
 
-
     with open("static/js/text_to_pep.js", "w+") as index_fd:
         index_str = json.dumps(INDEX)
-        index_str = json.dumps(index_str)   # for escaping double quotes
+        index_str = json.dumps(index_str)  # for escaping double quotes
         contents = f"const TEXT_TO_PEP = JSON.parse({index_str});"
         index_fd.write(contents)

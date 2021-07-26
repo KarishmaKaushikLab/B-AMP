@@ -56,7 +56,7 @@ def sort_residues(residues_str: str) -> str:
     for index, residue in enumerate(sorted_residues):
         sorted_residues_as_str += residue
 
-        if not index == len(sorted_residues)-1:
+        if not index == len(sorted_residues) - 1:
             sorted_residues_as_str += ","
 
     return sorted_residues_as_str
