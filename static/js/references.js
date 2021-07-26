@@ -117,7 +117,8 @@ const main = () => {
 					authors:
 						"Naozumi Hiranuma, Hahnbeom Park, Ivan Anishchanka, Minkyung Baek, David Baker",
 					title: "Improved protein structure refinement guided by deep learning based accuracy estimation",
-					publication: "(2020) bioRxiv preprint.",
+					publication:
+						"(2020) bioRxiv preprint. https://doi.org/10.1101/2020.07.17.209643",
 				},
 			],
 		},
