@@ -134,6 +134,16 @@ const main = () => {
 					title: "DRAMP: a comprehensive data repository of antimicrobial peptides",
 					publication: "Sci Rep. 2016 Apr 14;6:24482. PMID: 27075512",
 				},
+				{
+					authors: "Liu S.; Bao J.; Lao X.; Zheng H.",
+					title: "Novel 3D Structure Based Model for Activity Prediction and Design of Antimicrobial Peptides",
+					publication: "Sci Rep. 2018 Jul 25;8(1):11189. PMID:30046138",
+				},
+				{
+					authors: "Liu S.; Fan L.; Sun J.; Lao X.; Zheng H.",
+					title: "Computational resources and tools for antimicrobial peptides",
+					publication: "J Pept Sci. 2017 Jan;23(1):4-12. PMID:27966278",
+				},
 			],
 		},
 		{
@@ -151,16 +161,6 @@ const main = () => {
 			authors: "O. Trott, A. J. Olson",
 			title: "AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization and multithreading",
 			publication: "Journal of Computational Chemistry 31 (2010) 455-461",
-		},
-		{
-			authors: "Liu S.; Bao J.; Lao X.; Zheng H.",
-			title: "Novel 3D Structure Based Model for Activity Prediction and Design of Antimicrobial Peptides",
-			publication: "Sci Rep. 2018 Jul 25;8(1):11189. PMID:30046138",
-		},
-		{
-			authors: "Liu S.; Fan L.; Sun J.; Lao X.; Zheng H.",
-			title: "Computational resources and tools for antimicrobial peptides",
-			publication: "J Pept Sci. 2017 Jan;23(1):4-12. PMID:27966278",
 		},
 		{
 			authors: "The PyMOL Molecular Graphics System, Version 2.0",
