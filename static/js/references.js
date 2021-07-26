@@ -122,14 +122,24 @@ const main = () => {
 			],
 		},
 		{
+			section: "DRAMP",
+			citations: [
+				{
+					authors: "Kang X.; Dong F.; Shi C.; Zheng H. et al",
+					title: "DRAMP 2.0, an updated data repository of antimicrobial peptides",
+					publication: "Scientific Data. 2019; 6(1): 148. PMID:31409791",
+				},
+				{
+					authors: "Fan L.; Sun J.; Zhou M.; Zhou J.; Lao X.; Zheng H.; Xu H.",
+					title: "DRAMP: a comprehensive data repository of antimicrobial peptides",
+					publication: "Sci Rep. 2016 Apr 14;6:24482. PMID: 27075512",
+				},
+			],
+		},
+		{
 			authors: "O. Trott, A. J. Olson",
 			title: "AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization and multithreading",
 			publication: "Journal of Computational Chemistry 31 (2010) 455-461",
-		},
-		{
-			authors: "Kang X.; Dong F.; Shi C.; Zheng H. et al",
-			title: "DRAMP 2.0, an updated data repository of antimicrobial peptides",
-			publication: "Scientific Data. 2019; 6(1): 148. PMID:31409791",
 		},
 		{
 			authors: "Liu S.; Bao J.; Lao X.; Zheng H.",
@@ -141,11 +151,7 @@ const main = () => {
 			title: "Computational resources and tools for antimicrobial peptides",
 			publication: "J Pept Sci. 2017 Jan;23(1):4-12. PMID:27966278",
 		},
-		{
-			authors: "Fan L.; Sun J.; Zhou M.; Zhou J.; Lao X.; Zheng H.; Xu H.",
-			title: "DRAMP: a comprehensive data repository of antimicrobial peptides",
-			publication: "Sci Rep. 2016 Apr 14;6:24482. PMID: 27075512",
-		},
+
 		{
 			authors:
 				"Pettersen EF, Goddard TD, Huang CC, Couch GS, Greenblatt DM, Meng EC, Ferrin TE.",
