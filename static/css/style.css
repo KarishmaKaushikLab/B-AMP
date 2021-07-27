@@ -165,15 +165,20 @@ nav {
     flex-wrap: wrap;
 }
 
-#dockingDisclaimer {
-    text-align: center;
-    padding: 10px;
-
-    background-color: #0a960a;
-    color: white;
+.bubbleWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#dockingDisclaimer > a {
+.helpBubble {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    font-size: 1.3em;
+
+    background-color: #53a153;
     color: white;
 }
 
