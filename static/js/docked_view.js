@@ -174,10 +174,10 @@ const renderIsland = (score) => {
 	island.className = "island";
 	island.id = `score-${score}`;
 
-	const islandHeading = document.createElement("h1");
+	const islandHeading = document.createElement("h2");
 	islandHeading.style.backgroundColor = DOCKING_SCORE_TO_COLOR_CODE[score];
 	if (score > 2 && score < 9) islandHeading.style.color = "#545454";
-	islandHeading.textContent = score === 11 ? "Standard" : `Score ${score}`;
+	islandHeading.textContent = score === 11 ? "Standard" : `Preference Score ${score}`;
 	island.appendChild(islandHeading);
 
 	const islandCardContainer = document.createElement("span");
@@ -198,7 +198,7 @@ const addJumpListItem = (score) => {
 	li.style.backgroundColor = DOCKING_SCORE_TO_COLOR_CODE[score];
 
 	const jumpLink = document.createElement("a");
-	jumpLink.textContent = score === 11 ? "Standard" : `Score ${score}`;
+	jumpLink.textContent = score === 11 ? "Standard" : score;
 	if (score > 2 && score < 9) jumpLink.style.color = "#545454";
 	jumpLink.href = `#score-${score}`;
 	li.appendChild(jumpLink);
