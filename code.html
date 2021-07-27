@@ -19,6 +19,8 @@
 			</section>
 		</nav>
 
+		<h1 style="margin: 30px; font-size: 3.5em; text-align: center">Decoding our Code</h1>
+
 		<main id="codeWriteup">
 			<section class="codeWriteupSection">
 				<h1>INTRODUCTION</h1>
@@ -51,10 +53,10 @@
 					<a target="_blank" href="http://dramp.cpu-bioinfor.org/">DRAMP repository</a>.
 					Using these sequence strings, we intended to generate FASTA files. For example,
 					for Pep6 with sequence
-					<!-- <pre>GNGVLKTISHECNMNTWQFLFTCC</pre>
+					<pre>GNGVLKTISHECNMNTWQFLFTCC</pre>
 					the corresponding FASTA file would look like
 					<pre>>Peptide_6
-GNGVLKTISHECNMNTWQFLFTCC</pre> -->
+GNGVLKTISHECNMNTWQFLFTCC</pre>
 					This was an obvious and easy target for automation. We simply loop over all the
 					peptides in our spreadsheet in order and then generate a FASTA file with their
 					sequence. You can find the script for this
@@ -154,6 +156,52 @@ GNGVLKTISHECNMNTWQFLFTCC</pre> -->
 						rel="noopener noreferrer"
 						>here</a
 					>.
+				</p>
+			</section>
+			<section class="codeWriteupSection">
+				<h1>GENERATING WEBSITE ASSETS & RESOURCES</h1>
+				<p>
+					Our website is a static one. This means that there is no server-side code
+					running in the cloud. We simply deliver static HTML over
+					<a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer"
+						>GitHub Pages</a
+					>. We made this choice because we knew that given the size of our database (a
+					few thousand items), we could get away with a static website. But we also wanted
+					to have search enabled on this repository for convenient and easy access. Thus,
+					we built an offline search engine in JavaScript that runs off a compact search
+					index that your browser downloads every time you visit our
+					<a href="/all.html">All Peptides</a> or
+					<a href="/anti_gram_positive.html">Anti-Gram Positive Peptides</a> sections. We
+					wrote a
+					<a
+						href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/utils/index.py"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Python script</a
+					>
+					to generate these
+					<a
+						href="https://github.com/KarishmaKaushikLab/AMP-R/tree/master/static/js"
+						target="_blank"
+						rel="noopener noreferrer"
+						>search indexes</a
+					>.
+				</p>
+				<p>
+					This approach, while simplistic and limited, works well for us. Despite
+					downloading entire search indexes, our initial page load is in the neighborhood
+					of just 250KB, thanks to compression. Secondly, since our search runs within
+					your browser itself, it is lightning fast. Finally, we have zero server costs!
+				</p>
+				<p>
+					We also wrote a
+					<a
+						href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/utils/thumbs.py"
+						target="_blank"
+						rel="noopener noreferrer"
+						>bit of Python</a
+					>
+					to generate thumbnails for all the 3D models that you see on the site.
 				</p>
 			</section>
 		</main>
