@@ -21,7 +21,7 @@
 
 		<main id="codeWriteup">
 			<section class="codeWriteupSection">
-				<h1>INTRO</h1>
+				<h1>INTRODUCTION</h1>
 				<p>
 					Given the massive size of AMP-R, we were faced with many mechanical, tedious
 					tasks that were highly time-consuming to perform manually. Examples include
@@ -109,17 +109,47 @@ GNGVLKTISHECNMNTWQFLFTCC</pre> -->
 					we would have to sit down and spend a long time reconciling the changes.
 				</p>
 				<p>
-					Thankfully, with a bit of data wrangling, we were able to automate this as well. Our Python script first scanned our
-					original list to build a mapping between the IDs from the DRAMP database and our
-					own Pep IDs. Next, we scanned through the revised list and looked for any
-					peptides which weren't part of our original list. Finally, using the mapping we
-					built earlier, we retained our original Pep IDs and assigned new ones to the new
-					peptides.
+					Thankfully, with a bit of data wrangling, we were able to automate this as well.
+					Our Python script first scanned our original list to build a mapping between the
+					IDs from the DRAMP database and our own Pep IDs. Next, we scanned through the
+					revised list and looked for any peptides which weren't part of our original
+					list. Finally, using the mapping we built earlier, we retained our original Pep
+					IDs and assigned new ones to the new peptides.
 				</p>
 				<p>
 					You can find the script for this
 					<a
 						href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/scripts/dramp_combine_lists/combine.py"
+						target="_blank"
+						rel="noopener noreferrer"
+						>here</a
+					>.
+				</p>
+			</section>
+			<section class="codeWriteupSection">
+				<h1>SORTING RESIDUES BY INTERACTIONS</h1>
+				<p>
+					Once we had docked our selected few peptides with our target protein, we wished
+					to sort these peptides based on their interactions and docking energy. This
+					would result in a much more approachable and useful document that would help
+					users of our repository.
+				</p>
+				<p>
+					We assigned priorities to all candidate residues and performed a simple sort
+					based on them.
+				</p>
+				<p>
+					Further, we manually grouped peptides based on these interactions. We performed
+					an intra-group sort based on docking energy.
+				</p>
+				<p>
+					This part was extremely straightforward and was made even easier with Python's
+					excellent
+					<a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer"
+						>Pandas library</a
+					>.You can find the code for this
+					<a
+						href="https://github.com/KarishmaKaushikLab/AMP-R/tree/master/scripts/residue_sorter"
 						target="_blank"
 						rel="noopener noreferrer"
 						>here</a
