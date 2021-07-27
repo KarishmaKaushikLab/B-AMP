@@ -1,5 +1,6 @@
 const CARDS_CONTAINER = document.querySelector("#drampCards");
 const JUMP_LIST = document.querySelector("#jumpList");
+const JUMP_LIST_CONTAINER = document.querySelector("#jumpListContainer");
 
 const ACTIVITY_TO_CSS_CLASS = [
 	"otherActivity",
@@ -203,6 +204,19 @@ const addJumpListItem = (score) => {
 	JUMP_LIST.appendChild(li);
 };
 
+const hideJumpListOnScroll = () => {
+	var prevScrollpos = window.pageYOffset;
+	window.onscroll = function () {
+		var currentScrollPos = window.pageYOffset;
+		if (prevScrollpos > currentScrollPos) {
+			JUMP_LIST_CONTAINER.style.bottom = "0";
+		} else {
+			JUMP_LIST_CONTAINER.style.bottom = "-200px";
+		}
+		prevScrollpos = currentScrollPos;
+	};
+};
+
 const main = () => {
 	sortByDockingScore();
 
@@ -210,6 +224,8 @@ const main = () => {
 		renderIsland(score);
 		addJumpListItem(score);
 	}
+
+	hideJumpListOnScroll();
 };
 
 main();
