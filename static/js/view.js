@@ -297,6 +297,9 @@ const getPermalink = () => {
 };
 
 const enablePreviewMode = (permalink) => {
+	const helpBubble = document.querySelector(".helpBubble");
+	helpBubble.style.display = "none";
+
 	const searchSection = document.querySelector("#search");
 	searchSection.style.display = "none";
 
