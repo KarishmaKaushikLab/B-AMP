@@ -26,16 +26,19 @@
 			</section>
 
 			<section id="intro">
-				<p style="text-align: justify; text-justify: inter-word;">
-					AMP-R is a repository of Antimicrobial Peptides (AMPs) consisting of a vast library of 5544
-					structural AMP models. This entire set of FASTA files, along with PDB structures and 3D peptide models,
-					has been made available for use in this search-enabled repository. This also includes the 2547 filtered
-					anti-Gram positive peptides, and results from protein-peptide docking studies. The database is searchable
-					using DRAMP IDs or PEP IDs (please see files with IDs listed). AMP-R also contains in-house developed
-					Python scripts used to filter peptides from the library of 5841 general AMPs, and these codes can be modified
-					depending on use. Taken together, AMP-R is a user-friendly and accessible database of AMP structural
-					models that can serve as a resource for future bioinformatics studies examining AMPs for antimicrobial
-					and other biological applications. 
+				<p style="text-align: justify; text-justify: inter-word">
+					AMP-R is a repository of Antimicrobial Peptides (AMPs) consisting of a vast
+					library of 5544 structural AMP models. This entire set of FASTA files, along
+					with PDB structures and 3D peptide models, has been made available for use in
+					this search-enabled repository. This also includes the 2547 filtered anti-Gram
+					positive peptides, and results from protein-peptide docking studies. The
+					database is searchable using DRAMP IDs or PEP IDs (please see files with IDs
+					listed). AMP-R also contains in-house developed Python scripts used to filter
+					peptides from the library of 5841 general AMPs, and these codes can be modified
+					depending on use. Taken together, AMP-R is a user-friendly and accessible
+					database of AMP structural models that can serve as a resource for future
+					bioinformatics studies examining AMPs for antimicrobial and other biological
+					applications.
 				</p>
 			</section>
 		</section>
@@ -92,50 +95,72 @@
 		</section>
 
 		<section id="citeUs">
-			<h1 style="font-size: 2.5em;">CITE US</h1>
+			<h1 style="font-size: 2.5em">CITE US</h1>
 			<span class="citation">
 				<h3 class="citationAuthors">
-					Shreeya Mhade, Stutee Panse, Gandhar Tendulkar, Rohit Awate, Snehal Kadam, Karishma S. Kaushik
+					Shreeya Mhade, Stutee Panse, Gandhar Tendulkar, Rohit Awate, Snehal Kadam,
+					Karishma S. Kaushik
 				</h3>
 				<h3 class="citationTitle">
-					<i>AMPing up the search: An in silico virtual screening approach and search-enabled repository to identify Antimicrobial Peptides (AMPs) with potential anti-biofilm activity</i>
+					<i
+						>AMPing up the search: An in silico virtual screening approach and
+						search-enabled repository to identify Antimicrobial Peptides (AMPs) with
+						potential anti-biofilm activity</i
+					>
 				</h3>
 			</span>
 		</section>
 
 		<footer>
-			<img src="static/images/kaushik-lab-logo.png" id="labLogo">
+			<img src="static/images/kaushik-lab-logo.png" id="labLogo" />
 			<section id="footerContent">
 				<h3>A project by</h3>
 				<h1>HUMAN-RELEVANT INFECTION BIOLOGY GROUP</h1>
 				<h2>(led by Dr. Karishma Kaushik)</h2>
-				
-				<hr> 
+
+				<hr />
 
 				<section class="footerLinks">
 					<a href="https://www.karishmakaushiklab.com/" target="_blank">
-						<img src="static/icons/globe.png" class="footerLink">
+						<img src="static/icons/globe.png" class="footerLink" />
 					</a>
 					<a href="https://twitter.com/KaushikLab" target="_blank">
-						<img src="static/icons/twitter.png" class="footerLink">
+						<img src="static/icons/twitter.png" class="footerLink" />
 					</a>
 					<a href="mailto:karishmaskaushik@gmail.com" target="_blank">
-						<img src="static/icons/mail.png" class="footerLink">
+						<img src="static/icons/mail.png" class="footerLink" />
 					</a>
 					<a href="https://github.com/KarishmaKaushikLab/AMP-R" target="_blank">
-						<img src="static/icons/github.png" class="footerLink">
+						<img src="static/icons/github.png" class="footerLink" />
 					</a>
 				</section>
 			</section>
 		</footer>
 		<section id="license">
-			<p>This work is licensed under a <a rel="license" style="color: white;" href="https://creativecommons.org/licenses/by/3.0/deed.en_US" target="_blank">Creative Commons Attribution 3.0 Unported License</a>, with the exception of this website's code and additional utility code that aided this work, which is separately licensed under the <a rel="license" style="color: white;" href="https://github.com/RohitAwate/AMPRepo/blob/master/LICENSE" target="_blank">GNU General Public License v3.0</a>.</p>
+			<p>
+				This work is licensed under a
+				<a
+					rel="license"
+					style="color: white"
+					href="https://creativecommons.org/licenses/by/3.0/deed.en_US"
+					target="_blank"
+					>Creative Commons Attribution 3.0 Unported License</a
+				>, with the exception of this website's code and additional utility code that aided
+				this work, which is separately licensed under the
+				<a
+					rel="license"
+					style="color: white"
+					href="https://github.com/RohitAwate/AMPRepo/blob/master/LICENSE"
+					target="_blank"
+					>GNU General Public License v3.0</a
+				>.
+			</p>
 		</section>
 	</body>
 	<script>
 		const theTeam = document.querySelector("#theTeam");
 		for (var i = theTeam.children.length; i >= 0; i--) {
-			theTeam.appendChild(theTeam.children[Math.random() * i | 0]);
+			theTeam.appendChild(theTeam.children[(Math.random() * i) | 0]);
 		}
 	</script>
 </html>
