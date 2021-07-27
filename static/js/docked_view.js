@@ -119,18 +119,18 @@ const generateDockedCard = (drampID, pepID) => {
 };
 
 const DOCKING_SCORE_TO_COLOR_CODE = [
-	"red",
-	"green",
-	"#cfde0d",
-	"#1a91db",
-	"#e75480",
-	"purple",
-	"orange",
-	"black",
-	"olive",
-	"grey",
-	"#c4a01d",
-	"teal",
+	"#0405fd",
+	"#3055fe",
+	"#389cfe",
+	"#23e5ff",
+	"#70ffd3",
+	"#b7ff91",
+	"#e6ff4b",
+	"#ffeb00",
+	"#feac00",
+	"#ff6600",
+	"#fe0000",
+	"#545454",
 ];
 
 const DOCKED_PEPTIDES_BY_SCORE = {
@@ -175,7 +175,8 @@ const renderIsland = (score) => {
 	island.id = `score-${score}`;
 
 	const islandHeading = document.createElement("h1");
-	islandHeading.style = `background-color: ${DOCKING_SCORE_TO_COLOR_CODE[score]}`;
+	islandHeading.style.backgroundColor = DOCKING_SCORE_TO_COLOR_CODE[score];
+	if (score > 2 && score < 9) islandHeading.style.color = "#545454";
 	islandHeading.textContent = score === 11 ? "Standard" : `Score ${score}`;
 	island.appendChild(islandHeading);
 
@@ -194,10 +195,11 @@ const renderIsland = (score) => {
 const addJumpListItem = (score) => {
 	const li = document.createElement("li");
 	li.className = "jumpListItem";
-	li.style = `background-color: ${DOCKING_SCORE_TO_COLOR_CODE[score]}`;
+	li.style.backgroundColor = DOCKING_SCORE_TO_COLOR_CODE[score];
 
 	const jumpLink = document.createElement("a");
 	jumpLink.textContent = score === 11 ? "Standard" : `Score ${score}`;
+	if (score > 2 && score < 9) jumpLink.style.color = "#545454";
 	jumpLink.href = `#score-${score}`;
 	li.appendChild(jumpLink);
 
