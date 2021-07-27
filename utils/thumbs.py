@@ -1,6 +1,5 @@
 from os import mkdir, path, listdir
 from PIL import Image
-from glob import glob
 
 
 def generate_thumbnails():
