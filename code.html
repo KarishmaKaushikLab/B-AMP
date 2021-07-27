@@ -51,11 +51,11 @@
 					<a target="_blank" href="http://dramp.cpu-bioinfor.org/">DRAMP repository</a>.
 					Using these sequence strings, we intended to generate FASTA files. For example,
 					for Pep6 with sequence
-					<pre>GNGVLKTISHECNMNTWQFLFTCC</pre>
+					<!-- <pre>GNGVLKTISHECNMNTWQFLFTCC</pre>
 					the corresponding FASTA file would look like
 					<pre>>Peptide_6
-GNGVLKTISHECNMNTWQFLFTCC</pre>
-					This was an obvious and easy target for automation. We simple loop over all the
+GNGVLKTISHECNMNTWQFLFTCC</pre> -->
+					This was an obvious and easy target for automation. We simply loop over all the
 					peptides in our spreadsheet in order and then generate a FASTA file with their
 					sequence. You can find the script for this
 					<a
@@ -92,6 +92,38 @@ GNGVLKTISHECNMNTWQFLFTCC</pre>
 					>. We also have a dedicated section for peptides exhibiting
 					<strong>Anti-Gram+</strong> activity
 					<a href="/anti_gram_positive.html">here</a>.
+				</p>
+			</section>
+			<section class="codeWriteupSection">
+				<h1>COMBINING OLD & NEW DRAMP LISTS</h1>
+				<p>
+					We had pulled a list of peptides from the DRAMP repository back in December 2020
+					and were working with it. However, in May 2021 we noticed that DRAMP had revised
+					the list with more peptides. Thus, we had to incorporate the new peptides into
+					our work.
+				</p>
+				<p>
+					The issue was that we had already assigned Pep IDs as per the order in the
+					original list, which were being used throughout our project. Unfortunately,
+					DRAMP's revised list did not retain that same order as our original one. Thus,
+					we would have to sit down and spend a long time reconciling the changes.
+				</p>
+				<p>
+					Thankfully, with a bit of data wrangling, we were able to automate this as well. Our Python script first scanned our
+					original list to build a mapping between the IDs from the DRAMP database and our
+					own Pep IDs. Next, we scanned through the revised list and looked for any
+					peptides which weren't part of our original list. Finally, using the mapping we
+					built earlier, we retained our original Pep IDs and assigned new ones to the new
+					peptides.
+				</p>
+				<p>
+					You can find the script for this
+					<a
+						href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/scripts/dramp_combine_lists/combine.py"
+						target="_blank"
+						rel="noopener noreferrer"
+						>here</a
+					>.
 				</p>
 			</section>
 		</main>
