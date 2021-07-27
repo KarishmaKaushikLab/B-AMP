@@ -1,22 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code | AMP-R</title>
-    <link rel="stylesheet" href="static/css/style.css" />
-</head>
-<body>
-    <nav>
-        <a href="/" id="siteTitle"><h1>AMP-R</h1></a>
-        <section id="navLinksSection">
-            <a href="all.html"><h3>All Peptides</h3></a>
-            <a href="anti_gram_positive.html"><h3>Anti-Gram Positive Peptides</h3></a>
-            <a href="docked.html"><h3>Docked Peptides</h3></a>
-            <h3 id="currentPage">Code</h3>
-            <a href="references.html"><h3>References</h3></a>
-        </section>
-    </nav>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Code | AMP-R</title>
+		<link rel="stylesheet" href="static/css/style.css" />
+	</head>
+	<body>
+		<nav>
+			<a href="/" id="siteTitle"><h1>AMP-R</h1></a>
+			<section id="navLinksSection">
+				<a href="all.html"><h3>All Peptides</h3></a>
+				<a href="anti_gram_positive.html"><h3>Anti-Gram Positive Peptides</h3></a>
+				<a href="docked.html"><h3>Docked Peptides</h3></a>
+				<h3 id="currentPage">Code</h3>
+				<a href="references.html"><h3>References</h3></a>
+			</section>
+		</nav>
+
+		<main id="codeWriteup">
+			<section class="codeWriteupSection">
+				<h1>INTRO</h1>
+				<p>
+					Given the massive size of AMP-R, we were faced with many mechanical, tedious
+					tasks that were highly time-consuming to perform manually. Examples include
+					preparing FASTA files from sequences, merging spreadsheets from the DRAMP
+					repository, sorting and filtering lists based on certain parameters, etc.
+				</p>
+				<p>
+					To save time and effort, we used <strong>Python</strong> to automate these
+					tasks. Our simple Python scripts utilized our
+					<a
+						target="_blank"
+						href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/utils/full.csv"
+						>master spreadsheet</a
+					>
+					containing information about all peptides to achieve this. All of these scripts
+					have been made <em>open-source</em> and you can find them on our
+					<a target="_blank" href="https://github.com/KarishmaKaushikLab/AMP-R"
+						>GitHub repository</a
+					>.
+				</p>
+				<p>In this section, we shall talk in detail about these scripts.</p>
+			</section>
+			<section class="codeWriteupSection">
+				<h1>GENERATION OF FASTA FILES</h1>
+				<p>
+					Amongst other things, we pulled peptide sequence data from the
+					<a target="_blank" href="http://dramp.cpu-bioinfor.org/">DRAMP repository</a>.
+					Using these sequence strings, we intended to generate FASTA files. For example,
+					for Pep6 with sequence
+					<pre>GNGVLKTISHECNMNTWQFLFTCC</pre>
+					the corresponding FASTA file would look like
+					<pre>>Peptide_6
+GNGVLKTISHECNMNTWQFLFTCC</pre>
+					This was an obvious and easy target for automation. We simple loop over all the
+					peptides in our spreadsheet in order and then generate a FASTA file with their
+					sequence. You can find the script for this
+					<a
+						href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/utils/fasta.py"
+						target="_blank"
+						rel="noopener noreferrer"
+						>here</a
+					>.
+				</p>
+				<p>Thanks to this, we were able to achieve what would have taken months within a fraction of a second.</p>
+			</section>
+		</main>
+	</body>
 </html>

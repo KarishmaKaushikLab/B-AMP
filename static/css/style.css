@@ -536,6 +536,34 @@ nav {
     padding: 20px;
 }
 
+#codeWriteup {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 1.3em;
+
+    margin: 30px;
+}
+
+.codeWriteupSection {
+    max-width: 60%;
+    flex: 1;
+}
+
+.codeWriteupSection > p {
+    margin: 20px 0px;
+}
+
+pre {
+    background-color: #ddd;
+    color: #555;
+
+    margin: 10px 0px;
+    padding: 20px;
+}
+
 footer {
     padding: 20px;
     background-image: linear-gradient(45deg, crimson, #545454);
