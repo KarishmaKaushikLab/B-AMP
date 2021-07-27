@@ -77,12 +77,9 @@ GNGVLKTISHECNMNTWQFLFTCC</pre>
 				<p>
 					Our target organism, <em>Corynebacterium striatum</em> exhibits anti-Gram
 					positive activity. Thus, we were interested in filtering out peptides which
-					exhibited the same activity.
-				</p>
-				<p>
-					Our master spreadsheet has a column with a list of activities exhibited by each
-					peptide. We simply loop over all peptides and look for the
-					<strong>Anti-Gram+</strong> activity.
+					exhibited the same. Our master spreadsheet has a column with a list of
+					activities exhibited by each peptide. Again, we simply loop over all peptides
+					and look for the <strong>Anti-Gram+</strong> activity.
 				</p>
 				<p>
 					You can find the script for this
@@ -100,9 +97,9 @@ GNGVLKTISHECNMNTWQFLFTCC</pre>
 				<h1>COMBINING OLD & NEW DRAMP LISTS</h1>
 				<p>
 					We had pulled a list of peptides from the DRAMP repository back in December 2020
-					and were working with it. However, in April 2021 we noticed that DRAMP had revised
-					the list with more peptides. Thus, we had to incorporate the new peptides into
-					our work.
+					and were working with it. However, in April 2021 we noticed that DRAMP had
+					revised the list with more peptides. Thus, we had to incorporate the new
+					peptides into our work.
 				</p>
 				<p>
 					The issue was that we had already assigned Pep IDs as per the order in the
@@ -138,18 +135,14 @@ GNGVLKTISHECNMNTWQFLFTCC</pre>
 				</p>
 				<p>
 					We assigned priorities to all candidate residues and performed a simple sort
-					based on them.
+					based on them. Further, we manually grouped peptides based on these
+					interactions. We performed an intra-group sort based on docking energy.
 				</p>
 				<p>
-					Further, we manually grouped peptides based on these interactions. We performed
-					an intra-group sort based on docking energy.
-				</p>
-				<p>
-					This part was extremely straightforward and was made even easier with Python's
-					excellent
+					This part was straightforward and was made even easier with Python's excellent
 					<a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer"
 						>Pandas library</a
-					>.You can find the code for this
+					>. You can find the code for this
 					<a
 						href="https://github.com/KarishmaKaushikLab/AMP-R/tree/master/scripts/residue_sorter"
 						target="_blank"
@@ -166,13 +159,13 @@ GNGVLKTISHECNMNTWQFLFTCC</pre>
 					<a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer"
 						>GitHub Pages</a
 					>. We made this choice because we knew that given the size of our database (a
-					few thousand items), we could get away with a static website. But we also wanted
-					to have search enabled on this repository for convenient and easy access. Thus,
-					we built an offline search engine in JavaScript that runs off a compact search
-					index that your browser downloads every time you visit our
-					<a href="/all.html">All Peptides</a> or
-					<a href="/anti_gram_positive.html">Anti-Gram Positive Peptides</a> sections. We
-					wrote a
+					few thousand items), we could get away with a static website. But mainly, we
+					wanted to keep things simple.
+				</p>
+				<p>
+					However, we also wanted to have search enabled on this repository for convenient
+					and easy access. Thus, we built an offline search engine in JavaScript that runs
+					off a compact search index that your browser downloads. We wrote a
 					<a
 						href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/utils/index.py"
 						target="_blank"
