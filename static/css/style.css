@@ -227,6 +227,14 @@ nav {
     flex-direction: column;
 }
 
+#closeHelpButton {
+    cursor: pointer;
+}
+
+#closeHelpButton:hover {
+    filter: brightness(80%);
+}
+
 #helpOverlay > p {
     font-size: 1.5em;
     color: #888;

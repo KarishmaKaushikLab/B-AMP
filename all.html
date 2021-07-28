@@ -26,8 +26,8 @@
 					ID, DRAMP ID, or name of the AMP. You can search for and browse through a
 					library of 5544 AMPs. Each card for a particular AMP contains its own FASTA
 					file, PDB structure file and model image, which can be downloaded by clicking on
-					the respective icons. Please click on the <strong>SHOW HELP</strong> button for specific
-					instructions for search and legend.
+					the respective icons. Please click on the <strong>SHOW HELP</strong> button for
+					specific instructions for search and legend.
 				</p>
 			</section>
 		</div>
@@ -55,6 +55,15 @@
 		</section>
 
 		<section id="helpOverlay" class="overlay">
+			<div style="display: flex; justify-content: flex-end; width: 95%">
+				<img
+					src="static/icons/close.png"
+					alt="close-icon"
+					width="32"
+					onclick="hideHelpOverlay()"
+					id="closeHelpButton"
+				/>
+			</div>
 			<h1>SEARCH LIKE A PRO</h1>
 			<p style="margin: 10px 50px; text-align: center">
 				⚡ Search for a peptide by its DRAMP or PEP ID:
