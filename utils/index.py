@@ -35,7 +35,7 @@ def build_pep_to_dramp_index():
 
             pep_id += 1
 
-    with open("static/js/pep_to_dramp.js", "w+") as index_fd:
+    with open("static/js/pep_to_dramp_index.js", "w+") as index_fd:
         index_str = json.dumps(INDEX)
         index_str = json.dumps(index_str)  # for escaping double quotes
         contents = f"const PEP_TO_DRAMP = JSON.parse({index_str});"
@@ -112,7 +112,7 @@ def build_text_to_pep_index():
 
             pep_id += 1
 
-    with open("static/js/text_to_pep.js", "w+") as index_fd:
+    with open("static/js/text_to_pep_index.js", "w+") as index_fd:
         index_str = json.dumps(INDEX)
         index_str = json.dumps(index_str)  # for escaping double quotes
         contents = f"const TEXT_TO_PEP = JSON.parse({index_str});"
