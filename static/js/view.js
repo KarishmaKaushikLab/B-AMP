@@ -337,5 +337,3 @@ const main = () => {
 
 main();
 triggerSearch();
-
-showHelpOverlay();
