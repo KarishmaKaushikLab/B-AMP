@@ -203,9 +203,9 @@ nav {
 .overlay {
     position: fixed;
     display: none;
-    overflow: auto;
+    overflow: scroll;
     width: 100%;
-    top: 40%;
+    /* top: 40%; */
     left: 0;
     right: 0;
     bottom: 0;
@@ -229,6 +229,7 @@ nav {
 
 #closeHelpButton {
     cursor: pointer;
+    margin-top: 20px;
 }
 
 #closeHelpButton:hover {
@@ -236,7 +237,7 @@ nav {
 }
 
 #helpOverlay > p {
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: #888;
 }
 
@@ -246,11 +247,11 @@ nav {
 }
 
 .legend {
-    font-size: 1.7em;
+    font-size: 1.5em;
 
     color: white;
     
-    padding: 50px 30px;
+    padding: 30px 20px;
     border-radius: 10px;
     margin: 20px 10px;
 }
