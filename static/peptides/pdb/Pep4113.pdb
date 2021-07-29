@@ -1,736 +1,118 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>RPBS Web Portal
-      
-      
-    </title>
-    <link href="/portal/css/mobyle.css?=1617792051.27" rel="stylesheet" type="text/css" media="screen">
-    <script src="portal_properties.py" id="pp" type="text/javascript"></script>
-    <script>var htDir = '/portal/';</script>
-    <script src="/portal/js/prototype-1.7.js?=1297677389.0" type="text/javascript"></script><script src="/portal/js/rsh.js?=1273239688.0" type="text/javascript"></script><script src="/portal/js/builder.js?=1297677389.0" type="text/javascript"></script><script src="/portal/js/effects.js?=1297677389.0" type="text/javascript"></script><script src="/portal/js/controls.js?=1340210272.0" type="text/javascript"></script><script src="/portal/js/mobyle.js?=1560514941.29" type="text/javascript"></script><script src="/portal/js/mobyle_ga.js?=1268928155.0" type="text/javascript"></script>
-    <script type="text/javascript" src="/xdomain.min.js" slave="http://mobyle2.rpbs.univ-paris-diderot.fr/proxy.html"></script>
-    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
-    <meta name="description" content="Mobyle is a framework and web portal specifically aimed at the integration of bioinformatics software and databanks.">
-    
-    <meta name="author" content="The Mobyle Project">
-  </head>
-  <body id="portalBody">
-    <noscript>
-      <div class="unavailable">
-        <div>
-          <strong><a href="https://projets.pasteur.fr/wiki/mobyle/">Mobyle</a> is a
-            framework and web portal specifically aimed at the integration of
-            bioinformatics software and databanks.</strong>
-        </div>
-        <div>
-          Sorry, the Mobyle Portal requires javascript support. Please
-          use a browser that supports javascript.
-        </div>
-      </div>
-    </noscript>
-    <div class="unavailable" id="nocookie" style="display:none; visibility:hidden;">
-      <div>
-        Sorry, the Mobyle Portal requires that you accept <strong>cookies</strong>. Please
-        configure your browser to accept cookies from our server.
-      </div>
-    </div>
-    <form action="data_upload.py" id="bookmark_upload" style="display:none;">
-      <textarea name="data_input_upload"></textarea>
-      <input type="text" name="data_input_upload.name">
-      <input type="text" name="datatype_class">
-      <input type="text" name="datatype_superclass">
-      <input type="text" name="data_format">
-      <input type="text" name="data_biotype">
-      <input type="text" name="base64encoded" value="false">
-      <input type="text" name="doNotHideModal" value="1">
-      <input type="text" name="inputMode" value="upload">
-    </form>
-    <div id="userPopupOverlay" class="popup_overlay" style="display: none; z-index: 99999">
-      <span id="insertHere" class="popup_background"></span>
-    </div>
-    <div id="waitOverlay" class="popup_overlay" style="z-index: 999999">
-      <div class="popup_background">
-        <div class="loading">loading...</div>
-      </div>
-    </div>
-    <table id="banner" style="width: 100%;">
-      <tr>
-        <td rowspan="2" style="width: 50%;">
-         <span id="mobyleHead"><a href="https://bioserv.rpbs.univ-paris-diderot.fr/"><img src='/portal/images/logo_RPBS.png'></img></a><div><h1 id='mobyleHead'>RPBS Web Portal</h1></div></span>
-         
-        </td>
-        <td style="width: 50%; text-align: right; vertical-align: top;">
-          <div>
-            <span style="font-weight: bold;" id="userEmail"></span>
-            <span style="font-weight: bold; font-style: italic;" id="userStatus"></span>
-          </div>
-          <div>
-            <ul id="userOptions">
-              <li>
-                <a style="font-weight: bold;" href="#user::email" class="modalLink" title="enter your email">set email</a>
-              </li>
-              <li>
-                <a style="font-weight: bold;" href="#user::signin" class="modalLink" title="sign in to a registered account">sign-in</a>
-              </li>
-              <!-- OPENID -->
-              
-              <li>
-                <a style="font-weight: bold;" href="#user::activate" class="modalLink" title="activate an account">activate</a>
-              </li>
-              <li>
-                <a style="font-weight: bold;" href="#user::signout" class="modalLink" title="sign out from this account">sign-out</a>
-              </li>
-            </ul>
-          </div>
-          <a class="refresh_link" href="#">refresh workspace</a>
-        </td>
-      </tr>
-      <tr>
-        <td style="width: 80%;">
-          
-        </td>
-      </tr>
-      
-    </table>
-    <!-- -->
-    <form style="display: none" name="preload_info">
-      <input value="524288.00" id="sessionLimit">
-      <input value="True" id="anonymousSession">
-      <input value="True" id="authenticatedSession">
-      <input value="20" id="autoRefreshFreq">
-      <input value="UA-29788933-1" id="ga_code">
-      
-    </form>
-    <form style="display: none" name="file_upload" action="data_upload.py" method="POST" enctype="multipart/form-data" target="data_upload_target">
-      <input type="file" name="data_input_upload"><input type="hidden" name="datatype_class"><input type="hidden" name="datatype_superclass"><input type="hidden" name="data_format">
-    </form><iframe name="data_upload_target" id="data_upload_target" style="display: none"></iframe>
-    <form style="display: none" name="load" id="mobyle_load">
-      
-    </form>
-    <table id="mainContainer" style="table-layout:fixed; width:100%; text-overflow:ellipsis; height:100%">
-      <tr>
-        <td id="navbar" style="overflow:hidden; white-space:nowrap;  ">
-          <dl id="drawer" class="accordion">
-            <dd id="programsMenu">
-              <form id="programSearch" name="programSearch" action="programs_list.py" method="get">
-                <table style="width: 100%">
-                  <tr>
-                    <td>
-                      <input type="search" id="searchString" name="searchString" size="10" title="Enter a search string here" autofocus="autofocus">
-                      <input id="searchSubmit" name="plSubmit" type="submit" value="Search">
-                      <span id="listAllSubmitBlock">
-                        or <input id="listAllSubmit" name="plSubmit" class="programsForm" type="submit" value="All">
-                      </span>
-                    </td>
-                    <td>
-                      <a id="advancedProgramSearchToggle" href="#advancedProgramSearch" class="blindLink closed" title="Click here to access more search/display options">[more]</a>
-                    </td>
-                  </tr>
-                </table>
-                <div id="advancedProgramSearch" style="display: none; left-margin:2px;">
-                  <hr>
-                  <div>
-                    Classify:
-                    <label>
-                      by category <input type="radio" id="classifyByCategory" name="classifyBy" value="category" checked="checked">
-                    </label>
-                    <label>
-                      by package <input type="radio" id="classifyByPackage" name="classifyBy" value="package">
-                    </label>
-                  </div>
-                  <div>
-                    Programs workflows and tutorials:
-                    <label>
-                      separate <input type="radio" id="serviceTypeSortSeparated" name="serviceTypeSort" value="separate" checked="checked">
-                    </label>
-                    <label>
-                      mixed <input type="radio" id="serviceTypeSortMixed" name="serviceTypeSort" value="mixed">
-                    </label>
-                  </div>
-                </div>
-              </form>
-              <div class="channel" id="programs_list_channel">
-              </div>
-            </dd>
-            <dt href="#userWorkflowsMenu" class="blindLink menu workflows" style="position:relative;">
-              My Workflows
-            </dt>
-            <dd id="userWorkflowsMenu">
-              <div class="sessionList" id="files_list">
-                <ul id="userWorkflowsListUl">
-                </ul>
-              </div>
-            </dd>
-            <dt href="#dataMenu" class="blindLink menu data" style="position:relative;">
-              Data Bookmarks
-              <a href="#data::overview" style="right:0px; position:absolute;" title="Data bookmarks management" class="link">[overview]</a>
-            </dt>
-            <dd id="dataMenu">
-              <div class="sessionList" id="files_list">
-                <ul id="filesListUl">
-                </ul>
-              </div>
-            </dd>
-            <dt href="#jobsMenu" class="blindLink menu jobs" style="position:relative;">
-              Jobs
-              <a href="#jobs::overview" style="right:0px; position:absolute;" title="Jobs management" class="link">[overview]</a>
-            </dt>
-            <dd id="jobsMenu">
-              <div class="sessionList" id="jobs_list">
-                <ul id="jobsListUl">
-                </ul>
-              </div>
-            </dd>
-            <dt href="#helpMenu" class="blindLink menu help" style="position:relative;">
-              Services Help Pages
-            </dt>
-            <dd id="helpMenu">
-              <ul id="helpPagesUl">
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/BCSearch" onclick="window.open(this.href); return false;">BCSearch</a></li>
-                <li><a class="link" href="http://fafdrugs4.mti.univ-paris-diderot.fr" onclick="window.open(this.href); return false;">FAF-Drugs4</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/fpocket" onclick="window.open(this.href); return false;">fpocket</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/Frog2" onclick="window.open(this.href); return false;">Frog2</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/HHalign-Kbest" onclick="window.open(this.href); return false;">HHalign-Kbest</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/InterEvDock2" onclick="window.open(this.href); return false;">InterEvDock2</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/MTiOpenScreen" onclick="window.open(this.href); return false;">MTiAutoDock/MTiOpenScreen</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/PatchSearch" onclick="window.open(this.href); return false;">PatchSearch</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/Proteo3Dnet" onclick="window.open(this.href); return false;">Proteo3Dnet</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/PCE" onclick="window.open(this.href); return false;">PCE</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/PEP-FOLD" onclick="window.open(this.href); return false;">PEP-FOLD</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/PEP-FOLD3" onclick="window.open(this.href); return false;">PEP-FOLD3</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/PEP-SiteFinder" onclick="window.open(this.href); return false;">PEP-SiteFinder</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/pepATTRACT" onclick="window.open(this.href); return false;">pepATTRACT</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/SABBAC" onclick="window.open(this.href); return false;">SABBAC</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/SAFrag" onclick="window.open(this.href); return false;">SAFrag</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/SolyPep" onclick="window.open(this.href); return false;">SolyPep</a></li>
-                <li><a class="link" href="https://bioserv.rpbs.univ-paris-diderot.fr/services/Yakusa" onclick="window.open(this.href); return false;">Yakusa</a></li>
-              </ul>
-            </dd>
-          </dl>
-        </td>
-        <td id="navbarResize" title="resize the menu" style="width:3px; height:20px; background-color:lightGray; cursor:E-resize;"></td>
-        <td id="portalMain">
-          <ul class="handlesList">
-            <li class="menu welcome">
-              <a class="link" href="#welcome">Welcome</a>
-            </li>
-            <li class="menu forms">
-              <a class="link" href="#forms">Forms</a>
-            </li>
-            <li class="menu data">
-              <a class="link" href="#data">Data Bookmarks</a>
-            </li>
-            <li class="menu jobs">
-              <a class="link" href="#jobs">Jobs</a>
-            </li>
-            <li class="menu tutorials">
-              <a class="link" href="#tutorials">Tutorials</a>
-            </li>
-          </ul>
-          <div class="panelsList">
-          <div id="ms-welcome" class="tabPanel" style="display: none;">
-            <div id="welcome_header">
-              <h3 align="center">Welcome to Mobyle, a portal for bioinformatics analyses</h3>
-              <div>
-                <div id="welcome_frame" style="height: 40em; overflow: scroll;" type="text/html"><table class='dataTable'>
-  <tr>
-    <td><strong>03/24/2021</strong></td>
-    <td><font color="orange">Warning:</font> Storage server problems are affecting all services. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>08/06/2020</strong></td>
-    <td><font color="orange">Warning:</font> On August 12-13th, the Mobyle portal will be unreachable for electric power supply maintenance starting from 8:00am GMT+1. Expected downtime of 24 hours but may be subject to extension. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>03/11/2020</strong></td>
-    <td><font color="orange">Warning:</font> On March 13th-15th, the Mobyle portal will be unreachable for network maintenance starting from 4:00pm GMT+1. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>12/05/2019</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::Proteo3Dnet"><font color="green">Proteo3Dnet enhanced by connection to ELM and better on-line interactive graph exploration.</font></a></td>
-  </tr>
-  <tr>
-    <td><strong>09/11/2019</strong></td>
-    <td><font color="orange">End of service interruption</font> following electric power supply failure. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>08/05/2019</strong></td>
-    <td><font color="orange">End of service interruption</font> following server malfunction. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>07/22/2019</strong></td>
-    <td><font color="orange">Warning:</font> On August 12-13th, the Mobyle portal will be unreachable for electric power supply maintenance starting from 8:00am GMT+1. Expected downtime of 48 hours but may be subject to extension. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>07/07/2019</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::Proteo3DNet"><font color="green">Proteo3Dnet (formerly MS2MODELS)</font></a>, a service dedicated to probing protein interaction networks by proteomics and structural data integration, is now available.</td>
-  </tr>
-  <tr>
-    <td><strong>05/29/2019</strong></td>
-    <td><font color="orange">End of service interruption</font> following server maintenance. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>05/24/2019</strong></td>
-    <td><font color="orange">Warning:</font> On May 27th, the Mobyle portal will be unreachable for server maintenance starting from 10:00am GMT+1. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>05/06/2019</strong></td>
-    <td><a href="http://bioserv.rpbs.univ-paris-diderot.fr/events.html"><font color="green">Jupyter training session</font></a>, June 5-6th, at RPBS.</td>
-  </tr>
-  <tr>
-    <td><strong>04/04/2019</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::DaReUS-Loop"><font color="green">DaReUS-Loop</font></a>, a service dedicated to the modeling of loops in homology models, is now available.</td>
-  </tr>
-  <tr>
-    <td><strong>04/04/2019</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::PEP-Cyclizer"><font color="green">PEP-Cyclizer</font></a>, a service dedicated to the design of head-to-tail peptide cyclization, is now available.</td>
-  </tr>
-  <tr>
-    <td><strong>12/04/2018</strong></td>
-    <td><font color="orange">End of service interruption</font> following storage system failure. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-  <tr>
-    <td><strong>08/18/2018</strong></td>
-    <td><font color="orange">End of service interruption</font> following electric power supply maintenance. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>02/26/2018</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::PatchSearch"><font color="green">PatchSearch</font></a>, a service dedicated to the identification of structurally conserved regions at the protein surfaces, is now available.</td>
-  </tr>
-  <tr>
-    <td><strong>02/26/2018</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::InterEvDock2"><font color="green">InterEvDock2</font></a>, a service dedicated to the blind modeling of protein-protein complexes, is now available.</td>
-  </tr>
-  <tr>
-    <td><strong>10/17/2017</strong></td>
-    <td><font color="red">Bugfix:</font> Spurious bug affecting all services may have lead to <i>unusual status code ( 1 )</i> return. Quick correction setup. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>10/17/2017</strong></td>
-    <td><font color="orange">Warning:</font> On October 18th, the Mobyle portal will be unreachable for server maintenance starting from 10:00am GMT+1. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>06/27/2017</strong></td>
-    <td><font color="orange">Warning:</font> On June 27th, the Mobyle portal will be unreachable for server maintenance starting from 10:00am GMT+1 to 12:00pm GMT+1. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>04/26/2017</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::FAF-Drugs4"><font color="green">FAF-Drugs</font></a>, version 4, is now available.</td>
-  </tr>
-  <tr>
-    <td><strong>03/02/2017</strong></td>
-    <td><font color="blue">Note:</font> It is no longer possible to run more than one PepBasic3D job at once.</td>
-  </tr>
-  <tr>
-    <td><strong>03/02/2017</strong></td>
-    <td><font color="orange">Warning:</font> On March 8th, the Mobyle portal will be unreachable for network maintenance starting from 10:00am GMT+1 to 12:00pm GMT+1.</td>
-  </tr>
-  <tr>
-    <td><strong>03/02/2017</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::pepATTRACT"><font color="green">pepATTRACT</font></a>, a service dedicated to the blind docking of peptide on protein, is now available.</td>
-  </tr>
-  <tr>
-    <td><strong>03/02/2017</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::ProPHet"><font color="green">ProPHet</font></a>, a service dedicated to computation of protein local rigidity on the residue level, is now available.</td>
-  </tr>
-  <tr>
-    <td><strong>02/24/2017</strong></td>
-    <td><font color="blue">Note:</font> It is no longer possible to run more than one MTiOpenScreen job at once. Please do NOT try to submit more than one job at a time.</td>
-  </tr>
-  <tr>
-    <td><strong>12/20/2016</strong></td>
-    <td><font color="orange">Warning:</font> The MTiOpenScreen service has been temporarily disabled due to a too large number of submissions overloading the cluster. We apologize for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>09/15/2016</strong></td>
-    <td><font color="orange">Warning:</font> The Mobyle server may encounter issues during next week (September 19th - September 23rd) due to data storage server upgrade. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>07/25/2016</strong></td>
-    <td><font color="orange">Warning:</font> The Mobyle portal will be unreachable for electric power supply maintenance from July 28th 4:00pm GMT+1 to August 1st 11:00am GMT+1. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>05/20/2016</strong></td>
-    <td><font color="orange">Warning:</font> On May 25th, the Mobyle portal will be unreachable for network maintenance starting from 12:00pm GMT+1 to 1:00pm GMT+1.</td>
-  </tr>
-  <tr>
-    <td><strong>04/15/2016</strong></td>
-    <td><font color="orange">Warning:</font> On April 21st, the Mobyle portal will be unreachable for electric power supply maintenance starting from 5:00pm GMT+1 to April 22nd 12:00pm GMT+1.</td>
-  </tr>
-  <tr>
-    <td><strong>04/08/2016</strong></td>
-    <td><font color="orange">Warning:</font> On April 20th, the Mobyle portal will be unreachable for server maintenance starting from 10:30am GMT+1.</td>
-  </tr>
-  <tr>
-    <td><strong>03/10/2016</strong></td>
-    <td><font color="orange">Warning:</font> On March 10th, the Mobyle portal will be unreachable for server maintenance starting from 10:00am GMT+1.</td>
-  </tr>
-  <tr>
-    <td><strong>02/24/2016</strong></td>
-    <td><font color="orange">End of service interruption</font> following server malfunction (1:30pm GMT+1). We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>02/12/2016</strong></td>
-    <td><font color=green>Back to normal service availability</font> </td>
-  </tr>
-  <tr>
-    <td><strong>02/11/2016</strong></td>
-    <td><font color=orange>End of service interruption </font> following major (unexpected) intervention of electric power supply on February 10th. We apologize for any inconvenience. </td>
-    <!-- <font color=red>Note all services are not fully functional yet. In particular InterEvDock is not working on date of Feb 11th, 22:00 (france) </font>. </td> -->
-  </tr>
-  <tr>
-    <td><strong>12/17/2015</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::PEP-FOLD3"><font color="green">PEP-FOLD3</font></a>, an update of PEP-FOLD able to model peptides from 5 to 50 amino acids and to generate peptide protein complexes, is now available.</td>
-  </tr>
-  <tr>
-    <td><strong>12/12/2015</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::InterEvDock"><font color="green">InterEvDock</font></a>, a service dedicated to blind modeling of protein-protein complexes, is now available.</td>
-  </tr>
-  <tr>
-    <td><strong>10/21/2015</strong></td>
-    <td><font color="orange">Warning:</font> On October 5th, the Mobyle portal will be unreachable for a short period maintenance starting from 10:00 am GMT+1.</td>
-  </tr>
-  <tr>
-    <td><strong>07/29/2015</strong></td>
-    <td><font color="orange">Warning:</font> On August 5th, the Mobyle portal will be unreachable for electric power supply maintenance.</td>
-  </tr>
-  <tr>
-    <td><strong>07/28/2015</strong></td>
-    <td>Integration of 2 WebGL based viewers for PDB files : <font color="green">PV</font> & <font color="green">NGL Viewer</font>. Java applet based viewers <font color="green">Jmol</font> and <font color="green">OpenAstex</font> will be kept for some more time.</td>
-  </tr>
-  <tr>
-    <td><strong>07/23/2015</strong></td>
-    <td><font color="red">Bug fix:</font> HHAlign-Kbest crash bug with large sequences is now fixed.</td>
-  </tr>
-  <tr>
-    <td><strong>07/21/2015</strong></td>
-    <td><font color="orange">Warning:</font> Spurious bug affecting HHAlign-Kbest, to be fixed very soon. We apologize for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>07/08/2015</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::JSDraw"><font color="green">JSDraw</font></a>, a javascript based molecule editor, is now available. Former java applets editors have been removed.</td>
-  </tr>
-  <tr>
-    <td><strong>06/30/2015</strong></td>
-    <td><font color="orange">Warning:</font> On July 1st, the Mobyle portal will be unreachable starting from 11:00 am GMT+1 for server maintenance.</td>
-  </tr>
-  <tr>
-    <td><strong>06/17/2015</strong></td>
-    <td><font color="red">Bug fix:</font> FASTA sequence loading from pdbaa database has been fixed.</td>
-  </tr>
-  <tr>
-    <td><strong>06/10/2015</strong></td>
-    <td><font color="orange">Warning:</font> On June 10th, the Mobyle portal will be unreachable from 2:00 pm GMT+1 for a very short maintenance.</td>
-  </tr>
-  <tr>
-    <td><strong>05/19/2015</strong></td>
-    <td><font color="orange">End of service interruption</font> following server malfunction.</td>
-  </tr>
-  <tr>
-    <td><strong>05/18/2015</strong></td>
-    <td><font color="orange">Warning:</font> All Mobyle-legacy services (@rpbs) are deactivated following server malfunction. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>04/15/2015</strong></td>
-    <td><font color="red">Bug fix:</font> Page refresh on job termination should work better.</td>
-  </tr>
-  <tr>
-    <td><strong>03/30/2015</strong></td>
-    <td><font color="orange">Warning:</font> Services migration still ongoing. Sorry for some mismatch between new and old Mobyle portals.</td>
-  </tr>
-  <tr>
-    <td><strong>03/30/2015</strong></td>
-    <td><font color="orange">Warning:</font> On march 30th, the Mobyle portal will be unreachable from 10:30 GMT+1 for migration to new backend architecture. Estimated downtime is 1 hour. All running jobs and unsaved data will be lost in the process.</td>
-  </tr>
-  <tr>
-    <td><strong>02/28/2015</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::BCSpecificitySearch"><font color="green">BCSpecificitySearch</font></a>, a 4th service dedicated to mining collections of protein structures to identity fragments similar to a query, is now available.</td>
-  </tr>
-  <tr>
-    <td><strong>01/27/2015</strong></td>
-    <td><font color="orange">End of service interruption</font> following network problems.</td>
-  </tr>
-  <tr>
-    <td><strong>01/19/2015</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::BCFragSearch"><font color="green">BCFragSearch</font></a>, <a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::BCLoopSearch"><font color="green">BCLoopSearch</font></a> and <a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::BCMirrorSearch"><font color="green">BCMirrorSearch</font></a>, 3 services to mine collections of protein structures to identify fragments similar to a query, are now available.</td>
-  </tr>
-  <tr>
-    <td><strong>01/21/2015</strong></td>
-    <td><font color="orange">End of service interruption</font> following server maintenance.</td>
-  </tr>
-  <tr>
-    <td><strong>01/21/2015</strong></td>
-    <td><font color="orange">Warning:</font> On January 21st, the Mobyle portal will be unreachable from 2:00 pm up to 4:00 pm GMT+1 for maintenance.</td>
-  </tr>
-  <tr>
-    <td><strong>11/12/2014</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::MTiAutoDock"><font color="green">MTiAutoDock</font></a> and <a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::MTiOpenScreen"><font color="green">MTiOpenScreen</font></a>, 2 services to screen small compound onto a target protein, now open to all.</td>
-  </tr>
-  <tr>
-    <td><strong>11/16/2014</strong></td>
-    <td><a href="http://bactpepdb.rpbs.univ-paris-diderot.fr"><font color="green">BactPepDB</font></a>, a database of peptides predicted from bacteria genomes, is now available <a href="http://bactpepdb.rpbs.univ-paris-diderot.fr">here</a>.</td>
-  </tr>
-  <tr>
-    <td><strong>11/13/2014</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::HHalign-Kbest"><font color="green">HHalign-Kbest</font></a>, a service for homology comparative modelling using sub-optimal alignments, is now available.</td>
-  </tr>
-  <tr>
-    <td><strong>11/01/2014</strong></td>
-    <td>GLSearch superseded by <a href="http://bioserv.rpbs.univ-paris-diderot.fr/services/BCSearch"><font color="green">BCSearch</font></a>, a service to mine collections of protein structures to identify fragments similar to a query. </td>
-  </tr>
-  <tr>
-    <td><strong>08/05/2014</strong></td>
-    <td><font color="orange">Warning:</font> On August 20th, the Mobyle portal will be unreachable from 8:00 am up to 3:00 pm GMT+1 for electric power supply maintenance.</td>
- </tr>
-  <tr>
-    <td><strong>06/30/2014</strong></td>
-    <td><font color=orange>Warning:</font> From June 29th to June 30th, a problem occured with fileserver with services never returning results. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>06/06/2014</strong></td>
-    <td><font color="red">Bug fix:</font> Spurious bug affecting PEP-FOLD and PEP-SiteFinder identified. Quick correction setup. </td>
-  </tr>
-  <tr>
-    <td><strong>05/16/2014</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::LigAutoDock"><font color="green">LigAutoDock</font></a>, a tutorial service for the rigid docking of ONE small compound on protein structure, is now available for testing.</td>
-  </tr>
-  <tr>
-    <td><strong>05/12/2014</strong></td>
-    <td><font color=orange>Warning:</font> The Mobyle portal was unreachable from May 8th to May 12th due to fileserver malfunction. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>04/08/2014</strong></td>
-    <td>Mobyle@RPBS updated to 1.5.3.</td>
-  </tr>
-  <tr>
-    <td><strong>03/19/2014</strong></td>
-    <td><font color="green">Frog2:</font> minor bug fix. Service reopened to all.</td>
-  </tr>
-  <tr>
-    <td><strong>02/21/2014</strong></td>
-    <td><font color="orange">Warning:</font> On February 21st, the Mobyle portal will be unreachable between 8:00 to 10:00 am GMT+1 due to network operations.</td>
-  </tr>
-  <tr>
-    <td><strong>01/14/2014</strong></td>
-    <td><font color="orange">Warning:</font> On January 9-14th, some services (e.g. PEP-SiteFinder) have been affected due to a core calculation ressource spurious behavior which resulted in very slow processing. The problem has been solved on January 14th. </td>
-  </tr>
-  <tr>
-    <td><strong>12/18/2013</strong></td>
-    <td><font color="red">Bug fix:</font> page refresh on job termination.</td>
-  </tr>
-  <tr>
-    <td><strong>10/10/2013</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::PEP-SiteFinder"><font color=green>PEP-SiteFinder </font></a>, a service to identify candidate interacting residues given a protein structure and a peptide sequence open to all for final tests. </td>
-  </tr>
-  <tr>
-    <td><strong>10/07/2013</strong></td>
-    <td>The <strong>BCBB Mobyle Pipeline System (BMPS)</strong> is now available <a href='http://mobyle.rpbs.univ-paris-diderot.fr/workflow/' onclick='window.open(this.href); return false;'>here</a>.</td>
-  </tr>
-  <tr>
-    <td><strong>09/09/2013</strong></td>
-    <td><font color="orange">Warning:</font> Sessions are now available.</td>
-  </tr>
-  <tr>
-    <td><strong>09/06/2013</strong></td>
-    <td><font color="orange">Warning:</font> Sessions are currently disabled due to server maintenance. We are sorry for any inconvenience.</td>
-  </tr>
-  <tr>
-    <td><strong>09/04/2013</strong></td>
-    <td>Mobyle@RPBS updated to 1.5.1.</td>
-  </tr>
-  <tr>
-    <td><strong>07/04/2013</strong></td>
-    <td><font color=orange>End of service interruption</font> following fileserver malfunction.</td>
-  </tr>
-  <tr>
-    <td><strong>02/08/2013</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::psipred"><font color=green>psipred</font></a> updated to version 3.3.</td>
-  </tr>
-  <tr>
-    <td><strong>02/01/2013</strong></td>
-    <td>Mobyle@RPBS updated to 1.0.7.</td>
-  </tr>
-  <tr>
-    <td><strong>01/21/2013</strong></td>
-    <td><font color=orange>End of service interruption </font> following major intervention of electric power supply on January 19th.</td>
-  </tr>
-  <tr>
-    <td><strong>01/17/2013</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::GLSearch"><font color=green>GLSearch</font></a>, a service for fast 3D mining of protein fragments released.</td>
-  </tr>
-  <tr>
-    <td><strong>01/03/2013</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::GLSearch"><font color=green>GLSearch</font></a>, a service for fast 3D mining of protein fragments now open to all for final tests.</td>
-  </tr>
-  <tr>
-    <td><strong>12/18/2012</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::SAFrag"><font color=green>SAFrag</font></a>, a service to propose from amino-acid sequence candidate 3D fragments of variable size open to all for final tests.</td>
-  </tr>
-  <tr>
-    <td><strong>12/12/2012</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::SolyPep"><font color=green>SolyPep</font></a>, a service to assess peptide solubility released with ancillary tools.</td>
-  </tr>
-  <tr>
-    <td><strong>12/06/2012</strong></td>
-    <td>Bug fix and better side chain management for <a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::SABBAC"><font color=green>SABBAC</font></a> full protein structure reconstruction from alpha carbons.</td>
-  </tr>
-  <tr>
-    <td><strong>10/10/2012</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::TEF"><font color=green>TEF2</font></a> new version of Tightenend End Fragments assignment released.</td>
-  </tr>
-  <tr>
-    <td><strong>09/20/2012</strong></td>
-    <td><font color=orange>Service interruption </font>due to hardware failure. Back to normal on september 21st, 9.30 am.</td>
-  </tr>
-  <tr>
-    <td><strong>09/19/2012</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::TEF"><font color=green>TEF2</font></a> new version of Tightenend End Fragments assignment opened for tests.</td>
-  </tr>
-  <tr>
-    <td><strong>09/19/2012</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::Yakusa"><font color=green>Yakusa</font></a> structural similarity search now installed.</td>
-  </tr>
-  <tr>
-    <td><strong>03/25/2012</strong></td>
-    <td><a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::T-Coffee"><font color=green>T-Coffee</font></a> alignment suite installed.</td>
-  </tr>
-  <tr>
-    <td><strong>02/22/2012</strong></td>
-    <td>New version of the <a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::HHSearch"><font color=green>HHSearch</font></a> service based on HHblits.</td>
-  </tr>
-  <tr>
-    <td><strong>02/22/2012</strong></td>
-    <td>HHblits installed (supersedes psiblast for protein similarity search).</td>
-  </tr>
-  <tr>
-    <td><strong>02/22/2012</strong></td>
-    <td>Merge of former Mobyle@RPBS portal (0.97) into this one.</td>
-  </tr>
-  <tr>
-    <td><strong>12/19/2011</strong></td>
-    <td>New version of the <a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::HHSearch"><font color=green>HHSearch</font></a> service.</td>
-  </tr>
-  <tr>
-    <td><strong>11/21/2011</strong></td>
-    <td>Improved <a href="http://mobyle.rpbs.univ-paris-diderot.fr/cgi-bin/portal.py#forms::PEP-FOLD"><font color=green>PEP-FOLD</font></a> version now online.</td>
-  </tr>
-  <tr>
-    <td><strong>09/18/2011</strong></td>
-    <td>New computing resource connected to the portal.</td>
-  </tr>
-  <tr>
-    <td><strong>09/10/2011</strong></td>
-    <td>Migration of Structure services from previous v0.97 portal.</td>
-  </tr>
-</table>
-</div>
-                
-              </div>
-            </div>
-            <div title="Mobyle version: 1.5.3" id="welcome_footer">
-              <fieldset>
-                <legend>
-                  <b>Credits</b>
-                </legend>
-                <div>
-                  Mobyle is a platform developed jointly by the <a href="http://www.pasteur.fr" target="_blank">Institut Pasteur</a>
-                  <a href="http://www.pasteur.fr/ip/easysite/pasteur/en/research/Biology-IT-Center" target="_blank">Biology IT Center</a> and the <a href="https://bioserv.rpbs.univ-paris-diderot.fr" target="_blank">Ressource
-                    Parisienne en Bioinformatique Structurale</a>.
-                </div>
-                <div>
-                  More information about this project can be found <a href="https://projets.pasteur.fr/projects/mobyle/wiki" target="_blank">here</a>.
-                </div>
-              </fieldset>
-            </div>
-          </div>
-          <div id="ms-forms" class="tabPanel" style="display: none;">
-            <ul class="handlesList">
-            </ul>
-            <div class="panelsList">
-            </div>
-          </div>
-          <div id="ms-data" class="tabPanel" style="display: none;">
-            <ul class="handlesList">
-              <li class="menu data">
-                 <a class="link" href="#data::overview">Overview</a>
-              </li>
-            </ul>
-            <div class="panelsList" href="">
-              <div id="ms-data::overview" class="tabPanel">
-                <br>
-                <div>
-                  This page lets you control the data bookmarks stored on the
-                  server.
-                </div>
-                <div id="sessionDataSummary">
-                  Session usage:
-                  <div id="sessionSpace">
-                    <div id="sessionUsage">
-                    </div>
-                  </div>
-                  (total space available: <span id="sessionLimit">524288.00</span>KiB)
-                </div>
-                <form name="bookmark" action="data_remove.py" method="post">
-                  <div style="text-align: right">
-                    <input type="submit" id="job_#{key}" value="remove selected bookmarks">
-                  </div>
-                  <table>
-                    <tbody id="dataManagement" class="dataTable">
-                    </tbody>
-                  </table>
-                </form>                
-              </div>
-            </div>
-          </div>
-          <div id="ms-jobs" class="tabPanel" style="display: none;">
-            <ul class="handlesList">
-              <li class="menu jobs">
-                <a class="link" href="#jobs::overview">Overview</a>
-              </li>
-            </ul>
-            <div class="panelsList" href="">
-              <div id="ms-jobs::overview" class="tabPanel">
-                <br>
-                <form name="session_job_remove" id="jobsManagementTable" action="session_job_remove.py" method="post">
-                  <div style="text-align: right">
-                    <label style="display: inline">Sort by 
-                    <select name="sortJobsBy" id="sortJobsBy">
-                      <option value="name_and_id" selected="selected">name and identifier</option>
-                      <option value="jobSortDate">date</option>                    
-                    </select>
-                    </label>
-                    <input type="submit" id="job_#{key}" value="remove selected jobs">
-                  </div>
-                  <table>
-                    <tbody id="jobsManagement" class="dataTable">
-                    </tbody>
-                  </table>
-                </form>
-              </div>
-            </div>
-          </div>
-<!--
-          <div id="ms-tutorials" class="tabPanel" />
--->
-          <div id="ms-tutorials" class="tabPanel" style="display: none;">
-            <ul class="handlesList">
-              <li class="menu tutorials">
-                <a class="link" href="#tutorials::overview">Overview</a>
-              </li>
-            </ul>
-            <div class="panelsList" href="">
-              <div id="ms-tutorials::overview" class="tabPanel">
-                <p>There is no open tutorial to show yet.</p>
-              </div>
-            </div>
-          </div>
-          </td>
-          </tr>
-        </table>
-        <div class='acknowledgement'><a href="http://bfa.univ-paris-diderot.fr/equipe-8/"><img src='/portal/images/logo_BFA.png'/></a><a href="http://www.inserm.fr/"><img src='/portal/images/logo_INSERM.png'/></a><a href="http://www.univ-paris-diderot.fr/"><img src='/portal/images/logo_P7.png'/></a><a href="http://www.ibisa.net/"><img src='/portal/images/logo_IBISA.png'/></a><a href="http://www.france-bioinformatique.fr/"><img src='/portal/images/logo_IFB.png'/></a></div>
-        </body>
-      </html>
+HELIX    1   1 ALA      2  LEU     14  1                                  13
+REMARK    GENERATED BY TRJCONV
+TITLE     Protein t=   0.00000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   64.910   64.910   64.910  90.00  90.00  90.00 P 1           1
+HEADER PEP-FOLD PREDICTION
+HEADER PEP-FOLD PREDICTION
+HEADER  PEPFOLD-00033_bestene1-mc.pdb
+REMARK  Component boundaries: 0: 1 15 
 
+REMARK  SA Trajectory: VWAaWaAWaaaZ
+REMARK     eCACA      eHb  ePhiPhi eVdWBBBB eVdWBBSC eVdWSCSC    Total 
+REMARK    -1.896  -20.594    0.006   -0.347    0.178  -10.667  -33.320
+REMARK   sOPEP Energy: -33.3204
+
+ATOM      1  N   GLU     1      33.200  30.610  43.870  1.00  0.00           N
+ATOM      2  CA  GLU     1      33.460  29.890  42.620  1.00  0.00           C
+ATOM      3  CB  GLU     1      33.480  28.410  42.940  1.00  0.00           C
+ATOM      4  CG  GLU     1      34.260  27.660  41.860  1.00  0.00           C
+ATOM      5  CD  GLU     1      34.210  26.170  42.170  1.00  0.00           C
+ATOM      6  OE1 GLU     1      34.180  25.850  43.380  1.00  0.00           O
+ATOM      7  OE2 GLU     1      34.120  25.430  41.180  1.00  0.00           O
+ATOM      8  C   GLU     1      32.410  30.280  41.570  1.00  0.00           C
+ATOM      9  O   GLU     1      32.560  31.400  41.090  1.00  0.00           O
+ATOM     10  N   ALA     2      31.310  29.540  41.410  1.00  0.00           N
+ATOM     11  CA  ALA     2      30.120  29.860  40.570  1.00  0.00           C
+ATOM     12  CB  ALA     2      28.850  29.810  41.440  1.00  0.00           C
+ATOM     13  C   ALA     2      30.130  31.130  39.690  1.00  0.00           C
+ATOM     14  O   ALA     2      30.410  31.030  38.500  1.00  0.00           O
+ATOM     15  N   ALA     3      29.940  32.310  40.290  1.00  0.00           N
+ATOM     16  CA  ALA     3      30.070  33.630  39.640  1.00  0.00           C
+ATOM     17  CB  ALA     3      30.090  34.710  40.730  1.00  0.00           C
+ATOM     18  C   ALA     3      31.300  33.820  38.720  1.00  0.00           C
+ATOM     19  O   ALA     3      31.120  34.140  37.550  1.00  0.00           O
+ATOM     20  N   LEU     4      32.470  33.400  39.190  1.00  0.00           N
+ATOM     21  CA  LEU     4      33.740  33.440  38.410  1.00  0.00           C
+ATOM     22  CB  LEU     4      34.950  33.080  39.280  1.00  0.00           C
+ATOM     23  CG  LEU     4      35.330  34.160  40.300  1.00  0.00           C
+ATOM     24  CD1 LEU     4      36.420  33.630  41.220  1.00  0.00           C
+ATOM     25  CD2 LEU     4      35.820  35.430  39.590  1.00  0.00           C
+ATOM     26  C   LEU     4      33.710  32.510  37.190  1.00  0.00           C
+ATOM     27  O   LEU     4      33.900  32.970  36.080  1.00  0.00           O
+ATOM     28  N   LYS     5      33.260  31.270  37.410  1.00  0.00           N
+ATOM     29  CA  LYS     5      33.080  30.250  36.360  1.00  0.00           C
+ATOM     30  CB  LYS     5      32.620  28.940  37.030  1.00  0.00           C
+ATOM     31  CG  LYS     5      32.460  27.740  36.080  1.00  0.00           C
+ATOM     32  CD  LYS     5      33.750  27.400  35.330  1.00  0.00           C
+ATOM     33  CE  LYS     5      33.550  26.170  34.450  1.00  0.00           C
+ATOM     34  NZ  LYS     5      34.280  26.320  33.190  1.00  0.00           N
+ATOM     35  C   LYS     5      32.100  30.730  35.270  1.00  0.00           C
+ATOM     36  O   LYS     5      32.560  30.970  34.150  1.00  0.00           O
+ATOM     37  N   ALA     6      30.950  31.240  35.710  1.00  0.00           N
+ATOM     38  CA  ALA     6      29.940  31.880  34.830  1.00  0.00           C
+ATOM     39  CB  ALA     6      28.740  32.320  35.670  1.00  0.00           C
+ATOM     40  C   ALA     6      30.490  33.080  34.040  1.00  0.00           C
+ATOM     41  O   ALA     6      30.440  33.070  32.810  1.00  0.00           O
+ATOM     42  N   ALA     7      31.160  34.010  34.730  1.00  0.00           N
+ATOM     43  CA  ALA     7      31.830  35.170  34.110  1.00  0.00           C
+ATOM     44  CB  ALA     7      32.440  36.070  35.190  1.00  0.00           C
+ATOM     45  C   ALA     7      32.920  34.790  33.080  1.00  0.00           C
+ATOM     46  O   ALA     7      32.860  35.240  31.940  1.00  0.00           O
+ATOM     47  N   LEU     8      33.800  33.860  33.460  1.00  0.00           N
+ATOM     48  CA  LEU     8      34.840  33.300  32.560  1.00  0.00           C
+ATOM     49  CB  LEU     8      35.790  32.360  33.320  1.00  0.00           C
+ATOM     50  CG  LEU     8      36.750  33.100  34.250  1.00  0.00           C
+ATOM     51  CD1 LEU     8      37.470  32.090  35.150  1.00  0.00           C
+ATOM     52  CD2 LEU     8      37.770  33.930  33.460  1.00  0.00           C
+ATOM     53  C   LEU     8      34.270  32.580  31.330  1.00  0.00           C
+ATOM     54  O   LEU     8      34.600  32.970  30.220  1.00  0.00           O
+ATOM     55  N   ASP     9      33.290  31.700  31.550  1.00  0.00           N
+ATOM     56  CA  ASP     9      32.590  30.990  30.460  1.00  0.00           C
+ATOM     57  CB  ASP     9      31.680  29.890  31.010  1.00  0.00           C
+ATOM     58  CG  ASP     9      32.450  28.770  31.740  1.00  0.00           C
+ATOM     59  OD1 ASP     9      33.640  28.540  31.430  1.00  0.00           O
+ATOM     60  OD2 ASP     9      31.850  28.130  32.620  1.00  0.00           O
+ATOM     61  C   ASP     9      31.800  31.930  29.520  1.00  0.00           C
+ATOM     62  O   ASP     9      31.870  31.770  28.300  1.00  0.00           O
+ATOM     63  N   LEU    10      31.150  32.950  30.080  1.00  0.00           N
+ATOM     64  CA  LEU    10      30.550  34.050  29.280  1.00  0.00           C
+ATOM     65  CB  LEU    10      29.730  35.020  30.150  1.00  0.00           C
+ATOM     66  CG  LEU    10      28.360  34.460  30.530  1.00  0.00           C
+ATOM     67  CD1 LEU    10      27.710  35.370  31.580  1.00  0.00           C
+ATOM     68  CD2 LEU    10      27.450  34.350  29.300  1.00  0.00           C
+ATOM     69  C   LEU    10      31.590  34.840  28.460  1.00  0.00           C
+ATOM     70  O   LEU    10      31.490  34.850  27.240  1.00  0.00           O
+ATOM     71  N   ALA    11      32.670  35.290  29.110  1.00  0.00           N
+ATOM     72  CA  ALA    11      33.780  36.000  28.450  1.00  0.00           C
+ATOM     73  CB  ALA    11      34.820  36.420  29.490  1.00  0.00           C
+ATOM     74  C   ALA    11      34.460  35.190  27.330  1.00  0.00           C
+ATOM     75  O   ALA    11      34.410  35.600  26.170  1.00  0.00           O
+ATOM     76  N   ALA    12      34.800  33.940  27.630  1.00  0.00           N
+ATOM     77  CA  ALA    12      35.400  32.960  26.680  1.00  0.00           C
+ATOM     78  CB  ALA    12      35.830  31.720  27.460  1.00  0.00           C
+ATOM     79  C   ALA    12      34.510  32.550  25.490  1.00  0.00           C
+ATOM     80  O   ALA    12      34.980  31.830  24.600  1.00  0.00           O
+ATOM     81  N   LYS    13      33.200  32.700  25.660  1.00  0.00           N
+ATOM     82  CA  LYS    13      32.200  32.510  24.580  1.00  0.00           C
+ATOM     83  CB  LYS    13      30.930  31.980  25.250  1.00  0.00           C
+ATOM     84  CG  LYS    13      29.940  31.370  24.250  1.00  0.00           C
+ATOM     85  CD  LYS    13      28.620  31.080  24.940  1.00  0.00           C
+ATOM     86  CE  LYS    13      27.590  30.670  23.890  1.00  0.00           C
+ATOM     87  NZ  LYS    13      26.300  30.410  24.550  1.00  0.00           N
+ATOM     88  C   LYS    13      31.900  33.770  23.740  1.00  0.00           C
+ATOM     89  O   LYS    13      31.250  33.670  22.700  1.00  0.00           O
+ATOM     90  N   LEU    14      32.110  34.940  24.340  1.00  0.00           N
+ATOM     91  CA  LEU    14      31.870  36.260  23.690  1.00  0.00           C
+ATOM     92  CB  LEU    14      31.290  37.250  24.710  1.00  0.00           C
+ATOM     93  CG  LEU    14      29.840  36.950  25.110  1.00  0.00           C
+ATOM     94  CD1 LEU    14      29.440  37.830  26.290  1.00  0.00           C
+ATOM     95  CD2 LEU    14      28.880  37.180  23.940  1.00  0.00           C
+ATOM     96  C   LEU    14      33.060  36.920  22.970  1.00  0.00           C
+ATOM     97  O   LEU    14      32.830  37.900  22.260  1.00  0.00           O
+ATOM     98  N   ALA    15      34.260  36.610  23.440  1.00  0.00           N
+ATOM     99  CA  ALA    15      35.550  37.080  22.870  1.00  0.00           C
+ATOM    100  CB  ALA    15      36.650  36.850  23.910  1.00  0.00           C
+ATOM    101  C   ALA    15      35.930  36.370  21.560  1.00  0.00           C
+ATOM    102  O1  ALA    15      35.560  35.180  21.410  1.00  0.00           O
+ATOM    103  O2  ALA    15      36.670  37.010  20.770  1.00  0.00           O
