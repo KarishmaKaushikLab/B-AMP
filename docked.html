@@ -47,7 +47,7 @@
 			</section>
 		</div>
 
-		<div style="display: flex; justify-content: center;">
+		<div style="display: flex; justify-content: center">
 			<button id="toggleHelpButton" onclick="showHelpOverlay()">💡 SHOW HELP</button>
 		</div>
 
@@ -67,19 +67,6 @@
 					id="closeHelpButton"
 				/>
 			</div>
-			<h1>SEARCH LIKE A PRO</h1>
-			<p style="margin: 10px 50px; text-align: center">
-				⚡ Search for a peptide by its DRAMP or PEP ID:
-				<span class="mono">DRAMP01472</span> or <span class="mono">PEP1217</span>
-				<br />
-				⚡ Search for a range of peptides by their PEP IDs:
-				<span class="mono">PEP12-25</span>
-				<br />
-				⚡ Add commas for running multiple searches:
-				<span class="mono">DRAMP01472, PEP1217, PEP12-25</span>
-			</p>
-
-			<hr style="width: 50%; border-color: #ddd; margin: 15px 0px" />
 
 			<h1>LEGEND</h1>
 			<p>
@@ -92,6 +79,24 @@
 				<span class="legend antiGramNegative">Anti-Gram Negative</span>
 				<span class="legend bothActivities">Anti-Gram Positive & Negative</span>
 				<span class="legend otherActivity">Other Activity</span>
+			</section>
+
+			<p>Color scheme for interacting residues within images.</p>
+
+			<section id="legends">
+				<span
+					class="legend"
+					style="background-image: linear-gradient(45deg, cornflowerblue, navy)"
+					>His168-Cys230-Arg239 Triad</span
+				>
+				<span
+					class="legend"
+					style="
+						background-image: linear-gradient(45deg, gold, orangered);
+						color: #353535;
+					"
+					>Other interacting residues</span
+				>
 			</section>
 		</section>
 
