@@ -307,7 +307,15 @@ const enablePreviewMode = (permalink) => {
 	resultsCount.style.display = "none";
 
 	const navLinksSection = document.querySelector("#navLinksSection");
+	const linkToHome = document.createElement("a");
+	linkToHome.href = "/";
+
+	const homeHeading = document.createElement("h3");
+	homeHeading.innerText = "Home";
+	linkToHome.appendChild(homeHeading);
+
 	navLinksSection.innerHTML = "";
+	navLinksSection.appendChild(linkToHome);
 
 	const previewHeading = document.createElement("h3");
 	previewHeading.innerHTML = "Pep View";
