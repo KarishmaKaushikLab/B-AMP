@@ -1,6 +1,8 @@
 const CARDS_CONTAINER = document.querySelector("#drampCards");
 const JUMP_LIST = document.querySelector("#jumpList");
 const JUMP_LIST_CONTAINER = document.querySelector("#jumpListContainer");
+const HELP_OVERLAY = document.querySelector("#helpOverlay");
+const TOGGLE_HELP_BUTTON = document.querySelector("#toggleHelpButton");
 
 const ACTIVITY_TO_CSS_CLASS = [
 	"otherActivity",
@@ -217,6 +219,20 @@ const hideJumpListOnScroll = () => {
 		}
 		prevScrollpos = currentScrollPos;
 	};
+};
+
+const showHelpOverlay = () => {
+	HELP_OVERLAY.style.display = "flex";
+	TOGGLE_HELP_BUTTON.innerHTML = "✕ CLOSE HELP";
+	TOGGLE_HELP_BUTTON.removeEventListener("click", showHelpOverlay);
+	TOGGLE_HELP_BUTTON.addEventListener("click", hideHelpOverlay);
+};
+
+const hideHelpOverlay = () => {
+	HELP_OVERLAY.style.display = "none";
+	TOGGLE_HELP_BUTTON.innerHTML = "💡 SHOW HELP";
+	TOGGLE_HELP_BUTTON.removeEventListener("click", hideHelpOverlay);
+	TOGGLE_HELP_BUTTON.addEventListener("click", showHelpOverlay);
 };
 
 const main = () => {

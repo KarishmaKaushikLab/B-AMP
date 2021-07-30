@@ -47,11 +47,53 @@
 			</section>
 		</div>
 
+		<div style="display: flex; justify-content: center;">
+			<button id="toggleHelpButton" onclick="showHelpOverlay()">💡 SHOW HELP</button>
+		</div>
+
 		<section id="jumpListContainer">
 			<h1 style="margin-right: 10px; color: white">JUMP TO PREFERENCE SCORE</h1>
 			<ul id="jumpList"></ul>
 		</section>
 		<main id="drampCards" style="margin-bottom: 100px"></main>
+
+		<section id="helpOverlay" class="overlay">
+			<div style="display: flex; justify-content: flex-end; width: 95%">
+				<img
+					src="static/icons/close.png"
+					alt="close-icon"
+					width="32"
+					onclick="hideHelpOverlay()"
+					id="closeHelpButton"
+				/>
+			</div>
+			<h1>SEARCH LIKE A PRO</h1>
+			<p style="margin: 10px 50px; text-align: center">
+				⚡ Search for a peptide by its DRAMP or PEP ID:
+				<span class="mono">DRAMP01472</span> or <span class="mono">PEP1217</span>
+				<br />
+				⚡ Search for a range of peptides by their PEP IDs:
+				<span class="mono">PEP12-25</span>
+				<br />
+				⚡ Add commas for running multiple searches:
+				<span class="mono">DRAMP01472, PEP1217, PEP12-25</span>
+			</p>
+
+			<hr style="width: 50%; border-color: #ddd; margin: 15px 0px" />
+
+			<h1>LEGEND</h1>
+			<p>
+				Each card in the search results is color-coded as per the activity exhibited by that
+				peptide.
+			</p>
+
+			<section id="legends">
+				<span class="legend antiGramPositive">Anti-Gram Positive</span>
+				<span class="legend antiGramNegative">Anti-Gram Negative</span>
+				<span class="legend bothActivities">Anti-Gram Positive & Negative</span>
+				<span class="legend otherActivity">Other Activity</span>
+			</section>
+		</section>
 
 		<script src="static/js/pep_to_dramp_index.js"></script>
 		<script src="static/js/dramp_to_pep_index.js"></script>
