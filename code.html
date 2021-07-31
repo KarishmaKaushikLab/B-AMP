@@ -20,137 +20,140 @@
 			</section>
 		</nav>
 
-		<h1 style="margin: 30px; font-size: 3.5em; text-align: center">Decoding our Code</h1>
+		<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+			<h1 style="margin: 30px; font-size: 3.5em; text-align: center">Decoding our Code</h1>
 
-		<main id="codeWriteup">
-			<section class="codeWriteupSection">
-				<h1>INTRODUCTION</h1>
-				<p>
-					To prepare FASTA files from sequences, merging spreadsheets from the DRAMP
-					repository, sorting and filtering lists based on certain parameters, we used
-					Python code. The Python scripts utilized a master spreadsheet containing
-					relevant information; these scripts have been made open-source and you can find
-					them in this GitHub repository.
-				</p>
-				<p>
-					To save time and effort, we used <strong>Python</strong> to automate these
-					tasks. Our simple Python scripts utilized our
-					<a
-						target="_blank"
-						1
-						href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/utils/full.csv"
-						>master spreadsheet</a
-					>
-					containing information about all peptides to achieve this. All of these scripts
-					have been made <em>open-source</em> and you can find them on our
-					<a
-						target="_blank"
-						rel="noopener noreferrer"
-						href="https://github.com/KarishmaKaushikLab/AMP-R"
-						>GitHub repository</a
-					>.
-				</p>
-				<p>In this section, we shall talk in detail about these scripts.</p>
-			</section>
-			<section class="codeWriteupSection">
-				<h1>GENERATION OF FASTA FILES</h1>
-				<p>
-					AMP sequence data was obtained from the
-					<a target="_blank" href="http://dramp.cpu-bioinfor.org/">DRAMP database</a>, an
-					open access and manually curated database of AMP sequences. Using these sequence
-					strings, we generated FASTA files. For example, for Pep6 with sequence
-					<!-- <pre>GNGVLKTISHECNMNTWQFLFTCC</pre>
-					the corresponding FASTA file would look like
-					<pre>>Peptide_6
-GNGVLKTISHECNMNTWQFLFTCC</pre> -->
-					You can find the script for this
-					<a
-						href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/utils/fasta.py"
-						target="_blank"
-						rel="noopener noreferrer"
-						>here</a
-					>.
-				</p>
-			</section>
-			<section class="codeWriteupSection">
-				<h1>FILTERING ANTI-GRAM POSITIVE PEPTIDES</h1>
-				<p>
-					To filter AMPs peptides with anti-Gram positive activity, we used a script which
-					can be found
-					<a
-						href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/scripts/agp_filter/agp_filter.py"
-						target="_blank"
-						rel="noopener noreferrer"
-						>here</a
-					>. AMP-R also has a search section for anti-Gram positive AMPs
-					<a href="/anti_gram_positive.html">here</a>.
-				</p>
-			</section>
-			<section class="codeWriteupSection">
-				<h1>UPDATING THE AMPs LISTS</h1>
-				<p>
-					To incorporate new AMP sequences into our repository, we developed a Python
-					script that can be found
-					<a
-						href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/scripts/dramp_combine_lists/combine.py"
-						target="_blank"
-						rel="noopener noreferrer"
-						>here</a
-					>.
-				</p>
-			</section>
-			<section class="codeWriteupSection">
-				<h1>SORTING RESIDUES BY INTERACTIONS</h1>
-				<p>
-					After protein-peptide docking, peptides were sorted based on interactions and
-					docking energy using Python's
-					<a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer"
-						>Pandas library</a
-					>. You can find the code for this
-					<a
-						href="https://github.com/KarishmaKaushikLab/AMP-R/tree/master/scripts/residue_sorter"
-						target="_blank"
-						rel="noopener noreferrer"
-						>here</a
-					>.
-				</p>
-			</section>
-			<section class="codeWriteupSection">
-				<h1>GENERATING WEBSITE ASSETS & RESOURCES</h1>
-				<p>
-					This website is a static one, with no server-side code running in the cloud. It
-					delivers static HTML over
-					<a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer"
-						>GitHub Pages</a
-					>.
+			<main id="codeWriteup">
+				<section class="codeWriteupSection">
+					<h1>INTRODUCTION</h1>
+					<p>
+						To prepare FASTA files from sequences, merging spreadsheets from the DRAMP
+						repository, sorting and filtering lists based on certain parameters, we used
+						Python code. The Python scripts utilized a master spreadsheet containing
+						relevant information; these scripts have been made open-source and you can find
+						them in this GitHub repository.
+					</p>
+					<p>
+						To save time and effort, we used <strong>Python</strong> to automate these
+						tasks. Our simple Python scripts utilized our
+						<a
+							target="_blank"
+							1
+							href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/utils/full.csv"
+							>master spreadsheet</a
+						>
+						containing information about all peptides to achieve this. All of these scripts
+						have been made <em>open-source</em> and you can find them on our
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href="https://github.com/KarishmaKaushikLab/AMP-R"
+							>GitHub repository</a
+						>.
+					</p>
+					<p>In this section, we shall talk in detail about these scripts.</p>
 				</section>
+				<section class="codeWriteupSection">
+					<h1>GENERATION OF FASTA FILES</h1>
+					<p>
+						AMP sequence data was obtained from the
+						<a target="_blank" href="http://dramp.cpu-bioinfor.org/">DRAMP database</a>, an
+						open access and manually curated database of AMP sequences. Using these sequence
+						strings, we generated FASTA files. For example, for Pep6 with sequence
+						<pre>GNGVLKTISHECNMNTWQFLFTCC</pre>
+						the corresponding FASTA file would look like
+						<pre>>Peptide_6
+GNGVLKTISHECNMNTWQFLFTCC</pre>
+						You can find the script for this
+						<a
+							href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/utils/fasta.py"
+							target="_blank"
+							rel="noopener noreferrer"
+							>here</a
+						>.
+					</p>
+				</section>
+				<section class="codeWriteupSection">
+					<h1>FILTERING ANTI-GRAM POSITIVE PEPTIDES</h1>
+					<p>
+						To filter AMPs peptides with anti-Gram positive activity, we used a script which
+						can be found
+						<a
+							href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/scripts/agp_filter/agp_filter.py"
+							target="_blank"
+							rel="noopener noreferrer"
+							>here</a
+						>. AMP-R also has a search section for anti-Gram positive AMPs
+						<a href="/anti_gram_positive.html">here</a>.
+					</p>
+				</section>
+				<section class="codeWriteupSection">
+					<h1>UPDATING THE AMPs LISTS</h1>
+					<p>
+						To incorporate new AMP sequences into our repository, we developed a Python
+						script that can be found
+						<a
+							href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/scripts/dramp_combine_lists/combine.py"
+							target="_blank"
+							rel="noopener noreferrer"
+							>here</a
+						>.
+					</p>
+				</section>
+				<section class="codeWriteupSection">
+					<h1>SORTING RESIDUES BY INTERACTIONS</h1>
+					<p>
+						After protein-peptide docking, peptides were sorted based on interactions and
+						docking energy using Python's
+						<a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer"
+							>Pandas library</a
+						>. You can find the code for this
+						<a
+							href="https://github.com/KarishmaKaushikLab/AMP-R/tree/master/scripts/residue_sorter"
+							target="_blank"
+							rel="noopener noreferrer"
+							>here</a
+						>.
+					</p>
+				</section>
+				<section class="codeWriteupSection">
+					<h1>GENERATING WEBSITE ASSETS & RESOURCES</h1>
+					<p>
+						This website is a static one, with no server-side code running in the cloud. It
+						delivers static HTML over
+						<a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer"
+							>GitHub Pages</a
+						>.
+					</p>
 
-				<p>
-					To enable a search repository, we built an offline search engine in JavaScript
-					that runs off a compact search index. The Python script to generate these
-					<a
-						href="https://github.com/KarishmaKaushikLab/AMP-R/tree/master/static/js"
-						target="_blank"
-						rel="noopener noreferrer"
-						>search indexes</a
-					> can be found here <a
-						href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/utils/index.py"
-						target="_blank"
-						rel="noopener noreferrer"
-						>here</a
-					>.
-				</p>
-				<p>
-					We also wrote a
-					<a
-						href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/utils/thumbs.py"
-						target="_blank"
-						rel="noopener noreferrer"
-						>Python script</a
-					>
-					to generate thumbnails for the 3D models on the site.
-				</p>
-			</section>
-		</main>
+					<p>
+						To enable a search repository, we built an offline search engine in JavaScript
+						that runs off a compact search index. The Python script to generate these
+						<a
+							href="https://github.com/KarishmaKaushikLab/AMP-R/tree/master/static/js"
+							target="_blank"
+							rel="noopener noreferrer"
+							>search indexes</a
+						> can be found here <a
+							href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/utils/index.py"
+							target="_blank"
+							rel="noopener noreferrer"
+							>here</a
+						>.
+					</p>
+					<p>
+						We also wrote a
+						<a
+							href="https://github.com/KarishmaKaushikLab/AMP-R/blob/master/utils/thumbs.py"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Python script</a
+						>
+						to generate thumbnails for the 3D models on the site.
+					</p>
+				</section>
+			</main>
+		</div>
+
 	</body>
 </html>

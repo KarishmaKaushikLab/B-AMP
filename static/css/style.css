@@ -545,19 +545,13 @@ nav {
 }
 
 #codeWriteup {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-
+    width: 60%;
     font-size: 1.3em;
-
-    margin: 30px;
+    margin-bottom: 100px;
 }
 
 .codeWriteupSection {
-    max-width: 60%;
-    flex: 1;
+    flex: 100%;
 }
 
 .codeWriteupSection > p {
