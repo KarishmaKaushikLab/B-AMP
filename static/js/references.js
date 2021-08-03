@@ -76,7 +76,7 @@ const render = (sections) => {
 const main = () => {
 	const SECTIONS = [
 		{
-			sectionTitle: "PROTEIN MODELLING",
+			sectionTitle: "PROTEIN MODELING",
 			projects: [
 				{
 					projectTitle: "PEP-FOLD3 (for <50 amino acids)",
@@ -84,18 +84,21 @@ const main = () => {
 						{
 							authors:
 								"Lamiable A, Thévenet P, Rey J, Vavrusa M, Derreumaux P, Tufféry P.",
-							title: "PEP-FOLD3: faster de novo structure prediction for linear peptides in solution and in complex.",
+							title:
+								"PEP-FOLD3: faster de novo structure prediction for linear peptides in solution and in complex.",
 							publication: "Nucleic Acids Res. 2016 Jul 8;44(W1):W449-54.",
 						},
 						{
 							authors: "Shen Y, Maupetit J, Derreumaux P, Tufféry P.",
-							title: "Improved PEP-FOLD approach for peptide and miniprotein structure prediction",
+							title:
+								"Improved PEP-FOLD approach for peptide and miniprotein structure prediction",
 							publication: "J. Chem. Theor. Comput. 2014; 10:4745-4758",
 						},
 						{
 							authors:
 								"Thévenet P, Shen Y, Maupetit J, Guyon F, Derreumaux P, Tufféry P.",
-							title: "PEP-FOLD: an updated de novo structure prediction server for both linear and disulfide bonded cyclic peptides.",
+							title:
+								"PEP-FOLD: an updated de novo structure prediction server for both linear and disulfide bonded cyclic peptides.",
 							publication: "Nucleic Acids Res. 2012. 40, W288-293.",
 						},
 					],
@@ -110,7 +113,8 @@ const main = () => {
 						},
 						{
 							authors: "A Roy, A Kucukural, Y Zhang",
-							title: "I-TASSER: a unified platform for automated protein structure and function prediction.",
+							title:
+								"I-TASSER: a unified platform for automated protein structure and function prediction.",
 							publication: "Nature Protocols, 5: 725-738 (2010)",
 						},
 						{
@@ -126,13 +130,15 @@ const main = () => {
 						{
 							authors:
 								"Jianyi Yang, Ivan Anishchenko, Hahnbeom Park, Zhenling Peng, Sergey Ovchinnikov, and David Baker",
-							title: "Improved protein structure prediction using predicted interresidue orientations.",
+							title:
+								"Improved protein structure prediction using predicted interresidue orientations.",
 							publication: "(2020) PNAS 117 (3) 1496-1503",
 						},
 						{
 							authors:
 								"Naozumi Hiranuma, Hahnbeom Park, Ivan Anishchanka, Minkyung Baek, David Baker",
-							title: "Improved protein structure refinement guided by deep learning based accuracy estimation",
+							title:
+								"Improved protein structure refinement guided by deep learning based accuracy estimation",
 							publication:
 								"(2020) bioRxiv preprint. https://doi.org/10.1101/2020.07.17.209643",
 						},
@@ -145,7 +151,8 @@ const main = () => {
 						{
 							authors:
 								"Marcus D Hanwell, Donald E Curtis, David C Lonie, Tim Vandermeersch, Eva Zurek and Geoffrey R Hutchison",
-							title: "Avogadro: An advanced semantic chemical editor, visualization, and analysis platform",
+							title:
+								"Avogadro: An advanced semantic chemical editor, visualization, and analysis platform",
 							publication: "Journal of Cheminformatics 2012, 4:17",
 						},
 					],
@@ -160,7 +167,8 @@ const main = () => {
 					citations: [
 						{
 							authors: "O. Trott, A. J. Olson",
-							title: "AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization and multithreading",
+							title:
+								"AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization and multithreading",
 							publication: "Journal of Computational Chemistry 31 (2010) 455-461",
 						},
 					],
@@ -176,7 +184,8 @@ const main = () => {
 						{
 							authors:
 								"Pettersen EF, Goddard TD, Huang CC, Couch GS, Greenblatt DM, Meng EC, Ferrin TE.",
-							title: "UCSF Chimera--a visualization system for exploratory research and analysis",
+							title:
+								"UCSF Chimera--a visualization system for exploratory research and analysis",
 							publication: "J Comput Chem. 2004 Oct;25(13):1605-12.",
 						},
 					],
@@ -201,17 +210,20 @@ const main = () => {
 					citations: [
 						{
 							authors: "Kang X.; Dong F.; Shi C.; Zheng H. et al",
-							title: "DRAMP 2.0, an updated data repository of antimicrobial peptides",
+							title:
+								"DRAMP 2.0, an updated data repository of antimicrobial peptides",
 							publication: "Scientific Data. 2019; 6(1): 148. PMID:31409791",
 						},
 						{
 							authors: "Fan L.; Sun J.; Zhou M.; Zhou J.; Lao X.; Zheng H.; Xu H.",
-							title: "DRAMP: a comprehensive data repository of antimicrobial peptides",
+							title:
+								"DRAMP: a comprehensive data repository of antimicrobial peptides",
 							publication: "Sci Rep. 2016 Apr 14;6:24482. PMID: 27075512",
 						},
 						{
 							authors: "Liu S.; Bao J.; Lao X.; Zheng H.",
-							title: "Novel 3D Structure Based Model for Activity Prediction and Design of Antimicrobial Peptides",
+							title:
+								"Novel 3D Structure Based Model for Activity Prediction and Design of Antimicrobial Peptides",
 							publication: "Sci Rep. 2018 Jul 25;8(1):11189. PMID:30046138",
 						},
 						{
