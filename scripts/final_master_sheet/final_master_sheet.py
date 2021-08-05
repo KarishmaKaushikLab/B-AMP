@@ -37,5 +37,8 @@ peps_to_remove = [
 ]
 df = df[~df["PepID"].isin(peps_to_remove)]
 
+# Convert "Sequence" column to uppercase
+df["Sequence"] = df["Sequence"].str.upper()
+
 # Export out
 df.to_csv("final_sheet.csv", index=False)
