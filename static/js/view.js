@@ -19,9 +19,11 @@ const generateDRAMPLink = (pepID, linkType) => {
 	const linkText = document.createTextNode("");
 	link.appendChild(linkText);
 
+	let linkRelativePath;
+
 	switch (linkType) {
 		case "fasta": {
-			link.href = `static/peptides/fasta/Pep${pepID}.fasta`;
+			linkRelativePath = `static/peptides/fasta/Pep${pepID}.fasta`;
 			link.download = `Pep${pepID}.fasta`;
 			img.src = "static/icons/fasta.png";
 			img.alt = "fasta-icon";
@@ -29,7 +31,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "sortase_fasta": {
-			link.href = "static/sortase/M_Ala_Sortase.fasta";
+			linkRelativePath = "static/sortase/M_Ala_Sortase.fasta";
 			link.download = "M_Ala_Sortase.fasta";
 			img.src = "static/icons/fasta.png";
 			img.alt = "fasta-icon";
@@ -37,7 +39,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "pdb": {
-			link.href = `static/peptides/pdb/Pep${pepID}.pdb`;
+			linkRelativePath = `static/peptides/pdb/Pep${pepID}.pdb`;
 			link.download = `Pep${pepID}.pdb`;
 			img.src = "static/icons/download.png";
 			img.alt = "download-icon";
@@ -45,7 +47,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "model": {
-			link.href = `static/peptides/images/Pep${pepID}.png`;
+			linkRelativePath = `static/peptides/images/Pep${pepID}.png`;
 			link.download = `Pep${pepID}.png`;
 			img.src = "static/icons/camera.png";
 			img.alt = "camera-icon";
@@ -53,7 +55,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "sortase_model": {
-			link.href = "static/sortase/M_Ala_Sortase.png";
+			linkRelativePath = "static/sortase/M_Ala_Sortase.png";
 			link.download = "M_Ala_Sortase.png";
 			img.src = "static/icons/camera.png";
 			img.alt = "camera-icon";
@@ -61,7 +63,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "docked_model": {
-			link.href = `static/peptides/docked/images/Pep${pepID}.png`;
+			linkRelativePath = `static/peptides/docked/images/Pep${pepID}.png`;
 			link.download = `Pep${pepID}.png`;
 			img.src = "static/icons/camera.png";
 			img.alt = "camera-icon";
@@ -69,7 +71,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "sortase_pdbqt": {
-			link.href = `static/sortase/M_Ala_Sortase.pdbqt`;
+			linkRelativePath = `static/sortase/M_Ala_Sortase.pdbqt`;
 			link.download = `M_Ala_Sortase.pdbqt`;
 			img.src = "static/icons/download.png";
 			img.alt = "download-icon";
@@ -77,7 +79,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "pdbqt_in": {
-			link.href = `static/peptides/docked/pdbqt/input/Pep${pepID}.pdbqt`;
+			linkRelativePath = `static/peptides/docked/pdbqt/input/Pep${pepID}.pdbqt`;
 			link.download = `Pep${pepID}_In.pdbqt`;
 			img.src = "static/icons/download.png";
 			img.alt = "download-icon";
@@ -85,7 +87,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "pdbqt_out": {
-			link.href = `static/peptides/docked/pdbqt/output/Pep${pepID}.pdbqt`;
+			linkRelativePath = `static/peptides/docked/pdbqt/output/Pep${pepID}.pdbqt`;
 			link.download = `Pep${pepID}_Out.pdbqt`;
 			img.src = "static/icons/download.png";
 			img.alt = "download-icon";
@@ -93,7 +95,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "bond_info": {
-			link.href = `static/peptides/docked/bond_info/Pep${pepID}.txt`;
+			linkRelativePath = `static/peptides/docked/bond_info/Pep${pepID}.txt`;
 			link.download = `Pep${pepID}_BondInfo.txt`;
 			img.src = "static/icons/info.png";
 			img.alt = "info-icon";
@@ -101,6 +103,8 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 	}
+
+	link.href = linkRelativePath;
 
 	link.addEventListener("click", () => {
 		window.goatcounter.count({

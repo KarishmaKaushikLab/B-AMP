@@ -22,9 +22,11 @@ const generateDRAMPLink = (pepID, linkType) => {
 	const linkText = document.createTextNode("");
 	link.appendChild(linkText);
 
+	let linkRelativePath;
+
 	switch (linkType) {
 		case "docked_model": {
-			link.href = `static/peptides/docked/images/Pep${pepID}.png`;
+			linkRelativePath = `static/peptides/docked/images/Pep${pepID}.png`;
 			link.download = `Pep${pepID}.png`;
 			img.src = "static/icons/camera.png";
 			img.alt = "camera-icon";
@@ -32,7 +34,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "sortase_pdbqt": {
-			link.href = `static/sortase/M_Ala_Sortase.pdbqt`;
+			linkRelativePath = `static/sortase/M_Ala_Sortase.pdbqt`;
 			link.download = `M_Ala_Sortase.pdbqt`;
 			img.src = "static/icons/download.png";
 			img.alt = "download-icon";
@@ -40,7 +42,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "pdbqt_in": {
-			link.href = `static/peptides/docked/pdbqt/input/Pep${pepID}.pdbqt`;
+			linkRelativePath = `static/peptides/docked/pdbqt/input/Pep${pepID}.pdbqt`;
 			link.download = `Pep${pepID}_In.pdbqt`;
 			img.src = "static/icons/download.png";
 			img.alt = "download-icon";
@@ -48,7 +50,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "pdbqt_out": {
-			link.href = `static/peptides/docked/pdbqt/output/Pep${pepID}.pdbqt`;
+			linkRelativePath = `static/peptides/docked/pdbqt/output/Pep${pepID}.pdbqt`;
 			link.download = `Pep${pepID}_Out.pdbqt`;
 			img.src = "static/icons/download.png";
 			img.alt = "download-icon";
@@ -56,7 +58,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "bond_info": {
-			link.href = `static/peptides/docked/bond_info/Pep${pepID}.txt`;
+			linkRelativePath = `static/peptides/docked/bond_info/Pep${pepID}.txt`;
 			link.download = `Pep${pepID}_BondInfo.txt`;
 			img.src = "static/icons/info.png";
 			img.alt = "info-icon";
@@ -65,10 +67,12 @@ const generateDRAMPLink = (pepID, linkType) => {
 		}
 	}
 
+	link.href = linkRelativePath;
+
 	link.addEventListener("click", () => {
 		window.goatcounter.count({
-			path: link.href,
-			title: `(DOWNLOAD ${linkText.textContent}) ${pepID}`,
+			path: linkRelativePath,
+			title: `(DOWNLOAD ${linkText.textContent}) Pep${pepID}`,
 			event: true,
 		});
 	});
