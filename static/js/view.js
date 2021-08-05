@@ -336,10 +336,10 @@ const enablePreviewMode = (permalink) => {
 	if (permalink === "sortase") {
 		const card = generateSortaseCard();
 		CARDS_CONTAINER.appendChild(card);
-		document.title = "Class C Sortase | Pep View | AMP-R";
+		document.title = "Class C Sortase | Pep View | B-AMP";
 	} else {
 		searchBox.value = `PEP${permalink}`;
-		document.title = `Pep${permalink} | Pep View | AMP-R`;
+		document.title = `Pep${permalink} | Pep View | B-AMP`;
 	}
 };
 
