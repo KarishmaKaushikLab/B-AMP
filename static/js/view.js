@@ -102,6 +102,14 @@ const generateDRAMPLink = (pepID, linkType) => {
 		}
 	}
 
+	link.addEventListener("click", () => {
+		window.goatcounter.count({
+			path: link.href,
+			title: `(DOWNLOAD ${linkText.textContent}) ${pepID}`,
+			event: true,
+		});
+	});
+
 	return link;
 };
 
