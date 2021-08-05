@@ -40,5 +40,8 @@ df = df[~df["PepID"].isin(peps_to_remove)]
 # Convert "Sequence" column to uppercase
 df["Sequence"] = df["Sequence"].str.upper()
 
+# Pep1285: Change length to 14
+df.loc[df["PepID"] == 1285, "Length"] = 14
+
 # Export out
 df.to_csv("final_sheet.csv", index=False)
