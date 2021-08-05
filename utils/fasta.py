@@ -10,7 +10,7 @@ def generate_fasta_files():
             mkdir("static/peptides/fasta")
 
         for row in reader:
-            pep_id = row["PepID"]
+            pep_id = int(row["PepID"])
             
             if pep_id in (0, 1):
                 # These are hardcoded, skip
