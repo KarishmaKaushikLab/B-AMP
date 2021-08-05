@@ -343,6 +343,8 @@ const enablePreviewMode = (permalink) => {
 };
 
 const setPositionOfDisclaimerFooter = (position) => {
+	if (env !== "all") return;
+
 	if (position === "static") {
 		DISCLAIMER_FOOTER.style = "position: static;";
 	} else {
