@@ -7,7 +7,7 @@
 		<title>All Peptides | AMP-R</title>
 		<link rel="stylesheet" href="static/css/style.css" />
 	</head>
-	<body>
+	<body style="height: 100%;">
 		<nav>
 			<h1 id="siteTitle">AMP-R</h1>
 			<section id="navLinksSection">
@@ -91,6 +91,12 @@
 				<span class="legend bothActivities">Anti-Gram Positive & Negative</span>
 				<span class="legend otherActivity">Other Activity</span>
 			</section>
+		</section>
+
+		<section id="disclaimerFooter" style="position: fixed; bottom: 0; width: 100%;">
+			a) Peptides were modeled using PEP-FOLD3 for peptides of length <50 amino acids. <br />
+			b) Peptides were modeled using Robetta for peptides of length >50 amino acids. <br />
+			c) Peptides were modeled using PEP-FOLD3 for peptides of containing undetermined ‘X’ amino acids.
 		</section>
 
 		<script src="static/js/pep_to_dramp_index.js"></script>

@@ -4,6 +4,9 @@ const RESULTS_COUNT = document.querySelector("#resultsCount");
 const HELP_OVERLAY = document.querySelector("#helpOverlay");
 const TOGGLE_HELP_BUTTON = document.querySelector("#toggleHelpButton");
 
+const DISCLAIMER_FOOTER = document.querySelector("#disclaimerFooter");
+let DISCLAIMER_FOOTER_POSITION = "fixed";
+
 const ERROR_DELAY_MS = 400;
 
 const generateDRAMPLink = (pepID, linkType) => {
@@ -187,6 +190,12 @@ const renderCards = (results) => {
 		}
 		CARDS_CONTAINER.appendChild(card);
 	}
+
+	if (results.length > 0) {
+		setPositionOfDisclaimerFooter("static");
+	} else {
+		setPositionOfDisclaimerFooter("fixed");
+	}
 };
 
 const showResultsStats = (resultSet) => {
@@ -330,6 +339,14 @@ const enablePreviewMode = (permalink) => {
 	} else {
 		searchBox.value = `PEP${permalink}`;
 		document.title = `Pep${permalink} | Pep View | AMP-R`;
+	}
+};
+
+const setPositionOfDisclaimerFooter = (position) => {
+	if (position === "static") {
+		DISCLAIMER_FOOTER.style = "position: static;";
+	} else {
+		DISCLAIMER_FOOTER.style = `position: fixed; bottom: 0; width: 100%`;
 	}
 };
 
