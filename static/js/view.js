@@ -5,7 +5,6 @@ const HELP_OVERLAY = document.querySelector("#helpOverlay");
 const TOGGLE_HELP_BUTTON = document.querySelector("#toggleHelpButton");
 
 const DISCLAIMER_FOOTER = document.querySelector("#disclaimerFooter");
-let DISCLAIMER_FOOTER_POSITION = "fixed";
 
 const ERROR_DELAY_MS = 400;
 
@@ -329,6 +328,8 @@ const enablePreviewMode = (permalink) => {
 	const previewHeading = document.createElement("h3");
 	previewHeading.innerHTML = "Pep View";
 	navLinksSection.appendChild(previewHeading);
+
+	DISCLAIMER_FOOTER.style = "display: none;";
 
 	togglePageNavButtonsVisibility();
 
