@@ -1,12 +1,6 @@
-from csv import DictReader
+import pandas as pd
 
-with open("../../utils/full.csv") as file:
-    reader = DictReader(file)
+df = pd.read_csv("../../utils/full.csv")
 
-    i = 2
-    for row in reader:
-        activity = row["Activity"]
-        if "Anti-Gram+" in activity:           		
-                print(f"Pep{i}")
-
-        i = i + 1
+agp_df = df[df["Activity"].str.contains("Anti-Gram+", na=False, case=True, regex=False)]
+agp_df.to_csv("anti_gram_positive.csv", index=False)
