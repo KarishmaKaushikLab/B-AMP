@@ -225,9 +225,9 @@ const showErrors = (errors) => {
 const getEnv = () => {
 	const currentPage = document.querySelector("#currentPage");
 	return {
-		"All Peptides": "all",
-		"Anti-Gram Positive Peptides": "ag+",
-		"Docked Peptides": "docked",
+		"AMP Library": "all",
+		"Anti Gram Positive AMPs": "ag+",
+		"AMPs Docked to Biofilm Targets": "docked",
 	}[currentPage.textContent];
 };
 
