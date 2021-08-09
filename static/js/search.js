@@ -177,7 +177,7 @@ const isDocked = (pepID) => DOCKED_PEPS.has(pepID);
 const search = (query, env) => {
 	const queryItems = query.split(",").map((e) => e.trim());
 
-	const resultSet = [];
+	const resultSet = {};
 	const errors = [];
 
 	const addToResultSet = (resultItem) => {
@@ -190,7 +190,7 @@ const search = (query, env) => {
 			return;
 		}
 
-		resultSet.push(resultItem);
+		if (!(resultItem["pepID"] in resultSet)) resultSet[resultItem["pepID"]] = resultItem;
 	};
 
 	for (const queryItem of queryItems) {
@@ -278,7 +278,7 @@ const search = (query, env) => {
 	}
 
 	return {
-		resultSet: resultSet,
+		resultSet: Object.values(resultSet),
 		errors: errors,
 	};
 };
