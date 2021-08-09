@@ -238,7 +238,7 @@ const getEnv = () => {
 	return {
 		"AMP Library": "all",
 		"Anti Gram Positive AMPs": "ag+",
-		"Protein-peptide docking of AMPs to Biofilm Targets ": "docked",
+		"AMPs Docked to Biofilm Targets ": "docked",
 	}[currentPage.textContent];
 };
 
