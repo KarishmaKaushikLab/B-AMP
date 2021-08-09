@@ -196,4 +196,11 @@
 		async
 		src="//gc.zgo.at/count.js"
 	></script>
+	<script>
+		// Track outgoing clicks using GoatCounter
+		const outgoingLinks = document.querySelectorAll('a[target="_blank"]');
+		for (const outgoingLink of outgoingLinks) {
+			outgoingLink.setAttribute("data-goatcounter-click", outgoingLink.href);
+		}
+	</script>
 </html>
