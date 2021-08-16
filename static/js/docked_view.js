@@ -116,7 +116,7 @@ const generateDockedCard = (drampID, pepID) => {
 	nameContainer.appendChild(pepName);
 
 	const dockingEnergy = document.createElement("h2");
-	dockingEnergy.textContent = `${PEP_TO_DOCKING_SCORE[pepID]} kJ/mol`;
+	dockingEnergy.textContent = `${PEP_TO_DOCKING_SCORE[pepID]} kcal/mol`;
 	dockingEnergy.className = "dockingEnergy";
 	horizontalContainer.appendChild(dockingEnergy);
 
