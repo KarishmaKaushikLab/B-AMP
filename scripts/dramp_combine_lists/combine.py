@@ -1,5 +1,5 @@
 """
-Usage
+Usage:
 python3 combine.py <old_file> <new_file>
 
 This will generate a new combined CSV called combined.csv
