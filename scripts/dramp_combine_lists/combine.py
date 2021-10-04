@@ -30,6 +30,7 @@ for row in revised_reader:
     if not target_index:
         new_peps.append(row)
 
+print(f"{len(new_peps)} new peptides found.")
 
 original_reader = DictReader(open(args.old_csv))
 original_list = list(original_reader)
@@ -44,4 +45,3 @@ with open(COMBINED_CSV_NAME, "w+") as fd:
     writer.writerows(final_list)
 
     print(f"Combined csv written to {COMBINED_CSV_NAME}.")
-
