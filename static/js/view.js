@@ -238,6 +238,7 @@ const getEnv = () => {
 	return {
 		"AMP Library": "all",
 		"Anti Gram Positive AMPs": "ag+",
+		"Anti Gram Negative AMPs": "ag-",
 		"AMPs Docked to Biofilm Targets ": "docked",
 	}[currentPage.textContent];
 };
