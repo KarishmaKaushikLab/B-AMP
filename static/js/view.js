@@ -1,4 +1,3 @@
-var pep_links = JSON.parse(pep_to_links);
 const CARDS_CONTAINER = document.querySelector("#drampCards");
 const ERRORS_CONSOLE = document.querySelector("#errorsConsole");
 const RESULTS_COUNT = document.querySelector("#resultsCount");
@@ -103,20 +102,6 @@ const generateDRAMPLink = (pepID, linkType) => {
 			linkText.textContent = "BOND INFO";
 			break;
 		}
-		case "pubmed": {
-			if(pep_links.hasOwnProperty('pep'+pepID))
-				{	linkRelativePath = pep_links['pep'+pepID];
-					linkText.textContent="PUBMED";
-					linkRelativePath=pep_links['pep'+pepID];
-					link.target= "_blank";
-					img.src = "static/icons/ncbi_2.png";
-					img.alt = "pubmed-icon";
-				}
-			else {
-				link.hidden="true";
-			}
-			break;
-		}
 	}
 
 	link.href = linkRelativePath;
@@ -168,7 +153,6 @@ const generateDRAMPCard = (drampID, pepID) => {
 	drampLinks.appendChild(generateDRAMPLink(pepID, "fasta"));
 	drampLinks.appendChild(generateDRAMPLink(pepID, "pdb"));
 	drampLinks.appendChild(generateDRAMPLink(pepID, "model"));
-	drampLinks.appendChild(generateDRAMPLink(pepID, "pubmed"))
 
 	return drampCard;
 };
@@ -200,7 +184,6 @@ const generateSortaseCard = () => {
 	drampLinks.appendChild(generateDRAMPLink("Sortase", "sortase_fasta"));
 	drampLinks.appendChild(generateDRAMPLink("Sortase", "sortase_pdbqt"));
 	drampLinks.appendChild(generateDRAMPLink("Sortase", "sortase_model"));
-
 
 	return dockedCard;
 };
