@@ -5,6 +5,8 @@ on:
       - utils/**
       - static/peptides/images/**
       - static/peptides/docked/images/**
+    branches:
+      - master
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
