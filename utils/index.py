@@ -1,6 +1,8 @@
 from csv import DictReader
 import json
 
+from utils.ignore_list import IGNORE_LIST
+
 
 def build_dramp_to_pep_index():
     INDEX = {}
@@ -10,6 +12,9 @@ def build_dramp_to_pep_index():
 
         for row in reader:
             pep_id = row["PepID"]
+            if pep_id in IGNORE_LIST:
+                continue
+
             dramp_id = row["DRAMP_ID"][5:]
             INDEX[dramp_id] = pep_id
 
@@ -28,6 +33,9 @@ def build_pep_to_dramp_index():
 
         for row in reader:
             pep_id = row["PepID"]
+            if pep_id in IGNORE_LIST:
+                continue
+
             dramp_id = row["DRAMP_ID"][5:]
             INDEX[pep_id] = dramp_id
 
@@ -51,6 +59,9 @@ def build_pep_to_activity_and_name_index():
 
         for row in reader:
             pep_id = row["PepID"]
+            if pep_id in IGNORE_LIST:
+                continue
+
             activities = 0
             str_activities = row["Activity"].split(",")
             for str_activity in str_activities:
@@ -97,6 +108,9 @@ def build_text_to_pep_index():
 
         for row in reader:
             pep_id = row["PepID"]
+            if pep_id in IGNORE_LIST:
+                continue
+
             name = row["Name"].lower()
             name = re.sub(r"\W+", " ", name)
             tokens = name.split(sep=" ")
