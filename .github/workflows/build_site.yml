@@ -1,6 +1,8 @@
 name: Build and Deploy
 on:
   push:
+    branches:
+      - master
     paths:
       - utils/**
       - static/peptides/images/**
@@ -20,5 +22,4 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
-          branch: master
           folder: .
