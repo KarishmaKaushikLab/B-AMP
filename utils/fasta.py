@@ -1,6 +1,8 @@
 from csv import DictReader
 from os import mkdir, path
 
+from utils.ignore_list import FASTA_IGNORE_LIST
+
 
 def generate_fasta_files():
     with open("utils/full.csv") as fd:
@@ -12,8 +14,7 @@ def generate_fasta_files():
         for row in reader:
             pep_id = int(row["PepID"])
             
-            if pep_id in (0, 1):
-                # These are hardcoded, skip
+            if pep_id in FASTA_IGNORE_LIST:
                 continue
 
             with open(f"static/peptides/fasta/Pep{pep_id}.fasta", "w+") as fasta_file:
