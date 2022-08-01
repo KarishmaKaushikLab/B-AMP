@@ -145,6 +145,18 @@ const main = () => {
 					],
 				},
 				{
+					projectTitle: "RoseTTAFold (for modeling targets)",
+					citations: [
+						{
+							authors:
+								"Baek, M., DiMaio, F., Anishchenko, I., Dauparas, J., Ovchinnikov, S., and Lee, G.",
+							title:
+								"Accurate prediction of protein structures and interactions using a three-track neural network.",
+							publication: " (2021) Science, 373(6557), 871-876. doi: 10.1126/science.abj8754",
+						},
+					],
+				},
+				{
 					projectTitle:
 						"Avogadro: an open-source molecular builder and visualization tool. Version 1.2. http://avogadro.cc/ (for small peptides)",
 					citations: [
@@ -170,6 +182,26 @@ const main = () => {
 							title:
 								"AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization and multithreading",
 							publication: "Journal of Computational Chemistry 31 (2010) 455-461",
+						},
+					],
+				},
+			],
+		},
+		{
+			sectionTitle: "MOLECULAR DYNAMICS SIMULATIONS",
+			projects: [
+				{
+					projectTitle: "GROMACS",
+					citations: [
+						{
+							authors: "M.J. Abraham, T. Murtola, R. Schulz, S. Páll, J.C. Smith, B. Hess, and E. Lindahl",
+							title: "GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers",
+							publication: "SoftwareX 1-2 (2015) 19-25",
+						},
+						{
+							authors: "H. Bekker, H.J.C. Berendsen, E.J. Dijkstra, S. Achterop, R. van Drunen, D. van der Spoel, A. Sijbers, and H. Keegstra",
+							title: "Gromacs: A parallel computer for molecular dynamics simulations",
+							publication: "Physics computing (1992) 252–256",
 						},
 					],
 				},
@@ -209,6 +241,12 @@ const main = () => {
 					projectTitle: "DRAMP",
 					citations: [
 						{
+							authors: "Shi G.; Kang X.; Dong F.; Liu Y.; Zhu N.; & Hu Y. et al",
+							title:
+								"DRAMP 3.0: an enhanced comprehensive data repository of antimicrobial peptides",
+							publication: "Nucleic Acids Research 2021; 50(D1), 488-496. PMID:34390348",
+						},
+						{
 							authors: "Kang X.; Dong F.; Shi C.; Zheng H. et al",
 							title:
 								"DRAMP 2.0, an updated data repository of antimicrobial peptides",
@@ -218,7 +256,7 @@ const main = () => {
 							authors: "Fan L.; Sun J.; Zhou M.; Zhou J.; Lao X.; Zheng H.; Xu H.",
 							title:
 								"DRAMP: a comprehensive data repository of antimicrobial peptides",
-							publication: "Sci Rep. 2016 Apr 14;6:24482. PMID: 27075512",
+							publication: "Sci Rep. 2016 Apr 14;6:24482. PMID:27075512",
 						},
 						{
 							authors: "Liu S.; Bao J.; Lao X.; Zheng H.",
