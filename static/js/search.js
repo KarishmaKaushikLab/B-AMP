@@ -40,7 +40,7 @@ QUERY ALGORITHM:
 		- if queryItem contains hyphen
 			- Stop processing queryItem
 		- get PEP ID from selected[1] DRAMP_TO_PEP index
-  
+
 		- add PEP ID to resultSet
 - Create cards based on PEP IDs in resultSet
 

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Biofilm Targets | B-AMP</title>
+		<link rel="stylesheet" href="static/css/style.css"/>
+		<link rel="stylesheet" href="static/css/cardColors.css"/>
+	</head>
+	<body style="height: 100%">
+		<nav>
+			<h1 id="siteTitle">B-AMP</h1>
+			<section id="navLinksSection">
+				<a href="index.html"><h3>Home</h3></a>
+				<a href="all.html"><h3>AMP Library</h3></a>
+				<a href="anti_gram_positive.html"><h3>Anti Gram Positive AMPs</h3></a>
+				<a href="anti_gram_negative.html"><h3>Anti Gram Negative AMPs</h3></a>
+				<h3 id="currentPage">Biofilm Targets</h3>
+				<a href="docked.html"><h3>AMPs Docked to Biofilm Targets</h3></a>
+				<a href="code.html"><h3>Code</h3></a>
+				<a href="references.html"><h3>References</h3></a>
+			</section>
+		</nav>
+
+		<div class="bubbleWrap">
+			<section class="helpBubble" style="display:block;">
+				<p>
+					This section is an easy search facility for protein targets involved in biofilm formation, using Target ID, 
+					activity, source organism name, or name of the target across a range of 
+					biofilm forming bacterial species. Each card for a particular target contains 
+					its PDB structure file or the modeled structure (if available), the structure image and assosiated literature, 
+					which can be downloaded by clicking on the respective icons. Please click on the
+					<strong>SHOW HELP</strong>
+					button for specific instructions for search specifications and the image legend.
+					<br/>
+					<br/>
+					<section id="data-links">
+						<a
+							style="color: white"
+							target="_blank"
+							data-goatcounter-title="(REDIRECT) All Peptides Reference Sheet"
+							href="static/pdf/reference_sheets/B-AMP_All_Peptides_ReferenceSheet.pdf"
+						>
+							Reference sheet for Target Library
+						</a>
+						<br />
+					</section>
+				</p>
+			</section>
+			<section class="filterBubble" id="filters" hidden>
+				<strong>Filters</strong>
+				<br/>
+				<div style="width: 50%; float: left;" class="selectdiv"> Organism &ensp; : &ensp;
+					<select id="filter-organisms" onchange="filterTrigger();" class="dropdowns" style="width:50%;">
+					</select>
+				</div>
+				<div style="width: 50%; float: right;" class="selectdiv">Protein category &ensp; : &ensp;
+					<select id="filter-activity" onchange="filterTrigger();" class="dropdowns">
+					</select>
+				</div>
+				<br><br>
+				<button class="button-8" onclick="resetFilters();">Reset</button>
+			</section>
+		</div>
+
+		<section id="search">
+			<input
+				type="text"
+				name="dramp_id"
+				id="searchBox"
+				placeholder="Target1, hydrolase, coli"
+				spellcheck="false"
+				autofocus
+			/>
+			<button id="toggleHelpButton" onclick="showHelpOverlay()">💡 SHOW HELP</button>
+		</section>
+		<section id="errorsConsole"></section>
+
+		<div style="display: flex; justify-content: center; align-items: center">
+			<h4 class="resultsToast" id="resultsCount" style="visibility: hidden"></h4>
+		</div>
+
+		<main id="tarCards"></main>
+		
+		<section id="paginationButtons">
+			<button class="paginationButton" id="prevButton" style="visibility: hidden;" onclick="renderPrev()">< PREV</button>
+			<button class="paginationButton" id="nextButton" style="visibility: hidden;" onclick="renderNext()">NEXT ></button>
+		</section>
+
+		<section id="helpOverlay" class="overlay">
+			<div style="display: flex; justify-content: flex-end; width: 95%">
+				<img
+					src="static/icons/close.png"
+					alt="close-icon"
+					width="32"
+					onclick="hideHelpOverlay()"
+					id="closeHelpButton"
+				/>
+			</div>
+			<h1>SEARCH LIKE A PRO</h1>
+			<p style="margin: 10px 50px; text-align: center">
+				⚡ Search for a target by any part of its name:
+				<span class="mono">Fimbrial adhesin</span> or <span class="mono">adhesin</span>
+				<br />
+				⚡ Search for a target by any part of its source organism name:
+				<span class="mono">Escherichia coli</span> or <span class="mono">coli</span>
+				<br />
+				⚡ Search for a target or a range of targets by Target ID:
+				<span class="mono">Target1</span> or <span class="mono">Target12-25</span>
+				<br />
+			</p>
+
+			<hr style="width: 50%; border-color: #ddd; margin: 15px 0px" />
+			
+			<p style="font-size:1.5em;">
+					Each card in the search results is color-coded according to the classification of the target's activity as per PDB.
+			</p>
+			<br/>
+			<h1 style="cursor:pointer;" onclick="showLegend();">SHOW LEGEND</h1>
+			<br/>
+		</section>
+		
+		<section id="popup_container">
+			<div class="popup">
+				<button id="close" onclick="hideLegend();">&times;</button>
+				<section id="legends">
+					<span class="legend Transferase">Transferase</span>
+					<span class="legend Transport_protein">Transport protein</span>
+					<span class="legend Cell_adhesion">Cell adhesion</span>
+					<span class="legend Protein_fibril">Protein fibril</span>
+					<span class="legend Gene_regulation">Gene regulation</span>
+					<span class="legend Fimbrial_protein">Fimbrial protein</span>
+					<span class="legend Protein_transport">Protein transport</span>
+					<span class="legend Protein_binding">Protein binding</span>
+				</section>
+				
+				<section id="legends">
+					<span class="legend Structural_protein">Structural protein</span>
+					<span class="legend Membrane_protein">Membrane protein</span>
+					<span class="legend Signaling_protein">Signaling protein</span>
+					<span class="legend RNA_binding_protein">RNA binding protein</span>
+					<span class="legend Metal_binding_protein">Metal binding protein</span>
+					<span class="legend Immune_system_RNA">Immune system / RNA</span>
+				</section>
+				
+				<section id="legends">
+					<span class="legend Sugar_binding_protein">Sugar binding protein</span>
+					<span class="legend Signaling_protein_activator">Signaling protein activator</span>
+					<span class="legend Chaperone_protein_transport">Chaperone / protein transport</span>
+					<span class="legend Peptide_binding_protein">Peptide binding protein</span>
+					<span class="legend Toxin_inhibhitor">Toxin inhibhitor</span>
+				</section>
+				
+				<section id="legends">
+					<span class="legend Not_Available">Not Available</span>
+					<span class="legend Calcium_binding_protein">Calcium binding protein</span>
+					<span class="legend Ribosome">Ribosome</span>
+					<span class="legend DNA_binding_protein_toxin">DNA binding protein / toxin</span>
+					<span class="legend Transcriptional_regulator">Transcriptional regulator</span>
+					<span class="legend Hydrolase">Hydrolase</span>
+					<span class="legend Transcription">Transcription</span>
+				</section>
+			</div>
+		</section>
+		
+		<script src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore-umd-min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="static/js/target_data/activity_tarid.json"></script>
+		<script src="static/js/target_data/organisms_tarid.json"></script>
+		<script src="static/js/target_data/tarids.json"></script>
+		<script src="static/js/target_data/modelIDs.json"></script>
+		<script src="static/js/target_data/view_targets.js"></script>
+		<script src="static/js/target_data/search_targets.js"></script>
+		<script src="static/js/paginate.js"></script>
+
+		<script
+			data-goatcounter="https://b-amp.goatcounter.com/count"
+			async
+			src="//gc.zgo.at/count.js"
+		></script>
+		
+		<script>
+			$(function() { 
+							$('#searchBox').keyup(function(){
+							checkEmpty();
+							});
+						});
+			
+			const filterTrigger = () => {
+
+				let intersection = 
+				$('#filter-activity').val().split(',').filter(x => $('#filter-organisms').val().split(',').includes(x));
+
+				if(intersection.length > 0)
+					renderCards(intersection);
+				else
+					renderCards(false);
+			}
+
+			const resetFilters = () => {
+				search($("#searchBox").val());
+			}
+			
+			const hideLegend = () => {
+				$('#popup_container').hide();
+			}
+			
+			const showLegend = () => {
+				$('#popup_container').show();
+			}
+		</script>
+	</body>
+</html>

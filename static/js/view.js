@@ -105,9 +105,8 @@ const generateDRAMPLink = (pepID, linkType) => {
 		}
 		case "pubmed": {
 			if(pep_links.hasOwnProperty('pep'+pepID))
-				{	linkRelativePath = pep_links['pep'+pepID];
+				{	linkRelativePath = "https://pubmed.ncbi.nlm.nih.gov/?term=" + pep_links['pep'+pepID].join('+');
 					linkText.textContent="PUBMED";
-					linkRelativePath=pep_links['pep'+pepID];
 					link.target= "_blank";
 					img.src = "static/icons/ncbi_2.png";
 					img.alt = "pubmed-icon";

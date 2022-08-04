@@ -167,6 +167,7 @@ nav {
 
 .bubbleWrap {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -180,6 +181,18 @@ nav {
     text-align: center;
     font-size: 1.3em;
 
+    background-image: linear-gradient(to bottom, #48be48, #3ea73e);
+    box-shadow: 5px 5px 20px #aaa;
+    color: white;
+}
+
+.filterBubble {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+    font-size: 1.3em;
     background-image: linear-gradient(to bottom, #48be48, #3ea73e);
     box-shadow: 5px 5px 20px #aaa;
     color: white;
@@ -248,12 +261,10 @@ nav {
 
 .legend {
     font-size: 1.5em;
-
     color: white;
     justify-self: center;
     align-self: center;
-    
-    padding: 30px 20px;
+    padding: 30px 15px;
     border-radius: 10px;
     margin: 20px 10px;
 }
@@ -315,6 +326,13 @@ nav {
     padding: 10px 50px;
 }
 
+#tarCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 50px;
+}
+
 #paginationButtons {
     display: flex;
     justify-content: center;
@@ -360,6 +378,18 @@ nav {
     flex-direction: column;
 }
 
+.tarCard {
+    display: inline-flex;
+    flex-direction: column;   
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0px 0px 15px #bbb;
+    background-image: background-image: linear-gradient(45deg, #282828 40%, #989898);   
+}
+
 .dockedCard {
     display: inline-flex;
     flex-direction: column;
@@ -385,6 +415,19 @@ nav {
 .pepName {
     font-size: 1.2em;
     font-style: italic;
+}
+
+.tarOrgName {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.tarName {
+    font-size: 1.2em;
+}
+
+.tarActivity {
+    font-size: 1.2em;
 }
 
 .otherActivity {
@@ -614,6 +657,7 @@ footer > #footerContent > hr {
     color: white;
 }
 
+
 @media only screen and (max-width: 900px) {
     nav {
         flex-direction: column;
@@ -662,4 +706,111 @@ footer > #footerContent > hr {
     #intro {
         font-size: 1.3em;
     }
+}
+
+.button-8 {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-8:hover,
+.button-8:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.button-8:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-8:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+
+.selectdiv select {
+	position: relative;
+	top:4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+  width: 80%;
+  max-width: 320px;
+  height: 25px;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -ms-word-break: normal;
+  word-break: normal;
+}
+
+#popup_container{
+	position:absolute;
+	top:0;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0,0,0,0.7);
+	display:none;
+	z-index:100;
+
+}
+
+.popup{
+    background-color: #ffffff;
+    width: 90vw;
+	height: 70vh;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    text-align: center;
+}
+
+.popup button{
+    display: block;
+    margin:  0 0 20px auto;
+    font-size: 30px;
+    color: #ffffff;
+    background: #e30000;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.popup button:hover {
+	background: #c30000;
 }
