@@ -76,7 +76,7 @@ const generateTARLink = (tarID, linkType) => {
 			linkText.textContent="PDB";
 			linkRelativePath=TARID_SET[tarID]['pdb_link']
 			link.target= "_blank";
-			img.src = "static/icons/pdb_icon.png";
+			img.src = "static/icons/PDB_icon.png";
 			img.alt = "pdb-icon";
 			img.style.width = "30px";
 			img.style.height = "30px";
