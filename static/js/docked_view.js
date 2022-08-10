@@ -65,6 +65,19 @@ const generateDRAMPLink = (pepID, linkType) => {
 			linkText.textContent = "BOND INFO";
 			break;
 		}
+		case "MD_traj": {
+			linkRelativePath = `static/peptides/docked/MD/Pep${pepID}_trajectory.pdb`;
+			link.download = `Pep${pepID}_trajectory.pdb`;
+			link.target = "_blank";
+			img.src = "static/icons/PDB_icon.png";
+			img.alt = "d-icon";
+			img.style.width = "25px";
+			img.style.height = "25px";
+			img.style.position = "relative";
+			img.style.top = "7px";
+			linkText.textContent = "MD Trajectory (20 ns)";
+			break;
+		}
 	}
 
 	link.href = linkRelativePath;
@@ -80,7 +93,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 	return link;
 };
 
-const generateDockedCard = (drampID, pepID) => {
+const generateDockedCard = (drampID, pepID, MD = false) => {
 	const dockedCard = document.createElement("span");
 	dockedCard.classList.add("pepCard");
 	dockedCard.classList.add("dockedCard");
@@ -128,7 +141,8 @@ const generateDockedCard = (drampID, pepID) => {
 	drampLinks.appendChild(generateDRAMPLink(pepID, "pdbqt_out"));
 	drampLinks.appendChild(generateDRAMPLink(pepID, "docked_model"));
 	drampLinks.appendChild(generateDRAMPLink(pepID, "bond_info"));
-
+	if(MD)
+	{ drampLinks.appendChild(generateDRAMPLink(pepID, "MD_traj")); }
 	return dockedCard;
 };
 
@@ -238,8 +252,16 @@ const renderIsland = (score) => {
 	island.appendChild(islandCardContainer);
 
 	for (const pep of peps) {
-		const card = generateDockedCard(PEP_TO_DRAMP[pep], pep);
-		islandCardContainer.appendChild(card);
+		if([0,1,8,9,10,11].includes(score))
+		{ 
+			const card = generateDockedCard(PEP_TO_DRAMP[pep], pep, true); 
+			islandCardContainer.appendChild(card); 
+		}
+		else
+		{
+			const card = generateDockedCard(PEP_TO_DRAMP[pep], pep); 
+			islandCardContainer.appendChild(card); 
+		}
 	}
 
 	CARDS_CONTAINER.appendChild(island);
