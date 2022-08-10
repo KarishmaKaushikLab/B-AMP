@@ -223,6 +223,8 @@ const checkEmpty = () => {
 		RESULTS_COUNT.style.visibility = "hidden";				
 		DATA_LINKS.show();
 		FILTER_BUBBLE.hide();
+		prevButton.style.visibility = "hidden";
+		nextButton.style.visibility = "hidden";
 	}
 }
 //End
@@ -249,6 +251,31 @@ const addFilters = (filter_vals,section) => {
 
 const renderCards = (query_targets) => {
 	showResultsStats(query_targets);
+		
+	let query_orgs = {};
+	let query_activity = {};
+		
+	for (let i=0; i< query_targets.length; i++)
+	{	
+		if (query_orgs[TARID_SET[query_targets[i]]['src_org']])
+		{ query_orgs[TARID_SET[query_targets[i]]['src_org']].push(query_targets[i]); }
+
+		else 
+		{	query_orgs[TARID_SET[query_targets[i]]['src_org']] = [query_targets[i]]; }
+
+		if (query_activity[TARID_SET[query_targets[i]]['activity']])
+		{ query_activity[TARID_SET[query_targets[i]]['activity']].push(query_targets[i]); }
+
+		else 
+		{	query_activity[TARID_SET[query_targets[i]]['activity']] = [query_targets[i]]; }
+	}
+	
+	if($('#filter-organisms').has('option').length == 0)
+	{	addFilters(query_orgs,ORGANISM_FILTER); }
+		
+	if($('#filter-activity').has('option').length == 0)
+	{	addFilters(query_activity,ACTIVITY_FILTER);	}
+	
 	queryToCard(paginate(query_targets));
 }
 
@@ -257,38 +284,17 @@ const renderCards = (query_targets) => {
 const queryToCard = (query_ids) => {
 	CARDS_CONTAINER.textContent = "";
 	ERRORS_CONSOLE.textContent = "";
+	DATA_LINKS.hide();
+	FILTER_BUBBLE.show();
 	
 	if(query_ids)
 	{	
-		DATA_LINKS.hide();
-		FILTER_BUBBLE.show();
-		
-		let query_orgs = {};
-		let query_activity = {};
-
 		for (let i=0; i< query_ids.length; i++)
 		{	
-			if (query_orgs[TARID_SET[query_ids[i]]['src_org']])
-			{ query_orgs[TARID_SET[query_ids[i]]['src_org']].push(query_ids[i]); }
-
-			else 
-			{	query_orgs[TARID_SET[query_ids[i]]['src_org']] = [query_ids[i]]; }
-
-			if (query_activity[TARID_SET[query_ids[i]]['activity']])
-			{ query_activity[TARID_SET[query_ids[i]]['activity']].push(query_ids[i]); }
-
-			else 
-			{	query_activity[TARID_SET[query_ids[i]]['activity']] = [query_ids[i]]; }
-
 			card = generateTarCard(query_ids[i]);
 			CARDS_CONTAINER.appendChild(card);
 		}
 		
-			if($('#filter-organisms').has('option').length == 0)
-				addFilters(query_orgs,ORGANISM_FILTER);
-
-			if($('#filter-activity').has('option').length == 0)
-				addFilters(query_activity,ACTIVITY_FILTER);
 	}
 
 	else

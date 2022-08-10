@@ -119,14 +119,14 @@ const search = (query, env) => {
 				drampID: drampID,
 				pepID: DRAMP_TO_PEP[drampID],
 			};
-
-			addToResultSet(resultItem);
+			if(!["5564","5565","5566","5567","5568","5569","5570","5571"].includes(resultItem['pepID']))
+			{ addToResultSet(resultItem); }
 		}
 
 		if (queryItem.startsWith("PEP") && queryItem.length > 3) {
 			const subQueryItem = queryItem.substring(3);
 			const indices = subQueryItem.split("-");
-
+			
 			if (!verifyRangeIndices(indices)) {
 				errors.push(`Invalid range query: ${queryItem}`);
 			}
@@ -138,7 +138,8 @@ const search = (query, env) => {
 						pepID: parseInt(subQueryItem),
 					};
 
-					addToResultSet(resultItem);
+					if(![5564,5565,5566,5567,5568,5569,5570,5571].includes(resultItem['pepID']))
+					{ addToResultSet(resultItem); }
 					break;
 				}
 				case 2: {
@@ -157,8 +158,9 @@ const search = (query, env) => {
 							drampID: PEP_TO_DRAMP[i],
 							pepID: i,
 						};
-
-						addToResultSet(resultItem);
+						console.log(resultItem)
+						if(![5564,5565,5566,5567,5568,5569,5570,5571].includes(resultItem['pepID']))
+						{ addToResultSet(resultItem); }
 					}
 
 					break;
@@ -177,12 +179,14 @@ const search = (query, env) => {
 			if (peps === undefined) continue;
 
 			for (const pep of peps) {
-				const resultItem = {
-					pepID: pep,
-					drampID: PEP_TO_DRAMP[pep],
-				};
-
-				addToResultSet(resultItem);
+				if(!["5564","5565","5566","5567","5568","5569","5570","5571"].includes(pep)){
+					const resultItem = {
+						pepID: pep,
+						drampID: PEP_TO_DRAMP[pep],
+					};
+				
+					addToResultSet(resultItem);
+				}
 			}
 		}
 	}

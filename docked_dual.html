@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AMPs Docked to Dual Biofilm Target | B-AMP</title>
+		<link rel="stylesheet" href="static/css/style.css" />
+	</head>
+	<body>
+		<nav>
+			<h1 id="siteTitle">B-AMP</h1>
+			<section id="navLinksSection">
+				<a href="index.html"><h3>Home</h3></a>
+				<a href="all.html"><h3>AMP Library</h3></a>
+				<a href="anti_gram_positive.html"><h3>Anti Gram Positive AMPs</h3></a>
+				<a href="anti_gram_negative.html"><h3>Anti Gram Negative AMPs</h3></a>
+				<a href="targets.html"><h3>Biofilm Targets</h3></a>
+				<a href="docked_single.html"><h3>AMPs Docked to Single Biofilm Targets</h3></a>
+				<h3 id="currentPage">AMPs Docked to Dual Biofilm Targets</h3>
+				<a href="code.html"><h3>Code</h3></a>
+				<a href="references.html"><h3>References</h3></a>
+			</section>
+		</nav>
+
+		<div class="bubbleWrap">
+			<section class="helpBubble">
+				<p>
+					This section consists of a library of 25 AMPs, filtered from AMPs with both 
+					anti-Gram positive and anti-Gram negative activity, that have been evaluated 
+					for their ability to interact with the active site regions of Target 1 or the 
+					‘biofilm-associated surface protein’ of Staphylococcus aureus and Target 37 or 
+					the ‘fimbrial subunit CupB6’ of Pseudomonas aeruginosa. Based on negative energy 
+					binding scores and binding energy differences in the range of ± 1 kcal/mol, AMPs 
+					were filtered to present a list of candidate AMPs for both biofilm targets. Based 
+					on the proposed candidate list, AMPs can be taken up for further in silico evaluation 
+					such as AMP-biofilm target dynamic interactions and MD simulations, as well as in 
+					vitro and in vivo evaluation against mixed-species P. aeruginosa and S. aureus biofilms.  
+					Each card for a particular AMP contains PDBQT and docking files, and model image which 
+					can be downloaded by clicking on the respective icons.
+				</p>
+				<br />
+				<p>Protein-peptide docking studies were done using Autodock 4.2.</p>
+				<br />
+				<a
+					style="color: white"
+					target="_blank"
+					data-goatcounter-title="(REDIRECT) Docking Interactions Reference Sheet"
+					href="static/pdf/reference_sheets/B-AMP_Dual_Docking_ReferenceSheet.pdf"
+				>
+					Reference sheet for Dual Target Docking analysis
+				</a>
+			</section>
+		</div>
+
+		<div style="display: flex; justify-content: center">
+			<button id="toggleHelpButton" onclick="showHelpOverlay()">💡 SHOW HELP</button>
+		</div>
+
+		<main id="drampCards" style="margin-bottom: 100px"></main>
+
+		<section id="helpOverlay" class="overlay">
+			<div style="display: flex; justify-content: flex-end; width: 95%">
+				<img
+					src="static/icons/close.png"
+					alt="close-icon"
+					width="32"
+					onclick="hideHelpOverlay()"
+					id="closeHelpButton"
+				/>
+			</div>
+
+			<h1>LEGEND</h1>
+			<p>
+				Each card in the search results is color-coded as per the activity exhibited by that
+				peptide.
+			</p>
+
+			<section id="legends">
+				<span class="legend antiGramPositive">Anti-Gram Positive</span>
+				<span class="legend antiGramNegative">Anti-Gram Negative</span>
+				<span class="legend bothActivities">Anti-Gram Positive & Negative</span>
+				<span class="legend otherActivity">
+					Other Activity <br />
+					<p style="font-size: 0.7em">(Non anti-bacterial)</p>
+				</span>
+			</section>
+		</section>
+
+		<script src="static/js/pep_to_dramp_index.js"></script>
+		<script src="static/js/dramp_to_pep_index.js"></script>
+		<script src="static/js/pep_to_docking_score_dual_index.js"></script>
+		<script src="static/js/pep_to_activity_and_name_index.js"></script>
+		<script src="static/js/docked_dual_view.js"></script>
+
+		<script
+			data-goatcounter="https://b-amp.goatcounter.com/count"
+			async
+			src="//gc.zgo.at/count.js"
+		></script>
+	</body>
+</html>
