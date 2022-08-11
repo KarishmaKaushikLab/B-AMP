@@ -246,7 +246,6 @@ const renderIsland = (score) => {
 	islandHeading.style.backgroundColor = DOCKING_SCORE_TO_COLOR_CODE[score];
 	if (score > 2 && score < 9) islandHeading.style.color = "#545454";
 	islandHeading.textContent = score === 11 ? "Standard" : `Preference Score ${score}`;
-	islandHeading.style.zIndex = "1";
 	island.appendChild(islandHeading);
 
 	const islandCardContainer = document.createElement("span");

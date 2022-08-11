@@ -25,7 +25,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 	switch (linkType) {
 		case "pdbqt_in": {
 			linkRelativePath = `static/peptides/docked_dual/pdbqt/Pep${pepID}.pdbqt`;
-			link.download = `Pep${pepID}_In_target.pdbqt`;
+			link.download = `Pep${pepID}_In.pdbqt`;
 			img.src = "static/icons/download.png";
 			img.alt = "download-icon";
 			linkText.textContent = "PDBQT IN";
