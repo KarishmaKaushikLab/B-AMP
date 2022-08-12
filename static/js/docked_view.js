@@ -66,7 +66,7 @@ const generateDRAMPLink = (pepID, linkType) => {
 			break;
 		}
 		case "MD_traj": {
-			linkRelativePath = `static/peptides/docked/MD/Pep${pepID}_trajectory.pdb`;
+			linkRelativePath = `static/peptides/docked/MD/Pep${pepID}_trajectory.pdb.zip`;
 			link.download = `Pep${pepID}_trajectory.pdb`;
 			link.target = "_blank";
 			img.src = "static/icons/PDB_icon.png";
