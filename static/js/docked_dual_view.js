@@ -26,22 +26,25 @@ const generateDRAMPLink = (pepID, linkType) => {
 		case "pdbqt_in": {
 			linkRelativePath = `static/peptides/docked_dual/pdbqt/Pep${pepID}.pdbqt`;
 			link.download = `Pep${pepID}_In.pdbqt`;
+			link.target = "_blank";
 			img.src = "static/icons/download.png";
 			img.alt = "download-icon";
 			linkText.textContent = "PDBQT IN";
 			break;
 		}
 		case "pdb_tar1": {
-			linkRelativePath = `static/peptides/docked/pdb/docked_to_tar1/Pep${pepID}.pdb`;
+			linkRelativePath = `static/peptides/docked_dual/pdb/docked_to_tar1/Pep${pepID}_docked.pdb`;
 			link.download = `Pep${pepID}_docked_to_tar1.pdb`;
+			link.target = "_blank";
 			img.src = "static/icons/download.png";
 			img.alt = "download-icon";
 			linkText.textContent = "DOCKED PDB";
 			break;
 		}
 		case "pdb_tar37": {
-			linkRelativePath = `static/peptides/docked/pdb/docked_to_tar37/Pep${pepID}.pdb`;
+			linkRelativePath = `static/peptides/docked_dual/pdb/docked_to_tar37/Pep${pepID}_docked.pdb`;
 			link.download = `Pep${pepID}_docked_to_tar37.pdb`;
+			link.target = "_blank";
 			img.src = "static/icons/download.png";
 			img.alt = "download-icon";
 			linkText.textContent = "DOCKED PDB";
@@ -153,7 +156,7 @@ const renderIsland = (peptide) => {
 	CARDS_CONTAINER.appendChild(island);
 };
 
-peps = ['4975', '5241', '4710', '1217', '5037'];
+peps = ['4975', '5241', '4710', '1217', '5037', '5193', '169', '2533', '3961', '4707', '783', '167', '2896', '662', '3239', '4709', '4842', '3292', '3052', '407', '3240', '69', '2530', '5057', '5488'];
 const main = () => {
 	for (const pep of peps) {
 		renderIsland(pep);

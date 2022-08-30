@@ -1,0 +1,83 @@
+REMARK  14 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: CA_2  and  C_4 
+REMARK       I    between atoms: C_4  and  N_6 
+REMARK    2  A    between atoms: N_6  and  CA_7 
+REMARK    3  A    between atoms: CA_7  and  CB_8 
+REMARK    4  A    between atoms: CA_7  and  C_12 
+REMARK    5  A    between atoms: CB_8  and  CG_9 
+REMARK    6  A    between atoms: CG_9  and  SD_10 
+REMARK       I    between atoms: C_12  and  N_14 
+REMARK    7  A    between atoms: N_14  and  CA_15 
+REMARK    8  A    between atoms: CA_15  and  C_19 
+REMARK    9  A    between atoms: CA_15  and  CB_16 
+REMARK       I    between atoms: C_19  and  N_21 
+REMARK   10  A    between atoms: N_21  and  CA_22 
+REMARK   11  A    between atoms: CA_22  and  C_23 
+REMARK       I    between atoms: C_23  and  N_25 
+REMARK   12  A    between atoms: N_25  and  CA_26 
+REMARK   13  A    between atoms: CA_26  and  CB_27 
+REMARK   14  A    between atoms: CA_26  and  C_30 
+ROOT
+ATOM      1  CA  VAL     3      26.500  23.490  27.410  1.00  0.00     0.186 C 
+ENDROOT
+BRANCH   1   2
+ATOM      2  N   VAL     3      25.220  23.250  26.700  1.00  0.00    -0.229 NA
+ATOM      3  C   MET     2      24.140  24.020  26.840  1.00  0.00     0.274 C 
+ATOM      4  O   MET     2      24.040  24.860  27.720  1.00  0.00    -0.268 OA
+BRANCH   3   5
+ATOM      5  CA  MET     2      22.920  23.710  25.950  1.00  0.00     0.187 C 
+BRANCH   5   6
+ATOM      6  N   MET     2      23.080  23.060  24.620  1.00  0.00    -0.229 NA
+ATOM      7  C   ALA     1      23.960  23.450  23.700  1.00  0.00     0.289 C 
+ATOM      8  O   ALA     1      25.060  23.920  23.950  1.00  0.00    -0.268 OA
+BRANCH   7   9
+ATOM      9  CA  ALA     1      23.760  22.950  22.260  1.00  0.00     0.381 C 
+ATOM     10  N   ALA     1      24.430  23.940  21.400  1.00  0.00     0.626 N 
+ATOM     11  CB  ALA     1      24.430  21.580  22.090  1.00  0.00     0.052 C 
+ENDBRANCH   7   9
+ENDBRANCH   5   6
+BRANCH   5  12
+ATOM     12  CB  MET     2      21.860  23.000  26.800  1.00  0.00     0.046 C 
+BRANCH  12  13
+ATOM     13  CG  MET     2      20.480  22.850  26.150  1.00  0.00     0.060 C 
+BRANCH  13  14
+ATOM     14  SD  MET     2      19.850  24.340  25.280  1.00  0.00    -0.139 SA
+ATOM     15  CE  MET     2      19.560  25.450  26.640  1.00  0.00     0.069 C 
+ENDBRANCH  13  14
+ENDBRANCH  12  13
+ENDBRANCH   5  12
+ENDBRANCH   3   5
+ENDBRANCH   1   2
+BRANCH   1  16
+ATOM     16  C   VAL     3      27.610  24.140  26.550  1.00  0.00     0.274 C 
+ATOM     17  O   VAL     3      28.800  23.900  26.750  1.00  0.00    -0.268 OA
+ATOM     18  N   GLY     4      27.190  24.900  25.540  1.00  0.00    -0.226 NA
+BRANCH  18  19
+ATOM     19  CA  GLY     4      28.060  25.640  24.610  1.00  0.00     0.218 C 
+BRANCH  19  20
+ATOM     20  C   GLY     4      27.270  26.490  23.590  1.00  0.00     0.277 C 
+ATOM     21  N   THR     5      26.300  27.200  24.150  1.00  0.00    -0.225 NA
+ATOM     22  O   GLY     4      27.340  26.220  22.390  1.00  0.00    -0.268 OA
+BRANCH  21  23
+ATOM     23  CA  THR     5      25.390  28.190  23.520  1.00  0.00     0.223 C 
+BRANCH  23  24
+ATOM     24  CB  THR     5      24.150  27.610  22.820  1.00  0.00     0.185 C 
+ATOM     25  CG2 THR     5      24.430  27.200  21.380  1.00  0.00     0.038 C 
+ATOM     26  OG1 THR     5      23.580  26.560  23.610  1.00  0.00    -0.221 OA
+ENDBRANCH  23  24
+BRANCH  23  27
+ATOM     27  C   THR     5      24.810  28.960  24.710  1.00  0.00     0.211 C 
+ATOM     28  O1  THR     5      24.480  28.260  25.690  1.00  0.00    -0.646 OA
+ATOM     29  O2  THR     5      24.570  30.170  24.530  1.00  0.00    -0.646 OA
+ENDBRANCH  23  27
+ENDBRANCH  21  23
+ENDBRANCH  19  20
+ENDBRANCH  18  19
+ENDBRANCH   1  16
+BRANCH   1  30
+ATOM     30  CB  VAL     3      26.980  22.190  28.080  1.00  0.00     0.032 C 
+ATOM     31  CG1 VAL     3      26.030  21.780  29.210  1.00  0.00     0.003 C 
+ATOM     32  CG2 VAL     3      27.160  21.040  27.080  1.00  0.00     0.003 C 
+ENDBRANCH   1  30
+TORSDOF 14
